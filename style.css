@@ -1,5 +1,5 @@
 /*
-Theme Name: Sydney
+Theme Name: SydneyModified
 Theme URI: https://athemes.com/theme/sydney
 Author: aThemes
 Author URI: https://athemes.com
@@ -552,7 +552,7 @@ Repeatable Patterns
 		border-radius: 3px;
 		transition: all 0.3s;
 	}
-	
+
 	button:hover,
 	.llms-button-action:hover,
 	.llms-student-dashboard .llms-button-secondary:hover,
@@ -705,7 +705,7 @@ Header
 	}
 	.admin-bar:not(.siteScrolled) .slide-item {
 		background-position: 50% 0 !important;
-	}	
+	}
 	.header-image {
 		display: none;
 		position: relative;
@@ -728,7 +728,7 @@ Header
 	}
 	.site-description:empty {
 		margin: 0;
-	}	
+	}
 	.site-header.fixed {
 		position: fixed;
 	}
@@ -830,7 +830,7 @@ Header
 	}
 	#mainnav ul ul .dropdown-symbol svg {
 		transform: rotate(-90deg);
-	}	
+	}
 	#mainnav ul li ul:after {
 		content: "";
 		position: absolute;
@@ -905,7 +905,7 @@ Header
 	.fw-menu-container {
 		padding-left: 60px;
 		padding-right: 60px;
-	}	
+	}
 	/* New header */
 	.main-header,
 	.header-search-form {
@@ -949,7 +949,7 @@ Header
 	.main-header #mainnav ul ul li:last-of-type {
 		padding-bottom: 8px;
 	}
-	
+
 	.bottom-header_layout_4 #mainnav > div > ul > li:first-of-type,
 	.bottom-header_layout_5 #mainnav > div > ul > li:first-of-type {
 		padding-left: 0;
@@ -1346,7 +1346,7 @@ Header
 	 .custom-logo-link img {
 		 max-width: 180px;
 	}
-	
+
 	@media (max-width: 1024px) {
 		.bottom-header-row, .main-header {
 			display: none;
@@ -1368,7 +1368,7 @@ Header
 		.sydney-offcanvas-menu {
 			display: block;
 	   }
-	}	
+	}
 /* Transparent header */
 .transparent-header .header-wrapper {
 	position: absolute;
@@ -1403,14 +1403,14 @@ Header
 	position: fixed;
 	top: 32px;
 	z-index: 999;
-}	
+}
 /*--------------------------------------------------------------
 Mobile navigation
 --------------------------------------------------------------*/
 	.mainnav.toggled {
 		display: block !important;
 		top: 100%;
-	}	
+	}
 	.mainnav.toggled,
 	#mainnav-mobi {
 		display: block;
@@ -1585,7 +1585,7 @@ Layout
 }
 .header-slider {
 	-moz-transform: none;
-}	
+}
 /*--------------------------------------------------------------
 Parallax
 --------------------------------------------------------------*/
@@ -1738,7 +1738,7 @@ Blog
 }
 body:not(.elementor-page):not(.panel-layout) .entry-content h1 {
 	margin-top: 1em;
-	margin-bottom: 0.5em;	
+	margin-bottom: 0.5em;
 }
 body:not(.elementor-page):not(.panel-layout) .entry-content h2,
 body:not(.elementor-page):not(.panel-layout) .entry-content h3,
@@ -1796,7 +1796,7 @@ body:not(.elementor-page):not(.panel-layout) .entry-content h6 {
 }
 .entry-title a {
 	color: var(--sydney-headings-color);
-}	
+}
 .posts-layout .entry-title a:hover {
 	color: var(--sydney-grey-color);
 }
@@ -1847,7 +1847,7 @@ span.author.vcard {
 .layout5 .hentry:after {
 	width: 0;
 	height: 0;
-}	
+}
 .layout3 .row {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1879,52 +1879,52 @@ span.author.vcard {
 }
 .posts-layout .list-image {
 	width: 35%;
-}	
+}
 .posts-layout .list-content {
 	width: 65%;
 	max-width: 65%;
-}	
+}
 .posts-layout article:not(.has-post-thumbnail) .list-content {
 	width: 100%;
-	max-width: 100%;		
+	max-width: 100%;
 }
 .layout4 article, .layout6 article {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-}	
+}
 .layout4 .entry-thumb, .layout6 .entry-thumb {
 	margin: 0 24px 0 0;
-}	
+}
 .posts-layout .post-vertical-align-middle {
 	-webkit-box-align: center;
 		-ms-flex-align: center;
 			align-items: center;
-}	
+}
 .posts-layout .post-vertical-align-bottom {
 	-webkit-box-align: end;
 		-ms-flex-align: end;
 			align-items: flex-end;
-} 
+}
 .layout4 .image-right {
 	-webkit-box-ordinal-group: 2;
 		-ms-flex-order: 1;
 			order: 1;
-}	
+}
 .layout4 .image-right .entry-thumb {
 	margin: 0 0 0 30px;
 }
 .list-image.image-left:empty {
 	display: none;
-}	
+}
 .layout6 article:nth-of-type(even) .list-image {
 	-webkit-box-ordinal-group: 2;
 		-ms-flex-order: 1;
 			order: 1;
-}	
+}
 .layout6 article:nth-of-type(even) .list-image .entry-thumb {
 	margin: 0 0 0 24px;
-}	
+}
 .no-sidebar .layout1,
 .no-sidebar .layout2 {
 	max-width: 920px;
@@ -1952,7 +1952,7 @@ span.author.vcard {
 }
 .single-meta .byline {
 	padding-left: 10px;
-}	
+}
 /* Post author bio */
 .single-post-author {
 	margin-bottom: 60px;
@@ -2033,7 +2033,7 @@ span.author.vcard {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 10px;
-	padding: 0;		
+	padding: 0;
 }
 .entry-meta.delimiter-vertical > *:after {
 	content: '\007C';
@@ -2043,7 +2043,7 @@ span.author.vcard {
 }
 .single .entry-meta-below {
 	margin-bottom: 0;
-}		
+}
 /*--------------------------------------------------------------
 Widgets
 --------------------------------------------------------------*/
@@ -2359,14 +2359,14 @@ Preloader
 	text-align: center;
 	transition: opacity 0.2s ease 0s;
 	width: 100%;
-	z-index: 9999;	    
+	z-index: 9999;
 }
 .preloader.disable {
 	opacity: 0;
 }
 .preloader.hide {
 	display: none;
-}	
+}
 .preloader .spinner {
 	height: 30px;
 	left: 50%;
@@ -2454,7 +2454,7 @@ Go to top button
 .go-top.position-left {
 	right: auto;
 	left: 20px;
-}	
+}
 .go-top:hover {
 	background-color: #fff;
 }
@@ -2512,11 +2512,11 @@ Panels
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
-/* SO post carousel fix */	
+/* SO post carousel fix */
 .sow-carousel-thumbnail .overlay {
 	position: static;
 	height: 100% !important;
-}		
+}
 /* Counter
 -------------------------------------------------------------- */
 .roll-counter {
@@ -2948,7 +2948,7 @@ Panels
 .hentry .roll-testimonials blockquote {
 	background-color: transparent;
 	color: inherit;
-}	
+}
 .roll-testimonials .name {
 	font-size: 18px;
 	font-weight: 500;
@@ -3522,7 +3522,7 @@ ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
     padding: 5px 12px !important;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 12px;	
+    font-size: 12px;
 }
 .woocommerce ul.products li.product .price {
 	font-weight: 600;
@@ -3542,7 +3542,7 @@ ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
 .single-product .entry-summary .yith-wcwl-wishlistexistsbrowse,
 .single-product .entry-summary .compare {
 	width: 36px;
-	height: 36px;	
+	height: 36px;
 	display: block;
 	background: #fff;
 	border-radius: 50%;
@@ -3576,7 +3576,7 @@ ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
 .woocommerce-product-details__short-description {
 	margin-bottom: 30px;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #ebebeb;	
+	border-bottom: 1px solid #ebebeb;
 }
 .woocommerce-product-details__short-description p:last-of-type {
 	margin: 0;
@@ -3684,7 +3684,7 @@ ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
 .woocommerce-cart table.cart .coupon .button {
 	background-color: #cecece;
 	color: #443f3f;
-	
+
 }
 .woocommerce-cart table.cart td.actions .coupon .input-text,
 .woocommerce-cart table.cart .coupon .button,
@@ -3699,7 +3699,7 @@ ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
 	padding-top: 0;
 	padding-bottom: 0;
     background-color: #cecece;
-    color: #443f3f;	
+    color: #443f3f;
 }
 .woocommerce-cart .post-wrap,
 .woocommerce-checkout .post-wrap {
@@ -3845,7 +3845,7 @@ a.shipping-calculator-button {
 	.checkout.woocommerce-checkout:after {
 		clear: both;
 	}
-	
+
 }
 .woocommerce-order-received .entry-content h2 {
 	font-size: 26px;
@@ -3884,7 +3884,7 @@ section.woocommerce-bacs-bank-details {
 /* Lightbox video
 -------------------------------------------------------------- */
 .sydney-video .video-text,
-.sydney-video .toggle-popup, 
+.sydney-video .toggle-popup,
 .sydney-video .close-popup {
 	display: none;
 }
@@ -4006,7 +4006,7 @@ div[class*="elementor-widget-wp-widget-sydney"] h5 {
 .sydney-breadcrumbs a {
     text-decoration: underline;
     margin: 0 3px;
-    text-decoration-color: #bababa;	
+    text-decoration-color: #bababa;
 }
 /* Elementor slider block */
 .athemes-hero-slider .slide-overlay {
@@ -4109,7 +4109,7 @@ SVGs
 		}
 		.visibility-mobile-only {
 			display: block;
-		}    
+		}
 	}
 	@media only screen and (min-width: 1930px) {
 		.parallax {
@@ -4180,12 +4180,12 @@ SVGs
   		}
 		.blog-post:nth-of-type(2n+1) {
 		    clear: left;
-		}  						
+		}
 	}
 	@media only screen and (max-width: 1024px) {
 		.site-header.fixed {
 			position: static !important;
-		}		
+		}
 		.slides-container .slide-item,
 		.panel-row-style {
 			background-attachment: scroll !important;
@@ -4209,7 +4209,7 @@ SVGs
 		}
 		.header-clone {
 			display: none;
-		}		
+		}
 		.posts-navigation {
 			overflow: hidden;
 			margin-bottom: 30px;
@@ -4219,11 +4219,11 @@ SVGs
 		}
 		.btn-menu {
 			display: block;
-		}	
+		}
 		.fw-menu-container {
 			padding-left: 30px;
 			padding-right: 30px;
-		}			
+		}
 	}
 	@media only screen and (max-width: 780px) {
 		.roll-client .client-item img {
@@ -4358,14 +4358,14 @@ SVGs
 		}
 		.footer-widgets-grid {
 			grid-template-columns: 1fr !important;
-		}	
+		}
 		.site-info .sydney-credits,
 		.site-info .social-profile {
 			text-align: center;
 		}
 		.site-info .social-profile {
 			margin-top: 15px;;
-		}				
+		}
 	}
 	@media only screen and (max-width: 575px) {
 		.roll-client .client-item {
@@ -4373,7 +4373,7 @@ SVGs
 			margin: 0;
 			width: 32.5%;
 		}
-		.post-navigation .nav-previous, 
+		.post-navigation .nav-previous,
 		.post-navigation .nav-next {
 			width: 100%;
 			float: none;
@@ -4387,7 +4387,7 @@ SVGs
 		}
 		.facts-section.style2 .col-md-3 {
 			width: 100%;
-		}		
+		}
 		#commentform .comment-form-email,
 		#commentform .comment-form-url {
 			width: 100%;
@@ -4396,7 +4396,7 @@ SVGs
 		}
 		.comment-respond {
 			padding: 20px;
-		}		
+		}
 	}
 
 	/* Mobile Portrait Size */
@@ -4450,7 +4450,7 @@ SVGs
 		.main-header #mainnav > div > ul,
 		.bottom-header-row #mainnav > div > ul {
 			align-items: initial;
-		}		
+		}
 		#mainnav > div > ul {
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
@@ -4462,8 +4462,8 @@ SVGs
 		}
 		.menu-centered .fw-menu-container > .row {
 			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;			
-		}		
+			flex-wrap: wrap;
+		}
 	}
 	/* Mobile slider */
 	.mobile-slide {
@@ -4514,12 +4514,12 @@ SVGs
 	.no-sidebar .entry-content .alignfull {
 		margin: 20px calc(50% - 50vw);
 		max-width: 100vw;
-		width: 100vw;	
+		width: 100vw;
 	}
 	.no-sidebar .entry-content .alignwide {
 		margin: 20px calc(25% - 25vw);
 		width: auto;
-	}	
+	}
 }
 .wp-block-group.has-background {
 	padding: 20px 30px;

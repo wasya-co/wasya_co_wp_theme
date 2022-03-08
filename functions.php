@@ -2,7 +2,7 @@
 /**
  * Sydney functions and definitions
  *
- * @package Sydney
+ * @package SydneyModified
  */
 
 if ( ! function_exists( 'sydney_setup' ) ) :
@@ -89,7 +89,7 @@ function sydney_setup() {
 	$forked_owl = get_theme_mod( 'forked_owl_carousel', false );
 	if ( !$forked_owl ) {
 		set_theme_mod( 'forked_owl_carousel', true );
-	}	
+	}
 
 	//Set the compare icon for YTIH button
 	update_option( 'yith_woocompare_button_text', sydney_get_svg_icon( 'icon-compare', false ) );
@@ -168,7 +168,7 @@ if ( defined( 'SITEORIGIN_PANELS_VERSION' ) ) {
 	/**
 	 * Page builder support
 	 */
-	require get_template_directory() . '/inc/so-page-builder.php';	
+	require get_template_directory() . '/inc/so-page-builder.php';
 }
 require get_template_directory() . "/widgets/contact-info.php";
 
@@ -189,7 +189,7 @@ function sydney_admin_scripts() {
 		'headerUpdateDimiss' => array(
 			'confirmMessage' => __( 'Are you sure you want to dismiss this notice?', 'sydney' ),
 			'errorMessage' => __( 'It was not possible complete the request, please reload the page and try again.', 'sydney' )
-		),					
+		),
 	) );
 }
 add_action( 'admin_enqueue_scripts', 'sydney_admin_scripts' );
@@ -207,7 +207,7 @@ function sydney_set_modern_header_flag() {
 	set_theme_mod( 'swc_sidebar_products', true );
 
 	//Disable shop archive sidebar
-	set_theme_mod( 'shop_archive_sidebar', 'no-sidebar' );	
+	set_theme_mod( 'shop_archive_sidebar', 'no-sidebar' );
 }
 add_action( 'after_switch_theme', 'sydney_set_modern_header_flag' );
 
@@ -235,7 +235,7 @@ function sydney_scripts() {
 
 	if ( !$is_amp ) {
 		wp_enqueue_script( 'sydney-functions', get_template_directory_uri() . '/js/functions.js', array(), '20211026', true );
-		
+
 		//Enqueue hero slider script only if the slider is in use
 		$slider_home = get_theme_mod('front_header_type','nothing');
 		$slider_site = get_theme_mod('site_header_type');
@@ -246,7 +246,7 @@ function sydney_scripts() {
 	}
 
 	if ( class_exists( 'Elementor\Plugin' ) ) {
-		wp_enqueue_script( 'sydney-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'', true );		
+		wp_enqueue_script( 'sydney-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'),'', true );
 	}
 
 	if ( defined( 'SITEORIGIN_PANELS_VERSION' )	) {
@@ -345,7 +345,7 @@ function sydney_header_video() {
 
 /**
  * Preloader
- * Hook into 'wp_body_open' to ensure compatibility with 
+ * Hook into 'wp_body_open' to ensure compatibility with
  * header/footer builder plugins
  */
 function sydney_preloader() {
@@ -389,7 +389,7 @@ function sydney_header_clone() {
 			$cat 				= $wp_query->get_queried_object();
 			$thumbnail_id 		= get_term_meta( $cat->term_id, 'thumbnail_id', true );
 			$shop_archive_thumb	= wp_get_attachment_url( $thumbnail_id );
-			
+
 			if ( $shop_archive_thumb ) {
 				return;
 			}
@@ -427,12 +427,12 @@ function sydney_get_image_alt( $image ) {
  * thus it does not warrant having an entire dedicated blocking script being loaded.
  *
  * from TwentyTwenty
- * 
+ *
  * @link https://git.io/vWdr2
  */
 function sydney_skip_link_focus_fix() {
 
-	if ( sydney_is_amp() ) { 
+	if ( sydney_is_amp() ) {
 		return;
 	}
 	?>
@@ -485,7 +485,7 @@ function sydney_get_svg_icon( $icon, $echo = false ) {
 				'transform' => true
 			),
 		)
-	);	
+	);
 
 	if ( $echo != false ) {
 		echo $svg_code; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -672,7 +672,7 @@ if ( defined( 'SITEORIGIN_PANELS_VERSION' ) && ( isset($pagenow) && $pagenow == 
 		}
 
 		if( version_compare( $all_plugins['sydney-toolbox/sydney-toolbox.php']['Version'], '1.16', '>=' ) ) {
-			if( !get_option( 'sydney-fontawesome-v5' ) ) { ?> 
+			if( !get_option( 'sydney-fontawesome-v5' ) ) { ?>
 				<div class="notice notice-success thd-theme-dashboard-notice-success is-dismissible">
 					<p>
 						<strong><?php esc_html_e( 'Sydney Font Awesome Update: ', 'sydney'); ?></strong> <?php esc_html_e( 'Your website is currently running the version 4. Click in the below button to update to version 5.', 'sydney' ); ?>
