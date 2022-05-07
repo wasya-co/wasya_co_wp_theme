@@ -71,10 +71,10 @@ class Sydney_Typography_Control extends WP_Customize_Control {
 				?>
 				<?php if( !empty( $this->label ) ) { ?>
 					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<?php } ?>
+				<?php } ?>	
 				<?php if( !empty( $this->description ) ) { ?>
 						<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
-					<?php } ?>
+					<?php } ?>							
 				<div class="google_fonts_select_control popover-block">
 					<input type="hidden" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value( 'family' ) ); ?>" class="customize-control-google-font-selection" <?php $this->link( 'family' ); ?> />
 					<div class="google-fonts">
@@ -113,7 +113,7 @@ class Sydney_Typography_Control extends WP_Customize_Control {
 							?>
 						</select>
 					<?php endif; ?>
-					</div>
+					</div>				
 
 					<input type="hidden" class="google-fonts-category" value="<?php echo esc_html( $this->fontValues->category ); ?>">
 				</div>
@@ -125,11 +125,9 @@ class Sydney_Typography_Control extends WP_Customize_Control {
 		 * Find the index of the saved font in our multidimensional array of Google Fonts
 		 */
 		public function get_font_index( $haystack, $needle ) {
-			if (is_array($haystack) || is_object($haystack)) {
-				foreach( $haystack as $key => $value ) {
-					if( $value->family == $needle ) {
-						return $key;
-					}
+			foreach( $haystack as $key => $value ) {
+				if( $value->family == $needle ) {
+					return $key;
 				}
 			}
 			return false;
@@ -149,11 +147,7 @@ class Sydney_Typography_Control extends WP_Customize_Control {
 			$body = wp_remote_retrieve_body( $request );
 			$content = json_decode( $body );
 
-			if ($content && in_array('items', $content)) {
-  			return $content->items;
-			} else {
-				return null;
-			}
+			return $content->items;
 
 		}
 	}

@@ -10,7 +10,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 
 		/**
 		 * Instance
-		 */
+		 */		
 		private static $instance;
 
 		/**
@@ -60,7 +60,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 
 		/**
 		 * Mobile header markup
-		 */
+		 */		
 		public function header_mobile_markup() {
 			$layout = get_theme_mod( 'header_layout_mobile', 'header_mobile_layout_1' );
 			?>
@@ -81,13 +81,13 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 				</div>
 				<div class="mobile-header-item">
 					<?php $this->render_components( 'offcanvas' ); ?>
-				</div>
+				</div>				
 			</div>
-
+			
 			<?php call_user_func( array( $this, $layout ) ); ?>
 			<?php
 		}
-
+		
 		/**
 		 * Desktop: header layout 1
 		 */
@@ -107,7 +107,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-5 header-elements">
 									<?php $this->render_components( 'l1' ); ?>
-								</div>
+								</div>							
 							</div>
 						</div>
 					</div>
@@ -133,10 +133,10 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="header-col menu-col menu-<?php echo esc_attr( $menu_position ); ?>">
 									<?php $this->menu(); ?>
-								</div>
+								</div>							
 								<div class="header-col header-elements">
 									<?php $this->render_components( 'l1' ); ?>
-								</div>
+								</div>							
 							</div>
 						</div>
 					</div>
@@ -144,7 +144,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 				</header>
 			<?php
 		}
-
+		
 		/**
 		 * Desktop: header layout 3
 		 */
@@ -172,13 +172,13 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-4">
 									<?php $this->logo(); ?>
-								</div>
+								</div>							
 								<div class="col-md-4 header-elements">
 									<?php $this->render_components( 'l3right' ); ?>
-								</div>
+								</div>							
 							</div>
-						</div>
-					</div>
+						</div>	
+					</div>	
 					<?php $this->search_form(); ?>
 				</header>
 				<div class="bottom-header-row bottom-<?php echo esc_attr( $layout ); ?> <?php echo esc_attr( $this->sticky() ); ?>">
@@ -190,14 +190,14 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+					</div>	
+				</div>	
 				<?php if ( $transparent_menu ) : ?>
 				</div>
-				<?php endif; ?>
+				<?php endif; ?>							
 			<?php
 		}
-
+		
 		/**
 		 * Desktop: header layout 4
 		 */
@@ -209,11 +209,11 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 			$transparent_menu = '';
 			if ( isset( $post ) ) {
 				$transparent_menu = get_post_meta( $post->ID, '_sydney_transparent_menu', true );
-			}
+			}			
 			?>
 				<?php if ( $transparent_menu ) : ?>
 				<div class="header-wrapper">
-				<?php endif; ?>
+				<?php endif; ?>			
 				<header id="masthead" class="main-header <?php echo esc_attr( $layout ); ?>">
 					<div class="<?php echo esc_attr( $container ); ?>">
 						<div class="top-header-row">
@@ -223,11 +223,11 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-8 header-elements">
 									<?php $this->render_components( 'l4top' ); ?>
-								</div>
-
+								</div>							
+						
 							</div>
-						</div>
-					</div>
+						</div>	
+					</div>	
 					<?php $this->search_form(); ?>
 				</header>
 				<div class="bottom-header-row bottom-<?php echo esc_attr( $layout ); ?> <?php echo esc_attr( $this->sticky() ); ?>">
@@ -239,17 +239,17 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-4 header-elements">
 									<?php $this->render_components( 'l4bottom' ); ?>
-								</div>
+								</div>									
 							</div>
 						</div>
-					</div>
-				</div>
+					</div>	
+				</div>		
 				<?php if ( $transparent_menu ) : ?>
 				</div>
-				<?php endif; ?>
+				<?php endif; ?>						
 			<?php
-		}
-
+		}	
+		
 		/**
 		 * Desktop: header layout 5
 		 */
@@ -261,11 +261,11 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 			$transparent_menu = '';
 			if ( isset( $post ) ) {
 				$transparent_menu = get_post_meta( $post->ID, '_sydney_transparent_menu', true );
-			}
+			}				
 			?>
 				<?php if ( $transparent_menu ) : ?>
 				<div class="header-wrapper">
-				<?php endif; ?>
+				<?php endif; ?>					
 				<header id="masthead" class="main-header <?php echo esc_attr( $layout ); ?>">
 					<div class="<?php echo esc_attr( $container ); ?>">
 						<div class="top-header-row">
@@ -275,13 +275,13 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-4">
 									<?php $this->logo(); ?>
-								</div>
+								</div>							
 								<div class="col-md-4 header-elements">
 									<?php $this->render_components( 'l5topright' ); ?>
-								</div>
+								</div>							
 							</div>
-						</div>
-					</div>
+						</div>	
+					</div>		
 					<?php $this->search_form(); ?>
 				</header>
 				<div class="bottom-header-row bottom-<?php echo esc_attr( $layout ); ?> <?php echo esc_attr( $this->sticky() ); ?>">
@@ -293,21 +293,21 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								</div>
 								<div class="col-md-4 header-elements">
 									<?php $this->render_components( 'l5bottom' ); ?>
-								</div>
+								</div>									
 							</div>
 						</div>
-					</div>
-				</div>
+					</div>	
+				</div>	
 				<?php if ( $transparent_menu ) : ?>
 				</div>
-				<?php endif; ?>
+				<?php endif; ?>							
 			<?php
-		}
+		}			
 
 
 		/**
 		 * Mobile: layout 1
-		 */
+		 */		
 		public function header_mobile_layout_1() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
@@ -320,17 +320,17 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 							<div class="col-sm-8 col-grow-mobile header-elements valign align-right">
 								<?php $this->render_components( 'mobile' ); ?>
 								<?php $this->trigger(); ?>
-							</div>
+							</div>						
 						</div>
 					</div>
 					<?php $this->search_form(); ?>
 				</header>
 			<?php
-		}
+		}	
 
 		/**
 		 * Mobile: layout 2
-		 */
+		 */		
 		public function header_mobile_layout_2() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
@@ -339,23 +339,23 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 						<div class="row valign">
 							<div class="col-sm-4 col-xs-4 header-elements valign">
 								<?php $this->render_components( 'mobile' ); ?>
-							</div>
+							</div>							
 							<div class="col-sm-4 col-xs-4 align-center">
 								<?php $this->logo(); ?>
 							</div>
 							<div class="col-sm-4 col-xs-4 align-right">
 								<?php $this->trigger(); ?>
-							</div>
+							</div>						
 						</div>
 					</div>
 					<?php $this->search_form(); ?>
 				</header>
 			<?php
-		}
+		}	
 
 		/**
 		 * Mobile: layout 3
-		 */
+		 */		
 		public function header_mobile_layout_3() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
@@ -364,20 +364,20 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 						<div class="row valign">
 							<div class="col-sm-4 col-xs-4">
 								<?php $this->trigger(); ?>
-							</div>
+							</div>														
 							<div class="col-sm-4 col-xs-4 align-center">
 								<?php $this->logo(); ?>
 							</div>
 							<div class="col-sm-4 col-xs-4 header-elements valign align-right">
 								<?php $this->render_components( 'mobile' ); ?>
-							</div>
+							</div>						
 						</div>
 					</div>
 					<?php $this->search_form(); ?>
 				</header>
 			<?php
-		}
-
+		}			
+				
 		/**
 		 * Render header components
 		 */
@@ -403,7 +403,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 		public function menu() {
 			if ( function_exists('max_mega_menu_is_enabled') && max_mega_menu_is_enabled( 'primary' ) ) : ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
-			<?php else: ?>
+			<?php else: ?>	
 			<nav id="mainnav" class="mainnav">
 				<?php
 				wp_nav_menu(
@@ -448,10 +448,10 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 					<?php endif; ?>
 					<?php if ( $phone ) : ?>
 						<a href="tel:<?php echo esc_attr( $phone ); ?>"><i class="sydney-svg-icon"><?php sydney_get_svg_icon( 'icon-phone', true ); ?></i><?php echo esc_html( $phone ); ?></a>
-					<?php endif; ?>
+					<?php endif; ?>					
 				</div>
 			<?php
-		}
+		}		
 
 		/**
 		 * Woocommerce icons
@@ -461,9 +461,9 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 			if ( !class_exists( 'WooCommerce' ) ) {
 				return;
 			}
-
+			
 			echo sydney_woocommerce_header_cart(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
+		}		
 
 		/**
 		 * Search icon
@@ -496,22 +496,17 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 
 		/**
 		 * Site branding
-		 */
-		public function logo() { ?>
+		*/		
+		public function logo() {
+			?>
 			<div class="site-branding">
-				<?php if (get_theme_mod('site_logo')) : ?>
+
+				<?php if ( get_theme_mod('site_logo') ) : ?>
 					<?php
 						$logo_id 	= attachment_url_to_postid( get_theme_mod( 'site_logo' ) );
 						$logo_attrs = wp_get_attachment_image_src( $logo_id, 'large' );
-					?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>">
-					  <img width="<?php echo esc_attr( $logo_attrs[1] ); ?>"
-						  height="<?php echo esc_attr( $logo_attrs[2] ); ?>"
-							class="site-logo"
-							src="<?php echo esc_url(get_theme_mod('site_logo')); ?>"
-							alt="<?php bloginfo('name'); ?>" <?php sydney_do_schema( 'logo' ); ?>
-						/>
-					</a>
+					?>						
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img width="<?php echo esc_attr( $logo_attrs[1] ); ?>" height="<?php echo esc_attr( $logo_attrs[2] ); ?>" class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" <?php sydney_do_schema( 'logo' ); ?> /></a>
 				<?php else : ?>
 					<?php if ( is_front_page() && is_home() ) :
 						?>
@@ -527,10 +522,10 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 						?>
 						<p class="site-description"><?php echo $sydney_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 					<?php endif; ?>
-				<?php endif; ?>
+				<?php endif; ?>	
 			</div><!-- .site-branding -->
-
-		<?php }
+			<?php
+		}
 
 		/**
 		 * Mobile menu trigger
@@ -538,7 +533,7 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 		public function trigger() { ?>
 			<?php if ( function_exists('max_mega_menu_is_enabled') && max_mega_menu_is_enabled( 'primary' ) ) : ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary') ); ?>
-			<?php else: ?>
+			<?php else: ?>	
 				<?php $icon = get_theme_mod( 'mobile_menu_icon', 'mobile-icon2' ); ?>
 				<a href="#" class="menu-toggle">
 					<i class="sydney-svg-icon"><?php sydney_get_svg_icon( $icon, true ); ?></i>
@@ -575,14 +570,14 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 								<?php
 									$logo_id 	= attachment_url_to_postid( get_theme_mod( 'site_logo' ) );
 									$logo_attrs = wp_get_attachment_image_src( $logo_id );
-								?>
+								?>						
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo('name'); ?>"><img width="<?php echo esc_attr( $logo_attrs[1] ); ?>" height="<?php echo esc_attr( $logo_attrs[2] ); ?>" class="site-logo" src="<?php echo esc_url(get_theme_mod('site_logo')); ?>" alt="<?php bloginfo('name'); ?>" <?php sydney_do_schema( 'logo' ); ?> /></a>
 								<?php if ( is_home() && !is_front_page() ) : ?>
 									<h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
 								<?php endif; ?>
 							<?php else : ?>
 								<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-								<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+								<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>	        
 							<?php endif; ?>
 							</div>
 							<div class="col-md-8 col-sm-4 col-xs-12">

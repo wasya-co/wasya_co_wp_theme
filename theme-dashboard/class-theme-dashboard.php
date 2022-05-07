@@ -407,7 +407,7 @@ class Sydney_Theme_Dashboard {
 			<div class="thd-performance-item">
 				<div class="thd-performance-item-outer">
 					<div class="thd-performance-item-thumbnail">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/theme-dashboard/images/fastest-wordpress-hosting.jpg' ); ?>">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/theme-dashboard/images/best-wordpress-speed.jpg' ); ?>">
 					</div>
 					<div class="thd-performance-item-content">
 						<div class="thd-performance-item-name">
@@ -447,7 +447,7 @@ class Sydney_Theme_Dashboard {
 			<div class="thd-performance-item">
 				<div class="thd-performance-item-outer">
 					<div class="thd-performance-item-thumbnail">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/theme-dashboard/images/best-wordpress-speed.jpg' ); ?>">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/theme-dashboard/images/fastest-wordpress-hosting.jpg' ); ?>">
 					</div>
 					<div class="thd-performance-item-content">
 						<div class="thd-performance-item-name">
@@ -662,16 +662,16 @@ class Sydney_Theme_Dashboard {
 								<?php if ( ! $this->pro_status ) { ?>
 									<div class="thd-conttent-secondary">
 										<div class="thd-title">
-											<?php echo wp_kses_post( __( 'Priority Support', 'sydney' ) ); ?>
+											<?php echo wp_kses_post( __( 'Upgrade to priority support', 'sydney' ) ); ?>
 
 											<div class="thd-badge"><?php esc_html_e( 'pro', 'sydney' ); ?></div>
 										</div>
 
-										<div class="thd-description"><?php esc_html_e( 'Want your questions answered faster? Go Pro to be first in the queue!', 'sydney' ); ?></div>
+										<div class="thd-description"><?php esc_html_e( 'Get direct support from our developers via email. We aim to answer all priority support requests within 24 hours.', 'sydney' ); ?></div>
 
 										<div class="thd-button-wrap">
 											<a href="<?php echo esc_url( $this->settings['support_pro_link'] ); ?>" class="thd-button button" target="_blank">
-												<?php echo esc_html_e( 'Go PRO', 'sydney' ); ?>
+												<?php echo esc_html_e( 'Get Priority Support with Sydney Pro', 'sydney' ); ?>
 											</a>
 										</div>
 									</div>
