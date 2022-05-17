@@ -1,21 +1,39 @@
 /*
-Theme Name: SydneyModified
-Theme URI: https://athemes.com/theme/sydney
-Author: aThemes
-Author URI: https://athemes.com
-Description: Sydney is a powerful business theme that provides a fast way for companies or freelancers to create an awesome online presence. As well as being fully compatible with Elementor, Sydney brings plenty of customization possibilities like access to all Google Fonts, full color control, layout control, logo upload, full screen slider, header image, sticky navigation and much more. Also, Sydney provides all the construction blocks you need to rapidly create an engaging front page. Looking for a quick start with Sydney? With just a few clicks, you can import one of our existing demos (https://athemes.com/sydney-demos/)
-Version: 2.01
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tested up to: 5.7.2
-Requires PHP: 5.6
-Text Domain: sydney
-Tags: two-columns, right-sidebar, block-styles, custom-colors, custom-background, custom-header, custom-menu, featured-images, sticky-post, theme-options, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-Sydney is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-*/
+ * Theme Name: SydneyModified
+ * dat piousbox _vp_
+ * 2022-05-17
+ * 
+ * Contents:
+ *
+ * - social
+ * - navigation
+ * - accessibility
+ * - alignments
+ * - content
+ * - aside
+ * - infinite scroll
+ *  - media
+ * - captions
+ * - galleries
+ * - repeatable patterns
+ * - header
+ * - mobile navigation
+ * - layout
+ * - parallax
+ * - hero section
+ * - blog
+ * - widgets
+ * - blog single
+ * - comments
+ * - footer
+ * - bottom
+ * - preloader
+ * - go to top button
+ * - panels
+ * - integrations
+ * - svg
+ *
+**/
 
 :root {
 	--sydney-headings-color: #00102E;
@@ -24,6 +42,7 @@ Sydney is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic,
 	--sydney-text-color: #233452;
 	--sydney-light-background: #F4F5F7;
 	--sydney-button-background: #d65050;
+	--sydney-primary-color: #33cccc; /* _vp_ 2022-05-17 */
 }
 
 .valign {
@@ -357,15 +376,7 @@ Asides
 .archive .format-aside .entry-title {
 	display: none;
 }
-/*--------------------------------------------------------------
-Comments
---------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-	display: block;
-}
+
 /*--------------------------------------------------------------
 Infinite scroll
 --------------------------------------------------------------*/
@@ -1575,6 +1586,12 @@ Layout
 .entry-post img {
 	margin: 10px 0 20px;
 }
+/* _vp_ 2022-05-17 */
+.entry-post a {
+	border-bottom: 1px solid var(--sydney-button-background);
+	text-decoration: none;
+	color: var(--sydney-button-background);
+}
 .header-slider,
 .owl-wrapper {
 	direction: ltr;
@@ -1736,6 +1753,12 @@ Blog
 .entry-content > .panel-layout {
 	margin-bottom: 0;
 }
+/* _vp_ 2022-05-17 */
+.entry-content a {
+	color: var(--sydney-primary-color);
+	border-bottom: 1px solid var(--sydney-primary-color);
+}
+
 body:not(.elementor-page):not(.panel-layout) .entry-content h1 {
 	margin-top: 1em;
 	margin-bottom: 0.5em;
@@ -1779,8 +1802,8 @@ body:not(.elementor-page):not(.panel-layout) .entry-content h6 {
 }
 .single-post-author .author-link,
 .posts-layout .read-more {
-	color: var(--sydney-headings-color);
-	text-decoration: underline;
+	color: var(--sydney-primary-color); /* _vp_ 2022-05-17 */
+	
 	display: inline-block;
 	margin-top: 20px;
 }
@@ -2146,6 +2169,12 @@ Blog single
 /*--------------------------------------------------------------
 Comments
 --------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
 .comments-area {
 	margin-bottom: 60px;
 	margin-top: 30px;
@@ -3262,606 +3291,7 @@ border-radius: 50%;
 .entry-post .roll-team .team-inner .avatar img {
 	margin: 0;
 }
-/* Elements
--------------------------------------------------------------- */
-a {
-	color: #d65050;
-}
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	color: #d65050;
-}
-.text-color { color: #d65050;}
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-div.wpforms-container-full .wpforms-form input[type=submit],
-div.wpforms-container-full .wpforms-form button[type=submit],
-div.wpforms-container-full .wpforms-form .wpforms-page-button {
-	background-color: #d65050;
-	border: 1px solid #d65050;
-}
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-div.wpforms-container-full .wpforms-form input[type=submit]:hover,
-div.wpforms-container-full .wpforms-form button[type=submit]:hover,
-div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
-	background-color: transparent;
-	color: #d65050;
-}
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus {
-	border: 1px solid #d65050;
-}
-#mainnav > ul > li > a.active,
-#mainnav > ul > li > a:hover {
-	color: #d65050;
-}
-#mainnav ul li ul:after {
-	background-color: #d65050;
-	transition: all 0.3s ease;
-}
-#mainnav .sub-menu li:hover > a {
-	background-color: #d65050;
-}
-.error-wrap #search-submit:hover {
-	background-color: #d65050;
-	border-color: #d65050;
-}
-.text-slider .maintitle:after {
-	background-color: #d65050;
-}
-.hentry .meta-post a:hover {
-	color: #d65050;
-}
 
-.blog-pagination ul li {
-	border: 1px solid #d65050;
-}
-.blog-pagination ul li.active,
-.blog-pagination ul li:hover a {
-	background-color: #d65050;
-}
-.sidebar .widget:before {
-	background-color: #d65050;
-}
-.widget-tags .tag-list a:hover {
-	border: 1px solid #d65050;
-}
-.comment .comment-detail {
-	border: 1px solid #d65050;
-}
-.bottom .socials li:hover a,
-.go-top {
-	background-color: #d65050;
-}
-.go-top:hover {
-	color: #d65050;
-}
-.switcher-container .switcher-icon a:focus {
-	color: #d65050;
-}
-.owl-theme .owl-controls .owl-page span{
-	border: 2px solid #d65050;
-}
-.owl-theme .owl-controls .owl-page.active span,
-.owl-theme .owl-controls.clickable .owl-page:hover span{
-	background-color: #d65050;
-}
-.roll-icon-box .icon {
-	border: 1px solid #d65050;
-}
-.roll-icon-box .icon i,
-.roll-icon-box .content h3 a:hover {
-	color: #d65050;
-}
-.roll-icon-box.white .icon {
-	background-color: #d65050;
-}
-.roll-icon-box.white .content h3 a {
-	color: #d65050;
-}
-.roll-icon-list .icon {
-	border: 1px solid #d65050;
-}
-.roll-icon-list .icon i,
-.roll-icon-list .content h3 a:hover {
-	color: #d65050;
-}
-.llms-student-dashboard .llms-button-secondary,
-.roll-button {
-	background-color: #d65050;
-	border: 1px solid #d65050;
-}
-.llms-student-dashboard .llms-button-secondary:hover,
-.roll-button:hover {
-	color: #d65050;
-}
-.roll-button.border {
-	color: #d65050;
-	border: 1px solid #d65050;
-}
-.roll-button.border:hover {
-	background-color: #d65050;
-}
-.roll-button.light:hover {
-	border: 1px solid #d65050;
-	background-color: #d65050;
-}
-.project-filter li a.active,
-.project-filter li a:hover {
-	background-color: #d65050;
-}
-.roll-testimonials .name {
-	font-family: "Raleway", sans-serif;
-	font-size: 18px;
-	font-weight: 500;
-	color: #d65050;
-}
-.roll-project .project-item .project-pop {
-	background-color: #d65050;
-}
-.roll-socials li a {
-	border: 1px solid #d65050;
-}
-.roll-socials li a:hover {
-	background-color: #d65050;
-	border: 1px solid #d65050;
-}
-.roll-progress .progress-animate {
-	background-color: #d65050;
-}
-.roll-team .team-item .team-pop .team-social li:hover a {
-	color: #d65050;
-}
-.roll-team .team-item .team-pop {
-	background-color: #d65050;
-}
-.roll-team .team-content .name {
-	color: #d65050;
-}
-/* Woocommerce basic - full styles in wc.css
--------------------------------------------------------------- */
-.woocommerce #respond input#submit,
-.woocommerce a.button,
-.woocommerce button.button,
-.woocommerce input.button {
-	background-color: #d65050;
-}
-.cart-contents {
-	position: relative;
-}
-.cart-contents .fa,
-.header-account .fa {
-	font-size: 18px;
-}
-.cart-amount {
-    background-color: #d65050;
-    font-size: 12px;
-    display: block;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    border-radius: 50%;
-    top: -10px;
-    position: absolute;
-    color: #fff;
-    right: -18px;
-    text-align: center;
-}
-.woocommerce ul.products li.product .woocommerce-LoopProduct-link p {
-	color: #767676;
-}
-ol.flex-control-nav.flex-control-thumbs {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0 -3px;
-}
-ol.flex-control-nav.flex-control-thumbs li img {
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-   cursor: pointer;
-}
-ol.flex-control-nav.flex-control-thumbs li {
-    width: 33.333%;
-    display: inline-block;
-    padding: 3px;
-    vertical-align: middle;
-}
-ol.flex-control-nav.flex-control-thumbs li img:not(.flex-active) {
-    opacity: 0.6;
-}
-.woocommerce ul#shipping_method {
-	display: table;
-	margin: 0 auto;
-	text-align: left;
-}
-.woocommerce ul#shipping_method li {
-	padding: 0;
-}
-
-
-.woocommerce ul.products li.product .button {
-	font-size: 13px;
-	text-transform: uppercase;
-	fill: #fff;
-	letter-spacing: 1px;
-}
-.woocommerce ul.products li.product .button .sydney-svg-icon {
-	margin-right: 8px;
-	vertical-align: text-bottom;
-}
-.woocommerce ul.products li.product .onsale,
-.yith-wcqv-main span.onsale,
-.woocommerce span.onsale {
-	margin: 0;
-	min-height: auto;
-    min-width: auto;
-    line-height: 1;
-    background: #252525;
-    font-weight: 400;
-    padding: 5px 12px !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;
-}
-.woocommerce ul.products li.product .price {
-	font-weight: 600;
-}
-.woocommerce ul.products li.product h2 {
-	font-weight: 400;
-}
-.woocommerce ul.products li.product .price del,
-.woocommerce ul.products li.product .price ins {
-	display: inline-block;
-}
-.woocommerce ul.products li.product .yith-wcqv-button,
-.woocommerce ul.products li.product .yith-wcwl-add-button,
-.woocommerce ul.products li.product .yith-wcwl-wishlistexistsbrowse,
-.woocommerce ul.products li.product .compare,
-.single-product .entry-summary .yith-wcwl-add-button,
-.single-product .entry-summary .yith-wcwl-wishlistexistsbrowse,
-.single-product .entry-summary .compare {
-	width: 36px;
-	height: 36px;
-	display: block;
-	background: #fff;
-	border-radius: 50%;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-	text-align: center;
-	line-height: 36px;
-	fill: #3e3e3e;
-	font-size: 16px;
-}
-.single-product .entry-summary .yith-wcwl-add-to-wishlist,
-.single-product .entry-summary .compare {
-	display: inline-block;
-}
-.single-product .entry-summary .yith-wcwl-add-to-wishlist {
-	margin-right: 10px;
-}
-.yith-placeholder {
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	width: 36px;
-}
-.product_meta {
-	margin-top: 30px;
-	padding-top: 30px;
-	border-top: 1px solid #ebebeb;
-}
-.product_meta > * {
-	display: block;
-}
-.woocommerce-product-details__short-description {
-	margin-bottom: 30px;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #ebebeb;
-}
-.woocommerce-product-details__short-description p:last-of-type {
-	margin: 0;
-}
-.yith-placeholder > * {
-	margin: 15px 0 0;
-	opacity: 0;
-	left: -150px !important;
-	position: relative;
-}
-.yith-placeholder > *:first-child {
-	margin: 0;
-}
-.woocommerce ul.products li.product {
-	overflow: hidden;
-}
-.woocommerce ul.products li.product:hover .yith-placeholder > * {
-	opacity: 1;
-	left: 0 !important;
-	z-index: 11;
-}
-.woocommerce ul.products li.product:hover .yith-placeholder > * {
-	transition: all 0.5s;
-}
-.woocommerce ul.products li.product:hover .yith-placeholder > *:nth-child(2) {
-	transition-delay: 0.2s;
-}
-.woocommerce ul.products li.product:hover .yith-placeholder > *:nth-child(3) {
-	transition-delay: 0.4s;
-}
-.woocommerce-cart .content-area,
-.woocommerce-checkout .content-area {
-	width: 100%;
-}
-.single-product .entry-summary .compare svg,
-.woocommerce ul.products li.product .compare svg,
-.woocommerce ul.products li.product .yith-wcqv-button svg {
-	max-width: 15px;
-	position: relative;
-	top: 3px;
-}
-.yith-wcwl-add-button>a i,
-.yith-wcwl-add-to-wishlist .feedback .yith-wcwl-icon,
-.woocommerce ul.products li.product .feedback .yith-wcwl-icon,
-.woocommerce ul.products li.product .yith-wcwl-add-button i {
-	margin: 0;
-}
-.woocommerce ul.products li.product .yith-wcwl-add-button a {
-	color: #3e3e3e;
-}
-.single-product .entry-summary .compare,
-.woocommerce ul.products li.product .compare {
-	padding: 0;
-}
-
-.woocommerce-tabs li {
-	margin-right: 15px;
-}
-.woocommerce-tabs li:last-of-type {
-	margin-right: 0;
-}
-.woocommerce-tabs li a {
-	text-transform: uppercase;
-	font-size: 14px;
-	letter-spacing: 1px;
-	color: #737373;
-	font-weight: 600;
-}
-.woocommerce-tabs li.active a {
-	color: #000;
-	padding-bottom: 5px;
-	border-bottom: 2px solid;
-}
-.woocommerce-tabs.wc-tabs-wrapper {
-	margin-bottom: 45px;
-	border-bottom: 1px solid #ebebeb;
-}
-.woocommerce-MyAccount-navigation li a {
-	color: #443f3f;
-}
-.woocommerce-MyAccount-navigation li.is-active a {
-	font-weight: 600;
-}
-.woocommerce table.shop_table,
-.woocommerce table.shop_table th,
-.woocommerce table.shop_table td {
-	border: 0;
-}
-.woocommerce table.shop_table tr {
-	border-bottom: 2px solid #f0f0f0;
-}
-.woocommerce table.shop_table td {
-	padding: 10px;
-}
-.woocommerce-cart table.cart img {
-	width: auto;
-	max-width: 100px;
-}
-.woocommerce-cart table.cart .product-name a {
-	color: #443f3f;
-}
-.woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
-	padding: 30px 10px;
-}
-.woocommerce-cart table.cart .coupon .button {
-	background-color: #cecece;
-	color: #443f3f;
-
-}
-.woocommerce-cart table.cart td.actions .coupon .input-text,
-.woocommerce-cart table.cart .coupon .button,
-.woocommerce-cart table.cart button.button[name="update_cart"] {
-	padding: 0 20px;
-	height: 42px;
-	line-height: 42px;
-}
-.checkout_coupon button.button[name="apply_coupon"] {
-	height: 50px;
-	line-height: 50px;
-	padding-top: 0;
-	padding-bottom: 0;
-    background-color: #cecece;
-    color: #443f3f;
-}
-.woocommerce-cart .post-wrap,
-.woocommerce-checkout .post-wrap {
-	padding-right: 0;
-}
-.woocommerce-cart table.cart button.button[name="update_cart"] {
-	background: #000;
-	color: #fff;
-}
-.shop_table th,
-.shop_table td,
-.cart_totals th,
-.cart_totals td {
-	text-align: left;
-}
-.woocommerce-shipping-methods label {
-	font-weight: 400;
-}
-.woocommerce-shipping-methods input {
-	margin-right: 10px;
-}
-.woocommerce ul#shipping_method {
-	display: block;
-	margin-bottom: 20px;
-}
-.woocommerce-shipping-destination {
-	margin-bottom: 5px;
-}
-.woocommerce-info a,
-.woocommerce-privacy-policy-link,
-a.shipping-calculator-button  {
-	color: #717171;
-    text-decoration: underline;
-}
-a.shipping-calculator-button {
-	font-size: 14px;
-}
-.woocommerce-cart .button[name="calc_shipping"] {
-	background-color: #cecece;
-	color: #443f3f;
-	padding: 0 20px;
-    height: 42px;
-    line-height: 42px;
-}
-.shipping-calculator-form {
-	margin-top: 20px;
-}
-.woocommerce .woocommerce-cart-form a.remove {
-	display: block;
-    font-size: 20px;
-    height: 28px;
-    width: 28px;
-    line-height: 25px;
-    color: #333!important;
-    border: 2px solid #f0f0f0;
-    text-decoration: none;
-    font-weight: 700;
-    margin: 0 auto;
-}
-.woocommerce .woocommerce-cart-form a.remove:hover {
-    color: #fff!important;
-    background: #ff6565;
-    border-color: #ff6565;
-}
-.woocommerce-checkout .button[name="woocommerce_checkout_place_order"],
-.wc-proceed-to-checkout a.button {
-	font-size: 14px;
-    line-height: 24px;
-    font-weight: 700;
-	padding: 12px 34px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	width: 100%;
-}
-.shipping_address .select2-container .select2-selection__rendered,
-.woocommerce-billing-fields .select2-container .select2-selection__rendered,
-.cart_totals .select2-container .select2-selection__rendered {
-	margin-top: 8px;
-	padding: 0;
-}
-.shipping_address .select2-container .select2-selection__arrow,
-.woocommerce-billing-fields .select2-container .select2-selection__arrow,
-.cart_totals .select2-container .select2-selection__arrow {
-	margin-top: 12px;
-	right: 10px;
-}
-#order_comments_field label,
-.shipping_address label,
-#payment label,
-.woocommerce-billing-fields label {
-	font-weight: 400;
-}
-.woocommerce form .form-row {
-	margin: 0 0 20px;
-}
-.woocommerce-form__label-for-checkbox input[type=checkbox] {
-	margin-left: 0;
-	border-color: #dbdbdb;
-}
-.woocommerce-form__label-for-checkbox span {
-	padding-left: 20px;
-}
-.woocommerce-checkout ul#shipping_method {
-	margin-bottom: 0;
-}
-@media ( min-width: 1024px ) {
-	.woocommerce-checkout #customer_details .col-1,
-	.woocommerce-checkout #customer_details .col-2 {
-		width: 100%;
-		float: none;
-	}
-	.woocommerce-checkout #customer_details {
-		width: 66.66667%;
-		float: left;
-		padding-right: 45px;
-	}
-	.woocommerce-checkout #order_review_heading,
-	.woocommerce-checkout #order_review {
-		width: 33.33333%;
-		float: left;
-	}
-	.woocommerce-checkout #order_review_heading {
-		margin-top: 10px;
-		padding-top: 0;
-		border-top: 0;
-	}
-	.woocommerce-checkout #order_review th,
-	.woocommerce-checkout #order_review td {
-		text-align: left;
-		padding: 15px 10px 15px 0;
-	}
-	.woocommerce-checkout #order_review .order-total .woocommerce-Price-amount {
-		font-size: 20px;
-	}
-	.checkout.woocommerce-checkout {
-		margin-top: 50px;
-	}
-	.checkout.woocommerce-checkout:before,
-	.checkout.woocommerce-checkout:after {
-		content: " ";
-		display: table;
-	}
-	.checkout.woocommerce-checkout:after {
-		clear: both;
-	}
-
-}
-.woocommerce-order-received .entry-content h2 {
-	font-size: 26px;
-}
-.woocommerce-order-received .woocommerce-thankyou-order-details,
-section.woocommerce-bacs-bank-details {
-	margin-bottom: 50px;
-}
-.woocommerce-order-received .woocommerce-thankyou-order-details,
-.woocommerce-order-received .wc-bacs-bank-details {
-	padding-left: 0;
-}
-.woocommerce-order-received table.shop_table td,
-.woocommerce-order-received table.shop_table th {
-	padding-left: 0;
-}
 
 /* Core video
 -------------------------------------------------------------- */
@@ -3881,6 +3311,7 @@ section.woocommerce-bacs-bank-details {
 .wp-custom-header .wp-custom-header-video-button {
 	display: none;
 }
+
 /* Lightbox video
 -------------------------------------------------------------- */
 .sydney-video .video-text,
@@ -4259,7 +3690,9 @@ SVGs
 		}
 	}
 
-	/* All Mobile Sizes */
+	/* 
+	 * All Mobile Sizes 
+	**/
 	@media only screen and (max-width: 767px) {
 		.layout6 article {
 			display: block;
