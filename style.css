@@ -1588,9 +1588,8 @@ Layout
 }
 /* _vp_ 2022-05-17 */
 .entry-post a {
-	border-bottom: 1px solid var(--sydney-button-background);
+	border-bottom: 1px solid var(--sydney-primary-color);
 	text-decoration: none;
-	color: var(--sydney-button-background);
 }
 .header-slider,
 .owl-wrapper {
@@ -1598,7 +1597,7 @@ Layout
 }
 .header-slider,
 .owl-carousel {
-		-webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
 }
 .header-slider {
 	-moz-transform: none;
@@ -1757,6 +1756,7 @@ Blog
 .entry-content a {
 	color: var(--sydney-primary-color);
 	border-bottom: 1px solid var(--sydney-primary-color);
+	text-shadow: -0.5px 0.5px 0 black;
 }
 
 body:not(.elementor-page):not(.panel-layout) .entry-content h1 {
@@ -1803,7 +1803,7 @@ body:not(.elementor-page):not(.panel-layout) .entry-content h6 {
 .single-post-author .author-link,
 .posts-layout .read-more {
 	color: var(--sydney-primary-color); /* _vp_ 2022-05-17 */
-	
+	text-shadow: -1px 1px 0 black;
 	display: inline-block;
 	margin-top: 20px;
 }
