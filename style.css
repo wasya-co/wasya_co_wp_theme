@@ -932,16 +932,7 @@ Header
    * Header 
    * _vp_ 2022-05-26
   **/
-  header.main-header { /* _vp_ 2022-05-17 */
-    position: absolute;
-    width: 100%;
 
-    background-color: rgba(0,0,0, 0.2);
-  }
-
-  .main-header a {
-    color: white;
-  }
 
   .main-header,
   .header-search-form {
@@ -4017,8 +4008,9 @@ SVGs
 header.wasyaco-sticky-header {
   position: fixed;
   top: 0;
-  
+
   background: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 50%);
 
   animation-name: wasyaco-sticky-header;
   animation-duration: 0.5s;
@@ -4027,3 +4019,23 @@ header.wasyaco-sticky-header {
 header.wasyaco-sticky-header #mainnav ul li a {
   color: black;
 }
+#masthead-mobile svg {
+  fill: white;
+}
+#masthead-mobile.wasyaco-sticky-header svg {
+  fill: black;
+}
+
+
+header.main-header {
+  position: absolute;
+  width: 100%;
+
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.main-header a {
+  color: white;
+}
+
+
