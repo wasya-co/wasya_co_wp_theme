@@ -311,7 +311,9 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 		public function header_mobile_layout_1() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
-				<header id="masthead-mobile" class="main-header mobile-header">
+				<header id="masthead-mobile" class="main-header mobile-header"
+				  data-layout="1"
+				>
 					<div class="<?php echo esc_attr( $container ); ?>">
 						<div class="row valign">
 							<div class="col-sm-4 col-grow-mobile">
@@ -334,7 +336,9 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 		public function header_mobile_layout_2() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
-				<header id="masthead-mobile" class="main-header mobile-header">
+				<header id="masthead-mobile" class="main-header mobile-header"
+				  data-layout="2"
+				>
 					<div class="<?php echo esc_attr( $container ); ?>">
 						<div class="row valign">
 							<div class="col-sm-4 col-xs-4 header-elements valign">
@@ -355,11 +359,16 @@ if ( !class_exists( 'Sydney_Header' ) ) :
 
 		/**
 		 * Mobile: layout 3
+		 * I'm using this one.
+		 * 
+		 * _vp_ 2022-05-26
 		 */
 		public function header_mobile_layout_3() {
 			$container = get_theme_mod( 'header_container', 'container-fluid' );
 			?>
-				<header id="masthead-mobile" class="main-header mobile-header">
+				<header id="masthead-mobile" class="main-header mobile-header"
+				  data-layout="3"
+				>
 					<div class="<?php echo esc_attr( $container ); ?>">
 						<div class="row valign">
 							<div class="col-sm-4 col-xs-4">

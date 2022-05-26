@@ -37,66 +37,8 @@ if ( !class_exists( 'Sydney_Custom_CSS' ) ) :
 		 * Output all custom CSS
 		 */
 		public function output_css( $custom = false ) {
-
             $is_amp = sydney_is_amp();
-
-            $custom = '';
-        
-            //Woocommerce
-            $yith_buttons_visible = get_theme_mod( 'yith_buttons_visible', 0 );
-            if ( $yith_buttons_visible ) {
-                $custom .= ".yith-placeholder > * { opacity:1!important;left:0!important;}"."\n";
-            }
-        
-            //Get thumbnails for shop and shop archives
-            $shop_thumb = get_the_post_thumbnail_url( get_option( 'woocommerce_shop_page_id' ) );
-            if ( class_exists( 'Woocommerce' ) && is_product_category() ) {
-                global $wp_query;
-                $cat 			= $wp_query->get_queried_object();
-                $thumbnail_id 	= get_term_meta( $cat->term_id, 'thumbnail_id', true );
-                $shop_archive_thumb	= wp_get_attachment_url( $thumbnail_id );
-            }
-        
-            if ( class_exists( 'Woocommerce' ) && is_shop() && $shop_thumb ) {
-                $custom .= ".header-image { background-image:url(" . esc_url($shop_thumb) . ")!important;display:block;}"."\n";	
-                $custom .= ".site-header { background-color:transparent;}" . "\n";
-                $custom .= "@media only screen and (max-width: 1024px) { .sydney-hero-area .header-image { height:300px!important; }}" . "\n";
-                $shop_overlay = get_theme_mod( 'hide_overlay_shop' );
-                if ( $shop_overlay ) {
-                    $custom .= ".header-image .overlay { background-color:transparent;}" . "\n";
-                }
-            } elseif ( class_exists( 'Woocommerce' ) && is_product_category() && $shop_archive_thumb ) {
-                $custom .= ".header-image { background-image:url(" . esc_url($shop_archive_thumb) . ")!important;display:block;}"."\n";	
-                if ( !$is_amp ) {
-                    $custom .= ".site-header { background-color:transparent;}" . "\n";
-                }
-                $custom .= "@media only screen and (max-width: 1024px) { .sydney-hero-area .header-image { height:300px!important; }}" . "\n";
-            } elseif ( $is_amp || (get_theme_mod('front_header_type','nothing') == 'nothing' && is_front_page()) || (get_theme_mod('site_header_type') == 'nothing' && !is_front_page()) ) {
-                $menu_bg_color = get_theme_mod( 'menu_bg_color', '#263246' );
-                $rgba 	= $this->hex2rgba($menu_bg_color, 0.9);
-                $custom .= ".site-header { background-color:" . esc_attr($rgba) . ";}" . "\n";
-            }
-        
-            $wc_button_hover = get_theme_mod( 'wc_button_hover', 0 );
-            if ( $wc_button_hover ) {
-                $custom .= "
-                @media only screen and (min-width: 1024px) { 
-                .loop-button-wrapper {position: absolute;bottom: 0;width: 100%;left: 0;opacity: 0;transition: all 0.3s;}
-                .woocommerce ul.products li.product .woocommerce-loop-product__title,
-                .woocommerce ul.products li.product .price {transition: all 0.3s;}
-                .woocommerce ul.products li.product:hover .loop-button-wrapper {opacity: 1;bottom: 20px;}
-                .woocommerce ul.products li.product:hover .woocommerce-loop-product__title,
-                .woocommerce ul.products li.product:hover .price {opacity: 0;} }" . "\n";
-            }
-			
-			$loop_product_alignment = get_theme_mod( 'swc_loop_product_alignment', 'center' );
-            $custom .= ".woocommerce ul.products li.product { text-align:" . esc_attr( $loop_product_alignment ) . ";}"."\n";
-
-            if ( 'left' === $loop_product_alignment ) {
-                $custom .= ".woocommerce ul.products li.product .star-rating { margin-left:0;}"."\n";
-            } elseif ( 'right' === $loop_product_alignment ) {
-                $custom .= ".woocommerce ul.products li.product .star-rating { margin-right:0;}"."\n";
-            }
+            $custom = '';        
         
             global $post;
             if ( isset( $post ) ) {
@@ -380,7 +322,7 @@ if ( !class_exists( 'Sydney_Custom_CSS' ) ) :
 			}
 
 			$custom .= $this->get_background_color_css( 'main_header_background', '', '.main-header,.header-search-form' );
-			$custom .= $this->get_color_css( 'main_header_color', '', '.main-header .site-title a,.main-header .site-description,.main-header #mainnav .menu > li > a, .main-header .header-contact a' );
+			
 			$custom .= $this->get_fill_css( 'main_header_color', '', '.main-header .sydney-svg-icon svg, .main-header .dropdown-symbol .sydney-svg-icon svg' );
 
 			$custom .= $this->get_background_color_css( 'main_header_bottom_background', '', '.bottom-header-row' );
