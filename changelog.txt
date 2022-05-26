@@ -1,4 +1,5 @@
 Changelog available here: http://athemes.com/changelog/sydney/
 0.0.0 - 2022-03-07 - first commits
 0.1.0 - 2022-05-17 - color of a's
+        2022-05-26 - animated header
 
