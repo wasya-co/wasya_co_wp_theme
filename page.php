@@ -12,12 +12,8 @@
 
 get_header(); 
 
-//Get classes for main content area
-if ( apply_filters( 'sydney_disable_cart_checkout_sidebar', true ) && class_exists( 'WooCommerce' ) && ( is_checkout() || is_cart() ) ) {
-	$width = 'col-md-12';
-} else {
-	$width = 'col-md-9';
-}
+$width = ''; // full-width instead of col-md-9
+
 ?>
 
 	<div id="primary" class="content-area <?php echo esc_attr( apply_filters( 'sydney_content_area_class', $width ) ); ?>">
