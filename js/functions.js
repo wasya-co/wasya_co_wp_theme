@@ -40,7 +40,7 @@ window.onscroll = function() {
 function stickyHeader() {
 	var className = "wasyaco-sticky-header";
 
-	jQuery('header').each(function() {
+	jQuery('header.main-header').each(function() {
 		if (window.pageYOffset > this.offsetTop) {
 			this.classList.add(className);
 		} else {
