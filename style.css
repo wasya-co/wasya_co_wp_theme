@@ -4028,10 +4028,8 @@ header.wasyaco-sticky-header #mainnav ul li a {
 
 
 header.main-header {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-
-  background-color: rgba(0,0,0, 0.2);
 }
 
 .main-header a {

@@ -320,8 +320,6 @@ if ( !class_exists( 'Sydney_Custom_CSS' ) ) :
 					$custom .= ".top-header-row { border-bottom: 1px solid " . esc_attr( $main_header_divider_color ) . ";}" . "\n";
 				}            
 			}
-
-			$custom .= $this->get_background_color_css( 'main_header_background', '', '.main-header,.header-search-form' );
 			
 			$custom .= $this->get_fill_css( 'main_header_color', '', '.main-header .sydney-svg-icon svg, .main-header .dropdown-symbol .sydney-svg-icon svg' );
 
