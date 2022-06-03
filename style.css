@@ -4484,7 +4484,7 @@ body.page-template-page_stuck_header .page-wrap {
 }
 
 header.main-header {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 
