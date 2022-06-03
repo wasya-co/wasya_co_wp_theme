@@ -62,6 +62,14 @@
  * Utils, Industrial theme copy-paste, OurClients
 **/
 
+.flex-500 {
+  width: 500px;
+  display: flex;
+  flex-justify: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .OurClients .header-W0 {
   text-align: center; 
   position: relative;
@@ -2673,9 +2681,14 @@ Comments
 .comment-respond .comment-notes {
   margin-bottom: 40px;
 }
-/*--------------------------------------------------------------
-Footer
---------------------------------------------------------------*/
+/*
+ * Footer
+**/
+#sidebar-footer, footer {
+  position: relative;
+  z-index: 1;
+}
+
 .footer-widgets {
   border: 0;
   padding: 0;
@@ -2971,7 +2984,7 @@ Panels
 .roll-client .client-item img {
   max-width: 150px;
 }
-/* Icon Box
+/* Icon Box, Our Service _vp_ 2022-05-31
 -------------------------------------------------------------- */
 .service {
   margin-bottom: 30px;
@@ -3033,8 +3046,21 @@ Panels
   margin: 0;
 }
 
-/* Contact widget
--------------------------------------------------------------- */
+.our-services-S1 {
+  background: url('//ish-wp.s3.us-east-1.amazonaws.com/wp-content/uploads/2022/05/31160601/800x_on-white.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  /* height: 500px; */
+  height: 616px;
+
+  /* height: 50vh; */
+  /* height: min(500px, 100vh); */
+}
+
+/* Contact widget,
+ * contact us _vp_ 2022-05-31
+**/
 
 .sydney_contact_info_widget span {
   color: #d65050;
@@ -3043,6 +3069,41 @@ Panels
 .sydney_contact_info_widget div {
   margin-bottom: 10px;
 }
+
+.contact-us-S1 {
+  min-height: 500px;  
+}
+.contact-us-S1 h2 {
+  font-size: 56px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-shadow: 2px 2px #000;
+}
+.contact-us-S2 {
+  display: flex;
+  justify-content: center;
+  
+}
+.font-white {
+  color: white;
+  text-shadow: 1 1 #000000;
+}
+
+body.page-id-1093 #content {
+  background: url('//ish-wp.s3.us-east-1.amazonaws.com/wp-content/uploads/2022/05/31165552/1400x243-contact-us-2.jpg');
+  background-repeat: repeat-x ;
+  background-position: center 100px;
+}
+body.page-id-1093 .page-wrap {
+  padding-bottom: 0;
+}
+body.page-id-1093 .page-wrap .content-wrapper {
+  background-color: transparent;
+}
+body.page-id-1093 .entry-header {
+  display: none;
+}
+
 /* Icon List
 -------------------------------------------------------------- */
 .roll-icon-list {
@@ -4375,7 +4436,9 @@ SVGs
 
 
 /*
- * Wasyaco overrides and additions
+ * WasyaCo overrides and additions
+ * sticky, stuck header
+ *
 **/
 @keyframes wasyaco-sticky-header {
   from {
@@ -4387,7 +4450,8 @@ SVGs
     background: rgb(255, 255, 255);
   }
 }
-header.wasyaco-sticky-header {
+header.wasyaco-sticky-header,
+body.page-template-page_stuck_header header {
   position: fixed;
   top: 0;
 
@@ -4398,19 +4462,29 @@ header.wasyaco-sticky-header {
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
-header.wasyaco-sticky-header #mainnav ul li a {
+header.wasyaco-sticky-header #mainnav ul li a,
+body.page-template-page_stuck_header header #mainnav ul li a {
   color: black;
 }
 #masthead-mobile svg {
   fill: white;
 }
-#masthead-mobile.wasyaco-sticky-header svg {
+#masthead-mobile.wasyaco-sticky-header svg,
+body.page-template-page_stuck_header #masthead-mobile svg {
   fill: black;
 }
-
+body.page-template-page_stuck_header header.entry-header {
+  display: none;
+}
+body.page-template-page_stuck_header .page-wrap {
+  /* padding-top: 100px; */
+  /* padding-top: 20px; */
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 header.main-header {
-  /* position: absolute; */
+  position: absolute;
   width: 100%;
 }
 

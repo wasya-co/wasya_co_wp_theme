@@ -1,11 +1,9 @@
 <?php
 /**
- * The header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
+ * The header is white, like always stuck.
  *
  * @package Sydney
- */
+**/
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -58,5 +56,5 @@
 	<?php do_action('sydney_after_hero'); ?>
 
 	<div id="content" class="page-wrap">
-		<div class="container content-wrapper">
-			<div class="row">	
+		<div class="content-wrapper" data-not-class='container' >
+			<div class="row">

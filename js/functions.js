@@ -28,7 +28,7 @@
   console.log(`+++ ${b}:`, a); // eslint-disable-line no-console
 };
 
-
+var $ = jQuery;
 
 /*
  * From: https://www.w3schools.com/howto/howto_js_sticky_header.asp
@@ -38,6 +38,8 @@ window.onscroll = function() {
 };
 
 function stickyHeader() {
+	if ($("body.page-template-page_stuck_header").length > 0) { return; }
+
 	var className = "wasyaco-sticky-header";
 
 	jQuery('header.main-header').each(function() {
