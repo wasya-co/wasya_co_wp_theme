@@ -4,4 +4,5 @@ Changelog available here: http://athemes.com/changelog/sydney/
         2022-05-26 - animated header
 0.2.0 - 2022-06-03 - rotating.html is implemented in this version.
         2022-06-14 - at least I didn't lose anything here.
+        2022-06-16 - toon shader draft
         
