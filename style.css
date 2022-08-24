@@ -1,8 +1,7 @@
 /*
- * Theme Name: SydneyModified
- * dat piousbox _vp_
+ * Theme Name: Wasya Co Wp Theme
  * 2022-05-17
- * 
+ *
  * Contents:
  *
 
@@ -71,7 +70,7 @@
 }
 
 .OurClients .header-W0 {
-  text-align: center; 
+  text-align: center;
   position: relative;
 }
 .OurClients h2 {
@@ -1175,12 +1174,12 @@ Header
       margin: 20px 0;
   }
 
-  /** 
-   * Navigation 
+  /**
+   * Navigation
    *
    * huh?
    *
-   * _vp_ 2022-05-26 
+   * _vp_ 2022-05-26
   **/
   #mainnav {
     display: block;
@@ -1318,8 +1317,8 @@ Header
     padding-right: 60px;
   }
 
-  /* 
-   * Header 
+  /*
+   * Header
    * _vp_ 2022-05-26
   **/
 
@@ -1623,8 +1622,8 @@ Header
      padding-top: 15px;
      padding-bottom: 15px;
   }
-   .main-header.header_layout_3 .site-header-inner, 
-   .site-header.header_layout_4 .site-header-inner, 
+   .main-header.header_layout_3 .site-header-inner,
+   .site-header.header_layout_4 .site-header-inner,
    .main-header.header_layout_5 .site-header-inner {
      padding: 0;
   }
@@ -1758,7 +1757,7 @@ Header
   }
 
   @media (max-width: 1024px) {
-    .bottom-header-row, 
+    .bottom-header-row,
     .main-header {
       display: none;
      }
@@ -3071,7 +3070,7 @@ Panels
 }
 
 .contact-us-S1 {
-  min-height: 500px;  
+  min-height: 500px;
 }
 .contact-us-S1 h2 {
   font-size: 56px;
@@ -3082,7 +3081,7 @@ Panels
 .contact-us-S2 {
   display: flex;
   justify-content: center;
-  
+
 }
 .font-white {
   color: white;
@@ -4143,8 +4142,8 @@ SVGs
     }
   }
 
-  /* 
-   * All Mobile Sizes 
+  /*
+   * All Mobile Sizes
   **/
   @media only screen and (max-width: 767px) {
     .layout6 article {

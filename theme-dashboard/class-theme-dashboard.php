@@ -58,9 +58,6 @@ class Sydney_Theme_Dashboard {
 		'hero_image'          => '',
 		'hero_dashboard_link' => '#',
 		'documentation_link'  => '#',
-		'promo_title'         => 'Upgrade to Pro',
-		'promo_button'        => 'Upgrade to Pro',
-		'promo_link'          => '#',
 		'changelog_version'   => '1.0',
 		'review_link'         => '#',
 		'suggest_idea_link'   => '#',
@@ -373,7 +370,7 @@ class Sydney_Theme_Dashboard {
 								</a>
 								<?php if ( $feature['link'] ) : ?>
 									<a class="thd-theme-feature-customize thd-theme-feature-proceed" href="<?php echo esc_url( $feature['link'] ); ?>"><?php echo esc_html( $feature['link_label'] ); ?></a>
-								<?php endif; ?>								
+								<?php endif; ?>
 							<?php endif; ?>
 
 						<?php
@@ -478,79 +475,7 @@ class Sydney_Theme_Dashboard {
 
 		$screen = get_current_screen();
 		?>
-		<div class="thd-hero">
-			<div class="thd-hero-content">
-				<div class="thd-hero-hello">
-					<?php esc_html_e( 'Hello, ', 'theme-dashboard' ); ?>
 
-					<?php
-					$current_user = wp_get_current_user();
-
-					echo esc_html( $current_user->display_name );
-					?>
-
-					<?php esc_html_e( '👋🏻', 'theme-dashboard' ); ?>
-				</div>
-
-				<div class="thd-hero-title">
-					<?php echo wp_kses_post( $this->settings['hero_title'] ); ?>
-
-					<?php if ( $this->pro_status ) { ?>
-						<span class="thd-badge thd-badge-info">pro</span>
-					<?php } else { ?>
-						<span class="thd-badge thd-badge-success">free</span>
-					<?php } ?>
-				</div>
-
-				<?php if ( 'themes' === $location ) { ?>
-					<?php if ( isset( $this->settings['hero_themes_desc'] ) && $this->settings['hero_themes_desc'] ) { ?>
-						<div class="thd-hero-desc">
-							<?php echo wp_kses_post( $this->settings['hero_themes_desc'] ); ?>
-						</div>
-					<?php } ?>
-				<?php } else { ?>
-					<?php if ( isset( $this->settings['hero_desc'] ) && $this->settings['hero_desc'] ) { ?>
-						<div class="thd-hero-desc">
-							<?php echo wp_kses_post( $this->settings['hero_desc'] ); ?>
-						</div>
-					<?php } ?>
-				<?php } ?>
-
-				<div class="thd-hero-actions">
-					<?php
-					$target = 'redirect';
-
-					if ( 'active' === $this->get_plugin_status( $this->starter_plugin_path ) ) {
-						$target = 'active';
-					}
-					?>
-
-					<a href="<?php echo esc_url( add_query_arg( 'page', $this->starter_menu_slug, admin_url( 'themes.php' ) ) ); ?>" data-target="<?php echo esc_attr( $target ); ?>" class="thd-hero-go button button-primary">
-						<?php esc_html_e( 'Starter Sites', 'theme-dashboard' ); ?>
-					</a>
-
-					<?php if ( 'themes.php' === $pagenow && 'themes' === $screen->base ) { ?>
-						<a href="<?php echo esc_url( add_query_arg( 'page', $this->menu_slug, admin_url( 'themes.php' ) ) ); ?>" class="button">
-							<?php esc_html_e( 'Theme Dashboard', 'theme-dashboard' ); ?>
-						</a>
-					<?php } ?>
-				</div>
-
-				<?php if ( 'active' !== $this->get_plugin_status( $this->starter_plugin_path ) ) { ?>
-					<div class="thd-hero-notion">
-						<?php esc_html_e( 'Clicking “Starter Sites” button will install and activate the demo importer plugin.', 'theme-dashboard' ); ?>
-					</div>
-				<?php } ?>
-			</div>
-
-			<?php if ( isset( $this->settings['hero_image'] ) && $this->settings['hero_image'] ) { ?>
-				<div class="thd-hero-image">
-					<span>
-						<img src="<?php echo esc_url( $this->settings['hero_image'] ); ?>">
-					</span>
-				</div>
-			<?php } ?>
-		</div>
 		<?php
 	}
 
@@ -700,52 +625,6 @@ class Sydney_Theme_Dashboard {
 					</div>
 
 					<div class="thd-main-sidebar">
-						<?php if ( ! $this->pro_status ) { ?>
-							<div class="thd-panel thd-panel-promo">
-								<div class="thd-panel-inner">
-									<div class="thd-heading">
-										<?php echo wp_kses_post( $this->settings['promo_title'] ); ?>
-									</div>
-
-									<?php if ( isset( $this->settings['promo_desc'] ) && $this->settings['promo_desc'] ) { ?>
-										<div class="thd-description"><?php echo wp_kses_post( $this->settings['promo_desc'] ); ?></div>
-									<?php } ?>
-
-									<div class="thd-button-wrap">
-										<a href="<?php echo esc_url( $this->settings['promo_link'] ); ?>" class="thd-button button" target="_blank">
-											<?php echo wp_kses_post( $this->settings['promo_button'] ); ?>
-										</a>
-									</div>
-								</div>
-							</div>
-						<?php } ?>
-
-						<div class="thd-panel thd-panel-review">
-							<div class="thd-panel-head">
-								<h3 class="thd-panel-title"><?php esc_html_e( 'Review', 'sydney' ); ?></h3>
-							</div>
-							<div class="thd-panel-content">
-								<img class="thd-stars" src="<?php echo esc_url( get_template_directory_uri() . '/theme-dashboard/images/stars@2x.png' ); ?>" width="136px" height="24px">
-
-								<div class="thd-description"><?php esc_html_e( 'It makes us happy to hear from our users. We would appreciate a review.', 'sydney' ); ?></div>
-
-								<div class="thd-button-wrap">
-									<a href="<?php echo esc_url( $this->settings['review_link'] ); ?>" class="thd-button button" target="_blank">
-										<?php echo esc_html_e( 'Submit a Review', 'sydney' ); ?>
-									</a>
-								</div>
-
-								<div class="thd-line"></div>
-
-								<div class="thd-heading"><?php esc_html_e( 'Have an idea or feedback?', 'sydney' ); ?></div>
-
-								<div class="thd-description"><?php esc_html_e( 'Let us know. We\'d love to hear from you.', 'sydney' ); ?></div>
-
-								<a href="<?php echo esc_url( $this->settings['suggest_idea_link'] ); ?>" class="thd-suggest-idea-link" target="_blank">
-									<?php echo esc_html_e( 'Suggest an Idea', 'sydney' ); ?>
-								</a>
-							</div>
-						</div>
 
 						<div class="thd-panel thd-panel-changelog">
 							<div class="thd-panel-head">
