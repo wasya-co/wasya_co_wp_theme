@@ -2,7 +2,11 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+
 # Normalize
+
+# Utils
+
 # Typography
 # Elements
 # Forms
@@ -21,6 +25,7 @@
 # Media
 	## Captions
 	## Galleries
+# WasyaCo Overrides
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -526,6 +531,13 @@ th {
 .ast-row::after {
   content: "";
   display: table;
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Utils
+--------------------------------------------------------------*/
+.clear {
   clear: both;
 }
 
@@ -3603,4 +3615,50 @@ input[type="color"]::-webkit-color-swatch {
 
 .ast-align-self-stretch {
   align-self: stretch;
+}
+
+/*--------------------------------------------------------------
+# WasyaCo Overrides
+--------------------------------------------------------------*/
+
+/* Current Menu Item is still white, but a:hover is non-white */
+.ast-theme-transparent-header .ast-builder-menu .main-header-menu .current-menu-item > a.menu-link {
+  color: #ffffff;
+}
+
+/*
+ * Sticky, stuck header
+**/
+@keyframes wco-sticky-header {
+  from {
+    margin-top: -50px;
+    background: none;
+  }
+  to {
+    margin-top: 0;
+    background: rgb(255, 255, 255);
+  }
+}
+body.ast-theme-transparent-header header.wco-sticky-header#masthead {
+  position: fixed;
+  top: 0;
+
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 50%);
+
+  animation-name: wco-sticky-header;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+body.ast-theme-transparent-header header.wco-sticky-header .ast-builder-menu .main-header-menu a.menu-link {
+  color: black;
+}
+#masthead-mobile svg {
+  fill: white;
+}
+#masthead-mobile.wco-sticky-header svg {
+  fill: black;
+}
+body.ast-theme-transparent-header header.wco-sticky-header .custom-logo-link img {
+  max-width: 160px;
 }
