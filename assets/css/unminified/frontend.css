@@ -3662,3 +3662,10 @@ body.ast-theme-transparent-header header.wco-sticky-header .ast-builder-menu .ma
 body.ast-theme-transparent-header header.wco-sticky-header .custom-logo-link img {
   max-width: 160px;
 }
+
+
+.black-on-white .elementor-element h2.elementor-heading-title,
+.black-on-white h3 a,
+.black-on-white p {
+  color: black !important; /* @TODO: refactor. _vp_ 2022-09-08 */
+}
