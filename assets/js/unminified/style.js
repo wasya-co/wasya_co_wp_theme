@@ -140,7 +140,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 		var break_point = astra.break_point,
 			headerWrap = document.querySelectorAll('.main-header-bar-wrap');
 
-		if (headerWrap.length > 0) {
+		if (headerWrap.length) {
 			for (var i = 0; i < headerWrap.length; i++) {
 
 				if (headerWrap[i].tagName == 'DIV' && headerWrap[i].classList.contains('main-header-bar-wrap')) {
