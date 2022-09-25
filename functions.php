@@ -112,13 +112,6 @@ if ( is_admin() ) {
 }
 
 /**
- * Metabox additions.
- */
-require_once ASTRA_THEME_DIR . 'inc/metabox/class-astra-meta-boxes.php';
-
-require_once ASTRA_THEME_DIR . 'inc/metabox/class-astra-meta-box-operations.php';
-
-/**
  * Customizer additions.
  * _vp_ 2022-09-25
  */

@@ -1282,7 +1282,6 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			if ( ! defined( 'ASTRA_EXT_VER' ) ) {
 				require ASTRA_THEME_DIR . 'inc/customizer/astra-pro/class-astra-pro-customizer.php';// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-				require ASTRA_THEME_DIR . 'inc/customizer/astra-pro/class-astra-pro-upgrade-link-configs.php';// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			}
 		}
 

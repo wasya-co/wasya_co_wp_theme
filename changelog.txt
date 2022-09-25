@@ -6,4 +6,4 @@ Changelog available here: http://athemes.com/changelog/sydney/
 0.3.0 - 2022-08-24 - rename the theme to wasya_co_wp_theme for real.
 1.0.0 - 2022-09-08 - The 1.x.x versions are based on Astra.
 1.1.0 - 2022-09-25 - removing a lot of Astra internals, will clean up header styles.
-
+1.1.1 - 2022-09-25 - doesnt work, can be made to work soon, but lets start over with a blank theme, see how that goes.

@@ -11,21 +11,7 @@
  * @link        https://wpastra.com/
  * @since       Astra 2.5.0
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
-add_action( 'wp_head', 'astra_pingback_header' );
-
-/**
- * Add a pingback url auto-discovery header for singularly identifiable articles.
- */
-function astra_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
-	}
-}
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /**
  * Schema for <body> tag.
