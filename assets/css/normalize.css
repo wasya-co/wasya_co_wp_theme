@@ -59,9 +59,7 @@ sub {
 sup {
   top: -0.5em;
 }
-img {
-  border-style: none;
-}
+
 button,
 input,
 optgroup,
@@ -431,4 +429,12 @@ iframe,
 object,
 video {
   max-width: 100%;
+}
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
 }
