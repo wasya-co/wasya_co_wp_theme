@@ -8,4 +8,5 @@ Changelog available here: http://athemes.com/changelog/sydney/
 1.1.0 - 2022-09-25 - removing a lot of Astra internals, will clean up header styles.
 1.1.1 - 2022-09-25 - doesnt work, can be made to work soon, but lets start over with a blank theme, see how that goes.
 2.0.0 - 2022-09-25 - Let's create a theme from scratch, cleaning up an existing theme is too messy.
+2.0.1 - 2022-09-27 - 2.0.0 worked, now some destructive changes.
 

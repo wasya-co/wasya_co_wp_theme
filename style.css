@@ -761,8 +761,7 @@ template {
 .alignwide,
 .wide-max-width {
   max-width: var(--responsive--alignwide-width);
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .alignfull,
@@ -785,8 +784,6 @@ template {
   }
 }
 
-.entry-header .post-thumbnail,
-.singular .post-thumbnail,
 .alignfull [class*=inner-container] > .alignwide,
 .alignwide [class*=inner-container] > .alignwide {
   margin-left: auto;
@@ -878,8 +875,6 @@ template {
  * Block & non-gutenberg content wrappers
  * - Set margins
  */
-.entry-header,
-.post-thumbnail,
 .entry-content,
 .entry-footer,
 .author-bio {
@@ -951,8 +946,6 @@ template {
  * Block & non-gutenberg content wrapper children
  * - Sets spacing-unit margins
  */
-.entry-header > *,
-.post-thumbnail > *,
 .page-content > *,
 .comment-content > *,
 .widget > * {
@@ -4195,7 +4188,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: calc(2 * var(--global--spacing-vertical));
+  /* margin-top: calc(2 * var(--global--spacing-vertical)); */
 }
 
 /**
@@ -5956,3 +5949,13 @@ footer {
 .is-IE .post-thumbnail .wp-post-image {
   min-width: auto;
 }
+
+/*
+ * wasya_co
+**/
+
+/* @TODO: limit by slug of page? requires editing a php file. */
+.entry-header .entry-title {
+  font-size: 2em;
+}
+
