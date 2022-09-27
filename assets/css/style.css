@@ -485,7 +485,6 @@ Text Domain: t21
   margin-top: 0;
 }
 
-.site-main > article > *:last-child,
 .site-main > .not-found > *:last-child,
 .entry-content > *:last-child,
 [class*=inner-container] > *:last-child,
