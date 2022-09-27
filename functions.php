@@ -21,7 +21,7 @@ function do_setup() {
   ) );
 
   add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 1568, 9999 );
+  // set_post_thumbnail_size( 1568, 9999 );
 
   register_nav_menus(array(
     'primary' => esc_html__( 'Primary menu' ),
@@ -163,6 +163,8 @@ function do_setup() {
 
   add_filter( 'rss_widget_feed_link', '__return_false' );
 
+  add_filter('gutenberg_can_edit_post', '__return_false');
+  add_filter('use_block_editor_for_post', '__return_false');
 }
 add_action( 'after_setup_theme', 'do_setup' );
 

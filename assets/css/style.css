@@ -1056,7 +1056,7 @@ body {
   font-weight: normal;
   color: var(--global--color-primary);
   text-align: left;
-  background-color: var(--global--color-background);
+  background-color: var(--wco-light-bg-color);
 }
 
 button {
@@ -4006,11 +4006,11 @@ table.wp-calendar-table caption {
   color: var(--wp--style--color--link, var(--global--color-white));
 }
 
-.singular .entry-header {
+/* .singular .entry-header {
   border-bottom: 3px solid var(--global--color-border);
   /* padding-bottom: calc(2 * var(--global--spacing-vertical)); */
   margin-bottom: calc(3 * var(--global--spacing-vertical));
-}
+} */
 
 .home .entry-header {
   border-bottom: none;
@@ -4018,11 +4018,11 @@ table.wp-calendar-table caption {
   margin-bottom: 0;
 }
 
-.singular .has-post-thumbnail .entry-header {
+/* .singular .has-post-thumbnail .entry-header {
   border-bottom: none;
   padding-bottom: calc(1.3 * var(--global--spacing-vertical));
   margin-bottom: 0;
-}
+} */
 
 .no-results.not-found > *:first-child {
   margin-bottom: calc(3 * var(--global--spacing-vertical));
@@ -5951,7 +5951,7 @@ footer {
 }
 
 /*
- * wasya_co
+ * wasya_co _vp_ 2022-09-27
 **/
 
 .entry-header {
@@ -5968,5 +5968,63 @@ footer {
 .entry-header .entry-title {
   font-size: 2em;
   color: white;
+}
+
+:root {
+  --wco-light-bg-color: white;
+  --wco-light-site-menu-link-color: black;
+
+  --wco-dark-bg-color: black;
+  --wco-dark-site-menu-link-color: white;
+}
+
+/*
+ * Sticky, stuck header
+**/
+@keyframes wco-sticky-header {
+  from {
+    margin-top: -50px;
+    background: none;
+  }
+  to {
+    margin-top: 0;
+    background: var(--wco-light-bg-color);
+  }
+}
+@keyframes wco-sticky-header-logo {
+  from {
+    max-width: 300px;
+  }
+  to {
+    max-width: 180px;
+  }
+}
+.wco-sticky-header {
+  position: fixed;
+  top: 0;
+
+  background: var(--wco-light-bg-color);
+  box-shadow: 0px 1px 5px rgb(0 0 0 / 50%);
+
+  animation-name: wco-sticky-header;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+.wco-sticky-header a {
+  color: var(--wcp-right-site-menu-link-color);
+}
+#masthead-mobile svg { /* @TODO: nothing mobile about it */
+  fill: white;
+}
+#masthead-mobile.wco-sticky-header svg {  /* @TODO: nothing mobile about it */
+  fill: black;
+}
+
+.wco-sticky-header .site-logo img {
+  max-width: 180px;
+
+  animation-name: wco-sticky-header-logo;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
 }
 
