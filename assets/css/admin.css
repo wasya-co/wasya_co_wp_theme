@@ -1,0 +1,6 @@
+
+
+/* fixes a bug in admin where I cant click 'Delete | Done' */
+.CodeMirror-scroll {
+  padding-bottom: 0 !important;
+}

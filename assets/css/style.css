@@ -95,6 +95,14 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
 /* Variables */
 :root {
 
+  --wco-light-bg-color: white;
+  --wco-light-site-menu-link-color: black;
+
+  --wco-dark-bg-color: black;
+  --wco-dark-link-color: #00AC97;
+  --wco-dark-text-color: white;
+  --wco-dark-site-menu-link-color: white;
+
   --debug-border: 1px solid red;
 
   /* Font Family */
@@ -276,13 +284,6 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
   --pagination--font-size: var(--global--font-size-lg);
   --pagination--font-weight: normal;
   --pagination--font-weight-strong: 600;
-
-  /* Footer */
-  --footer--color-text: var(--global--color-primary);
-  --footer--color-link: var(--global--color-primary);
-  --footer--color-link-hover: var(--global--color-primary-hover);
-  --footer--font-family: var(--global--font-primary);
-  --footer--font-size: var(--global--font-size-sm);
 
   /* Block: Pull quote */
   --pullquote--font-family: var(--global--font-primary);
@@ -756,7 +757,6 @@ template {
 .pagination,
 .comments-pagination,
 .post-navigation,
-.site-footer,
 .site-header,
 .alignwide,
 .wide-max-width {
@@ -828,8 +828,7 @@ template {
  * Top Level Wrappers (header, main, footer)
  * - Set vertical padding and horizontal margins
  */
-.widget-area,
-.site-footer {
+.widget-area {
   padding-top: var(--global--spacing-vertical);
   padding-bottom: var(--global--spacing-vertical);
   margin-left: auto;
@@ -928,14 +927,11 @@ template {
   margin-bottom: 0;
 }
 
-.site-footer > *,
 .widget-area > * {
   margin-top: calc(0.666 * var(--global--spacing-vertical));
   margin-bottom: calc(0.666 * var(--global--spacing-vertical));
 }
 @media only screen and (min-width: 482px) {
-
-  .site-footer > *,
   .widget-area > * {
     margin-top: var(--global--spacing-vertical);
     margin-bottom: var(--global--spacing-vertical);
@@ -1072,9 +1068,7 @@ button {
 .site-header:before,
 .site-header:after,
 .site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.site-content:after {
   content: "";
   display: table;
   table-layout: fixed;
@@ -1084,8 +1078,7 @@ button {
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
-.site-content:after,
-.site-footer:after {
+.site-content:after {
   clear: both;
 }
 
@@ -3925,22 +3918,29 @@ table.wp-calendar-table caption {
   }
 }
 
+/*
+ * .site-footer
+**/
 .site-footer {
-  padding-top: 0;
-  padding-bottom: calc(1.7 * var(--global--spacing-vertical));
+  background-color: #292929;
+  color: var(--wco-dark-text-color);
+  font-size: 0.8em;
+  padding: 1em 0;
+}
+.site-footer a {
+  color: var(--wco-dark-link-color);
 }
 
-.no-widgets .site-footer {
+/* .no-widgets .site-footer {
   margin-top: calc(6 * var(--global--spacing-vertical));
 }
 @media only screen and (max-width: 481px) {
-
   .no-widgets .site-footer {
     margin-top: calc(3 * var(--global--spacing-vertical));
   }
-}
+} */
 
-.site-footer > .site-info {
+/* .site-footer > .site-info {
   padding-top: var(--global--spacing-vertical);
   color: var(--footer--color-text);
   font-family: var(--footer--font-family);
@@ -3959,7 +3959,6 @@ table.wp-calendar-table caption {
   margin-top: calc(0.5 * var(--global--spacing-vertical));
 }
 @media only screen and (min-width: 822px) {
-
   .site-footer > .site-info {
     display: flex;
     align-items: center;
@@ -3996,21 +3995,9 @@ table.wp-calendar-table caption {
 
 .site-footer > .site-info a:focus {
   color: var(--footer--color-link-hover);
-}
-
-.is-dark-theme .site-footer > .site-info a:focus {
-  color: var(--wp--style--color--link, var(--global--color-background));
-}
-
-.has-background-white .site-footer > .site-info a:focus {
-  color: var(--wp--style--color--link, var(--global--color-white));
-}
-
-/* .singular .entry-header {
-  border-bottom: 3px solid var(--global--color-border);
-  /* padding-bottom: calc(2 * var(--global--spacing-vertical)); */
-  margin-bottom: calc(3 * var(--global--spacing-vertical));
 } */
+
+
 
 .home .entry-header {
   border-bottom: none;
@@ -5902,54 +5889,6 @@ footer {
   max-width: none;
 }
 
-.is-IE.is-dark-theme {
-  color: #fff;
-}
-
-.is-IE.is-dark-theme *,
-.is-IE.is-dark-theme a,
-.is-IE.is-dark-theme .site-description,
-.is-IE.is-dark-theme .entry-title,
-.is-IE.is-dark-theme .entry-footer,
-.is-IE.is-dark-theme .widget-area,
-.is-IE.is-dark-theme .post-navigation .meta-nav,
-.is-IE.is-dark-theme .footer-navigation-wrapper li a:link,
-.is-IE.is-dark-theme .site-footer > .site-info,
-.is-IE.is-dark-theme .site-footer > .site-info a,
-.is-IE.is-dark-theme .site-footer > .site-info a:visited {
-  color: #fff;
-}
-
-.is-IE.is-dark-theme .sub-menu-toggle svg,
-.is-IE.is-dark-theme .sub-menu-toggle path,
-.is-IE.is-dark-theme .post-navigation .meta-nav svg,
-.is-IE.is-dark-theme .post-navigation .meta-nav path {
-  fill: #fff;
-}
-
-.is-IE.is-dark-theme .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
-  background: #000;
-}
-@media only screen and (max-width: 481px) {
-
-  .is-IE.is-dark-theme.primary-navigation-open .primary-navigation > .primary-menu-container,
-  .is-IE.is-dark-theme.primary-navigation-open .menu-button-container {
-    background-color: #000;
-  }
-}
-
-.is-IE.is-dark-theme .skip-link:focus {
-  color: #21759b;
-}
-
-.is-IE .navigation .nav-links {
-  display: block;
-}
-
-.is-IE .post-thumbnail .wp-post-image {
-  min-width: auto;
-}
-
 /*
  * wasya_co _vp_ 2022-09-27
 **/
@@ -5970,13 +5909,6 @@ footer {
   color: white;
 }
 
-:root {
-  --wco-light-bg-color: white;
-  --wco-light-site-menu-link-color: black;
-
-  --wco-dark-bg-color: black;
-  --wco-dark-site-menu-link-color: white;
-}
 
 /*
  * Sticky, stuck header
@@ -6027,4 +5959,3 @@ footer {
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
-

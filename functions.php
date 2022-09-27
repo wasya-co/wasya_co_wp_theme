@@ -165,16 +165,22 @@ function do_setup() {
 
   add_filter('gutenberg_can_edit_post', '__return_false');
   add_filter('use_block_editor_for_post', '__return_false');
+  register_nav_menu('footer', 'footer');
 }
 add_action( 'after_setup_theme', 'do_setup' );
+
+function wco_admin_styles() {
+  wp_enqueue_style('admin-styles', get_template_directory_uri() . '/assets/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'wco_admin_styles');
 
 /**
  * Register widget area.
  */
 function twenty_twenty_one_widgets_init() {
   register_sidebar(array(
-    'name'          => esc_html__( 'Footer' ),
-    'id'            => 'sidebar-1',
+    'name'          => 'Footer Top',
+    'id'            => 'footer-top',
     'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
