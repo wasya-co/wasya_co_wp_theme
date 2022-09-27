@@ -5,8 +5,10 @@
 
 if ( is_active_sidebar( 'footer-top' ) ) : ?>
 
-  <aside class="widget-area">
-    <?php dynamic_sidebar( 'footer-top' ); ?>
-  </aside>
+  <footer class='footer-top' >
+    <aside class="widget-area alignwide">
+      <?php dynamic_sidebar( 'footer-top' ); ?>
+    </aside>
+  </footer>
 
 <?php endif; ?>
