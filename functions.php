@@ -6,82 +6,37 @@
 function do_setup() {
   load_theme_textdomain( 't21', get_template_directory() . '/languages' );
 
-  // Add default posts and comments RSS feed links to head.
-  add_theme_support( 'automatic-feed-links' );
+  add_theme_support( 'automatic-feed-links' ); // Add default posts and comments RSS feed links to head.
 
-  /*
-    * Let WordPress manage the document title.
-    * This theme does not use a hard-coded <title> tag in the document head,
-    * WordPress will provide it for us.
-    */
-  add_theme_support( 'title-tag' );
+  add_theme_support( 'title-tag' ); // Let WordPress manage the document title.
 
-  /**
-   * Add post-formats support.
-   */
-  add_theme_support(
-    'post-formats',
-    array(
-      'link',
-      'aside',
-      'gallery',
-      'image',
-      'quote',
-      'video',
-      'audio',
-    )
-  );
+  add_theme_support('post-formats', array(
+    'link',
+    'aside',
+    'gallery',
+    'image',
+    'quote',
+    'video',
+    'audio',
+  ) );
 
-  /*
-    * Enable support for Post Thumbnails on posts and pages.
-    *
-    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-    */
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( 1568, 9999 );
 
-  register_nav_menus(
-    array(
-      'primary' => esc_html__( 'Primary menu' ),
-      'footer'  => esc_html__( 'Secondary menu' ),
-    )
-  );
+  register_nav_menus(array(
+    'primary' => esc_html__( 'Primary menu' ),
+    'footer'  => esc_html__( 'Secondary menu' ),
+  ) );
 
-  /*
-    * Switch default core markup for search form, comment form, and comments
-    * to output valid HTML5.
-    */
-  add_theme_support(
-    'html5',
-    array(
-      'comment-form',
-      'comment-list',
-      'gallery',
-      'caption',
-      'style',
-      'script',
-      'navigation-widgets',
-    )
-  );
-
-  /*
-    * Add support for core custom logo.
-    *
-    * @link https://codex.wordpress.org/Theme_Logo
-    */
-  $logo_width  = 300;
-  $logo_height = 100;
-
-  add_theme_support(
-    'custom-logo',
-    array(
-      'height'               => $logo_height,
-      'width'                => $logo_width,
-      'flex-width'           => true,
-      'flex-height'          => true,
-      'unlink-homepage-logo' => true,
-    )
-  );
+  add_theme_support('html5', array(
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+    'style',
+    'script',
+    'navigation-widgets',
+  ) );
 
   add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -207,6 +162,7 @@ function do_setup() {
   add_theme_support( 'custom-spacing' );
 
   add_filter( 'rss_widget_feed_link', '__return_false' );
+
 }
 add_action( 'after_setup_theme', 'do_setup' );
 
@@ -312,22 +268,19 @@ function do_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'do_enqueue_scripts' );
 
-/**
- * Enqueue block editor script.
- */
-function twentytwentyone_block_editor_script() {
-  wp_enqueue_script( 'twentytwentyone-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
-}
-add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script' );
+// /**
+//  * Enqueue block editor script.
+//  */
+// function twentytwentyone_block_editor_script() {
+//   wp_enqueue_script( 'twentytwentyone-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+// }
+// add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script' );
 
 /**
  * Fix skip link focus in IE11.
  *
  * This does not enqueue the script because it is tiny and because it is only for IE11,
  * thus it does not warrant having an entire dedicated blocking script being loaded.
- *
- * @since Twenty Twenty-One 1.0
- *
  * @link https://git.io/vWdr2
  */
 function twenty_twenty_one_skip_link_focus_fix() {
@@ -375,9 +328,6 @@ require get_template_directory() . '/inc/block-styles.php';
 require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
 new Twenty_Twenty_One_Dark_Mode();
 
-/**
- * Enqueue scripts for the customizer preview.
- */
 function twentytwentyone_customize_preview_init() {
   wp_enqueue_script(
     'twentytwentyone-customize-helpers',
@@ -396,9 +346,6 @@ function twentytwentyone_customize_preview_init() {
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
 
-/**
- * Enqueue scripts for the customizer.
- */
 function twentytwentyone_customize_controls_enqueue_scripts() {
   wp_enqueue_script(
     'twentytwentyone-customize-helpers',
@@ -410,14 +357,7 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
 
-/**
- * Add "is-IE" class to body if the user is on Internet Explorer.
- *
- * @since Twenty Twenty-One 1.0
- *
- * @return void
- */
-function twentytwentyone_add_ie_class() {
+function twentytwentyone_add_ie_class() { // Add "is-IE" class to body if the user is on Internet Explorer.
   ?>
   <script>
   if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
@@ -428,16 +368,6 @@ function twentytwentyone_add_ie_class() {
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
-if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
-  /**
-   * Retrieves the list item separator based on the locale.
-   *
-   * Added for backward compatibility to support pre-6.0.0 WordPress versions.
-   *
-   * @since 6.0.0
-   */
-  function wp_get_list_item_separator() {
-    /* translators: Used between list items, there is a space after the comma. */
-    return __( ', ' );
-  }
-endif;
+function wp_get_list_item_separator() {
+  return __( ', ' );
+}
