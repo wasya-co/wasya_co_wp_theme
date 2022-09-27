@@ -1,14 +1,8 @@
 <?php
-/**
- * Functions and definitions
- *
- */
 
-// This theme requires WordPress 5.3 or later.
-if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
-  require get_template_directory() . '/inc/back-compat.php';
-}
-
+/*
+ * _vp_ 2022-09-27
+**/
 function do_setup() {
   load_theme_textdomain( 't21', get_template_directory() . '/languages' );
 
@@ -38,6 +32,11 @@ function do_setup() {
     )
   );
 
+  /*
+    * Enable support for Post Thumbnails on posts and pages.
+    *
+    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+    */
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size( 1568, 9999 );
 
@@ -88,46 +87,8 @@ function do_setup() {
 
   add_theme_support( 'wp-block-styles' );
 
+  // Add support for full and wide align images.
   add_theme_support( 'align-wide' );
-
-  // Add custom editor font sizes.
-  add_theme_support(
-    'editor-font-sizes',
-    array(
-      array(
-        'name'      => esc_html__( 'Extra small' ),
-        'shortName' => esc_html_x( 'XS', 'Font size' ),
-        'size'      => 16,
-        'slug'      => 'extra-small',
-      ),
-      array(
-        'name'      => esc_html__( 'Small' ),
-        'shortName' => esc_html_x( 'S', 'Font size' ),
-        'size'      => 18,
-        'slug'      => 'small',
-      ),
-      array(
-        'name'      => esc_html__( 'Normal' ),
-        'shortName' => esc_html_x( 'M', 'Font size' ),
-        'size'      => 20,
-        'slug'      => 'normal',
-      ),
-      array(
-        'name'      => esc_html__( 'Large' ),
-        'shortName' => esc_html_x( 'L', 'Font size' ),
-        'size'      => 24,
-        'slug'      => 'large',
-      ),
-    )
-  );
-
-  // Custom background color.
-  add_theme_support(
-    'custom-background',
-    array(
-      'default-color' => 'd1e4dd',
-    )
-  );
 
   // Editor color palette.
   $black     = '#000000';
@@ -141,139 +102,132 @@ function do_setup() {
   $yellow    = '#EEEADD';
   $white     = '#FFFFFF';
 
-  add_theme_support(
-    'editor-color-palette',
+  add_theme_support('editor-color-palette', array(
     array(
-      array(
-        'name'  => esc_html__( 'Black' ),
-        'slug'  => 'black',
-        'color' => $black,
-      ),
-      array(
-        'name'  => esc_html__( 'Dark gray' ),
-        'slug'  => 'dark-gray',
-        'color' => $dark_gray,
-      ),
-      array(
-        'name'  => esc_html__( 'Gray' ),
-        'slug'  => 'gray',
-        'color' => $gray,
-      ),
-      array(
-        'name'  => esc_html__( 'Green' ),
-        'slug'  => 'green',
-        'color' => $green,
-      ),
-      array(
-        'name'  => esc_html__( 'Blue' ),
-        'slug'  => 'blue',
-        'color' => $blue,
-      ),
-      array(
-        'name'  => esc_html__( 'Purple' ),
-        'slug'  => 'purple',
-        'color' => $purple,
-      ),
-      array(
-        'name'  => esc_html__( 'Red' ),
-        'slug'  => 'red',
-        'color' => $red,
-      ),
-      array(
-        'name'  => esc_html__( 'Orange' ),
-        'slug'  => 'orange',
-        'color' => $orange,
-      ),
-      array(
-        'name'  => esc_html__( 'Yellow' ),
-        'slug'  => 'yellow',
-        'color' => $yellow,
-      ),
-      array(
-        'name'  => esc_html__( 'White' ),
-        'slug'  => 'white',
-        'color' => $white,
-      ),
-    )
-  );
+      'name'  => esc_html__( 'Black' ),
+      'slug'  => 'black',
+      'color' => $black,
+    ),
+    array(
+      'name'  => esc_html__( 'Dark gray' ),
+      'slug'  => 'dark-gray',
+      'color' => $dark_gray,
+    ),
+    array(
+      'name'  => esc_html__( 'Gray' ),
+      'slug'  => 'gray',
+      'color' => $gray,
+    ),
+    array(
+      'name'  => esc_html__( 'Green' ),
+      'slug'  => 'green',
+      'color' => $green,
+    ),
+    array(
+      'name'  => esc_html__( 'Blue' ),
+      'slug'  => 'blue',
+      'color' => $blue,
+    ),
+    array(
+      'name'  => esc_html__( 'Purple' ),
+      'slug'  => 'purple',
+      'color' => $purple,
+    ),
+    array(
+      'name'  => esc_html__( 'Red' ),
+      'slug'  => 'red',
+      'color' => $red,
+    ),
+    array(
+      'name'  => esc_html__( 'Orange' ),
+      'slug'  => 'orange',
+      'color' => $orange,
+    ),
+    array(
+      'name'  => esc_html__( 'Yellow' ),
+      'slug'  => 'yellow',
+      'color' => $yellow,
+    ),
+    array(
+      'name'  => esc_html__( 'White' ),
+      'slug'  => 'white',
+      'color' => $white,
+    ),
+  ) );
 
-  add_theme_support(
-    'editor-gradient-presets',
+  add_theme_support('editor-gradient-presets', array(
     array(
-      array(
-        'name'     => esc_html__( 'Purple to yellow' ),
-        'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
-        'slug'     => 'purple-to-yellow',
-      ),
-      array(
-        'name'     => esc_html__( 'Yellow to purple' ),
-        'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
-        'slug'     => 'yellow-to-purple',
-      ),
-      array(
-        'name'     => esc_html__( 'Green to yellow' ),
-        'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
-        'slug'     => 'green-to-yellow',
-      ),
-      array(
-        'name'     => esc_html__( 'Yellow to green' ),
-        'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
-        'slug'     => 'yellow-to-green',
-      ),
-      array(
-        'name'     => esc_html__( 'Red to yellow' ),
-        'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
-        'slug'     => 'red-to-yellow',
-      ),
-      array(
-        'name'     => esc_html__( 'Yellow to red' ),
-        'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
-        'slug'     => 'yellow-to-red',
-      ),
-      array(
-        'name'     => esc_html__( 'Purple to red' ),
-        'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
-        'slug'     => 'purple-to-red',
-      ),
-      array(
-        'name'     => esc_html__( 'Red to purple' ),
-        'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
-        'slug'     => 'red-to-purple',
-      ),
-    )
-  );
+      'name'     => esc_html__( 'Purple to yellow' ),
+      'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
+      'slug'     => 'purple-to-yellow',
+    ),
+    array(
+      'name'     => esc_html__( 'Yellow to purple' ),
+      'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
+      'slug'     => 'yellow-to-purple',
+    ),
+    array(
+      'name'     => esc_html__( 'Green to yellow' ),
+      'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
+      'slug'     => 'green-to-yellow',
+    ),
+    array(
+      'name'     => esc_html__( 'Yellow to green' ),
+      'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
+      'slug'     => 'yellow-to-green',
+    ),
+    array(
+      'name'     => esc_html__( 'Red to yellow' ),
+      'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
+      'slug'     => 'red-to-yellow',
+    ),
+    array(
+      'name'     => esc_html__( 'Yellow to red' ),
+      'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
+      'slug'     => 'yellow-to-red',
+    ),
+    array(
+      'name'     => esc_html__( 'Purple to red' ),
+      'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
+      'slug'     => 'purple-to-red',
+    ),
+    array(
+      'name'     => esc_html__( 'Red to purple' ),
+      'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
+      'slug'     => 'red-to-purple',
+    ),
+  ) );
 
   add_theme_support( 'responsive-embeds' );
 
   add_theme_support( 'custom-line-height' );
+
+  add_theme_support( 'experimental-link-color' );
+
+  add_theme_support( 'custom-spacing' );
+
+  add_filter( 'rss_widget_feed_link', '__return_false' );
 }
 add_action( 'after_setup_theme', 'do_setup' );
 
 /**
  * Register widget area.
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function twenty_twenty_one_widgets_init() {
-  register_sidebar(
-    array(
-      'name'          => esc_html__( 'Footer' ),
-      'id'            => 'sidebar-1',
-      'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
-      'before_widget' => '<section id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</section>',
-      'before_title'  => '<h2 class="widget-title">',
-      'after_title'   => '</h2>',
-    )
-  );
+  register_sidebar(array(
+    'name'          => esc_html__( 'Footer' ),
+    'id'            => 'sidebar-1',
+    'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
 }
 add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * @global int $content_width Content width.
- *
- * @return void
  */
 function twenty_twenty_one_content_width() {
   // This variable is intended to be overruled from themes.
@@ -285,11 +239,21 @@ add_action( 'after_setup_theme', 'twenty_twenty_one_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
- * _vp_ 2022-09-26
- *
  */
 function do_enqueue_scripts() {
-  wp_enqueue_script( 'wasya_co_js', get_template_directory_uri() . '/assets/js/wasya_co.js' );
+  // Note, the is_IE global variable is defined by WordPress and is used
+  // to detect if the current browser is internet explorer.
+  global $is_IE, $wp_scripts;
+  if ( $is_IE ) {
+    // If IE 11 or below, use a flattened stylesheet with static values replacing CSS Variables.
+    wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
+  } else {
+    // If not IE, use the standard stylesheet.
+    wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+  }
+
+  // RTL styles.
+  wp_style_add_data( 'twenty-twenty-one-style', 'rtl', 'replace' );
 
   // Print styles.
   wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
@@ -307,6 +271,7 @@ function do_enqueue_scripts() {
     wp_get_theme()->get( 'Version' ),
     true
   );
+
   // Register the IE11 polyfill loader.
   wp_register_script(
     'twenty-twenty-one-ie11-polyfills',
@@ -349,7 +314,6 @@ add_action( 'wp_enqueue_scripts', 'do_enqueue_scripts' );
 
 /**
  * Enqueue block editor script.
- *
  */
 function twentytwentyone_block_editor_script() {
   wp_enqueue_script( 'twentytwentyone-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
@@ -367,7 +331,6 @@ add_action( 'enqueue_block_editor_assets', 'twentytwentyone_block_editor_script'
  * @link https://git.io/vWdr2
  */
 function twenty_twenty_one_skip_link_focus_fix() {
-
   // If SCRIPT_DEBUG is defined and true, print the unminified file.
   if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
     echo '<script>';
@@ -392,19 +355,29 @@ new Twenty_Twenty_One_Custom_Colors();
 // Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
 
+// Menu functions and filters.
 require get_template_directory() . '/inc/menu-functions.php';
 
+// Custom template tags for the theme.
 require get_template_directory() . '/inc/template-tags.php';
 
 // Customizer additions.
 require get_template_directory() . '/classes/class-twenty-twenty-one-customize.php';
 new Twenty_Twenty_One_Customize();
 
+// Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
 
+// Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
 
+// Dark Mode.
+require_once get_template_directory() . '/classes/class-twenty-twenty-one-dark-mode.php';
+new Twenty_Twenty_One_Dark_Mode();
 
+/**
+ * Enqueue scripts for the customizer preview.
+ */
 function twentytwentyone_customize_preview_init() {
   wp_enqueue_script(
     'twentytwentyone-customize-helpers',
@@ -423,7 +396,9 @@ function twentytwentyone_customize_preview_init() {
 }
 add_action( 'customize_preview_init', 'twentytwentyone_customize_preview_init' );
 
-
+/**
+ * Enqueue scripts for the customizer.
+ */
 function twentytwentyone_customize_controls_enqueue_scripts() {
   wp_enqueue_script(
     'twentytwentyone-customize-helpers',
@@ -434,7 +409,6 @@ function twentytwentyone_customize_controls_enqueue_scripts() {
   );
 }
 add_action( 'customize_controls_enqueue_scripts', 'twentytwentyone_customize_controls_enqueue_scripts' );
-
 
 /**
  * Add "is-IE" class to body if the user is on Internet Explorer.
@@ -454,7 +428,16 @@ function twentytwentyone_add_ie_class() {
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
-function wp_get_list_item_separator() {
-  /* translators: Used between list items, there is a space after the comma. */
-  return __( ', ' );
-}
+if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
+  /**
+   * Retrieves the list item separator based on the locale.
+   *
+   * Added for backward compatibility to support pre-6.0.0 WordPress versions.
+   *
+   * @since 6.0.0
+   */
+  function wp_get_list_item_separator() {
+    /* translators: Used between list items, there is a space after the comma. */
+    return __( ', ' );
+  }
+endif;
