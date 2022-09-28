@@ -11,7 +11,9 @@
 
   <footer class="site-footer" >
     <div class='alignwide site-info'>
-      Copyright (c) 2017-2022 Wasya Co | <a href="/terms-of-service">Terms of Service</a> &nbsp; &nbsp; v2.0.1
+      <span>Copyright (c) 2017-2022 Wasya Co</span>
+      <a href="/terms-of-service"><span>Terms of Service</span></a>
+      <span>v2.0.1</span>
     </div>
   </footer>
 

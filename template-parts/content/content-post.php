@@ -1,7 +1,7 @@
 <?php
 /**
- * Template part for displaying posts
- */
+ * Displays a post
+**/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
