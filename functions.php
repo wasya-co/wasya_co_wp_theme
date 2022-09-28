@@ -352,6 +352,8 @@ function twentytwentyone_add_ie_class() { // Add "is-IE" class to body if the us
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
-function wp_get_list_item_separator() {
-  return __( ', ' );
+if ( ! function_exists( 'wp_get_list_item_separator' ) ) {
+  function wp_get_list_item_separator() {
+    return __( ', ' );
+  }
 }
