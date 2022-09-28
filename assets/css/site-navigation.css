@@ -1,5 +1,12 @@
 
 
+#masthead-mobile svg { /* @TODO: nothing mobile about it */
+  fill: white;
+}
+#masthead-mobile.wco-sticky-header svg {  /* @TODO: nothing mobile about it */
+  fill: black;
+}
+
 .menu-button-container {
   display: none;
   justify-content: space-between;
@@ -94,7 +101,7 @@
   transform: translateY(var(--global--spacing-vertical));
 }
 
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 852px) {
 
   .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo {
     position: absolute;
@@ -245,7 +252,7 @@
   padding-left: 0;
   position: relative;
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 852px) {
 
   .primary-navigation > div > .menu-wrapper {
     padding-bottom: 100px;
@@ -261,7 +268,7 @@
   position: relative;
   width: 100%;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
 
   .primary-navigation > div > .menu-wrapper li {
     margin: 0;
@@ -288,7 +295,7 @@
 .primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
   outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 852px) {
 
   .primary-navigation > div > .menu-wrapper .sub-menu-toggle {
     display: none;
@@ -322,13 +329,13 @@
 .primary-navigation > div > .menu-wrapper > li > .sub-menu {
   position: relative;
 }
-@media only screen and (min-width: 482px) and (prefers-reduced-motion: no-preference) {
+@media only screen and (min-width: 852px) and (prefers-reduced-motion: no-preference) {
 
   .primary-navigation > div > .menu-wrapper > li > .sub-menu {
     transition: all 0.5s ease;
   }
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
   .primary-navigation > div > .menu-wrapper > li > .sub-menu {
     left: 0;
     margin: 0;
@@ -404,7 +411,7 @@
 .primary-navigation .primary-menu > .menu-item:hover > a {
   color: var(--primary-nav--color-link-hover);
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
 
   .primary-navigation .primary-menu-container {
     margin-right: calc(0px - var(--primary-nav--padding));
@@ -441,7 +448,7 @@
 .primary-navigation a + svg {
   fill: var(--site-header-link-color);
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
   .primary-navigation a {
     font-family: var(--primary-nav--font-family);
     font-size: var(--primary-nav--font-size);
@@ -485,13 +492,13 @@
 .primary-navigation .sub-menu .sub-menu {
   border: none;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
 
   .primary-navigation .sub-menu > .menu-item > .sub-menu {
     padding: 0;
   }
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 852px) {
 
   .primary-navigation .sub-menu .menu-item:last-child {
     margin-bottom: 0;
@@ -504,7 +511,7 @@
   font-size: var(--primary-nav--font-size-sub-menu-mobile);
   font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
 
   .primary-navigation .sub-menu .menu-item > a {
     font-size: var(--primary-nav--font-size-sub-menu);
@@ -515,7 +522,7 @@
 .primary-navigation .menu-item-has-children > .svg-icon {
   display: none;
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 852px) {
 
   .primary-navigation .menu-item-has-children > .svg-icon {
     display: inline-block;
@@ -563,6 +570,7 @@
 }
 .wco-sticky-header {
   position: fixed;
+  height: 80px;
   top: 0;
 
   background: var(--wco-light-bg-color);
@@ -573,15 +581,8 @@
   animation-timing-function: ease-in-out;
 }
 .wco-sticky-header a {
-  color: var(--wcp-right-site-menu-link-color);
+  color: var(--wco-light-link-color);
 }
-#masthead-mobile svg { /* @TODO: nothing mobile about it */
-  fill: white;
-}
-#masthead-mobile.wco-sticky-header svg {  /* @TODO: nothing mobile about it */
-  fill: black;
-}
-
 .wco-sticky-header .site-logo img {
   max-width: 180px;
 
