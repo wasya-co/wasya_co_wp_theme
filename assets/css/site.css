@@ -2046,6 +2046,9 @@ h1.page-title {
 .overflow-margin {
   margin: -50px auto;
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
+  background: var(--wco-light-bg-color);
+  padding: 1em;
+  position: relative;
 }
 @media only screen and (max-width: 482px) {
   .overflow-margin {
