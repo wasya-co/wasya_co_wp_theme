@@ -221,9 +221,6 @@
   bottom: 0;
   position: fixed;
 }
-html {
-  margin-bottom: 32px;
-}
 .widget-area, .pagination, .comments-pagination, .post-navigation, .site-header, .alignwide, .wide-max-width {
   max-width: var(--responsive--alignwide-width);
   margin: auto;
