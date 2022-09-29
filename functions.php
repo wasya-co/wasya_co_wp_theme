@@ -252,7 +252,12 @@ function do_enqueue_scripts() {
     true
   );
 
-  wp_enqueue_script('wasya_co_js', get_template_directory_uri() . '/assets/js/wasya_co.js');
+  wp_enqueue_script('wasya_co_js',
+    get_template_directory_uri() . '/assets/js/wasya_co.js',
+    array('jquery'),
+    wp_get_theme()->get( 'Version' ),
+    true // in footer
+  );
 }
 add_action( 'wp_enqueue_scripts', 'do_enqueue_scripts' );
 
