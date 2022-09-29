@@ -440,14 +440,6 @@
     transform: translateY(0) translateX(100%);
   }
 
-  .admin-bar .has-logo.has-title-and-tagline .primary-navigation > .primary-menu-container {
-    top: var(--global--admin-bar--height);
-  }
-
-  .admin-bar .primary-navigation > .primary-menu-container {
-    height: calc(100vh - var(--global--admin-bar--height));
-  }
-
   .primary-navigation > .primary-menu-container:focus {
     border: 2px solid var(--global--color-primary);
   }

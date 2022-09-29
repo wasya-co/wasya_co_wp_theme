@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+  --global--admin-bar--height: 0px;
 
   --wco-light-border-color: #00AC97;
   --wco-light-border: 1px dashed var(--wco-light-border-color);
@@ -242,6 +243,15 @@
     --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
   }
+}
+
+#wpadminbar {
+  top: auto;
+  bottom: 0;
+  position: fixed;
+}
+html {
+  margin-bottom: 32px;
 }
 
 .widget-area,
