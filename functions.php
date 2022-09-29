@@ -6,6 +6,7 @@
 function do_setup() {
   load_theme_textdomain( 't21', get_template_directory() . '/languages' );
 
+  add_theme_support( 'custom-logo' );
   add_theme_support( 'automatic-feed-links' ); // Add default posts and comments RSS feed links to head.
 
   add_theme_support( 'title-tag' ); // Let WordPress manage the document title.
