@@ -2,9 +2,7 @@
 /**
  * Displays the post header
  *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
- */
+ * Is this trash? _vp_ 2022-09-29
+**/
 
 the_title( '<h1 class="entry-title">', '</h1>' );

@@ -1,9 +1,12 @@
 <?php
 
+$hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/29191326/1920x450-dark-galaxy-1.jpg";
+
 /*
  * _vp_ 2022-09-27
 **/
 function do_setup() {
+  include get_template_directory() . '/inc/category-meta-fields.php';
   load_theme_textdomain( 't21', get_template_directory() . '/languages' );
 
   add_theme_support( 'custom-logo' );

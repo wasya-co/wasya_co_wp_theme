@@ -1,7 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
   $ = jQuery
-});
+
+
+  window.onscroll = function() {
+    stickyHeader()
+  }
+  stickyHeader()
+
+})
 
 /*
  * From: https://www.w3schools.com/howto/howto_js_sticky_header.asp
@@ -20,6 +27,4 @@ function stickyHeader() {
     }
   })
 }
-window.onscroll = function() {
-  stickyHeader()
-}
+

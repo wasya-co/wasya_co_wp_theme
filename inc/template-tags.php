@@ -59,55 +59,47 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
   function twenty_twenty_one_entry_meta_footer() {
     if ( 'post' !== get_post_type() ) { return; }
 
-
-    if ( is_single() ) {
-      ?>
-      <div class='metaline'>
-
-        <? twenty_twenty_one_posted_on(); ?>
-        <? twenty_twenty_one_posted_by(); ?>
-        <div class='edit-box'>
-          <a href="/wp-admin/edit.php">Admin</a>
-          <? edit_post_link(
-            sprintf("Edit %s", '<span class="screen-reader-text">' . get_the_title() . '</span>'),
-            '<span class="edit-link">',
-            '</span>'
-          ); ?>
-        </div>
-
-        </div>
-      <?
-
-      if ( has_category() || has_tag() ) {
-
-        echo '<div class="post-taxonomies">';
-
-        $categories_list = get_the_category_list( wp_get_list_item_separator() );
-        if ( $categories_list ) {
-          printf(
-            /* translators: %s: List of categories. */
-            '<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
-            $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-          );
-        }
-
-        $tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
-        if ( $tags_list ) {
-          printf(
-            /* translators: %s: List of tags. */
-            '<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
-            $tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-          );
-        }
-        echo '</div>';
-      }
-
-    } else {
-      ?>
+    if ( is_user_logged_in() ) : ?>
       <div class='edit-box'>
+        <div>is_single ? <?= is_single() ? 'Y' : 'N' ?></div>
+        <div>Id: <? the_ID(); ?></div>
         <a href="/wp-admin/edit.php">Admin</a>
+        <? edit_post_link(
+          sprintf("Edit %s", '<span class="screen-reader-text">' . get_the_title() . '</span>'),
+          '<span class="edit-link">',
+          '</span>'
+        ); ?>
       </div>
+    <? endif; ?>
+
+    <div class='metaline'>
       <?
+        twenty_twenty_one_posted_on();
+        twenty_twenty_one_posted_by();
+
+        if ( has_category() || has_tag() ) {
+          echo '<div class="post-taxonomies">';
+
+          $categories_list = get_the_category_list( wp_get_list_item_separator() );
+          if ( $categories_list ) {
+            printf(
+              /* translators: %s: List of categories. */
+              '<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
+              $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+            );
+          }
+
+          $tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
+          if ( $tags_list ) {
+            printf('<span class="tags-links">Tagged %s</span>', $tags_list );
+          }
+          echo '</div>';
+        }
+      ?>
+    </div>
+    <?
+
+    if ( !is_single() ) {
 
       if ( is_sticky() ) {
         echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'twentytwentyone' ) . '</p>';
@@ -117,45 +109,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
       if ( 'aside' === $post_format || 'status' === $post_format ) {
         echo '<p><a href="' . esc_url( get_permalink() ) . '">' . twenty_twenty_one_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
       }
-
-      // Posted on.
-      twenty_twenty_one_posted_on();
-
-      // Edit post link.
-      edit_post_link(
-        sprintf(
-          /* translators: %s: Post title. Only visible to screen readers. */
-          esc_html__( 'Edit %s', 'twentytwentyone' ),
-          '<span class="screen-reader-text">' . get_the_title() . '</span>'
-        ),
-        '<span class="edit-link">',
-        '</span>'
-      );
-
-      if ( has_category() || has_tag() ) {
-
-        echo '<div class="post-taxonomies">';
-
-        $categories_list = get_the_category_list( wp_get_list_item_separator() );
-        if ( $categories_list ) {
-          printf(
-            /* translators: %s: List of categories. */
-            '<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
-            $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-          );
-        }
-
-        $tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
-        if ( $tags_list ) {
-          printf(
-            /* translators: %s: List of tags. */
-            '<span class="tags-links">' . esc_html__( 'Tagged %s', 'twentytwentyone' ) . '</span>',
-            $tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-          );
-        }
-        echo '<a href="/wp-admin/edit.php">Admin</a></div>';
-      }
     }
+
   }
 }
 

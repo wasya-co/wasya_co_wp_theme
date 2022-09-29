@@ -6,10 +6,16 @@
 get_header();
 $page_object = get_queried_object();
 $description = get_the_archive_description();
+global $hero_url_default;
+$hero_url = get_term_meta( $page_object->term_id, 'wco_hero_url', true);
+if (strlen($hero_url) == 0) {
+  $hero_url = $hero_url_default;
+}
+
 ?>
 
 <header class="page-header "
-  style="background-image: url('<?= get_post_meta( get_the_ID(), 'wco_hero_url', true) ?>'); "
+  style="background-image: url('<?= $hero_url ?>'); "
 >
   <div class='page-header-inner '>
     <h1 class="entry-title alignwide"><?= $page_object->cat_name; ?></h1>
