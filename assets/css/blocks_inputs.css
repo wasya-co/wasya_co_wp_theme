@@ -79,8 +79,9 @@ input[type=reset],
   text-decoration: none;
 }
 
-.site .button:not(:hover):not(:active):not(.has-text-color),
-button:not(:hover):not(:active):not(.has-text-color),
+/* SiteNavigation +/- is affected by the below */
+/* .site .button:not(:hover):not(:active):not(.has-text-color),
+button:not(:hover):not(:active):not(.has-text-color), */
 input[type=submit]:not(:hover):not(:active):not(.has-text-color),
 input[type=reset]:not(:hover):not(:active):not(.has-text-color),
 .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-text-color),

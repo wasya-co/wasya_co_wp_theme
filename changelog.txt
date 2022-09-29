@@ -10,4 +10,5 @@ Changelog available here: http://athemes.com/changelog/sydney/
 2.0.0 - 2022-09-25 - Let's create a theme from scratch, cleaning up an existing theme is too messy.
 2.0.1 - 2022-09-27 - 2.0.0 worked, now some destructive changes.
                      renders, looks and feels better.
-
+2.0.2 - skip, broken
+2.0.3 - 2022-09-29 - detailing of colors

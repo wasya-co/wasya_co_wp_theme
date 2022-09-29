@@ -1,93 +1,18 @@
 @charset "UTF-8";
 
-/**
- * SETTINGS
- * File-header..........The file header for the themes style.css file.
- * Fonts................Any font files, if the project needs specific fonts.
- * Global...............Project-specific, globally available variables.
- *
- * TOOLS
- * Functions............Global functions.
- * Mixins...............Global mixins.
- *
- * GENERIC
- * Normalize.css........Normalise browser defaults.
- * Breakpoints..........Mixins and variables for responsive styles
- * Vertical-margins.....Vertical spacing for the main components.
- * Reset................Reset specific elements to make them easier to style in other contexts.
- * Clearings............Clearings for the main components.
- *
- * ELEMENTS
- * Blockquote...........Default blockquote.
- * Forms................Element-level form styling.
- * Headings.............H1–H6
- * Links................Default links.
- * Lists................Default lists.
- * Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video.
- *
- * BLOCKS
- * Audio................Specific styles for the audio block.
- * Button...............Specific styles for the button block.
- * Code.................Specific styles for the code block.
- * Columns..............Specific styles for the columns block.
- * Cover................Specific styles for the cover block.
- * File.................Specific styles for the file block.
- * Gallery..............Specific styles for the gallery block.
- * Group................Specific styles for the group block.
- * Heading..............Specific styles for the heading block.
- * Image................Specific styles for the image block.
- * Latest comments......Specific styles for the latest comments block.
- * Latest posts.........Specific styles for the latest posts block.
- * Legacy...............Specific styles for the legacy gallery.
- * List.................Specific styles for the list block.
- * Media text...........Specific styles for the media and text block.
- * Navigation...........Specific styles for the navigation block.
- * Paragraph............Specific styles for the paragraph block.
- * Pullquote............Specific styles for the pullquote block.
- * Quote................Specific styles for the quote block.
- * Search...............Specific styles for the search block.
- * Separator............Specific styles for the separator block.
- * Spacer...............Specific styles for the spacer block.
- * Table................Specific styles for the table block.
- * Verse................Specific styles for the verse block.
- * Video................Specific styles for the video block.
- * Utilities............Block alignments.
- *
- * COMPONENTS
- * Header...............Header styles.
- * Footer...............Footer styles.
- * Comments.............Comment styles.
- * Archives.............Archive styles.
- * 404..................404 styles.
- * Search...............Search styles.
- * Navigation...........Navigation styles.
- * Footer Navigation....Footer Navigation styles.
- * Pagination...........Pagination styles.
- * Single...............Single page and post styles.
- * Posts and pages......Misc, sticky post styles.
- * Entry................Entry, author biography.
- * Widget...............Widget styles.
- * Editor...............Editor styles.
- *
- * UTILITIES
- * A11y.................Screen reader text, prefers reduced motion etc.
- * Color Palette........Classes for the color palette colors.
- * Editor Font Sizes....Editor Font Sizes.
- * Measure..............The width of a line of text, in characters.
- */
-
-/* Categories 01 to 03 are the basics. */
-
-/* Variables */
 :root {
 
+  --wco-light-border-color: #20dfd7;
+  --wco-light-border: 1px dashed var(--wco-light-border-color);
   --wco-light-bg-color: white;
   --wco-light-link-color: #00AC97;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
+  --wco-dark-border-color: #00AC97;
+  --wco-dark-border: 1px dashed var(--wco-dark-border-color);
   --wco-dark-bg-color: black;
-  --wco-dark-link-color: #ffff00;
+  --wco-dark-link-color: #20dfd7;
   --wco-dark-text-color: white;
   --wco-dark-site-menu-link-color: white;
 
@@ -260,11 +185,7 @@
   --primary-nav--font-weight: normal;
   --primary-nav--font-weight-button: 500;
 
-  /* _vp_ 2022-09-25
-   * I need two sets: light and dark.
-  **/
   --primary-nav--color-link: var(--global--color-light-gray);
-  --site-header-link-color: var(--global--color-light-gray);
   --site-header-hover-color: var(--global--color-green);
   --site-header-bg-color: rgba(0, 0, 0, .2);
   --primary-nav--color-link-hover: var(--global--color-primary-hover);
@@ -315,26 +236,7 @@
 
   /* Admin-bar height */
   --global--admin-bar--height: 0px;
-}
 
-.admin-bar {
-  --global--admin-bar--height: 32px;
-}
-@media only screen and (max-width: 782px) {
-  .admin-bar {
-    --global--admin-bar--height: 46px;
-  }
-}
-@media only screen and (min-width: 652px) {
-  :root {
-    --global--font-size-xl: 2.5rem;
-    --global--font-size-xxl: 6rem;
-    --global--font-size-xxxl: 9rem;
-    --heading--font-size-h3: 2rem;
-    --heading--font-size-h2: 3rem;
-  }
-}
-:root {
   --responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
   --responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
   --responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal));
@@ -352,7 +254,6 @@
 }
 @media only screen and (min-width: 822px) {
   :root {
-    /* --responsive--aligndefault-width: calc(100vw - 8 * var(--global--spacing-horizontal)); */
     --responsive--aligndefault-width: 100vw;
     --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
   }
@@ -407,28 +308,6 @@
   }
 }
 
-/**
- * Top Level Wrappers (header, main)
- * - Set vertical padding and horizontal margins
- */
-.widget-area {
-  padding-top: var(--global--spacing-vertical);
-  padding-bottom: var(--global--spacing-vertical);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.site-header-wrapper {
-  border-bottom: 1px solid red;
-  position: absolute;
-  width: 100vw;
-  z-index: 2;
-}
-@media only screen and (max-width: 482px) {
-  .site-header-wrapper {
-    height: 65px;
-  }
-}
 
 /*
  * Block & non-gutenberg content wrappers
@@ -611,52 +490,6 @@ a:hover {
   vertical-align: middle;
 }
 
-:root .is-extra-small-text,
-:root .has-extra-small-font-size {
-  font-size: var(--global--font-size-xs);
-}
-
-:root .is-small-text,
-:root .has-small-font-size {
-  font-size: var(--global--font-size-sm);
-}
-
-:root .is-regular-text,
-:root .has-regular-font-size,
-:root .is-normal-font-size,
-:root .has-normal-font-size,
-:root .has-medium-font-size {
-  font-size: var(--global--font-size-base);
-}
-
-:root .is-large-text,
-:root .has-large-font-size {
-  font-size: var(--global--font-size-lg);
-  line-height: var(--global--line-height-heading);
-}
-
-:root .is-larger-text,
-:root .has-larger-font-size,
-:root .is-extra-large-text,
-:root .has-extra-large-font-size {
-  font-size: var(--global--font-size-xl);
-  line-height: var(--global--line-height-heading);
-}
-
-:root .is-huge-text,
-:root .has-huge-font-size {
-  font-size: var(--global--font-size-xxl);
-  line-height: var(--global--line-height-heading);
-  font-weight: var(--heading--font-weight-page-title);
-}
-
-:root .is-gigantic-text,
-:root .has-gigantic-font-size {
-  font-size: var(--global--font-size-xxxl);
-  line-height: var(--global--line-height-heading);
-  font-weight: var(--heading--font-weight-page-title);
-}
-
 
 /**
  * .alignleft
@@ -767,7 +600,6 @@ a:hover {
   display: none;
 }
 @media only screen and (min-width: 482px) {
-
   .desktop-only {
     display: block;
   }
@@ -1861,40 +1693,6 @@ h1.page-title {
   content: "";
   display: table;
   clear: both;
-}
-
-.widget h1,
-.widget h2,
-.widget h3,
-.widget h4,
-.widget h5,
-.widget h6 {
-  font-weight: var(--widget--font-weight-title);
-  line-height: var(--widget--line-height-title);
-}
-
-.widget h1 {
-  font-size: var(--global--font-size-md);
-}
-
-.widget h2 {
-  font-size: var(--global--font-size-sm);
-}
-
-.widget h3 {
-  font-size: var(--global--font-size-xs);
-}
-
-.widget h4 {
-  font-size: var(--global--font-size-xs);
-}
-
-.widget h5 {
-  font-size: var(--global--font-size-xs);
-}
-
-.widget h6 {
-  font-size: var(--global--font-size-xs);
 }
 
 .widget ul {
