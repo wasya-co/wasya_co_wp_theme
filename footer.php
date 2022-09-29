@@ -13,7 +13,7 @@
     <div class='alignwide site-info'>
       <span>Copyright (c) 2017-2022 Wasya Co</span>
       <a href="/terms-of-service"><span>Terms of Service</span></a>
-      <span>v2.0.1</span>
+      <span>v2.0.3</span>
     </div>
   </footer>
 
