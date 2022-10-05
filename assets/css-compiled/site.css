@@ -1392,3 +1392,7 @@ h1.page-title {
 #wpforms-7-field_2-container {
   clear: both;
 }
+.wpforms-submit-container button[type="submit"] {
+  background: var(--wco-light-link-color);
+  color: var(--wco-light-bg-color);
+}
