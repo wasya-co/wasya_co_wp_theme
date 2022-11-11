@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+  font-size: 16px;
+}
+
 :root {
   --global--admin-bar--height: 0px;
 
@@ -1781,6 +1785,7 @@ h1.page-title {
 .page-header .entry-title {
   font-size: 2em;
   color: white;
+  text-align: center;
 }
 
 .articles {
@@ -1823,13 +1828,23 @@ h1.page-title {
 
 /* single content-post */
 
-article {
-  .entry-content {
-    max-width: 640px;
-  }
+.single_php {
+  article {
+    .entry-content {
+      max-width: 640px;
+    }
 
-  .sidebar-right {
-    margin: 1em;
+    .flex-row {
+      justify-content: center;
+    }
+
+    .sidebar-right {
+      margin: 1em;
+    }
+
+    .custom-html-widget {
+      margin: 0 1em 1em 0;
+    }
+
   }
 }
-

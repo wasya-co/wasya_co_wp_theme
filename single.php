@@ -1,3 +1,4 @@
+<div class='single_php'>
 <?php
 /**
  * Display a single post
@@ -24,7 +25,6 @@ while ( have_posts() ) :
 
 endwhile;
 
-
-
-
 get_footer();
+
+?></div>

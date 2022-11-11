@@ -1,4 +1,7 @@
 @charset "UTF-8";
+html {
+  font-size: 16px;
+}
 :root {
   --global--admin-bar--height: 0px;
   --wco-light-border-color: #00AC97;
@@ -1367,6 +1370,7 @@ h1.page-title {
 .page-header .entry-title {
   font-size: 2em;
   color: white;
+  text-align: center;
 }
 .articles {
   position: relative;
@@ -1401,9 +1405,15 @@ h1.page-title {
   display: flex;
 }
 /* single content-post */
-article .entry-content {
+.single_php article .entry-content {
   max-width: 640px;
 }
-article .sidebar-right {
+.single_php article .flex-row {
+  justify-content: center;
+}
+.single_php article .sidebar-right {
   margin: 1em;
+}
+.single_php article .custom-html-widget {
+  margin: 0 1em 1em 0;
 }

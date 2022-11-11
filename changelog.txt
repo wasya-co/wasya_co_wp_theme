@@ -12,4 +12,6 @@ Changelog available here: http://athemes.com/changelog/sydney/
                      renders, looks and feels better.
 2.0.2 - skip, broken
 2.0.3 - 2022-09-29 - detailing of colors
-        2022-11-11 - adding PiousboxComWidget to now two-column single pages.
+2.1.0 - 2022-11-11 - adding PiousboxComWidget to now two-column single pages. May need to roll back.
+                     adding language selector styling
+

@@ -58,35 +58,6 @@ if (strlen($hero_url) == 0) {
     <? if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
       <section class='sidebar-right' >
         <?php dynamic_sidebar( 'sidebar-right' ); ?>
-
-
-
-<style>
-#PiousboxComWidget {
-  text-align: center;
-}
-#PiousboxComWidget .W0 {
-  border: 1px solid gray;
-  border-radius: 10px;
-
-  width: 200px;
-  height: 200px;
-}
-#PiousboxComWidget .W1 {
-  background: url('https://piousbox.com/wp-content/themes/piousbox_wp_theme/assets/images/60x100_paladin.png');
-}
-</style>
-<div id="PiousboxComWidget">
-  <div class="W0">
-    <div class="W1">
-      &nbsp;
-    </div>
-    <h1><a href="https://piousbox.com">Piousbox</a></h1>
-    <div class='subheader'><a href="https://piousbox.com">Elements of Personal-Corporate Culture</a></div>
-  </div>
-</div>
-
-
       </section>
     <? endif; ?>
 
