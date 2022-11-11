@@ -1798,7 +1798,7 @@ h1.page-title {
 }
 
 .overflow-margin {
-  margin: -50px 0;
+  margin: -50px auto;
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
   background: var(--wco-light-bg-color);
   padding: 1em;
@@ -1830,6 +1830,10 @@ h1.page-title {
 
 .single_php {
   article {
+    .custom-html-widget {
+      margin: 0 1em 1em 0;
+    }
+
     .entry-content {
       max-width: 640px;
     }
@@ -1838,13 +1842,16 @@ h1.page-title {
       justify-content: center;
     }
 
+    .overflow-margin {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     .sidebar-right {
       margin: 1em;
     }
 
-    .custom-html-widget {
-      margin: 0 1em 1em 0;
-    }
+
 
   }
 }
