@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a page.
+ * Display a page
  * _vp_ 2022-09-29
  */
 

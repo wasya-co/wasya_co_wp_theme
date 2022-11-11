@@ -150,7 +150,6 @@
   --entry-header--color-hover: var(--global--color-primary-hover);
   --entry-header--color-focus: var(--global--color-secondary);
   --entry-header--font-size: var(--heading--font-size-h2);
-  --entry-content--font-family: var(--global--font-secondary);
   --entry-author-bio--font-family: var(--heading--font-family);
   --entry-author-bio--font-size: var(--heading--font-size-h4);
 
@@ -1794,7 +1793,7 @@ h1.page-title {
 }
 
 .overflow-margin {
-  margin: -50px auto;
+  margin: -50px 0;
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
   background: var(--wco-light-bg-color);
   padding: 1em;
@@ -1815,3 +1814,22 @@ h1.page-title {
   background: var(--wco-light-link-color);
   color: var(--wco-light-bg-color);
 }
+
+/* utils */
+
+.flex-row {
+  display: flex;
+}
+
+/* single content-post */
+
+article {
+  .entry-content {
+    max-width: 640px;
+  }
+
+  .sidebar-right {
+    margin: 1em;
+  }
+}
+

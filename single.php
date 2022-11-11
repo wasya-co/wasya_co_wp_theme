@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying all single posts
+ * Display a single post
+ * _vp_ 2022-11-09
  */
 
 get_header();
@@ -16,11 +17,14 @@ while ( have_posts() ) :
     the_post_navigation(
       array(
         /* translators: %s: Parent post link. */
-        'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentytwentyone' ), '%title' ),
+        'prev_text' => sprintf('<span class="meta-nav">Published in</span><span class="post-title">%s</span>', '%title' ),
       )
     );
   }
 
 endwhile;
+
+
+
 
 get_footer();

@@ -188,9 +188,10 @@ add_action('get_header', 'my_filter_head');
 
 
 /**
- * Register widget area.
+ * Register widget area. _vp_ 2022-11-11
  */
-function twenty_twenty_one_widgets_init() {
+function init_widgets() {
+
   register_sidebar(array(
     'name'          => 'Footer Top',
     'id'            => 'footer-top',
@@ -200,8 +201,21 @@ function twenty_twenty_one_widgets_init() {
     'before_title'  => '<h2 class="widget-title">',
     'after_title'   => '</h2>',
   ) );
+  // register_widget('FooterTop');
+
+  register_sidebar(array(
+    'name'          => 'Sidebar',
+    'id'            => 'sidebar-right',
+    'description'   => esc_html__( 'Add widgets here to appear in your sidebar.' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  // register_widget('Sidebar');
+
 }
-add_action( 'widgets_init', 'twenty_twenty_one_widgets_init' );
+add_action( 'widgets_init', 'init_widgets' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.

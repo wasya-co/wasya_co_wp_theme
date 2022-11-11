@@ -1,7 +1,7 @@
 <?php
 /**
- * Displays the site header.
- *
+ * Display site header
+ * _vp_ 2022-11-09
 **/
 
 $wrapper_classes  = 'site-header';
