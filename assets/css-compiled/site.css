@@ -1417,3 +1417,16 @@ h1.page-title {
 .single_php article .custom-html-widget {
   margin: 0 1em 1em 0;
 }
+@media only screen and (max-width: 852px) {
+  .single_php article .entry-content {
+    max-width: none;
+  }
+  .single_php article .flex-row {
+    flex-direction: column;
+  }
+  .single_php article .sidebar-right {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

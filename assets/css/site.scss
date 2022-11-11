@@ -1848,3 +1848,22 @@ h1.page-title {
 
   }
 }
+@media only screen and (max-width: 852px) {
+  .single_php {
+    article {
+      .entry-content {
+        max-width: none;
+      }
+      .flex-row {
+        flex-direction: column;
+      }
+      .sidebar-right {
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+

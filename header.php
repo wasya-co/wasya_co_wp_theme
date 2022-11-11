@@ -43,7 +43,7 @@ owa_cmds.push(['trackClicks']);
     gtag('config', 'UA-53077236-2');
   </script>
 
-
+<? /*
 <!-- Boostrap CSS -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -55,6 +55,7 @@ owa_cmds.push(['trackClicks']);
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
+*/ ?>
 
 <?php wp_head(); ?>
 </head>
