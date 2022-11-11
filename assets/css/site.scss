@@ -1866,4 +1866,10 @@ h1.page-title {
   }
 }
 
+html[lang='en-US'] a[lang='en-US'],
+html[lang='es-CO'] a[lang='es-CO'],
+html[lang='pt-BR'] a[lang='pt-BR'] {
+  // border: 2px solid #333333;
+  background: rgba(0, 0, 0, 0.3);
+}
 
