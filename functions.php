@@ -233,11 +233,11 @@ function do_enqueue_scripts() {
   global $wp_scripts;
 
   wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css');
-  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css-compiled/site.css', array(), wp_get_theme()->get( 'Version' ) );
-  wp_enqueue_style('style-nav', get_template_directory_uri() . '/assets/css-compiled/site-navigation.css', array(), wp_get_theme()->get( 'Version' ) );
+  wp_enqueue_style('style', get_template_directory_uri() . '/assets/css-compiled/site.css', array(), wp_get_theme()->get('Version') );
+  wp_enqueue_style('style-nav', get_template_directory_uri() . '/assets/css-compiled/site-navigation.css', array(), wp_get_theme()->get('Version') );
   wp_enqueue_style('blocks_inputs', get_template_directory_uri() . '/assets/css/blocks_inputs.css');
 
-  wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+  wp_enqueue_style( 'twenty-twenty-one-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get('Version'), 'print' );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
@@ -248,12 +248,12 @@ function do_enqueue_scripts() {
     'twenty-twenty-one-ie11-polyfills-asset',
     get_template_directory_uri() . '/assets/js/polyfills.js',
     array(),
-    wp_get_theme()->get( 'Version' ),
+    wp_get_theme()->get('Version'),
     true
   );
 
   // Register the IE11 polyfill loader.
-  wp_register_script('twenty-twenty-one-ie11-polyfills', null, array(), wp_get_theme()->get( 'Version' ), true );
+  wp_register_script('twenty-twenty-one-ie11-polyfills', null, array(), wp_get_theme()->get('Version'), true );
   wp_add_inline_script('twenty-twenty-one-ie11-polyfills', wp_get_script_polyfill($wp_scripts, array('Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset' ) ) );
 
   // Main navigation scripts.
@@ -261,7 +261,7 @@ function do_enqueue_scripts() {
     wp_enqueue_script('twenty-twenty-one-primary-navigation-script',
       get_template_directory_uri() . '/assets/js/primary-navigation.js',
       array( 'twenty-twenty-one-ie11-polyfills' ),
-      wp_get_theme()->get( 'Version' ),
+      wp_get_theme()->get('Version'),
       true
     );
   }
