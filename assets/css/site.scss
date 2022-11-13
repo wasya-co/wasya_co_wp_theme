@@ -1820,6 +1820,14 @@ h1.page-title {
   color: var(--wco-light-bg-color);
 }
 
+.wpforms-field.are-you-human label::after {
+  content: " Please write the following word in the form: 'bubbalicious'";
+}
+.wpforms-field.phone-number label::after {
+  content: "(optional)";
+  display: block;
+}
+
 /* utils */
 
 .flex-row {
