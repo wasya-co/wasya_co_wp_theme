@@ -1401,7 +1401,7 @@ h1.page-title {
   color: var(--wco-light-bg-color);
 }
 .wpforms-field.are-you-human label::after {
-  content: " Please write the following word in the form: 'bubbalicious'";
+  content: "Please write the following word: 'bubbalicious'";
 }
 .wpforms-field.phone-number label::after {
   content: "(optional)";
