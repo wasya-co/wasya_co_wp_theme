@@ -1444,3 +1444,14 @@ h1.page-title {
 html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"] {
   background: rgba(0, 0, 0, 0.3);
 }
+/* /2022/11/wasya-co-announces-a-seed-round-of-funding */
+article.post-2990 {
+  background: gray;
+}
+article.post-2990 header.page-header {
+  background-size: cover;
+  background-bottom: 2px solid cyan;
+}
+article.post-2990 .entry-content {
+  max-width: 800px;
+}
