@@ -1888,3 +1888,17 @@ html[lang='pt-BR'] a[lang='pt-BR'] {
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* /2022/11/wasya-co-announces-a-seed-round-of-funding */
+article.post-2990 {
+  background: gray;
+
+  header.page-header {
+    background-size: cover;
+    background-bottom: 2px solid cyan;
+  }
+
+  .entry-content {
+    max-width: 800px;
+  }
+
+}
