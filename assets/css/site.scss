@@ -1894,11 +1894,17 @@ article.post-2990 {
 
   header.page-header {
     background-size: cover;
-    background-bottom: 2px solid cyan;
+    border-bottom: 2px solid cyan;
   }
 
   .entry-content {
     max-width: 800px;
+  }
+
+  footer,
+  .author-bio,
+  nav {
+    display: none;
   }
 
 }

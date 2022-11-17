@@ -1450,8 +1450,11 @@ article.post-2990 {
 }
 article.post-2990 header.page-header {
   background-size: cover;
-  background-bottom: 2px solid cyan;
+  border-bottom: 2px solid cyan;
 }
 article.post-2990 .entry-content {
   max-width: 800px;
+}
+article.post-2990 footer, article.post-2990 .author-bio, article.post-2990 nav {
+  display: none;
 }
