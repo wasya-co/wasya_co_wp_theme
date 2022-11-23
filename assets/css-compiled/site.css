@@ -1445,16 +1445,16 @@ html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lan
   background: rgba(0, 0, 0, 0.3);
 }
 /* /2022/11/wasya-co-announces-a-seed-round-of-funding */
-article.post-2990 {
+body.single-post article.post-2990 {
   background: gray;
 }
-article.post-2990 header.page-header {
+body.single-post article.post-2990 header.page-header {
   background-size: cover;
   border-bottom: 2px solid cyan;
 }
-article.post-2990 .entry-content {
+body.single-post article.post-2990 .entry-content {
   max-width: 800px;
 }
-article.post-2990 footer, article.post-2990 .author-bio, article.post-2990 nav {
+body.single-post article.post-2990 footer, body.single-post article.post-2990 .author-bio, body.single-post article.post-2990 nav {
   display: none;
 }
