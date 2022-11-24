@@ -1,0 +1,161 @@
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  border: 1px solid red;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  width: calc( 100vw - 0px );
+  height: calc( 100vh * 0.9 );
+}
+#root .headers,
+.rootShadow .headers {
+  color: white;
+
+  position: absolute;
+  top: 50vh;
+  left: 15vw;
+}
+#root .headers > * {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+}
+.rootShadow {
+  position: relative;
+  height: calc( 100vh * 0.9 );
+  z-index: 0;
+
+  background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/10/16010226/rootShadowBg.jpg');
+  background-position: bottom center;
+}
+</style>
+
+<div id="root">
+  <div class="headers">
+    <h1>Rapid Software Development</h1>
+    <h2>Innovative Technical Solutions</h2>
+  </div>
+</div>
+<div class="rootShadow">
+  <div class="headers">
+    <h1>Rapid Software Development</h1>
+    <h2>Innovative Technical Solutions</h2>
+  </div>
+</div>
+
+<script type="module">
+
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js';
+
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js';
+
+const w = window.innerWidth;
+const h = window.innerHeight*0.9;
+const assetPath = '/wp-content/themes/wasya_co_wp_theme/assets/obj/out-4-lite.glb'
+const skyAssetPath = '/wp-content/themes/wasya_co_wp_theme/assets/obj/out-4-sky.glb'
+
+const renderer = new THREE.WebGLRenderer() // { alpha: true }
+renderer.shadowMap.enabled = true
+renderer.setSize( w, h );
+renderer.setClearColor( 0x000000, 1);
+document.getElementById('root').appendChild( renderer.domElement );
+
+const scene = new THREE.Scene()
+let light
+let camera
+let controls
+const gltfLoader = new GLTFLoader()
+
+function animate() {
+  controls.update() // required if controls.enableDamping or controls.autoRotate are set to true
+  renderer.render( scene, camera )
+  requestAnimationFrame( animate )
+}
+
+function init () {
+  light = new THREE.HemisphereLight( 0xeeeeff, 0x777788, 0.75 )
+  // light.position.set( 0.5, 1, 0.75 )
+  scene.add( light )
+
+  const color = 0xFFFFFF;
+  const intensity = 10;
+  light = new THREE.DirectionalLight(color, intensity);
+  light.castShadow = true;
+  light.position.set(-1500, 1500, 0);
+  light.target.position.set(0, 0, 0);
+  light.shadow.camera.top = 1500;
+  light.shadow.camera.bottom = -1500;
+  light.shadow.camera.left = -3000;
+  light.shadow.camera.right = 3000;
+  light.shadow.camera.near = 100;
+  light.shadow.camera.far = 5000;
+  scene.add(light);
+  scene.add(light.target)
+
+  // const helper = new THREE.CameraHelper(light.shadow.camera)
+  // scene.add( helper )
+
+
+
+  gltfLoader.load(assetPath, ( gltf ) => {
+    gltf.scene.position.x = 0
+    gltf.scene.position.y = 0
+    gltf.scene.position.z = 0
+    gltf.scene.scale.multiplyScalar(1000)
+    gltf.scene.traverse( child => {
+      if ( child.isMesh ) {
+        child.castShadow = true
+        child.receiveShadow = true
+      }
+    })
+    scene.add(gltf.scene)
+  })
+
+  gltfLoader.load(skyAssetPath, ( gltf ) => {
+    gltf.scene.position.x = 0
+    gltf.scene.position.y = 0
+    gltf.scene.position.z = 0
+    gltf.scene.scale.multiplyScalar(1000)
+    scene.add(gltf.scene)
+  })
+
+  const axesHelper = new THREE.AxesHelper( 5 );
+  scene.add( axesHelper );
+
+  camera = new THREE.PerspectiveCamera( 75, w/h, 100, 20000 );
+  camera.position.set( 2500, 1500, 0 );
+
+  controls = new OrbitControls( camera, renderer.domElement );
+
+  controls.autoRotate = true
+  controls.enableZoom = false
+  controls.enablePan = false
+  controls.update()
+  animate()
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $("#root").css("display", "none")
+  } else {
+    init()
+  }
+
+})
+
+
+</script>

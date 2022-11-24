@@ -1441,7 +1441,7 @@ h1.page-title {
     flex-wrap: wrap;
   }
 }
-html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"] {
+html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"], html[lang="ru-RU"] a[lang="ru-RU"] {
   background: rgba(0, 0, 0, 0.3);
 }
 /* /2022/11/wasya-co-announces-a-seed-round-of-funding */
