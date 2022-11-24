@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: resume-page
- *
+ * Template Name: Resume Template
+ * Template Post Type: post, page, product
  * _vp_ 2022-10-06
  */
 ?>

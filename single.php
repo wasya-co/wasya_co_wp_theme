@@ -14,13 +14,10 @@ while ( have_posts() ) :
   get_template_part( 'template-parts/content/content-post' );
 
   if ( is_attachment() ) {
-    // Parent post navigation.
-    the_post_navigation(
-      array(
-        /* translators: %s: Parent post link. */
-        'prev_text' => sprintf('<span class="meta-nav">Published in</span><span class="post-title">%s</span>', '%title' ),
-      )
-    );
+    the_post_navigation(array(
+      'next_text' => '<p class="meta-nav">Next post' . twenty_twenty_one_get_icon_svg( 'ui', 'arrow_right' ) . '</p><p class="post-title">%title</p>',
+      'prev_text' => '<p class="meta-nav">' . twenty_twenty_one_get_icon_svg( 'ui', 'arrow_left' ) . 'Previous Post</p><p class="post-title">%title</p>',
+    ) );
   }
 
 endwhile;

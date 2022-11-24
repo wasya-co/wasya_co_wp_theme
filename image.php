@@ -16,7 +16,7 @@ while ( have_posts() ) {
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header alignwide">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
+		</header>
 
 		<div class="entry-content">
 			<figure class="wp-block-image">
@@ -35,7 +35,7 @@ while ( have_posts() ) {
 				<?php if ( wp_get_attachment_caption() ) : ?>
 					<figcaption class="wp-caption-text"><?php echo wp_kses_post( wp_get_attachment_caption() ); ?></figcaption>
 				<?php endif; ?>
-			</figure><!-- .wp-block-image -->
+			</figure>
 
 			<?php
 			the_content();

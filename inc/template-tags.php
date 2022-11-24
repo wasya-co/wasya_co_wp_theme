@@ -50,12 +50,12 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
   }
 }
 
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ * Footer entry meta is displayed differently in archives and single posts.
+ *
+**/
 if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
-  /**
-   * Prints HTML with meta information for the categories, tags and comments.
-   * Footer entry meta is displayed differently in archives and single posts.
-   *
-   */
   function twenty_twenty_one_entry_meta_footer() {
     if ( 'post' !== get_post_type() ) { return; }
 

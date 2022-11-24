@@ -80,17 +80,10 @@ add_action( 'wp_footer', 'twenty_twenty_one_supports_js' );
 
 /**
  * Changes comment form default fields.
- *
- * @since Twenty Twenty-One 1.0
- *
- * @param array $defaults The form defaults.
- * @return array
- */
+**/
 function twenty_twenty_one_comment_form_defaults( $defaults ) {
-
 	// Adjust height of comment form.
 	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="5"', $defaults['comment_field'] );
-
 	return $defaults;
 }
 add_filter( 'comment_form_defaults', 'twenty_twenty_one_comment_form_defaults' );

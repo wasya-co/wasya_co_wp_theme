@@ -900,12 +900,18 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
   grid-column: span 2;
 }
 
-.single .site-main > article > .entry-footer .posted-on,
-.single .site-main > article > .entry-footer .byline,
-.single .site-main > article > .entry-footer .cat-links,
-.single .site-main > article > .entry-footer .tags-links {
-  display: block;
+
+.single .site-main > article .entry-footer {
+  .byline {
+    padding-left: 0.2em;
+  }
+
+  .cat-links,
+  .tags-links {
+    display: block;
+  }
 }
+
 @media only screen and (max-width: 481px) {
 
   .single .site-main > article > .entry-footer {
@@ -1076,15 +1082,14 @@ h1.page-title {
 /**
  * Comment Title
  */
-.comments-title,
-.comment-reply-title {
-  font-size: var(--heading--font-size-h2);
-  letter-spacing: var(--heading--letter-spacing-h2);
+.comments-title {
+  text-align: right;
+  margin-bottom: 0;
 }
-
 .comment-reply-title {
-  display: flex;
-  justify-content: space-between;
+  text-align: right;
+  display: block;
+  border-bottom: 2px solid black;
 }
 
 .comment-reply-title small a {
@@ -1106,21 +1111,40 @@ h1.page-title {
 .comment-list {
   padding-left: 0;
   list-style: none;
+
+  > li {
+    margin-top: var(--global--spacing-vertical);
+    margin-bottom: var(--global--spacing-vertical);
+  }
+
+  .children {
+    margin-top: -1.4em;
+    list-style: none;
+    padding-left: 0;
+
+    > li {
+      margin-top: var(--global--spacing-vertical);
+      margin-bottom: var(--global--spacing-vertical);
+    }
+  }
+
+  .comment article {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }
 
-.comment-list > li {
-  margin-top: var(--global--spacing-vertical);
-  margin-bottom: var(--global--spacing-vertical);
-}
+.comment-respond {
+  margin-top: 0;
+  // border: 1px solid black;
+  // border-radius: 10px;
+  // padding: 10px;
 
-.comment-list .children {
-  list-style: none;
-  padding-left: 0;
-}
-
-.comment-list .children > li {
-  margin-top: var(--global--spacing-vertical);
-  margin-bottom: var(--global--spacing-vertical);
+  .required-field-message,
+  .comment-reply-title {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 482px) {
@@ -1199,8 +1223,8 @@ h1.page-title {
 }
 
 .comment-body > * {
-  margin-top: var(--global--spacing-vertical);
-  margin-bottom: var(--global--spacing-vertical);
+  // margin-top: var(--global--spacing-vertical);
+  // margin-bottom: var(--global--spacing-vertical);
 }
 
 .comment-body .reply {
@@ -1218,28 +1242,39 @@ h1.page-title {
 }
 
 .comment-respond {
-  margin-top: var(--global--spacing-vertical);
+  // margin-top: var(--global--spacing-vertical);
+
+  > * {
+    // margin-top: var(--global--spacing-unit);
+    // margin-bottom: var(--global--spacing-unit);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // > *:first-child {
+  //   margin-top: 0;
+  // }
+
+  // > *:last-child {
+  //   margin-bottom: 0;
+  // }
+
+  // > *:last-child.comment-form {
+  //   margin-bottom: var(--global--spacing-vertical);
+  // }
+
 }
 
-.comment-respond > * {
-  margin-top: var(--global--spacing-unit);
-  margin-bottom: var(--global--spacing-unit);
-}
 
-.comment-respond > *:first-child {
-  margin-top: 0;
-}
-
-.comment-respond > *:last-child {
-  margin-bottom: 0;
-}
-
-.comment-respond > *:last-child.comment-form {
-  margin-bottom: var(--global--spacing-vertical);
-}
 
 .comment-author {
   padding-top: 3px;
+
+  img {
+    // border: 1px solid black;
+    // border-radius: 3px;
+    // padding: 4px;
+  }
 }
 
 .comment-author .url {
@@ -1249,6 +1284,10 @@ h1.page-title {
 .comment-form {
   display: flex;
   flex-wrap: wrap;
+
+  .form-submit {
+    text-align: right;
+  }
 }
 
 .comment-form > * {
@@ -1284,7 +1323,7 @@ h1.page-title {
 }
 
 .comment-form > p {
-  margin-bottom: var(--global--spacing-unit);
+  // margin-bottom: var(--global--spacing-unit);
 }
 
 .comment-form > p:first-of-type {
@@ -1319,6 +1358,8 @@ h1.page-title {
   .comment-form > p.comment-notes,
   .comment-form > p.logged-in-as {
     display: block;
+    font-size: 0.8em;
+    text-align: right;
   }
 }
 @media only screen and (max-width: 481px) {
@@ -1795,6 +1836,12 @@ h1.page-title {
 }
 .articles article {
   margin: 2em auto;
+}
+
+.archive_php {
+  .overflow-margin {
+    max-width: 640px;
+  }
 }
 
 .overflow-margin {
