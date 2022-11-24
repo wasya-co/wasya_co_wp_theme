@@ -1466,3 +1466,14 @@ body.single-post article.post-2990 .entry-content {
 body.single-post article.post-2990 footer, body.single-post article.post-2990 .author-bio, body.single-post article.post-2990 nav {
   display: none;
 }
+.a20221006CitiesUIUX .gallery {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+.a20221006CitiesUIUX .gallery img {
+  /* max-width: 400px; */
+  max-height: 70vh;
+  object-fit: cover;
+  width: auto;
+}

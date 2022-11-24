@@ -1960,3 +1960,18 @@ body.single-post article.post-2990 {
   }
 
 }
+
+.a20221006CitiesUIUX {
+  .gallery {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+      /* max-width: 400px; */
+      max-height: 70vh;
+      object-fit: cover;
+      width: auto;
+    }
+  }
+}
