@@ -12,8 +12,23 @@
   <footer class="site-footer" >
     <div class='alignwide site-info'>
       <span>Copyright (c) 2017-2022 Wasya Co</span>
-      <a href="/terms-of-service"><span>Terms of Service</span></a>
-      <span>v2.0.3</span>
+      <? /* <a href="/terms-of-service"><span>Terms of Service</span></a> */ ?>
+      <?php if ( has_nav_menu( 'footer' ) ) : ?>
+        <nav aria-label="Secondary menu" class="footer-navigation" >
+          <ul class="footer-navigation-wrapper">
+            <? wp_nav_menu(array(
+                'theme_location' => 'footer',
+                'items_wrap'     => '%3$s',
+                'container'      => false,
+                'depth'          => 1,
+                'link_before'    => '<span>',
+                'link_after'     => '</span>',
+                'fallback_cb'    => false,
+              ) ); ?>
+          </ul>
+        </nav>
+      <?php endif; ?>
+      <span>v2.1.0</span>
     </div>
   </footer>
 

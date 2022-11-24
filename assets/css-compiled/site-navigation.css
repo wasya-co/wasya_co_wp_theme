@@ -448,37 +448,42 @@
 /*
  * footer navigation
 **/
-.footer-navigation-wrapper {
-  display: flex;
+nav.footer-navigation {
+  display: inline;
+}
+ul.footer-navigation-wrapper {
+  display: inline;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
-.footer-navigation-wrapper li {
+ul.footer-navigation-wrapper li {
   display: inline;
   line-height: 3;
 }
-.footer-navigation-wrapper li a {
+ul.footer-navigation-wrapper li a {
   padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.footer-navigation-wrapper li a:hover {
+ul.footer-navigation-wrapper li a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-skip-ink: none;
+}
+ul.footer-navigation-wrapper li .svg-icon {
+  vertical-align: middle;
+  fill: var(--footer--color-link);
+}
+ul.footer-navigation-wrapper li .svg-icon:hover {
+  transform: scale(1.1);
 }
 .is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
   fill: var(--wp--style--color--link, var(--global--color-background));
 }
 .has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
   fill: var(--wp--style--color--link, var(--global--color-white));
-}
-.footer-navigation-wrapper li .svg-icon {
-  vertical-align: middle;
-  fill: var(--footer--color-link);
-}
-.footer-navigation-wrapper li .svg-icon:hover {
-  transform: scale(1.1);
 }
 @media (prefers-reduced-motion: no-preference) {
   .footer-navigation-wrapper li .svg-icon {
