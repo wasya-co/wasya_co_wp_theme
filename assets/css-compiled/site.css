@@ -1478,6 +1478,7 @@ body.single-post article.post-2990 footer, body.single-post article.post-2990 .a
   width: auto;
 }
 .i20221125-android-devroom-sm .W0 {
+  margin: 10px;
   border: 1px solid black;
   border-radius: 20px;
   display: flex;
