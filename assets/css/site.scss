@@ -1969,9 +1969,43 @@ body.single-post article.post-2990 {
 
     img {
       /* max-width: 400px; */
-      max-height: 70vh;
+      max-height: 552px;
       object-fit: cover;
       width: auto;
+    }
+  }
+}
+
+
+.i20221125-android-devroom-sm {
+  .W0 {
+    border: 1px solid black;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+
+    .headers {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      flex-grow: 1;
+      text-align: right;
+      padding-right: 0.8em;
+
+      h2 {
+        margin-bottom: 3em;
+      }
+    }
+    .thumb {
+      border-left: 1px solid black;
+      width: 33%;
+      max-width: 400px;
+
+      img {
+        border-radius: 20px;
+      }
     }
   }
 }

@@ -1473,7 +1473,32 @@ body.single-post article.post-2990 footer, body.single-post article.post-2990 .a
 }
 .a20221006CitiesUIUX .gallery img {
   /* max-width: 400px; */
-  max-height: 70vh;
+  max-height: 552px;
   object-fit: cover;
   width: auto;
+}
+.i20221125-android-devroom-sm .W0 {
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.i20221125-android-devroom-sm .W0 .headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 0.8em;
+}
+.i20221125-android-devroom-sm .W0 .headers h2 {
+  margin-bottom: 3em;
+}
+.i20221125-android-devroom-sm .W0 .thumb {
+  border-left: 1px solid black;
+  width: 33%;
+  max-width: 400px;
+}
+.i20221125-android-devroom-sm .W0 .thumb img {
+  border-radius: 20px;
 }
