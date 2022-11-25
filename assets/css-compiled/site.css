@@ -1400,6 +1400,11 @@ h1.page-title {
     box-shadow: none;
   }
 }
+.feature-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 /* contact us form problem */
 #wpforms-7-field_2-container {
   clear: both;
@@ -1502,4 +1507,87 @@ body.single-post article.post-2990 footer, body.single-post article.post-2990 .a
 }
 .i20221125-android-devroom-sm .W0 .thumb img {
   border-radius: 20px;
+}
+body.page-id-3229, body.page-id-2922 {
+  /* production */
+  /* localhost */
+}
+body.page-id-3229 article .overflow-margin, body.page-id-2922 article .overflow-margin {
+  background: #c2e0f4;
+}
+body.page-id-3229 .overflow-margin, body.page-id-2922 .overflow-margin {
+  padding: 0;
+}
+body.page-id-3229 .overflow-margin #u_content_text_3 strong, body.page-id-2922 .overflow-margin #u_content_text_3 strong {
+  /* hi Name */
+  display: none;
+}
+body.page-id-3229 .overflow-margin td, body.page-id-3229 .overflow-margin th, body.page-id-2922 .overflow-margin td, body.page-id-2922 .overflow-margin th {
+  border: 0px;
+}
+body.page-id-3229 .i20221125-reactjs table, body.page-id-3229 .i20221125-reactjs tr, body.page-id-3229 .i20221125-reactjs td, body.page-id-2922 .i20221125-reactjs table, body.page-id-2922 .i20221125-reactjs tr, body.page-id-2922 .i20221125-reactjs td {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+body.page-id-3229 .i20221125-reactjs p, body.page-id-2922 .i20221125-reactjs p {
+  margin: 0;
+}
+body.page-id-3229 .i20221125-reactjs .ie-container table, body.page-id-3229 .i20221125-reactjs .mso-container table, body.page-id-2922 .i20221125-reactjs .ie-container table, body.page-id-2922 .i20221125-reactjs .mso-container table {
+  table-layout: fixed;
+}
+body.page-id-3229 .i20221125-reactjs a[x-apple-data-detectors="true"], body.page-id-2922 .i20221125-reactjs a[x-apple-data-detectors="true"] {
+  text-decoration: none !important;
+}
+body.page-id-3229 .i20221125-reactjs table, body.page-id-3229 .i20221125-reactjs td, body.page-id-2922 .i20221125-reactjs table, body.page-id-2922 .i20221125-reactjs td {
+  color: #000000;
+}
+body.page-id-3229 .i20221125-reactjs a, body.page-id-2922 .i20221125-reactjs a {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 480px) {
+  body.page-id-3229 .i20221125-reactjs #u_content_image_1 .v-src-width, body.page-id-2922 .i20221125-reactjs #u_content_image_1 .v-src-width {
+    width: auto !important;
+  }
+  body.page-id-3229 .i20221125-reactjs #u_content_image_1 .v-src-max-width, body.page-id-2922 .i20221125-reactjs #u_content_image_1 .v-src-max-width {
+    max-width: 59% !important;
+  }
+  body.page-id-3229 .i20221125-reactjs #u_content_text_3 .v-color, body.page-id-2922 .i20221125-reactjs #u_content_text_3 .v-color {
+    color: #000000 !important;
+  }
+}
+@media only screen and (min-width: 670px) {
+  body.page-id-3229 .i20221125-reactjs .u-row, body.page-id-2922 .i20221125-reactjs .u-row {
+    width: 650px !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-row .u-col, body.page-id-2922 .i20221125-reactjs .u-row .u-col {
+    vertical-align: top;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-row .u-col-33p33, body.page-id-2922 .i20221125-reactjs .u-row .u-col-33p33 {
+    width: 216px !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-row .u-col-100, body.page-id-2922 .i20221125-reactjs .u-row .u-col-100 {
+    width: 650px !important;
+  }
+}
+@media only screen and (max-width: 670px) {
+  body.page-id-3229 .i20221125-reactjs .u-row-container, body.page-id-2922 .i20221125-reactjs .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-row .u-col, body.page-id-2922 .i20221125-reactjs .u-row .u-col {
+    min-width: 320px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-row, body.page-id-2922 .i20221125-reactjs .u-row {
+    width: calc(100% - 40px) !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-col, body.page-id-2922 .i20221125-reactjs .u-col {
+    width: 100% !important;
+  }
+  body.page-id-3229 .i20221125-reactjs .u-col > div, body.page-id-2922 .i20221125-reactjs .u-col > div {
+    margin: 0 auto;
+  }
 }

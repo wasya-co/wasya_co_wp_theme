@@ -1,0 +1,26 @@
+
+= How to organize a wordpress blog into magazine-like issues. =
+
+Ref: https://phoenixnap.com/kb/linux-date-command
+
+Ever since a long time ago I've wanted my own publishing resource, and a one that looks like a magazine, maybe with monthly (quarterly, weekly) issues. A magazine that has pretty pictures, photography, or illustration. A magazine that also tracks hyper- current events, like if a natural disaster strikes, or if a systemically important institution fails, I want to be able to report on it right away, and not at the end of a month. Luckily, Wordpress is a very flexible publishing platform, and per-issue posting can be done with a standard installation, without any additional plugins or tools. In this post, I explain how I've set up my issues on Wordpress.
+
+This article assumes that the reader is comfortable writing/editing php code, not just installing/configuring plugins. I find code development faster than managing plugins, anyway.
+
+We will use documented naming conventions to add this per-issue structure. Our issues will be simply categories, nested. The issue is a category, and the categories nested under it, are the categories, of the issue! Putting a post into several categories at once is possible. The can can be achieved with tags rather than categories, but I found tags somewhat less reliable. The category structure is more strict, and I think it is appropriate for this task.
+
+The specific naming convention that will tie this together is the format of the slug of the issue category. I thought of using +"i%Y%m", and +"issue-%b%y". Please refer to <syntax of linux date command> for conventions on date formating: `man date`. I'll stick with the latter: the word "issue", followed by month and year.
+
+This way I can list all the categories that are "issues" very easily. But also, I could have created a parent category "issues" and said that each child is an issue - that approach, while different, could have been equally easy to implement.
+
+Then, there is a page for each issue. The homepage page actually changes whenever the issue is rotated, and previous issues are accessible by going to their respective pages. The page slug can follow the same formalism as the category slug, or similar. So I call these pages "home-%b%y". The exact format doesn't matter as long as you are consistent, so that scripts can pick up *all* issues automatically.
+
+I have not written automation for rotating a new issue in place, I do that each month manually. Once the site and the setup is successful, I'd write the automation. (If you need something like that written for your own online magazine, please use our <client intake form> to describe your project, and we'll get back to you right away.)
+
+Of course, you'll need your own design of the magazine page. I have written about how I approach this UIUX task separately, in <designing the magazine layout>. Note that the structure of the page relies on the naming conventions we've outlined. Note that this approach is similar to internationalizing a wordpress site, so once you're comfortable doing this, you can add multi-language support very easily.
+
+The last thing you'd need is a custom visual component letting the user know what issue is being viewed, and allowing navigation to past (future) issues. This component possibly relies on strict naming conventions we've outlined. The "current issue" is encoded in what wordpress uses as the homepage. The issue you are reading "now" is encoded in the slug of the page you're accessing. And the list of all issues is encoded by the convention that they are all named "home-%b%y" and "issue-%b%y".
+
+Here is the code for my "issues" component. I use wordpress's shorthand capability to place this component on a page. In Elementor, add "shortcode" block and write `[issues-list ]`. This will place the component on the page.
+
+That is it! I hope you enjoyed reading this article. Let me know if you have any questions or need additional help in the comments. And I hope this writeup helps you to publish your own resources better.   \(^ .^ )/

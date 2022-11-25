@@ -77,7 +77,8 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
         twenty_twenty_one_posted_on();
         twenty_twenty_one_posted_by();
 
-        if ( has_category() || has_tag() ) {
+        // hidden, I'm not displaying categories. _vp_ 2022-11-25
+        if ( false && has_category() || has_tag() ) {
           echo '<div class="post-taxonomies">';
 
           $categories_list = get_the_category_list( wp_get_list_item_separator() );

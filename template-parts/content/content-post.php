@@ -30,7 +30,10 @@ if (strlen($hero_url) == 0) {
         <?php twenty_twenty_one_entry_meta_footer(); ?>
       </footer>
 
-      <img src="<?= get_the_post_thumbnail_url( get_the_ID() ); ?>" alt='' />
+      <div class='feature-img-wrapper'>
+        <img src="<?= get_the_post_thumbnail_url( get_the_ID() ); ?>" alt='' />
+      </div>
+
       <?
       the_content();
 
@@ -38,7 +41,6 @@ if (strlen($hero_url) == 0) {
         array(
           'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
           'after'    => '</nav>',
-          /* translators: %: Page number. */
           'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
         )
       );
