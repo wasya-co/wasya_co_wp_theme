@@ -1409,24 +1409,48 @@ code {
   background: #dedede;
   padding: 8px;
 }
-/* contact us form problem */
-#wpforms-7-field_2-container {
-  clear: both;
+/*
+ * Contact us form
+**/
+form#wpforms-form-7 .wpforms-field-container {
+  display: block;
 }
-.wpforms-submit-container button[type="submit"] {
+form#wpforms-form-7 .wpforms-submit-container button[type="submit"] {
   background: var(--wco-light-link-color);
   color: var(--wco-light-bg-color);
 }
-.wpforms-field.are-you-human label::after {
+form#wpforms-form-7 .are-you-human label::after {
   content: "Please write the following word: 'bubbalicious'";
 }
-.wpforms-field.phone-number label::after {
-  content: "(optional)";
-  display: block;
+form#wpforms-form-7 label.wpforms-error {
+  position: absolute;
 }
-/* utils */
+@media only screen and (min-width: 482px) {
+  form#wpforms-form-7 .wpforms-field-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  form#wpforms-form-7 .wpforms-field-container .wpforms-field {
+    flex: 50%;
+    padding-right: 10px;
+  }
+  form#wpforms-form-7 .wpforms-field-container .wpforms-field.wpforms-field-textarea {
+    flex-base: 100%;
+  }
+}
+/*
+ * Utils
+**/
+c, .clear {
+  clear: both;
+}
 .flex-row {
   display: flex;
+}
+.hide, .hidden {
+  display: none;
 }
 /* single content-post */
 .single_php article .custom-html-widget {

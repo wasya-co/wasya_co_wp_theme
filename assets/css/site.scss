@@ -1875,28 +1875,61 @@ code {
 
 
 
-/* contact us form problem */
-#wpforms-7-field_2-container {
+/*
+ * Contact us form
+**/
+form#wpforms-form-7 {
+  .wpforms-field-container {
+    display: block;
+  }
+
+  .wpforms-submit-container button[type='submit'] {
+    background: var(--wco-light-link-color);
+    color: var(--wco-light-bg-color);
+  }
+
+  .are-you-human label::after {
+    content: "Please write the following word: 'bubbalicious'";
+  }
+
+  label.wpforms-error {
+    position: absolute;
+  }
+}
+@media only screen and (min-width: 482px) {
+  form#wpforms-form-7 .wpforms-field-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .wpforms-field {
+      flex: 50%;
+      padding-right: 10px;
+    }
+
+    .wpforms-field.wpforms-field-textarea {
+      flex-base: 100%;
+    }
+  }
+}
+
+/*
+ * Utils
+**/
+
+c,
+.clear {
   clear: both;
 }
 
-.wpforms-submit-container button[type='submit'] {
-  background: var(--wco-light-link-color);
-  color: var(--wco-light-bg-color);
-}
-
-.wpforms-field.are-you-human label::after {
-  content: "Please write the following word: 'bubbalicious'";
-}
-.wpforms-field.phone-number label::after {
-  content: "(optional)";
-  display: block;
-}
-
-/* utils */
-
 .flex-row {
   display: flex;
+}
+
+.hide,
+.hidden {
+  display: none;
 }
 
 /* single content-post */
