@@ -1405,6 +1405,10 @@ h1.page-title {
   display: flex;
   justify-content: center;
 }
+code {
+  background: #dedede;
+  padding: 8px;
+}
 /* contact us form problem */
 #wpforms-7-field_2-container {
   clear: both;

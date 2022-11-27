@@ -98,6 +98,24 @@
   position: relative;
   width: 100%;
 }
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
+  outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
+}
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus {
+  display: none;
+}
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded=true] .icon-minus {
+  display: flex;
+}
+.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded=true] .icon-plus {
+  display: none;
+}
+.primary-navigation .sub-menu .menu-item > a {
+  padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
+  display: block;
+  font-size: var(--primary-nav--font-size-sub-menu-mobile);
+  font-style: var(--primary-nav--font-style-sub-menu-mobile);
+}
 .primary-navigation .sub-menu-toggle {
   display: flex;
   height: calc(2 * var(--primary-nav--padding) + 1.15em + 1px);
@@ -118,29 +136,11 @@
 .primary-navigation .sub-menu-toggle .icon-plus svg, .primary-navigation .sub-menu-toggle .icon-minus svg {
   margin-top: -4px;
 }
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle:focus {
-  outline: 2px solid var(--wp--style--color--link, var(--global--color-primary));
-}
 .primary-navigation .primary-menu > .menu-item:hover > a {
   color: var(--primary-nav--color-link-hover);
 }
 .primary-navigation .menu-item-has-children > .svg-icon {
   display: none;
-}
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle .icon-minus {
-  display: none;
-}
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded=true] .icon-minus {
-  display: flex;
-}
-.primary-navigation > div > .menu-wrapper .sub-menu-toggle[aria-expanded=true] .icon-plus {
-  display: none;
-}
-.primary-navigation .sub-menu .menu-item > a {
-  padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
-  display: block;
-  font-size: var(--primary-nav--font-size-sub-menu-mobile);
-  font-style: var(--primary-nav--font-style-sub-menu-mobile);
 }
 .primary-navigation a {
   display: block;
