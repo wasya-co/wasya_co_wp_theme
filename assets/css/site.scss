@@ -1913,32 +1913,17 @@ form#wpforms-form-7 {
     }
   }
 }
-.elementor-2650 {
-  .elementor-icon-box-wrapper {
-    display: flex;
 
-    .elementor-icon-box-icon {
-      margin-right: var(--icon-box-icon-margin, 15px);
-    }
-    .elementor-icon-box-content {
-      text-align: left;
-      margin-left: 20px;
-    }
-  }
-}
 @media only screen and (max-width: 482px) {
-  .elementor-widget-icon-box.elementor-mobile-position-top .elementor-icon-box-wrapper {
-    display: flex !important;
-  }
-
-  .elementor-2650 {
-    > section > .elementor-container {
-      display: flex;
-      flex-direction: column-reverse;
-    }
   div[data-id='c6bdab3'],
   div[data-id='5cef73a'] {
     display: none;
+  }
+
+  section[data-id='41cec0df'] > .elementor-container,
+  .elementor-2650 > section > .elementor-container {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
