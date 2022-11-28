@@ -1363,14 +1363,12 @@ h1.page-title {
  * wasya_co _vp_ 2022-09-27
 **/
 .page-header {
-  height: 300px;
   background-position: center center;
 }
 .page-header-inner {
   background: rgba(0, 0, 0, 0.5);
   padding: 150px 0 60px 0;
   width: 100%;
-  height: 100%;
 }
 .page-header .entry-title {
   font-size: 2em;
