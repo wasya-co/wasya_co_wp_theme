@@ -2178,3 +2178,18 @@ body.page-id-2922 { /* localhost */
   }
 }
 
+.i20221128PimsleurEn4EsW0 .W1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.i20221128PimsleurEn4EsW0 .W1 ul {
+  flex: 33%;
+  margin-bottom: 2em;
+}
+@media only screen and (max-width: 482px) {
+  .i20221128PimsleurEn4EsW0 .W1 ul {
+    flex: 100%;
+
+  }
+}
+
