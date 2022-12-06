@@ -696,8 +696,8 @@ get_header();
                                     <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
 
 
-                                      <img align="center" alt="" src="https://mcusercontent.com/c1c0b5d8d2e0e77bfc4d6376e/images/3492e609-f393-0458-7556-fc5005239023.jpeg"
-                                        width="564" style="max-width: 1600px; padding-bottom: 0px; vertical-align: bottom; display: inline !important; border-radius: 3%;"
+                                      <img align="center" alt="" src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/06141355/600x450-RudolphLee.jpg"
+                                        width="564" style="padding-bottom: 0px; vertical-align: bottom; display: inline !important; border-radius: 3%;"
                                         class="mcnImage" >
                                       <span class='figure-caption' >Illustration by Rudolph Lee</span>
 
