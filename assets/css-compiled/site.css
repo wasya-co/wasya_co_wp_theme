@@ -1642,3 +1642,327 @@ body.page-id-3229 .i20221125-reactjs a, body.page-id-2922 .i20221125-reactjs a {
 body.page-id-3318 article.post-3318 .overflow-margin {
   width: 680px;
 }
+article.post-3229 table td, article.post-3229 table th {
+  border: 0;
+}
+article.post-3229 .figure-caption {
+  display: block;
+  text-align: right;
+  font-size: 0.6em;
+  color: #666666;
+}
+article.post-3229 p {
+  margin: 10px 0;
+  padding: 0;
+}
+article.post-3229 table {
+  border-collapse: collapse;
+}
+article.post-3229 h1, article.post-3229 h2, article.post-3229 h3, article.post-3229 h4, article.post-3229 h5, article.post-3229 h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+article.post-3229 img, article.post-3229 a img {
+  border: 0;
+  height: auto;
+  outline: none;
+  text-decoration: none;
+}
+article.post-3229 body, article.post-3229 #bodyTable, article.post-3229 #bodyCell {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+article.post-3229 .mcnPreviewText {
+  display: none !important;
+}
+article.post-3229 #outlook a {
+  padding: 0;
+}
+article.post-3229 img {
+  -ms-interpolation-mode: bicubic;
+}
+article.post-3229 table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+article.post-3229 .ReadMsgBody {
+  width: 100%;
+}
+article.post-3229 .ExternalClass {
+  width: 100%;
+}
+article.post-3229 p, article.post-3229 a, article.post-3229 li, article.post-3229 td, article.post-3229 blockquote {
+  mso-line-height-rule: exactly;
+}
+article.post-3229 a[href^=tel], article.post-3229 a[href^=sms] {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+article.post-3229 p, article.post-3229 a, article.post-3229 li, article.post-3229 td, article.post-3229 body, article.post-3229 table, article.post-3229 blockquote {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+article.post-3229 .ExternalClass, article.post-3229 .ExternalClass p, article.post-3229 .ExternalClass td, article.post-3229 .ExternalClass div, article.post-3229 .ExternalClass span, article.post-3229 .ExternalClass font {
+  line-height: 100%;
+}
+article.post-3229 a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+article.post-3229 .templateContainer {
+  max-width: 600px !important;
+}
+article.post-3229 a.mcnButton {
+  display: block;
+}
+article.post-3229 .mcnImage, article.post-3229 .mcnRetinaImage {
+  vertical-align: bottom;
+}
+article.post-3229 .mcnTextContent {
+  word-break: break-word;
+}
+article.post-3229 .mcnTextContent img {
+  height: auto !important;
+}
+article.post-3229 .mcnDividerBlock {
+  table-layout: fixed !important;
+}
+article.post-3229 h1 {
+  color: #222222;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  letter-spacing: normal;
+  text-align: center;
+}
+article.post-3229 h2 {
+  color: #222222;
+  font-family: Helvetica;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  letter-spacing: normal;
+  text-align: left;
+}
+article.post-3229 h3 {
+  color: #444444;
+  font-family: Helvetica;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  letter-spacing: normal;
+  text-align: left;
+}
+article.post-3229 h4 {
+  color: #949494;
+  font-family: Georgia;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 125%;
+  letter-spacing: normal;
+  text-align: left;
+}
+article.post-3229 #templateHeader {
+  background-color: #f7f7f7;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 45px;
+}
+article.post-3229 .headerContainer {
+  background-color: #transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+article.post-3229 .headerContainer .mcnTextContent, article.post-3229 .headerContainer .mcnTextContent p {
+  color: #757575;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+article.post-3229 .headerContainer .mcnTextContent a, article.post-3229 .headerContainer .mcnTextContent p a {
+  color: #007C89;
+  font-weight: normal;
+  text-decoration: underline;
+}
+article.post-3229 #templateBody {
+  background-color: #FFFFFF;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+}
+article.post-3229 .bodyContainer {
+  background-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+article.post-3229 .bodyContainer .mcnTextContent, article.post-3229 .bodyContainer .mcnTextContent p {
+  color: #757575;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+article.post-3229 .bodyContainer .mcnTextContent a, article.post-3229 .bodyContainer .mcnTextContent p a {
+  color: #007C89;
+  font-weight: normal;
+  text-decoration: underline;
+}
+article.post-3229 #templateFooter {
+  background-color: #333333;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 45px;
+  padding-bottom: 63px;
+}
+article.post-3229 .footerContainer {
+  background-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+article.post-3229 .footerContainer .mcnTextContent, article.post-3229 .footerContainer .mcnTextContent p {
+  color: #FFFFFF;
+  font-family: Helvetica;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+}
+article.post-3229 .footerContainer .mcnTextContent a, article.post-3229 .footerContainer .mcnTextContent p a {
+  color: #FFFFFF;
+  font-weight: normal;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  article.post-3229 .templateContainer {
+    width: 600px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  article.post-3229 body, article.post-3229 table, article.post-3229 td, article.post-3229 p, article.post-3229 a, article.post-3229 li, article.post-3229 blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+  article.post-3229 body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  article.post-3229 .mcnRetinaImage {
+    max-width: 100% !important;
+  }
+  article.post-3229 .mcnImage {
+    width: 100% !important;
+  }
+  article.post-3229 .mcnCartContainer, article.post-3229 .mcnCaptionTopContent, article.post-3229 .mcnRecContentContainer, article.post-3229 .mcnCaptionBottomContent, article.post-3229 .mcnTextContentContainer, article.post-3229 .mcnBoxedTextContentContainer, article.post-3229 .mcnImageGroupContentContainer, article.post-3229 .mcnCaptionLeftTextContentContainer, article.post-3229 .mcnCaptionRightTextContentContainer, article.post-3229 .mcnCaptionLeftImageContentContainer, article.post-3229 .mcnCaptionRightImageContentContainer, article.post-3229 .mcnImageCardLeftTextContentContainer, article.post-3229 .mcnImageCardRightTextContentContainer, article.post-3229 .mcnImageCardLeftImageContentContainer, article.post-3229 .mcnImageCardRightImageContentContainer {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  article.post-3229 .mcnBoxedTextContentContainer {
+    min-width: 100% !important;
+  }
+  article.post-3229 .mcnImageGroupContent {
+    padding: 9px !important;
+  }
+  article.post-3229 .mcnCaptionLeftContentOuter .mcnTextContent, article.post-3229 .mcnCaptionRightContentOuter .mcnTextContent {
+    padding-top: 9px !important;
+  }
+  article.post-3229 .mcnImageCardTopImageContent, article.post-3229 .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent, article.post-3229 .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
+    padding-top: 18px !important;
+  }
+  article.post-3229 .mcnImageCardBottomImageContent {
+    padding-bottom: 9px !important;
+  }
+  article.post-3229 .mcnImageGroupBlockInner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  article.post-3229 .mcnImageGroupBlockOuter {
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+  }
+  article.post-3229 .mcnTextContent, article.post-3229 .mcnBoxedTextContentColumn {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+  article.post-3229 .mcnImageCardLeftImageContent, article.post-3229 .mcnImageCardRightImageContent {
+    padding-right: 18px !important;
+    padding-bottom: 0 !important;
+    padding-left: 18px !important;
+  }
+  article.post-3229 .mcpreview-image-uploader {
+    display: none !important;
+    width: 100% !important;
+  }
+  article.post-3229 h1 {
+    font-size: 30px !important;
+    line-height: 125% !important;
+  }
+  article.post-3229 h2 {
+    font-size: 26px !important;
+    line-height: 125% !important;
+  }
+  article.post-3229 h3 {
+    font-size: 20px !important;
+    line-height: 150% !important;
+  }
+  article.post-3229 h4 {
+    font-size: 18px !important;
+    line-height: 150% !important;
+  }
+  article.post-3229 .mcnBoxedTextContentContainer .mcnTextContent, article.post-3229 .mcnBoxedTextContentContainer .mcnTextContent p {
+    font-size: 14px !important;
+    line-height: 150% !important;
+  }
+  article.post-3229 .headerContainer .mcnTextContent, article.post-3229 .headerContainer .mcnTextContent p {
+    font-size: 16px !important;
+    line-height: 150% !important;
+  }
+  article.post-3229 .bodyContainer .mcnTextContent, article.post-3229 .bodyContainer .mcnTextContent p {
+    font-size: 16px !important;
+    line-height: 150% !important;
+  }
+  article.post-3229 .footerContainer .mcnTextContent, article.post-3229 .footerContainer .mcnTextContent p {
+    font-size: 14px !important;
+    line-height: 150% !important;
+  }
+}
