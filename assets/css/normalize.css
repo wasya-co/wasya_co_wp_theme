@@ -250,7 +250,7 @@ template {
  }
 
  body {
-   font-size: var(--global--font-size-base);
+   /* font-size: var(--global--font-size-base); */
    font-weight: normal;
    color: var(--global--color-primary);
    text-align: left;

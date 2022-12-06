@@ -15,6 +15,7 @@ function do_setup() {
   add_theme_support( 'title-tag' ); // Let WordPress manage the document title.
 
   add_filter('do_redirect_guess_404_permalink', '__return_false');
+  wp_deregister_script('autosave');
 
   add_theme_support('post-formats', array(
     'link',
