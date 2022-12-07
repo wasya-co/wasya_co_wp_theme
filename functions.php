@@ -388,3 +388,138 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) {
     return __( ', ' );
   }
 }
+
+
+// Update Registration form and functions
+add_action('login_head', function () {
+  ?>
+      <style>
+          #registerform>p:first-child {
+              display: none;
+          }
+      </style>
+  
+      <script type="text/javascript" src="<?php echo site_url('/wp-includes/js/jquery/jquery.js'); ?>"></script>
+      <script type="text/javascript">
+          jQuery(document).ready(function($) {
+              $('#registerform > p:first-child').css('display', 'none');
+          });
+      </script>
+  <?php
+  });
+  
+  //Remove error for username, only show error for email only.
+  add_filter('registration_errors', function ($wp_error, $sanitized_user_login, $user_email) {
+      if (isset($wp_error->errors['empty_username'])) {
+          unset($wp_error->errors['empty_username']);
+      }
+  
+      if (isset($wp_error->errors['username_exists'])) {
+          unset($wp_error->errors['username_exists']);
+      }
+      return $wp_error;
+  }, 10, 3);
+  
+  
+  add_action('login_form_register', function () {
+      if (isset($_POST['user_login']) && isset($_POST['user_email']) && !empty($_POST['user_email'])) {
+          $_POST['user_login'] = $_POST['user_email'];
+      }
+  });
+  
+  
+  // Add custom field to the registration form
+  add_action('register_form', function () {
+  ?>
+  
+      <p class="user-password-wrap">
+          <label for="password"><?php _e('Password'); ?></label>
+          <input type="password" name="password" id="password" class="input password-input" size="20" value="" autocomplete="off" />
+      </p>
+  
+      <p class="user-password-wrap">
+          <label for="confirm_password"><?php _e('Confirm Password'); ?></label>
+          <input type="password" name="confirm_password" id="confirm_password" class="input password-input" size="20" value="" autocomplete="off" />
+      </p>
+  
+      <p class="user-password-wrap">
+          <label for="captcha"><?php _e('Type "14.6" Below'); ?></label>
+          <input type="text" name="captcha" id="captcha" class="input" size="20" value="" autocomplete="off" />
+      </p>
+  <?php
+  });
+  
+  // Check Register Form Errors
+  add_filter('registration_errors', function ($errors) {
+  
+      $password = $_POST['password'];
+      $confirm_password = $_POST['confirm_password'];
+      $captcha = $_POST['captcha'];
+  
+      if (!$password) {
+          $errors->add('password-required', '<strong>Error</strong>: Please enter a password.');
+      }
+  
+      if (!$confirm_password) {
+          $errors->add('password-required', '<strong>Error</strong>: Please enter a password confirmation.');
+      }
+  
+      if (!($password == $confirm_password)) {
+          $errors->add('password-mismatch', '<strong>Error</strong>: Password confirmation not matched.');
+      }
+  
+      if (!$captcha) {
+          $errors->add('captcha-required', '<strong>Error</strong>: Please enter a captcha for confirmation.' . $password);
+      }
+  
+      if (!($captcha == '14.6')) {
+          $errors->add('captcha-wrong', '<strong>Error</strong>: Please enter a valid captcha confirmation.');
+          wp_redirect(site_url('/'));
+          exit;
+      }
+  
+      return $errors;
+  });
+  
+  // Insert Password and Send Account activation code
+  add_action( 'user_register', function ( $user_id ) {
+      $userdata = array();
+      $userdata['ID'] = $user_id;
+      $userdata['user_pass'] = $_POST['password'];
+      add_filter( 'send_password_change_email', '__return_false' );
+      wp_update_user( $userdata );
+  
+      $user_info = get_userdata($user_id); 
+      $code = md5(time()); 
+      $string = array('id'=>$user_id, 'code'=>$code); 
+      update_user_meta($user_id, 'account_activated', 0);
+      update_user_meta($user_id, 'activation_code', $code); 
+  
+      $url = get_site_url(). '/my-account/?act=' .base64_encode( serialize($string)). "\r\n\r\n"; 
+      $html = 'Please click the following link to activate the account'. "\r\n\r\n" . $url . "\r\n\r\n"; 
+      wp_mail( $user_info->user_email, __('Email Subject','text-domain') , $html);
+  });
+  
+  
+  // Send Welcome Notification 
+  add_filter('wp_new_user_notification_email', 'my_new_user_notification_email', 10, 2);
+  
+  function my_new_user_notification_email($wp_new_user_notification_email, $user)
+  {
+      $message  = "Welcome! Your account created successfully" . "\r\n\r\n";
+      $message .= sprintf( __( 'Username: %s' ), $user->user_login ) . "\r\n\r\n";
+      $message .= wp_login_url() . "\r\n";
+  
+      $wp_new_user_notification_email = array(
+          'to'      => $user->user_email, 
+          'subject' => __( '[%s] Login Details' ),
+          'message' => $message,
+          'headers' => '',
+      );
+  
+      // $wp_new_user_notification_email['message'] = $message;
+      // $wp_new_user_notification_email['headers'] = "From: Your Name<youremail@example.com>";
+      return $wp_new_user_notification_email;
+  }
+  
+  
