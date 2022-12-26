@@ -18,6 +18,7 @@ html {
   --wco-dark-site-menu-link-color: white;
   --wco-width-sm: 1em;
   --wco-width-md: 2em;
+  --wco-border-radius: 10px;
   --debug-border: 1px solid red;
   /* Font Family */
   --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
@@ -666,6 +667,8 @@ h1.entry-title {
   display: block;
 }
 .edit-box {
+  display: none;
+  /* HEREHERE */
   background: black;
   color: white;
   border: 1px solid red;
@@ -796,11 +799,6 @@ h1.page-title {
 }
 .archive.logged-in .entry-footer .posted-on, .search.logged-in .entry-footer .posted-on, .blog.logged-in .entry-footer .posted-on {
   margin-right: calc(0.5 * var(--global--spacing-unit));
-}
-.archive-description {
-  margin-top: var(--global--spacing-vertical);
-  font-size: var(--global--font-size-xl);
-  line-height: var(--global--line-height-heading);
 }
 .error404 main p {
   font-size: var(--global--font-size-lg);
@@ -1037,7 +1035,10 @@ h1.page-title {
     opacity: 1;
   }
 }
-/* Next/Previous navigation */
+/*
+ * Next/Previous navigation
+ * and paged nav
+**/
 .navigation {
   color: var(--global--color-primary);
 }
@@ -1059,6 +1060,12 @@ h1.page-title {
 .navigation .nav-links > * {
   min-width: 44px;
   min-height: 44px;
+}
+.navigation .svg-icon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+  position: relative;
 }
 .navigation .nav-links .nav-next a, .navigation .nav-links .nav-previous a {
   display: flex;
@@ -1082,12 +1089,6 @@ h1.page-title {
   .navigation .nav-links .nav-next {
     text-align: right;
   }
-}
-.navigation .svg-icon {
-  display: inline-block;
-  fill: currentColor;
-  vertical-align: middle;
-  position: relative;
 }
 .navigation .nav-previous .svg-icon, .navigation .prev .svg-icon {
   top: -2px;
@@ -1139,12 +1140,6 @@ h1.page-title {
 .pagination, .comments-pagination {
   border-top: 3px solid var(--global--color-border);
   padding-top: var(--global--spacing-vertical);
-  margin: var(--global--spacing-vertical) auto;
-}
-@media only screen and (min-width: 822px) {
-  .pagination, .comments-pagination {
-    margin: var(--global--spacing-vertical) auto;
-  }
 }
 .pagination .nav-links, .comments-pagination .nav-links {
   margin-top: calc(-1 * var(--global--spacing-vertical));
@@ -1361,8 +1356,9 @@ h1.page-title {
 /*
  * wasya_co _vp_ 2022-09-27
 **/
-.page-header {
+header.page-header {
   background-position: center center;
+  background-size: cover;
 }
 .page-header-inner {
   background: rgba(0, 0, 0, 0.5);
@@ -1377,25 +1373,49 @@ h1.page-title {
 .articles {
   position: relative;
   padding: 1em;
-  background: var(--wco-light-bg-color);
 }
 .articles article {
-  margin: 2em auto;
+  margin: 0 auto 2em;
 }
-.archive_php .overflow-margin {
-  max-width: 640px;
+.archive_php > .W0 {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  border-radius: var(--wco-border-radius);
+  padding: 1em 2em 0;
+  background: var(--wco-light-bg-color);
+}
+.archive_php .col-2 {
+  margin-top: 1em;
+  margin-left: 10px;
 }
 .overflow-margin {
   margin: -50px auto;
+}
+.Card, .pagination, .comments-pagination {
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
   background: var(--wco-light-bg-color);
   padding: 1em;
   position: relative;
+  border-radius: var(--wco-border-radius) 0;
 }
-@media only screen and (max-width: 482px) {
-  .overflow-margin {
+@media only screen and (max-width: 822px) {
+  .archive_php > .W0 {
+    flex-direction: column-reverse;
+    padding: 1em 0 0 0;
+  }
+  .archive_php > .W0 .archive-description {
+    padding: 0 0.5em;
+  }
+  .Card {
     box-shadow: none;
   }
+  .archive_php .Card {
+    box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
+  }
+}
+.pagination, .comments-pagination {
+  border-radius: 0 0 20px 20px;
 }
 .feature-img-wrapper {
   width: 100%;
@@ -1452,6 +1472,9 @@ form#wpforms-form-7 label.wpforms-error {
 c, .clear {
   clear: both;
 }
+.debug {
+  border: 1px solid red;
+}
 .flex-row {
   display: flex;
 }
@@ -1490,6 +1513,22 @@ c, .clear {
 }
 html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"], html[lang="ru-RU"] a[lang="ru-RU"] {
   background: rgba(0, 0, 0, 0.3);
+}
+/*
+ * Specific fixes, below
+**/
+body.category-site-updates .archive_php .W0 {
+  background-color: #f2f2fb;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26171509/70x126-bg.png");
+  background-attachment: fixed;
+  box-shadow: 0px 10px 30px var(--wco-light-bg-color);
+  background-size: 35px 63px;
+}
+body.category-site-updates .site-main {
+  background-color: #f2f2f2;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26171509/70x126-bg.png");
+  background-attachment: fixed;
+  background-size: 35px 63px;
 }
 /* /2022/11/wasya-co-announces-a-seed-round-of-funding */
 body.single-post article.post-2990 {

@@ -16,3 +16,6 @@ Changelog available here: http://athemes.com/changelog/sydney/
                      adding language selector styling
 2.2.0 - 2022-11-24 - big bad updates to theming.
 2.3.0 - 2022-12-06 - styling reactjs-development-services page.
+2.4.0 - 2022-12-26 - merry xmas!
+                     adding two-column layout to archive_php
+                     adding assymetric corners, box shadows.
