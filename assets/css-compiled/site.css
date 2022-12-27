@@ -280,10 +280,13 @@ html {
     background: var(--wco-light-bg-color);
   }
 }
-/*
- * Block & non-gutenberg content wrapper children
- * - Sets spacing-vertical margin logic
- */
+.site-main {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png");
+}
+.site-main .W0 {
+  background-color: var(--wco-light-bg-color);
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png");
+}
 .site-main > .not-found > *, .entry-content > *, [class*=inner-container] > *, .wp-block-template-part > *, .wp-block-post-template :where(li > *) {
   margin-top: calc(0.666 * var(--global--spacing-vertical));
   margin-bottom: calc(0.666 * var(--global--spacing-vertical));
@@ -739,6 +742,9 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
  */
 .post-thumbnail {
   text-align: center;
+}
+.archive_php .post-thumbnail {
+  width: 200px;
 }
 .post-thumbnail .wp-post-image {
   display: block;
@@ -1373,6 +1379,7 @@ header.page-header {
 .articles {
   position: relative;
   padding: 1em;
+  flex-grow: 1;
 }
 .articles article {
   margin: 0 auto 2em;
@@ -1383,11 +1390,11 @@ header.page-header {
   max-width: 1000px;
   border-radius: var(--wco-border-radius);
   padding: 1em 2em 0;
-  background: var(--wco-light-bg-color);
 }
 .archive_php .col-2 {
   margin-top: 1em;
   margin-left: 10px;
+  max-width: 300px;
 }
 .overflow-margin {
   margin: -50px auto;
@@ -1403,6 +1410,7 @@ header.page-header {
   .archive_php > .W0 {
     flex-direction: column-reverse;
     padding: 1em 0 0 0;
+    background: var(--wco-light-bg-color);
   }
   .archive_php > .W0 .archive-description {
     padding: 0 0.5em;
@@ -1514,9 +1522,25 @@ c, .clear {
 html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"], html[lang="ru-RU"] a[lang="ru-RU"] {
   background: rgba(0, 0, 0, 0.3);
 }
+.flex-row-2 {
+  display: flex;
+}
+.flex-row-2 img {
+  max-width: 200px;
+}
+.wps_subtitle {
+  margin-left: 10px;
+  flex-grow: 1;
+}
 /*
  * Specific fixes, below
 **/
+.a20221212 .W1 {
+  text-align: center;
+}
+.a20221212 .W1 img {
+  margin: 20px 0;
+}
 body.category-site-updates .archive_php .W0 {
   background-color: #f2f2fb;
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26171509/70x126-bg.png");

@@ -6,7 +6,7 @@
 **/
 ?>
 
-<article id="post-<? the_ID(); ?>" <? post_class(); ?> >
+<article id="post-<? the_ID(); ?>" class="content_php Card <?= implode(" ", get_post_class()); ?>" >
   <header class="page-header">
     <? if ( is_singular() ) : ?>
       <? the_title( '<h1 class="entry-title default-max-width">', '</h1>' ); ?>
