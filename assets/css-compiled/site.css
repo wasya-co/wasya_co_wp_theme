@@ -569,6 +569,7 @@ a:hover {
 **/
 .footer-top {
   background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095548/1380x450-world-bg-6.png") no-repeat bottom center fixed, url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095935/200-mini.png") repeat;
+  min-height: 450px;
   color: var(--wco-dark-text-color);
   padding: 2em 0;
 }
