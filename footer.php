@@ -7,7 +7,7 @@
     </div><!-- .content-area -->
   </div><!-- #content -->
 
-  <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+  <? get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
   <footer class="site-footer" >
     <div class='alignwide site-info'>
