@@ -1,0 +1,131 @@
+<html>
+  <head>
+<style>
+
+
+figure {
+  margin: 0;
+}
+
+.td-figure {
+  perspective: 1500px;
+}
+
+.td-figure img {
+  transform: rotateX(10deg) rotateY(-18deg) rotateZ(3deg);
+  border-radius: 0.375em;
+  box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
+  transition: .3s;
+}
+
+/* .td-figure:hover img {
+  transform: rotate(0);
+} */
+
+body {
+  padding: 4rem 0;
+}
+
+.Card3d-Marketing-20230107 {
+  width: 400px;
+
+  height: 400px;
+  border: 1px solid red;
+
+  padding-top: 3em;
+  padding-left: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 80rem; */
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.text-component {
+  /* min-width: 300px; */
+  text-align: center;
+}
+
+.text-component h1 {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .text-component {
+    text-align: left;
+  }
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+
+<script>
+const logg = (a, b="", c=null) => {
+  c = "string" === typeof c ? c : b.replace(/\W/g, "");
+  if (c.length > 0 && typeof window !== "undefined") {
+    window[c] = a;
+  }
+  console.log(`+++ ${b}:`, a); // eslint-disable-line no-console
+};
+
+
+</script>
+</head>
+<body>
+
+<div class="Card3d-Marketing-20230107">
+  <div class="grid">
+    <div class="text-component">
+      <h1>3D Perspective</h1>
+      <p>Learn how to create a 3D space in CSS.</p>
+    </div>
+
+    <figure class="td-figure" id="this_id" >
+      <img style="width: 400px" src="https://images.unsplash.com/photo-1603695454344-12df53ab0c11?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Image description">
+    </figure>
+  </div>
+</div>
+
+
+<script>
+(function() {
+
+$("#this_id").mousemove(function(e) {
+  const w = 400
+  const h = 320
+  const maxDeg = 90
+  const maxZDeg = 10
+
+  var parentOffset = $(this).offset()
+  //or $(this).offset() if you really just want the current element's offset
+  var relX = e.pageX - parentOffset.left - w/2
+  var relY = e.pageY - parentOffset.top - h/2
+  let relYpc = relY/h/2 // rel Y Percent
+  let relXpc = relX/w/2 // rel X Percent
+  let relZpc = relX > 0 ? relXpc+relYpc : relXpc-relYpc
+
+  // logg(relXpc, 'rel x pc')
+  // logg(relYpc, 'rel y pc')
+  // logg(relZpc, 'rel z pc')
+
+  // $(".td-figure img").css('transform', 'rotate(0)')
+  $(".td-figure img").css('transform', `rotateX(${maxDeg*relYpc}deg) rotateY(${-maxDeg*relXpc}deg) rotateZ(${maxZDeg*relZpc}deg)`)
+
+})
+
+$("#this_id").mouseout(function(e) {
+  // $(".td-figure img").css('transform', 'rotateX(10deg) rotateY(-18deg) rotateZ(3deg)')
+})
+
+})()
+</script>
+
+
+</body></html>
