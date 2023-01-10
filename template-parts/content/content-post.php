@@ -26,7 +26,9 @@ if (strlen($hero_url) == 0) {
     <div class="entry-content overflow-margin Card">
 
       <footer class="entry-footer default-max-width">
-        <? twenty_twenty_one_entry_meta_footer(); ?>
+        <? twenty_twenty_one_entry_meta_footer(array(
+          'display edit-box' => false
+        )); ?>
       </footer>
 
       <div class='feature-img-wrapper'>

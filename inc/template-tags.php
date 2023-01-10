@@ -22,7 +22,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_on' ) ) {
     echo '<span class="posted-on">';
     printf(
       /* translators: %s: Publish date. */
-      esc_html__( 'Published %s', 'twentytwentyone' ),
+      esc_html__( 'Published %s ', 'twentytwentyone' ),
       $time_string // phpcs:ignore WordPress.Security.EscapeOutput
     );
     echo '</span>';
@@ -42,7 +42,7 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
       echo '<span class="byline">';
       printf(
         /* translators: %s: Author name. */
-        esc_html__( 'By %s', 'twentytwentyone' ),
+        esc_html__( 'by %s', 'twentytwentyone' ),
         '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
       );
       echo '</span>';
@@ -56,10 +56,15 @@ if ( ! function_exists( 'twenty_twenty_one_posted_by' ) ) {
  *
 **/
 if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
-  function twenty_twenty_one_entry_meta_footer() {
+  $default_config_meta_footer = array(
+    'display edit-box' => true,
+    'display categories' => false,
+  );
+  function twenty_twenty_one_entry_meta_footer($config = null) {
     if ( 'post' !== get_post_type() ) { return; }
+    if (!$config) { $config = $default_config_meta_footer; }
 
-    if ( is_user_logged_in() ) : ?>
+    if ( is_user_logged_in() && $config['display edit-box'] ) : ?>
       <div class='edit-box'>
         <div>is_single ? <?= is_single() ? 'Y' : 'N' ?></div>
         <div>Id: <? the_ID(); ?></div>
@@ -77,26 +82,28 @@ if ( ! function_exists( 'twenty_twenty_one_entry_meta_footer' ) ) {
         twenty_twenty_one_posted_on();
         twenty_twenty_one_posted_by();
 
-        // hidden, I'm not displaying categories. _vp_ 2022-11-25
-        if ( false && has_category() || has_tag() ) {
-          echo '<div class="post-taxonomies">';
-
-          $categories_list = get_the_category_list( wp_get_list_item_separator() );
-          if ( $categories_list ) {
-            printf(
-              /* translators: %s: List of categories. */
-              '<span class="cat-links">' . esc_html__( 'Categorized as %s', 'twentytwentyone' ) . ' </span>',
-              $categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-            );
-          }
+        if ( $config['display categories'] && ( has_category() || has_tag() ) ) :
+          // $post_categories = wp_get_post_categories(get_the_ID());
+          $post_categories = get_the_category();
+          if ( !empty($post_categories) ) : ?>
+            <div class='TagsListMini'>
+              <? foreach ( $post_categories as $cat ) : ?>
+                <div class='Tag'>
+                  <i class='fa fa-tag'></i>
+                  <span><a href="<?= get_category_link( $cat ); ?>"><?= $cat->name; ?></a></span>
+                  <div class='tag-tail'></div>
+                </div>
+              <? endforeach; ?>
+            </div>
+          <? endif;
 
           $tags_list = get_the_tag_list( '', wp_get_list_item_separator() );
           if ( $tags_list ) {
             printf('<span class="tags-links">Tagged %s</span>', $tags_list );
           }
-          echo '</div>';
-        }
-      ?>
+
+        endif;
+        ?>
     </div>
     <?
 
