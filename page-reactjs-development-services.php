@@ -15,7 +15,6 @@ if (strlen($hero_url) == 0) {
 get_header();
 ?>
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <header class="page-header" style="background-image: url('<?= $hero_url ?>'); ">

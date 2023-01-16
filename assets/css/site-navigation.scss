@@ -9,6 +9,10 @@
 #masthead-mobile.wco-sticky-header svg {  /* @TODO: nothing mobile about it */
   fill: black;
 }
+/* _vp_ 2022-09-28 */
+.wco-sticky-header .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+  background: var(--wco-light-bg-color);
+}
 
 .menu-button-container {
   display: none;
@@ -272,11 +276,6 @@
   .primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
     top: -9px;
     border-color: var(--wco-light-bg-color) transparent;
-  }
-
-  /* _vp_ 2022-09-28 */
-  .wco-sticky-header .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
-    background: var(--wco-light-bg-color);
   }
 
   .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left {

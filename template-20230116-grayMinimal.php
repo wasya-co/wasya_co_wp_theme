@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: 20230110 grayArticle
- * Template Post Type: post, page, event
- * _vp_ 20230110
+ * Template Name: 20230116 grayMinimal
+ * Template Post Type: post, page
+ * _vp_ 20230116
 **/
 
 // get_header();
@@ -263,7 +263,7 @@
 </style>
 
 </head>
-<body>
+<body class='t20230116-grayM' >
 <div class='container margin-overflow'>
 
 
@@ -362,8 +362,13 @@
   </div>
   <div class='footer-copyright'>
     <div class='maxwidth'>
-      Copyright 2023 &copy; WasyaCo &nbsp;|&nbsp;
-      <a href="https://wasya.co/terms-of-service/">Terms of Service</a>
+      <div clas='col'>
+        Copyright 2023 &copy; WasyaCo &nbsp;|&nbsp;
+        <a href="https://wasya.co/terms-of-service/">Terms of Service</a>
+      </div>
+      <div class='col debug'>
+        template: grayMinimal
+      </div>
     </div>
   </div>
 

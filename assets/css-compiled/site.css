@@ -2093,3 +2093,9 @@ article.post-3229 .footerContainer .mcnTextContent a, article.post-3229 .footerC
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15173241/1800x600-silicon.jpg");
   color: red;
 }
+/*
+ * t stands for template:
+**/
+.t20230116-grayM .footer-copyright > .maxwidth {
+  display: flex;
+}

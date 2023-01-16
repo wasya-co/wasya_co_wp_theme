@@ -9,6 +9,10 @@
   /* @TODO: nothing mobile about it */
   fill: black;
 }
+/* _vp_ 2022-09-28 */
+.wco-sticky-header .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
+  background: var(--wco-light-bg-color);
+}
 .menu-button-container {
   display: none;
   justify-content: space-between;
@@ -183,7 +187,6 @@
  * MinWidth was here
 **/
 @media only screen and (min-width: 852px) {
-  /* _vp_ 2022-09-28 */
   /* debug, remove display */
   .primary-navigation {
     position: relative;
@@ -232,9 +235,6 @@
   .primary-navigation > div > .menu-wrapper > li > .sub-menu:after {
     top: -9px;
     border-color: var(--wco-light-bg-color) transparent;
-  }
-  .wco-sticky-header .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
-    background: var(--wco-light-bg-color);
   }
   .primary-navigation > div > .menu-wrapper > li > .sub-menu.submenu-reposition-left {
     /* rtl:ignore */
