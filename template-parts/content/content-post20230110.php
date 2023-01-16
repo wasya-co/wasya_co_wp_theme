@@ -37,7 +37,11 @@ if (strlen($hero_url) == 0) {
       <p>Aliquam nec lectus nibh. Curabitur non scelerisque tellus, eu viverra ligula. Maecenas euismod sem turpis, ac efficitur velit placerat eget.</p> -->
     </div>
 
-    <div class='feature-image' style="background: url('<?= get_the_post_thumbnail_url( get_the_ID() ); ?>');" ></div>
+    <? if ( $style_20230116 = get_the_post_thumbnail_url(get_the_ID()) ) : ?>
+      <div class='feature-image' style="background: url('<?= $style_20230116; ?>');" ></div>
+    <? else: ?>
+      <div class='feature-image' ></div>
+    <? endif; ?>
 
 
     <div class='description'>

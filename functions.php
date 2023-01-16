@@ -15,43 +15,41 @@ function do_setup() {
 
   add_theme_support( 'title-tag' ); // Let WordPress manage the document title.
 
+  remove_theme_support( 'widgets-block-editor' );
+  // show_admin_bar(false);
+
   add_filter('do_redirect_guess_404_permalink', '__return_false');
+  add_filter('gutenberg_can_edit_post', '__return_false');
+  add_filter('use_block_editor_for_post', '__return_false');
   wp_deregister_script('autosave');
 
-  add_theme_support('post-formats', array(
-    'link',
-    'aside',
-    'gallery',
-    'image',
-    'quote',
-    'video',
-    'audio',
+  add_theme_support('post-formats', array('gallery',
+                                          'image',
+                                          'quote',
+                                          'video',
   ) );
 
-  add_theme_support( 'post-thumbnails' );
-  // set_post_thumbnail_size( 1568, 9999 );
+  add_theme_support( 'post-thumbnails' ); // set_post_thumbnail_size( 1568, 9999 );
+
 
   register_nav_menus(array(
     'primary' => esc_html__( 'Primary menu' ),
     'footer'  => esc_html__( 'Secondary menu' ),
   ) );
+  register_nav_menu('footer', 'footer');
 
-  add_theme_support('html5', array(
-    'comment-form',
-    'comment-list',
-    'gallery',
-    'caption',
-    'style',
-    'script',
-    'navigation-widgets',
+  add_theme_support('html5', array( 'comment-form',
+                                    'comment-list',
+                                    'gallery',
+                                    'caption',
+                                    'style',
+                                    'script',
+                                    'navigation-widgets',
   ) );
 
   add_theme_support( 'customize-selective-refresh-widgets' );
-
   add_theme_support( 'wp-block-styles' );
-
-  // Add support for full and wide align images.
-  add_theme_support( 'align-wide' );
+  add_theme_support( 'align-wide' ); // Add support for full and wide align images.
 
   // Editor color palette.
   $black     = '#000000';
@@ -144,31 +142,30 @@ function do_setup() {
   ) );
 
   add_theme_support( 'responsive-embeds' );
-
   add_theme_support( 'custom-line-height' );
-
   add_theme_support( 'experimental-link-color' );
-
   add_theme_support( 'custom-spacing' );
 
   add_filter( 'rss_widget_feed_link', '__return_false' );
-
   add_filter('gutenberg_can_edit_post', '__return_false');
   add_filter('use_block_editor_for_post', '__return_false');
   add_filter('widget_text', 'do_shortcode');
-  register_nav_menu('footer', 'footer');
 }
 add_action( 'after_setup_theme', 'do_setup' );
+
+
+function wco_get_header() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'wco_get_header');
+
 
 function wco_admin_enqueue_scripts() {
   wp_enqueue_style('admin-styles', get_template_directory_uri() . '/assets/css/admin.css');
 }
 add_action('admin_enqueue_scripts', 'wco_admin_enqueue_scripts');
 
-function wco_get_header() {
-  remove_action('wp_head', '_admin_bar_bump_cb');
-}
-add_action('get_header', 'wco_get_header');
+
 
 
 /**
@@ -217,6 +214,11 @@ add_action( 'widgets_init', 'wco_widgets_init' );
 
 function wco_enqueue_scripts() {
   global $wp_scripts;
+
+  // wp_deregister_script('jquery');
+  // wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), null, true);
+  // wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js', array('jquery'), null, true);
+  wp_enqueue_script('jquery-ui-core');
 
   wp_enqueue_style('normalize',     get_template_directory_uri() . '/assets/css/normalize.css');
   wp_enqueue_style('style',         get_template_directory_uri() . '/assets/css-compiled/site.css',            array(), wp_get_theme()->get('Version') );
@@ -360,15 +362,19 @@ function google_analytics() { echo "\n\n"; ?>
 <? }
 
 function bootstrap_css() { echo "\n\n"; ?>
-  <!-- Boostrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap-theme.min.css" crossorigin="anonymous">
+  <? /* HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries */ ?>
+  <? /* WARNING: Respond.js doesn't work if you view the page via file:// */ ?>
   <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
   <![endif]-->
+<? }
+
+function mui_css() { echo "\n\n"; ?>
+  <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
 <? }
 
 function carousel_css() { echo "\n\n"; ?>
@@ -400,13 +406,7 @@ add_action( 'customize_preview_init', 'wco_customize_preview_init' );
  * Naming ok _vp_ 2023-01-16
 **/
 function wco_customize_controls_enqueue_scripts() {
-  wp_enqueue_script(
-    'wco-customize-helpers',
-    get_theme_file_uri( '/assets/js/customize-helpers.js' ),
-    array(),
-    wp_get_theme()->get( 'Version' ),
-    true
-  );
+  wp_enqueue_script('wco-customize-helpers', get_theme_file_uri( '/assets/js/customize-helpers.js' ), array(), wp_get_theme()->get('Version'), true );
 }
 add_action( 'customize_controls_enqueue_scripts', 'wco_customize_controls_enqueue_scripts' );
 

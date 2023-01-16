@@ -3,6 +3,7 @@
  * reactjs-development-services /
  * _vp_ 2022-12-06
 **/
+get_header();
 
 // // Duplicated from template-parts/content/content-post.php
 $description = get_the_archive_description();
@@ -11,8 +12,6 @@ $hero_url = get_post_meta( get_the_ID(), 'wco_hero_url', true);
 if (strlen($hero_url) == 0) {
   $hero_url = $hero_url_default;
 }
-
-get_header();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
