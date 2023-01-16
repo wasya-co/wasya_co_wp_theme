@@ -2739,3 +2739,70 @@ article.post-3229 {
   }
 
 }
+
+
+#wco20230115Carousel {
+  border: 1px solid red;
+  height: 80vh;
+  position: relative;
+
+  .glide__track {
+    height: 100%;
+  }
+
+  ul.glide__slides {
+    height: 100%;
+  }
+
+  ul.glide__slides li {
+    border: 1px solid green;
+    height: 100%;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .glide__navigation {
+    position: absolute;
+    // border: 1px solid yellow;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .glide__bullets {
+    margin-top: 1em;
+  }
+  .glide__bullets button {
+    width: 20px;
+    height: 20px;
+    color: white;
+    border: 1px dashed #999;
+    border-radius: 10px;
+    padding: 0;
+    margin: 10px;
+  }
+  .glide__bullet--active {
+    background: gray;
+  }
+
+  #wcoSlide1 {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15163445/1536x1024-carousel-4.jpg');
+  }
+  #wcoSlide2 {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15163439/1536x1024-carousel-2.jpg');
+  }
+  #wcoSlide3 {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15163442/1536x1024-carousel-3.jpg');
+  }
+  #wcoSlide4 {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15165015/1536x1024-carousel-1-v2.jpg');
+  }
+}
+
+#wco20230115Silicon {
+  height: 300px;
+  background-size: cover;
+  background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/15173241/1800x600-silicon.jpg');
+  color: red;
+}

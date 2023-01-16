@@ -4,7 +4,7 @@
  *
  * This is the template that displays all of the <head> section and everything up until main.
  *
- */
+**/
 ?>
 
 <!doctype html>
@@ -43,6 +43,9 @@ owa_cmds.push(['trackClicks']);
     gtag('config', 'UA-53077236-2');
   </script>
 
+
+
+
 <? /*
 <!-- Boostrap CSS -->
 <!-- Latest compiled and minified CSS -->
@@ -56,6 +59,15 @@ owa_cmds.push(['trackClicks']);
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
 */ ?>
+
+
+<!-- 2023-01-15 homepage carousel -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.core.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/css/glide.theme.min.css"> -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@latest/dist/glide.min.js"></script>
+
+
+
 
 <?php wp_head(); ?>
 </head>
