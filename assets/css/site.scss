@@ -253,10 +253,14 @@ html {
 
 #wpadminbar {
   top: auto;
-  bottom: 0;
+  bottom: 50px;
+  left: 50px;
   position: fixed;
   width: auto;
   border: 2px solid yellow;
+}
+#wp-admin-bar-top-secondary {
+  display: none;
 }
 
 .widget-area,
@@ -724,15 +728,22 @@ a:hover {
  * Site Footer(s)
 **/
 .footer-top {
+  // background:
+  //   url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095548/1380x450-world-bg-6.png')
+  //     no-repeat bottom center fixed,
+  //   url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095935/200-mini.png')
+  //     repeat;
+
   background:
-    url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095548/1380x450-world-bg-6.png')
-      no-repeat bottom center fixed,
-    url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095935/200-mini.png')
-      repeat;
+    url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
+      repeat-x bottom center fixed,
+    #b3ffff;
+  // background-size: 50%;
 
   min-height: 450px;
 
-  color: var(--wco-dark-text-color);
+  // color: var(--wco-dark-text-color);
+  color: var(--wco-light-text-color);
   padding: 2em 0;
 
   aside {
@@ -740,9 +751,9 @@ a:hover {
   }
 }
 .site-footer {
-  background-color: rgba(97, 206, 208, 0.33);
+  background-color: rgba(97, 206, 208, 0.8);
   // border-top: 1px dashed #46a3a5;
-  color: var(--wco-dark-text-color);
+  color: var(--wco-light-text-color);
   font-size: 0.8em;
   padding: 1em 0;
 
@@ -751,15 +762,22 @@ a:hover {
   left: 0;
   right: 0;
 
+  .site-info {
+    a {
+      border-left: 2px solid var(--wco-dark-text-color);
+      padding-left: var(--wco-width-sm);
+      // color: var(--wco-light-link-color);
+      color: black;
+      text-decoration: underline;
+    }
+
+    span {
+      padding-right: var(--wco-width-sm);
+    }
+  }
+
 }
-.site-footer .site-info span {
-  padding-right: var(--wco-width-sm);
-}
-.site-footer .site-info a {
-  border-left: 2px solid var(--wco-dark-text-color);
-  padding-left: var(--wco-width-sm);
-  color: var(--wco-dark-link-color);
-}
+
 @media only screen and (max-width: 482px) {
   .site-footer .site-info a {
     display: block;
@@ -1674,14 +1692,19 @@ h1.page-title {
     min-width: 300px;
 
     li {
+      background: rgba(255,255,255, .9);
+      margin-bottom: 3px;
 
 
       a {
+        padding: 5px;
+
         display: block;
         width: 100%;
-        border-bottom: var(--wco-dark-border);
+        // border-bottom: var(--wco-dark-border);
         text-decoration: none;
-        color: var(--wco-dark-text-color);
+        // color: var(--wco-dark-text-color);
+        color: var(--wco-light-text-color);
         padding-left: 20px;
         position: relative;
 

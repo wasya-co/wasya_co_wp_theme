@@ -3,7 +3,14 @@
     </div><!-- .content-area -->
   </div><!-- #content -->
 
-  <? get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+  <? if ( is_active_sidebar( 'footer-top' ) ) : ?>
+    <footer class='footer-top' >
+      <aside class="widget-area alignwide">
+        <?php dynamic_sidebar( 'footer-top' ); ?>
+      </aside>
+    </footer>
+  <? endif; ?>
+
 
   <footer class="site-footer" >
     <div class='alignwide site-info'>
