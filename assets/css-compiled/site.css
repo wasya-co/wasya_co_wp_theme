@@ -220,6 +220,11 @@ html {
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
   }
 }
+@media only screen and (min-width: 822px) {
+  :root {
+    --responsive--alignwide-width: 1000px;
+  }
+}
 #wpadminbar {
   top: auto;
   bottom: 50px;
@@ -287,9 +292,6 @@ html {
   .site-main > article {
     background: var(--wco-light-bg-color);
   }
-}
-.site-main {
-  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png");
 }
 .site-main .W0 {
   background-color: var(--wco-light-bg-color);

@@ -237,7 +237,9 @@ html {
 
   --responsive--spacing-horizontal: calc(2 * var(--global--spacing-horizontal) * 0.6);
   --responsive--aligndefault-width: calc(100vw - var(--responsive--spacing-horizontal));
+
   --responsive--alignwide-width: calc(100vw - var(--responsive--spacing-horizontal)); /* 1240px which is reasonable */
+
   --responsive--alignfull-width: 100%;
   --responsive--alignright-margin: var(--global--spacing-horizontal);
   --responsive--alignleft-margin: var(--global--spacing-horizontal);
@@ -248,6 +250,12 @@ html {
     --responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
     --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
     --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
+  }
+}
+
+@media only screen and (min-width: 822px) {
+  :root {
+    --responsive--alignwide-width: 1000px;
   }
 }
 
@@ -339,8 +347,7 @@ html {
 }
 
 .site-main {
-  background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png');
-
+  // background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png');
   .W0 {
     background-color: var(--wco-light-bg-color);
     background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png');

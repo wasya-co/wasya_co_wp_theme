@@ -1,0 +1,91 @@
+/*
+ * 2023-02-10 our-process.scss
+**/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  /* @TODO: make a var */
+}
+.main-header {
+  background: rgba(100, 100, 100, 0.5);
+}
+.main-header .logo {
+  font-family: "Lobster", cursive;
+}
+.main-header .max-width {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header a {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-decoration: none;
+  color: red;
+}
+.max-width {
+  max-width: var(--responsive--alignwide-width);
+  margin: auto;
+}
+article#a20230210ourProcess header.title {
+  font-size: 1.6em;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  margin: 3em 0 0 0;
+}
+article#a20230210ourProcess header.title h1 {
+  margin: 0;
+}
+article#a20230210ourProcess section {
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+article#a20230210ourProcess section .description {
+  width: 70%;
+}
+article#a20230210ourProcess section .illustration {
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-width: 200px;
+  min-height: 200px;
+  width: 40%;
+  height: 100%;
+}
+article#a20230210ourProcess #p1 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10130741/512x512-guy-2-rm-tiny.png");
+  background-size: contain;
+}
+article#a20230210ourProcess #p2 {
+  flex-direction: row-reverse;
+}
+article#a20230210ourProcess #p2 .description {
+  padding-top: 15%;
+  width: 50%;
+  margin-right: 0%;
+}
+article#a20230210ourProcess #p2 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10131252/tower-1rm-tiny.png");
+  background-size: 80%;
+}
+article#a20230210ourProcess #p3 {
+  flex-direction: row;
+  align-items: center;
+}
+article#a20230210ourProcess #p3 .description {
+  padding-top: 0;
+}
+article#a20230210ourProcess #p3 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10132634/guy-1-rm-flipped-tiny.png");
+  background-size: 80%;
+}
+footer.main-footer {
+  background: #eff;
+  height: 120px;
+  width: 100%;
+}
