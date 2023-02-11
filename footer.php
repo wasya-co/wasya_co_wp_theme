@@ -5,13 +5,24 @@
 
   <div class='footers'>
 
-    <? if ( is_active_sidebar( 'footer-top' ) ) : ?>
+
+    <? if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
       <footer class='footer-top' >
         <aside class="widget-area alignwide max-width">
-          <?php dynamic_sidebar( 'footer-top' ); ?>
+          <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
+            <? dynamic_sidebar( 'footer-1' ); ?>
+          <? endif; ?>
+          <? if ( is_active_sidebar( 'footer-2' ) ) : ?>
+            <? dynamic_sidebar( 'footer-2' ); ?>
+          <? endif; ?>
+          <? if ( is_active_sidebar( 'footer-3' ) ) : ?>
+            <? dynamic_sidebar( 'footer-3' ); ?>
+          <? endif; ?>
         </aside>
       </footer>
     <? endif; ?>
+
+
 
 
     <footer class="site-footer" >

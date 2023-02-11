@@ -1,11 +1,44 @@
 
 /*
- * 2023-02-10 our-process.scss
+ * From: https://getcssscan.com/css-buttons-examples
 **/
+.button-91 {
+  padding: 15px 25px;
+  border-radius: 14px;
+  font-size: 16px;
+
+  color: #fff;
+  // background-color: #38D2D2;
+  // background-color: var(--wco-dark-border-color);
+  background-color: var(--wco-light-link-color);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
+    inset 0px 3px 9px rgba(255, 255, 255, 0.3),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0px -8px 36px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 5px rgba(255, 255, 255, 0.6),
+    2px 19px 31px rgba(0, 0, 0, 0.2);
+
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--wco-dark-link-color);
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html, body {
-  // background: pink;
+  background: pink;
+  background:
+  url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
+    repeat-x bottom center fixed; //, linear-gradient(white, #b3ffff);
 
   margin: 0;
   padding: 0;
@@ -27,21 +60,50 @@ html, body {
   }
   a {
     padding: 10px;
+    margin-left: 0.4em;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     text-decoration: none;
     color: red;
   }
+  a:hover {
+    background: white;
+  }
+}
+.center {
+  display: inline-block;
+  text-align: center;
 }
 .max-width {
   // max-width: 1000px; /* @TODO: make a var */
   max-width: var(--responsive--alignwide-width);
   margin: auto;
 }
+.spacer-300 {
+  background: linear-gradient(var(--wco-color5) 50%, var(--wco-transparent) );
+
+  height: 300px;
+}
 
 
+/*
+ * 2023-02-10 our-process.scss
+**/
 article#a20230210ourProcess {
   // border: 1px solid pink;
+
+  // background: white;
+  // background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+
+  --wco-color0: #ccc;
+  --wco-color1: #f69d3c;
+  --wco-color2: #6c8f9e;
+  // --wco-color3: var(--wco-color2);
+  --wco-color3: #ccc;
+  --wco-color4: #fcffbe;
+  // --wco-color5: rgba(255,255,255, 0);
+  --wco-color5: white;
+  --wco-transparent: rgba(0,0,0, 0);
 
   header.title {
     font-size: 1.6em;
@@ -54,22 +116,35 @@ article#a20230210ourProcess {
     }
   }
 
-  section {
+  section,
+  section > .max-width {
     height: 60vh;
     min-height: 400px;
     display: flex;
     align-items: center;
 
     .description {
+      // background: rgba(1,1,1, 0.1);
+
+      box-sizing: border-box;
+      padding: 0.4em;
+
       width: 70%;
+
     }
 
+    .illustrationW,
+    .illustration,
+    .illustrationC {
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .illustrationC {
+      height: 100%;
+    }
     .illustration {
       // border: 1px solid green;
       // background-color: pink;
-
-      background-repeat: no-repeat;
-      background-position: center center;
 
       min-width: 200px;
       min-height: 200px;
@@ -77,33 +152,83 @@ article#a20230210ourProcess {
       height: 100%;
     }
   }
-
-  #p1 .illustration {
-    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10130741/512x512-guy-2-rm-tiny.png');
-    background-size: contain;
+  section + .divider {
+    margin-top: -40px;
+    // margin-left: -50%;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    transform: rotate(-2deg);
   }
+
+  #p1 {
+    // background: pink;
+    // background-image: linear-gradient( 135deg, pink, white);
+
+    background: linear-gradient( white, var(--wco-color0) );
+    padding-bottom: 40px;
+
+    .illustration {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10130741/512x512-guy-2-rm-tiny.png');
+      background-size: contain;
+    }
+  }
+  #p1 + .divider {
+    background-image: linear-gradient(var(--wco-color0), var(--wco-color1));
+  }
+
   #p2 {
     flex-direction: row-reverse;
-    // align-items: flex-start;
+    .max-width {
+      flex-direction: row-reverse;
+    }
+
+    // background: linear-gradient(-2deg, #3f87a6, #ebf8e1, #f69d3c);
+    background: linear-gradient(-2deg, var(--wco-color2) 10%, var(--wco-color1) 90%);
+
+    padding-bottom: 40px;
+    // margin-bottom: 40px;
 
     .description {
-      padding-top: 15%;
+      // border: 1px solid red;
 
-      // width: 30%;
-      // margin-right: 20%;
+      padding-top: 15%;
 
       width: 50%;
       margin-right: 0%;
     }
 
     .illustration {
-      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10131252/tower-1rm-tiny.png');
-      background-size: 80%;
+      // border: 1px solid cyan;
+
+      padding: 2em;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: row-reverse;
+      flex-grow: 1;
     }
+    .illustrationC {
+      // border: 1px solid black;
+      // background-color: rgba(255,0,0,0.25);
+
+      max-width: 400px;
+      width: 100%;
+
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10131252/tower-1rm-tiny.png');
+      background-size: contain;
+      background-position: right;
+    }
+  }
+  #p2 + .divider {
+    background-image: linear-gradient(var(--wco-color2), var(--wco-color3));
+
   }
   #p3 {
     flex-direction: row;
     align-items: center;
+
+    background: linear-gradient( var(--wco-color3), var(--wco-color4) );
 
     .description {
       padding-top: 0;
@@ -114,7 +239,30 @@ article#a20230210ourProcess {
     }
   }
 
+  #p4 {
+    background: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
+
+    flex-direction: row-reverse;
+    .description {
+      width: 50%;
+    }
+    .illustration {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png');
+      background-position: center right;
+    }
+
+  }
+  #p4 + .divider {
+    // border: 1px solid red;
+
+    display: none;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+
 }
+
 
 footer.main-footer {
   background: #eff;

@@ -34,7 +34,7 @@ function do_setup() {
 
   register_nav_menus(array(
     'primary' => esc_html__( 'Primary menu' ),
-    'footer'  => esc_html__( 'Secondary menu' ),
+    'footer'  => esc_html__( 'Footer menu' ),
   ) );
   register_nav_menu('footer', 'footer');
 
@@ -174,8 +174,26 @@ add_action('admin_enqueue_scripts', 'wco_admin_enqueue_scripts');
 function wco_widgets_init() {
 
   register_sidebar(array(
-    'name'          => 'Footer Top',
-    'id'            => 'footer-top',
+    'name'          => 'Footer Col-1',
+    'id'            => 'footer-1',
+    'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  register_sidebar(array(
+    'name'          => 'Footer Col-2',
+    'id'            => 'footer-2',
+    'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+  register_sidebar(array(
+    'name'          => 'Footer Col-3',
+    'id'            => 'footer-3',
     'description'   => esc_html__( 'Add widgets here to appear in your footer.' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',

@@ -8,16 +8,16 @@ html {
   --global--admin-bar--height: 0px;
 
   --wco-light-border-color: #00AC97;
+  --wco-light-link-color:   #00AC97;
   --wco-light-border: 1px dashed var(--wco-light-border-color);
   --wco-light-bg-color: white;
-  --wco-light-link-color: #00AC97;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
   --wco-dark-border-color: #20dfd7;
+  --wco-dark-link-color:   #20dfd7;
   --wco-dark-border: 1px dashed var(--wco-dark-border-color);
   --wco-dark-bg-color: black;
-  --wco-dark-link-color: #20dfd7;
   --wco-dark-text-color: #dedede;
   --wco-dark-site-menu-link-color: white;
 
@@ -741,10 +741,12 @@ a:hover {
   //   url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/01/04095935/200-mini.png')
   //     repeat;
 
-  background:
-    url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
-      repeat-x bottom center fixed,
-    linear-gradient(white, #b3ffff);
+  // background:
+  //   url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
+  //     repeat-x bottom center fixed,
+  //   linear-gradient(white, #b3ffff);
+
+  background: linear-gradient( rgba(97, 206, 208, 0),  rgba(97, 206, 208, 0.6) );
 
 
   min-height: 450px;
@@ -1699,7 +1701,7 @@ h1.page-title {
     min-width: 300px;
 
     li {
-      background: rgba(255,255,255, .9);
+      background: rgba(255,255,255, .7);
       margin-bottom: 3px;
 
 
@@ -2103,6 +2105,7 @@ html[lang='pt-BR'] a[lang='pt-BR'],
 html[lang='ru-RU'] a[lang='ru-RU'] {
   // border: 2px solid #333333;
   background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
 }
 
 .flex-row-2 {
