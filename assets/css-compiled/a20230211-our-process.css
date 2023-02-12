@@ -22,12 +22,13 @@
   background-color: var(--wco-dark-link-color);
 }
 html, body {
-  background: pink;
-  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
   margin: 0;
   padding: 0;
   font-size: 18px;
   /* @TODO: make a var */
+}
+body.page-id-3770, body.page-id-2689 {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
 }
 .main-header {
   background: rgba(100, 100, 100, 0.5);

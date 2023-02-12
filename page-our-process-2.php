@@ -13,7 +13,7 @@
     <meta name="copyright" content="WasyaCo" />
     <meta name="robots" content="index,follow"/>
 
-    <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/our-process-2.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process.css" crossorigin="anonymous">
 
     <? wp_head(); ?>
 

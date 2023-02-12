@@ -492,12 +492,9 @@ a:hover {
 **/
 .site-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   row-gap: var(--global--spacing-vertical);
-}
-.wp-custom-logo .site-header {
-  align-items: center;
 }
 .site-branding {
   color: var(--branding--color-text);
@@ -2198,17 +2195,15 @@ article.post-3229 .footerContainer .mcnTextContent a, article.post-3229 .footerC
   border-right: var(--wco-tag-tail-width) solid white;
   width: var(--wco-tag-tail-width);
 }
-.t20230116-grayM .footers {
+.footers {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
-.t20230116-grayM .footers > * {
+.footers > * {
   flex-grow: 1;
 }
-.t20230116-grayM .footers > *:not(:last-child) {
-  margin-right: 1rem;
-}
-.t20230116-grayM .footer-copyright > .maxwidth {
+.footers .footer-copyright > .maxwidth {
   display: flex;
   justify-content: space-between;
 }

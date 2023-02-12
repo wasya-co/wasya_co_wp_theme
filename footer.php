@@ -10,13 +10,13 @@
       <footer class='footer-top' >
         <aside class="widget-area alignwide max-width">
           <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
-            <section class='widget widget_nav_menu' ><? dynamic_sidebar( 'footer-1' ); ?></section>
+            <div><? dynamic_sidebar( 'footer-1' ); ?></div>
           <? endif; ?>
           <? if ( is_active_sidebar( 'footer-2' ) ) : ?>
-            <section class='widget widget_nav_menu' ><? dynamic_sidebar( 'footer-2' ); ?></section>
+            <div><? dynamic_sidebar( 'footer-2' ); ?></div>
           <? endif; ?>
           <? if ( is_active_sidebar( 'footer-3' ) ) : ?>
-            <section class='widget widget_nav_menu' ><? dynamic_sidebar( 'footer-3' ); ?></section>
+            <div><? dynamic_sidebar( 'footer-3' ); ?></div>
           <? endif; ?>
         </aside>
       </footer>

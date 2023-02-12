@@ -1,0 +1,300 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+}
+.max-width {
+  width: 1000px;
+  margin: auto;
+}
+
+.spacer {
+  background: #f9f9f9;
+}
+.spacer-300 {
+  height: 300px;
+}
+.spacer-500 {
+  height: 500px;
+}
+
+
+/**
+ * From: https://getcssscan.com/css-buttons-examples
+ * ex: <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a>
+**/
+.button-91 {
+  padding: 15px 25px;
+  border-radius: 14px;
+  font-size: 16px;
+
+  color: #fff;
+  // background-color: #38D2D2;
+  // background-color: var(--wco-dark-border-color);
+  background-color: var(--wco-light-link-color);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
+    inset 0px 3px 9px rgba(255, 255, 255, 0.3),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0px -8px 36px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 5px rgba(255, 255, 255, 0.6),
+    2px 19px 31px rgba(0, 0, 0, 0.2);
+
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--wco-dark-link-color);
+  }
+}
+
+body.issue-202302 {
+  background: #fff;;
+}
+
+.wco-card-2 {
+  border: 1px solid black;
+  border-radius: 10px;
+
+  position: relative;
+
+  padding: 1em calc(25% - 1.5em) 1em 1em;
+
+  width: 75%;
+  height: 40vh;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .img {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    width: 60%;
+    aspect-ratio: 3/2;
+
+    position: absolute;
+    top: calc( 50% - 66px );
+    left: 75%;
+
+    background-size: contain;
+    background-position: center center;
+  }
+}
+
+article#a20230212feb23issue {
+
+  section {
+    .header {
+      text-align: center;
+    }
+  }
+
+  // hero, beautiful landscape
+  section#p1 {
+    --wco-20230212-bg1: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12130633/1536x1024-lowpoly-landscape-1.jpg');
+    background: var(--wco-20230212-bg1) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 94vh;
+  }
+
+  // black bg, wasya co = dev services
+  section#p2 {
+    padding: 1em 0 2em;
+
+    background: rgba(32, 32, 32, 0.66);
+    color: #ccc;
+
+    .subtitle {
+      font-style: italic;
+      font-size: 0.9em;
+    }
+
+    p {
+      max-width: 400px;
+      margin: auto;
+      text-align: justify;
+
+      margin-top: 1em;
+    }
+  }
+
+  section.issue-navigator {
+    margin: 2em 0;
+
+    .p1,
+    .p2 {
+      text-align: right;
+    }
+  }
+
+  section.our-services {
+
+    .row {
+      margin-top: 1em;
+    }
+
+    .img.ruby {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12143121/512x341-ruby.jpg');
+
+    }
+
+    .img.reactor {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12145735/512x341-reactor.jpg');
+    }
+
+    .img.printing-press {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12145601/512x341-printing-press.jpg');
+    }
+
+    .our-services-exploreW {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .our-services-explore {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      // align-items: center;
+
+      // height: 100%;
+
+      .description {
+        text-align: right;
+        margin-right: 1em;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        // width: 380px;
+      }
+
+      img {
+        width: 160px;
+        margin-bottom: 1em;
+      }
+    }
+
+  }
+  section.our-process {
+    margin: 1em 0;
+    padding: 4em 0;
+    background: #eee;
+
+    .max-width {
+      display: flex;
+      justify-content: center;
+    }
+
+    .col-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .description {
+      margin: 1em 0;
+      max-width: 400px;
+      text-align: justify;
+    }
+
+    .flex-col {
+      align-items: center;
+    }
+  }
+
+  section.our-clients {
+    padding: 10em 0 10em 0;
+    border-bottom: 1px solid red;
+
+    .col-md-3 {
+      text-align: center;
+    }
+    img {
+      // padding: 2em;
+      width: 100px;
+    }
+  }
+
+  section.testimonials {
+    padding: 10em 0 10em 0;
+    border-bottom: 1px solid red;
+
+    h2 {
+      margin-bottom: 2em;
+    }
+
+    .signature {
+      font-weight: bold;
+      * {
+        display: inline-block;
+      }
+      .name {
+        font-style: italic;
+        &::before {
+          content: '--';
+        }
+        &::after {
+          content: ', ';
+        }
+      }
+    }
+  }
+
+  section.contact-us {
+    padding: 10em 0;
+
+    .max-width {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .illustration {
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png');
+      background-position: center right;
+
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+
+      min-width: 200px;
+      min-height: 200px;
+
+    }
+  }
+
+}
+
