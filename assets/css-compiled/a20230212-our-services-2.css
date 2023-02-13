@@ -1,0 +1,101 @@
+.wco-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wco-card-3 .illustration {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+.wco-card-4 {
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  display: flex;
+}
+.wco-card-4 .illustration {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+}
+.wco-card-4 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.wco-card-4 .col-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-4 .col-1 .from-our-blog {
+  padding-right: 1em;
+}
+.wco-card-4 .col-1 .from-our-blog h4 {
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #ccc;
+}
+.wco-card-5 {
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.wco-card-5 .row-1 {
+  display: flex;
+}
+.wco-card-5 .row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.wco-card-5 .illustration {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+}
+.wco-card-5 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.wco-card-5 .header h2 {
+  flex-grow: 1;
+}
+.wco-card-5 .header > .col-1 {
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-5 > .col-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-5 .related {
+  padding-right: 1em;
+  font-size: 0.8em;
+}
+.wco-card-5 .related h4 {
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #ccc;
+}
+#a20230223-our-services-2 .dev-app-layer > .header {
+  padding: 1em 0;
+  margin: 1em auto 1em;
+  border: 10px solid #999;
+  color: #999;
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+}
+#a20230223-our-services-2 .dev-app-layer .dev-ror .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png");
+}
+#a20230223-our-services-2 .dev-app-layer .dev-wp .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png");
+}
+#a20230223-our-services-2 .dev-app-layer .dev-react .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png");
+}

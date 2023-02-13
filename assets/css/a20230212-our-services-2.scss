@@ -1,0 +1,163 @@
+
+.wco-card-3 {
+  // border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .illustration {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+  }
+}
+
+.wco-card-4 {
+  // border: 1px solid red;
+
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+
+  display: flex;
+
+  .illustration {
+    width: 400px;
+    height: 400px;
+
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .col-1 {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    .from-our-blog {
+      padding-right: 1em;
+
+      // align-self: flex-end;
+      h4 {
+        padding-bottom: 0.6em;
+        border-bottom: 2px solid #ccc;
+        // text-align: right;
+      }
+    }
+
+  }
+}
+
+.wco-card-5 {
+  // border: 1px solid red;
+
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+
+  // display: flex;
+
+  .row-1 {
+    display: flex;
+  }
+
+  .row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .illustration {
+    width: 400px;
+    height: 400px;
+
+    background-size: cover;
+  }
+
+  .header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    h2 {
+      flex-grow: 1;
+    }
+
+    > .col-1 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  > .col-1 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .from-our-blog {
+    h4 {
+      // text-align: right;
+    }
+  }
+  .related {
+    padding-right: 1em;
+    font-size: 0.8em;
+    h4 {
+      padding-bottom: 0.6em;
+      border-bottom: 2px solid #ccc;
+    }
+  }
+
+}
+
+
+#a20230223-our-services-2 {
+
+
+  .dev-app-layer {
+    // background: #ccc;
+
+     > .header {
+      padding: 1em 0;
+      margin: 1em auto 1em;
+
+      border: 10px solid #999;
+      color: #999;
+
+      border-left: 0;
+      border-right: 0;
+
+      text-align: center;
+    }
+
+    .dev-ror {
+      .illustration {
+        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png');
+      }
+    }
+
+    .dev-wp {
+      .illustration {
+        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png');
+      }
+    }
+
+    .dev-react {
+      .illustration {
+        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png');
+      }
+    }
+
+  }
+}
