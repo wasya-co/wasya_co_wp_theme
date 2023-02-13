@@ -25,20 +25,16 @@
     <div class="content-area">
       <main class="site-main">
 
-<header class='main-header'>
+<? /* <header class='main-header'>
   <div class='max-width'>
     <h1 class='logo'>WasyaCo</h1>
     <nav class='main-nav'>
       <a href='/'>Home</a>
       <a href='/our-process-2'>Our Process</a>
-
-      <!-- <a href="/"><button class="button-91" role="button">Home</button></a> -->
-      <!-- <a href="/our-process-2"><button class="button-91" role="button">Our Process</button></a> -->
-
     </nav>
   </div>
-</header>
-<? // get_template_part( 'template-parts/header/site-header' ); ?>
+</header> */ ?>
+<? get_template_part( 'template-parts/header/site-header' ); ?>
 
 <div class='container'>
 
