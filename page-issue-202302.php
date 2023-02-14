@@ -1,8 +1,6 @@
 
 <? get_header(); ?>
-
-
-<? get_template_part( 'template-parts/header/site-header' ); ?>
+<? // get_template_part( 'template-parts/header/site-header' ); ?>
 
 <article id="a20230212feb23issue" class='' >
   <section id='p1' class='hero' >
