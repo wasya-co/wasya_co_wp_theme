@@ -72,9 +72,7 @@
   </div>
 </section>
 
-<div class='spacer-300'>
-  spacer?
-</div>
+<div class='spacer-300'></div>
 
 <? get_footer(); ?>
 
