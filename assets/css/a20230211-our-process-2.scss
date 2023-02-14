@@ -83,7 +83,6 @@ body.page-id-2689 { // development::our-process-2
   text-align: center;
 }
 .max-width {
-  // max-width: 1000px; /* @TODO: make a var */
   max-width: var(--responsive--alignwide-width);
   margin: auto;
 }

@@ -381,7 +381,8 @@ function google_analytics() { echo "\n\n"; ?>
 
 function bootstrap_css() { echo "\n\n"; ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap-theme.min.css" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap-theme.min.css" crossorigin="anonymous"> -->
+
   <? /* HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries */ ?>
   <? /* WARNING: Respond.js doesn't work if you view the page via file:// */ ?>
   <!--[if lt IE 9]>

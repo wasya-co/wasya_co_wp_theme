@@ -1,10 +1,10 @@
 
       </main>
-    </div><!-- .content-area -->
+    </div><!--content-area-->
   </div><!-- #content -->
 
   <div class='footers'>
-
+    <div class='footers-fog'></div>
 
     <? if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
       <footer class='footer-top' >
@@ -22,12 +22,9 @@
       </footer>
     <? endif; ?>
 
-
-
-
     <footer class="site-footer" >
       <div class='alignwide max-width site-info'>
-        <span>Copyright (c) 2017-2022 Wasya Co</span>
+        <span>Copyright (c) 2023 Wasya Co</span>
         <?php if ( has_nav_menu( 'footer' ) ) : ?>
           <nav aria-label="Secondary menu" class="footer-navigation" >
             <ul class="footer-navigation-wrapper">
@@ -45,17 +42,14 @@
         <span>v2.1.0</span>
       </div>
     </footer>
-
-</div>
+  </div><!--footers-->
 
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
-
 <!-- Boostrap CSS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-
 
 </body>
 </html>

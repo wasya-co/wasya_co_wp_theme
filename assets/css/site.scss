@@ -7,19 +7,17 @@ html {
 :root {
   --global--admin-bar--height: 0px;
 
-  --wco-light-border-color: #00AC97;
+  // lod, Light on Dark
+  --wco-lod-text-color: #dedede;
   --wco-light-link-color:   #00AC97;
-  --wco-light-border: 1px dashed var(--wco-light-border-color);
+  // --wco-dol-link-color:   #20dfd7; // unused!
+  --wco-light-border: 1px dashed var(--wco-light-link-color);
   --wco-light-bg-color: white;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
-  --wco-dark-border-color: #20dfd7;
-  --wco-dark-link-color:   #20dfd7;
-  --wco-dark-border: 1px dashed var(--wco-dark-border-color);
-  --wco-dark-bg-color: black;
-  --wco-dark-text-color: #dedede;
-  --wco-dark-site-menu-link-color: white;
+  // dol, Dark on Light
+  --wco-dol-text-color: #333;
 
   --wco-width-sm: 1em;
   --wco-width-md: 2em;
@@ -271,7 +269,6 @@ html {
   display: none;
 }
 
-.widget-area,
 .pagination,
 .comments-pagination,
 .post-navigation,
@@ -388,17 +385,6 @@ html {
 .wp-block-template-part > *:last-child,
 .wp-block-post-template :where(li > *):last-child {
   margin-bottom: 0;
-}
-
-.widget-area > * {
-  margin-top: calc(0.666 * var(--global--spacing-vertical));
-  margin-bottom: calc(0.666 * var(--global--spacing-vertical));
-}
-@media only screen and (min-width: 482px) {
-  .widget-area > * {
-    margin-top: var(--global--spacing-vertical);
-    margin-bottom: var(--global--spacing-vertical);
-  }
 }
 
 /*
@@ -748,10 +734,8 @@ a:hover {
 
   background: linear-gradient( rgba(97, 206, 208, 0),  rgba(97, 206, 208, 0.6) );
 
+  // min-height: 450px;
 
-  min-height: 450px;
-
-  // color: var(--wco-dark-text-color);
   color: var(--wco-light-text-color);
   padding: 2em 0;
 
@@ -760,11 +744,13 @@ a:hover {
   }
 }
 .site-footer {
-  background-color: rgba(97, 206, 208, 0.8);
   // border-top: 1px dashed #46a3a5;
+
+  background-color: rgba(97, 206, 208, 0.8);
   color: var(--wco-light-text-color);
+
   font-size: 0.8em;
-  padding: 1em 0;
+  // padding: 1em 0;
 
   position: absolute;
   bottom: 0;
@@ -773,10 +759,9 @@ a:hover {
 
   .site-info {
     a {
-      border-left: 2px solid var(--wco-dark-text-color);
+      border-left: 2px solid var(--wco-dol-text-color);
       padding-left: var(--wco-width-sm);
-      // color: var(--wco-light-link-color);
-      color: black;
+      color: var(--wco-dol-text-color);
       text-decoration: underline;
     }
 
@@ -1683,70 +1668,31 @@ h1.page-title {
 }
 
 /**
- * Widget Area is really only site footer
+ * Widget Area is only site footer
 **/
 .widget-area {
   margin-top: calc(6 * var(--global--spacing-vertical));
   padding-bottom: calc(var(--global--spacing-vertical) / 3);
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 
-  // color: var(--footer--color-text);
-  // font-size: var(--footer--font-size);
-  // font-family: var(--footer--font-family);
+  > * {
+    width: 32%;
+  }
 
-  .widget_nav_menu {
-    min-width: 300px;
+  .wp-block-social-links {
+    margin-top: var(--global--spacing-vertical);
 
-    li {
-      background: rgba(255,255,255, .7);
-      margin-bottom: 3px;
-
-
-      a {
-        padding: 5px;
-
-        display: block;
-        width: 100%;
-        // border-bottom: var(--wco-dark-border);
-        text-decoration: none;
-        // color: var(--wco-dark-text-color);
-        color: var(--wco-light-text-color);
-        padding-left: 20px;
-        position: relative;
-
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          height: 0;
-          top: calc( 50% - 7px );
-          left: 5px;
-          border-style: solid;
-          border-color: transparent var(--wco-light-border-color);
-          border-width: 7px 0 10px 7px;
-        }
-
-      }
+    .alignright {
+      justify-content: flex-end;
     }
   }
 }
-
 @media only screen and (max-width: 481px) {
   .widget-area {
     margin-top: calc(3 * var(--global--spacing-vertical));
   }
-}
-
-.widget-area .wp-block-social-links.alignright {
-  margin-top: var(--global--spacing-vertical);
-  justify-content: flex-end;
-}
-
-.widget-area .wp-block-social-links.alignleft {
-  margin-top: var(--global--spacing-vertical);
 }
 
 .widget ul {

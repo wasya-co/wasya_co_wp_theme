@@ -1,0 +1,200 @@
+/*
+ * From: https://getcssscan.com/css-buttons-examples
+**/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.button-91 {
+  padding: 15px 25px;
+  border-radius: 14px;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--wco-light-link-color);
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.button-91:hover {
+  color: #fff;
+  background-color: var(--wco-dark-link-color);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  /* @TODO: make a var */
+}
+body.page-id-3770, body.page-id-2689 {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
+}
+body.page-id-3770 .site-header-wrapper:not(.wco-sticky-header), body.page-id-2689 .site-header-wrapper:not(.wco-sticky-header) {
+  position: relative;
+}
+body.page-id-3770 .site-header-wrapper.sticky-header, body.page-id-2689 .site-header-wrapper.sticky-header {
+  position: fixed;
+}
+.main-header {
+  background: rgba(100, 100, 100, 0.5);
+}
+.main-header .logo {
+  font-family: "Lobster", cursive;
+}
+.main-header .max-width {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header a {
+  padding: 10px;
+  margin-left: 0.4em;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-decoration: none;
+  color: red;
+}
+.main-header a:hover {
+  background: white;
+}
+.center {
+  display: inline-block;
+  text-align: center;
+}
+.max-width {
+  max-width: var(--responsive--alignwide-width);
+  margin: auto;
+}
+.spacer-300 {
+  background: linear-gradient(var(--wco-color5) 50%, var(--wco-transparent));
+  height: 300px;
+}
+/*
+ * 2023-02-10 our-process.scss
+**/
+article#a20230210ourProcess {
+  --wco-color0: #ccc;
+  --wco-color1: #f69d3c;
+  --wco-color2: #6c8f9e;
+  --wco-color3: #ccc;
+  --wco-color4: #fcffbe;
+  --wco-color5: white;
+  --wco-transparent: rgba(0,0,0, 0);
+}
+article#a20230210ourProcess header.title {
+  font-size: 1.6em;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  margin: 3em 0 0 0;
+}
+article#a20230210ourProcess header.title h1 {
+  margin: 0;
+}
+article#a20230210ourProcess section, article#a20230210ourProcess section > .max-width {
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+article#a20230210ourProcess section .description, article#a20230210ourProcess section > .max-width .description {
+  box-sizing: border-box;
+  padding: 0.4em;
+  width: 70%;
+}
+article#a20230210ourProcess section .illustrationW, article#a20230210ourProcess section .illustration, article#a20230210ourProcess section .illustrationC, article#a20230210ourProcess section > .max-width .illustrationW, article#a20230210ourProcess section > .max-width .illustration, article#a20230210ourProcess section > .max-width .illustrationC {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+article#a20230210ourProcess section .illustrationC, article#a20230210ourProcess section > .max-width .illustrationC {
+  height: 100%;
+}
+article#a20230210ourProcess section .illustration, article#a20230210ourProcess section > .max-width .illustration {
+  min-width: 200px;
+  min-height: 200px;
+  width: 40%;
+  height: 100%;
+}
+article#a20230210ourProcess section + .divider {
+  margin-top: -40px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  transform: rotate(-2deg);
+}
+article#a20230210ourProcess #p1 {
+  background: linear-gradient(white, var(--wco-color0));
+  padding-bottom: 40px;
+}
+article#a20230210ourProcess #p1 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10130741/512x512-guy-2-rm-tiny.png");
+  background-size: contain;
+}
+article#a20230210ourProcess #p1 + .divider {
+  background-image: linear-gradient(var(--wco-color0), var(--wco-color1));
+}
+article#a20230210ourProcess #p2 {
+  flex-direction: row-reverse;
+  background: linear-gradient(-2deg, var(--wco-color2) 10%, var(--wco-color1) 90%);
+  padding-bottom: 40px;
+}
+article#a20230210ourProcess #p2 .max-width {
+  flex-direction: row-reverse;
+}
+article#a20230210ourProcess #p2 .description {
+  padding-top: 15%;
+  width: 50%;
+  margin-right: 0%;
+}
+article#a20230210ourProcess #p2 .illustration {
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+}
+article#a20230210ourProcess #p2 .illustrationC {
+  max-width: 400px;
+  width: 100%;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10131252/tower-1rm-tiny.png");
+  background-size: contain;
+  background-position: right;
+}
+article#a20230210ourProcess #p2 + .divider {
+  background-image: linear-gradient(var(--wco-color2), var(--wco-color3));
+}
+article#a20230210ourProcess #p3 {
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(var(--wco-color3), var(--wco-color4));
+}
+article#a20230210ourProcess #p3 .description {
+  padding-top: 0;
+}
+article#a20230210ourProcess #p3 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10132634/guy-1-rm-flipped-tiny.png");
+  background-size: 80%;
+}
+article#a20230210ourProcess #p4 {
+  background: linear-gradient(var(--wco-color4), var(--wco-color5) 90%);
+  flex-direction: row-reverse;
+}
+article#a20230210ourProcess #p4 .description {
+  width: 50%;
+}
+article#a20230210ourProcess #p4 .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png");
+  background-position: center right;
+}
+article#a20230210ourProcess #p4 + .divider {
+  display: none;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+}
+footer.main-footer {
+  background: #eff;
+  height: 120px;
+  width: 100%;
+}

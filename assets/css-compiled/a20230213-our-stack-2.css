@@ -2,15 +2,41 @@
   max-width: 1000px;
   margin: auto;
 }
+.spacer {
+  background: gold;
+}
 .spacer-300 {
   height: 300px;
 }
 .spacer-500 {
   height: 500px;
 }
-#circularW {
+.footers {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
+  padding-top: 100px;
+}
+.footers .footers-fog {
+  border-top: 1px solid red;
+  height: 150px;
+  background-image: linear-gradient(white, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.our-stack-2-frontend {
   background: #eee;
   padding: 5em 0;
+}
+.our-stack-2-frontend .header {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.our-stack-2-frontend .header .title {
+  font-family: "Lobster", cursive;
+}
+.our-stack-2-frontend .header .fancy-border {
+  border-bottom: 1px solid red;
 }
 #circular {
   --r: 250px;
