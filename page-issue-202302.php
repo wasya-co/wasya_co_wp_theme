@@ -1,30 +1,15 @@
-<html>
-<head>
 
-  <!--Bootstrap-->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<? get_header(); ?>
 
-
-  <link rel=stylesheet href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212.css">
-  <!-- <script src="./wco-marker-2.js"></script> -->
-
-  <? wp_head(); ?>
-
-</head>
-<body class='issue-202302' >
 
 <? get_template_part( 'template-parts/header/site-header' ); ?>
 
 <article id="a20230212feb23issue" class='' >
-  <section id='p1' >
+  <section id='p1' class='hero' >
   </section>
+  <div class='divider'></div>
 
-  <section id='p2' >
+  <section id='p2' class='about-us' >
     <div class='max-width'>
       <div class='header'>
         <h2 class='title'>WasyaCo</h2>
@@ -32,11 +17,12 @@
       </div>
       <div class='fancy-border'></div>
 
-      <p>Wasya Co is a research & development firm that specializes in delivering resilient, high-quality software solutions to small and medium-size Enterprises.</p>
+      <p>Wasya Co is a research & development firm that specializes in delivering resilient, high-quality software solutions.</p>
 
-      <p>We walk in step with the time by embracing innovation as a core value. We look ahead to the bright future ahead. We are firmly rooted in the past as our engine of growth, and the source of strength it provides. We diligently operate in the present, by addressing real chalenges, and offering solutions to real needs.</p>
+      <p>We walk in step with the time by embracing innovation as a core value. We look ahead to a bright future. We are firmly rooted in the past as our engine of growth. We diligently operate in the present, by solving real clients' needs.</p>
     </div>
   </section>
+  <div class='divider'></div>
 
   <section id='p3' class='issue-navigator' >
     <div class='max-width'>
@@ -48,9 +34,10 @@
       </div>
     </div>
   </section>
+  <div class='divider'></div>
 
-  <section id='p4' class='our-services container' >
-    <div class='max-width'>
+  <section id='p4' class='our-services' >
+    <div class='max-width container'>
       <div class='header'>
         <h2 class='title'>Our Technology Services</h2>
         <div class='subtitle'>We offer technical development services in a variety of technologies and stacks.</div>
@@ -99,9 +86,7 @@
 
             <div class='our-services-explore' >
               <div class='description' >
-                We additionally offer services in a <br />
-                multitude of other languages, <br />
-                frameworks and technologies.
+                We additionally offer services in a multitude of other languages, frameworks and technologies.
               </div>
               <div class='col' >
                 <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12152656/300x300-usher-2.png" />
@@ -120,7 +105,7 @@
     <div class='max-width'>
 
       <div class='col-md-6'>
-        <div class='col-1'>
+        <div class='my-col'>
           <div class='header'>
             <h2>Our Process</h2>
           </div>
@@ -137,13 +122,58 @@
           </div>
         </div>
       </div>
-      <div class='col-2 col-md-6'>
+      <div class='my-col col-md-6'>
         <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" />
       </div>
 
     </div>
   </section>
   <div class='divider'></div>
+
+  <section class='our-stack-2-frontend' >
+    <div class='max-width'>
+      <div class='header'>
+        <h2 class='title'>Frontend Technologies</h2>
+        <div class='fancy-border'></div>
+      </div>
+
+      <div id='circular'>
+        <div class='el center'>
+          <div class='icon'></div>
+        </div>
+        <div class='el i1'>
+          <div class='icon'></div>
+          <div class='label'>
+            ES6 JavaScript, NPM Node packages
+          </div>
+        </div>
+        <div class='el i2'>
+          <div class='icon'></div>
+          <div class='label'>
+            React
+          </div>
+        </div>
+        <div class='el i3'>
+          <div class='icon'></div>
+          <div class='label'>
+            Webpack & Babel
+          </div>
+        </div>
+        <div class='el i4'>
+          <div class='icon'></div>
+          <div class='label'>
+            Jest & Testing
+          </div>
+        </div>
+        <div class='el i5'>
+          <div class='icon'></div>
+          <div class='label'>
+            Ionic
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id='p6' class='our-clients' >
     <div class='max-width'>
@@ -243,6 +273,4 @@
 </article>
 
 <? get_footer(); ?>
-
-</body></html>
 

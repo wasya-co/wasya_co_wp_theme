@@ -24,7 +24,7 @@ body {
   padding-top: 100px;
 
   .footers-fog {
-    border-top: 1px solid red;
+    border-top: 1px solid #00a3cc;
 
     height: 150px;
 
@@ -39,24 +39,7 @@ body {
 }
 
 
-.our-stack-2-frontend {
-  background: #eee;
-  padding: 5em 0;
 
-  .header {
-    text-align: center;
-    margin-bottom: 5em;
-
-    .title {
-      font-family: 'Lobster', cursive;
-    }
-    .fancy-border {
-      border-bottom: 1px solid red;
-    }
-
-  }
-
-}
 
 #circular {
 
@@ -84,7 +67,7 @@ body {
   }
   .label {
     position: absolute;
-    width: 300px;
+    width: 500px;
     height: 30px;
     line-height: 30px;
     top: -15px;
@@ -149,3 +132,4 @@ body {
     background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png');
   }
 }
+

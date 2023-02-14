@@ -51,6 +51,7 @@ body.issue-202302 {
 .wco-card-2 {
   border: 1px solid black;
   border-radius: 10px;
+  background: white;
   position: relative;
   padding: 1em calc(25% - 1.5em) 1em 1em;
   width: 75%;
@@ -64,56 +65,83 @@ body.issue-202302 {
   border: 1px solid black;
   border-radius: 5px;
   width: 60%;
-  aspect-ratio: 1.5;
+  height: 40%;
   position: absolute;
   top: calc(50% - 66px);
   left: 75%;
   background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
 }
-article#a20230212feb23issue section .header {
-  text-align: center;
-}
-article#a20230212feb23issue section#p1 {
+article#a20230212feb23issue {
   --wco-20230212-bg1: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12130633/1536x1024-lowpoly-landscape-1.jpg");
   background: var(--wco-20230212-bg1) center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 94vh;
 }
-article#a20230212feb23issue section#p2 {
-  padding: 1em 0 2em;
-  background: rgba(32, 32, 32, 0.66);
+article#a20230212feb23issue section .header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+article#a20230212feb23issue section .header .title {
+  font-family: "Lobster", cursive;
+}
+article#a20230212feb23issue section.hero {
+  height: 85vh;
+}
+article#a20230212feb23issue section.hero + .divider {
+  height: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #ccc);
+}
+article#a20230212feb23issue section.about-us {
+  padding: 3em 0 4em;
+  background: rgba(32, 32, 32, 0.7);
   color: #ccc;
 }
-article#a20230212feb23issue section#p2 .subtitle {
+article#a20230212feb23issue section.about-us .subtitle {
   font-style: italic;
   font-size: 0.9em;
 }
-article#a20230212feb23issue section#p2 p {
-  max-width: 400px;
+article#a20230212feb23issue section.about-us p {
+  max-width: 600px;
   margin: auto;
   text-align: justify;
   margin-top: 1em;
 }
+article#a20230212feb23issue section.about-us + .divider {
+  height: 50px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), #ccc);
+}
 article#a20230212feb23issue section.issue-navigator {
-  margin: 2em 0;
+  background: #ccc;
+  padding: 2em 0;
+  margin: 0;
+}
+article#a20230212feb23issue section.issue-navigator a {
+  text-decoration: underline;
 }
 article#a20230212feb23issue section.issue-navigator .p1, article#a20230212feb23issue section.issue-navigator .p2 {
   text-align: right;
+}
+article#a20230212feb23issue section.our-services {
+  padding: 3em 0;
+  background: white;
 }
 article#a20230212feb23issue section.our-services .row {
   margin-top: 1em;
 }
 article#a20230212feb23issue section.our-services .img.ruby {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12143121/512x341-ruby.jpg");
+  background-color: white;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/14101804/300x125-Ruby_on_Rails-Logo-tiny.png");
 }
 article#a20230212feb23issue section.our-services .img.reactor {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12145735/512x341-reactor.jpg");
+  background-color: white;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png");
 }
 article#a20230212feb23issue section.our-services .img.printing-press {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12145601/512x341-printing-press.jpg");
+  background-color: white;
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/14102126/300x300-Wordpress_Blue_logo-tiny.png");
 }
 article#a20230212feb23issue section.our-services .our-services-exploreW {
   display: flex;
@@ -138,7 +166,7 @@ article#a20230212feb23issue section.our-services .our-services-explore img {
   margin-bottom: 1em;
 }
 article#a20230212feb23issue section.our-process {
-  margin: 1em 0;
+  margin: 0;
   padding: 4em 0;
   background: #eee;
 }
@@ -146,7 +174,10 @@ article#a20230212feb23issue section.our-process .max-width {
   display: flex;
   justify-content: center;
 }
-article#a20230212feb23issue section.our-process .col-1 {
+article#a20230212feb23issue section.our-process .header {
+  margin-bottom: 0;
+}
+article#a20230212feb23issue section.our-process .my-col {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,9 +192,23 @@ article#a20230212feb23issue section.our-process .description {
 article#a20230212feb23issue section.our-process .flex-col {
   align-items: center;
 }
+article#a20230212feb23issue section.our-stack-2-frontend {
+  background: #eee;
+  border-top: 1px solid #00a3cc;
+  color: #00a3cc;
+  padding: 5em 0;
+}
+article#a20230212feb23issue section.our-stack-2-frontend .header {
+  text-align: center;
+  margin-bottom: 5em;
+}
+article#a20230212feb23issue section.our-stack-2-frontend .header .fancy-border {
+  border-bottom: 1px solid #00a3cc;
+}
 article#a20230212feb23issue section.our-clients {
   padding: 10em 0 10em 0;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #00a3cc;
+  background: white;
 }
 article#a20230212feb23issue section.our-clients .col-md-3 {
   text-align: center;
@@ -173,7 +218,8 @@ article#a20230212feb23issue section.our-clients img {
 }
 article#a20230212feb23issue section.testimonials {
   padding: 10em 0 10em 0;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #00a3cc;
+  background: white;
 }
 article#a20230212feb23issue section.testimonials h2 {
   margin-bottom: 2em;
@@ -195,6 +241,7 @@ article#a20230212feb23issue section.testimonials .signature .name::after {
 }
 article#a20230212feb23issue section.contact-us {
   padding: 10em 0;
+  background: white;
 }
 article#a20230212feb23issue section.contact-us .max-width {
   display: flex;
