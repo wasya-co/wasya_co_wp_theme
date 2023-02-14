@@ -22,4 +22,5 @@ Changelog available here: http://athemes.com/changelog/sydney/
         2023-01-04 - better footer, incorporating low-poly illustrations
         2023-01-15 - adding carousel, not ready to deploy
 2.5.0 - 2023-01-16 - making minimal cc processing form, improving structure
-
+2.6.0 - lotsa good work!
+2.7.0 - 2023-02-24 - deploying feb23 issue.
