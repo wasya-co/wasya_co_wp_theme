@@ -1,0 +1,48 @@
+#circular {
+  --r: 250px;
+  width: calc(var(--r) * 2);
+  height: calc(var(--r) * 2);
+  /* background: #eee; */
+  margin: auto;
+  position: relative;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.el {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+}
+.i1 {
+  position: absolute;
+  background: red;
+  top: calc(50% - 230px);
+  /* left: calc( 50% + sin(22.5) * var(--r) ); */
+  opacity: sin(100);
+  height: calc(sin( 90deg ) * 100px);
+}
+.i2 {
+  position: absolute;
+  top: calc(50% - 162px);
+  left: calc(50% + 190px);
+}
+.i3 {
+  position: absolute;
+  top: calc(50%);
+  left: calc(50% + 250px);
+  /* top: calc( 50% - cos(22.5) * var(--r) ); */
+  /* left: calc( 50% - sin(22.5) * var(--r) ); */
+}
+.i4 {
+  position: absolute;
+  top: calc(50% + 162px);
+  left: calc(50% + 190px);
+}
+.i5 {
+  position: absolute;
+  top: calc(50% + 230px);
+  left: calc(50% + 96px);
+}

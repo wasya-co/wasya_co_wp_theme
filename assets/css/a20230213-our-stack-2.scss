@@ -1,0 +1,111 @@
+
+.max-width {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.spacer-300 {
+  height: 300px;
+}
+.spacer-500 {
+  height: 500px;
+}
+#circularW {
+  // border: 1px solid red;
+  background: #eee;
+  padding: 5em 0;
+}
+#circular {
+
+
+  --r: 250px;
+
+  width: calc( var(--r) * 2 );
+  height: calc( var(--r) * 2 );
+
+  // margin: auto;
+  position: relative;
+
+
+  .el {
+    width: 10px;
+    height: 10px;
+
+    position: absolute;
+
+  }
+  .icon {
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+  }
+  .label {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    top: -15px;
+    left: 50px;
+    padding-left: 10px;
+  }
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .icon {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: -100px;
+      left: -100px;
+      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184551/200x200-tv-rm-tiny.png');
+    }
+
+  }
+}
+
+
+.i1 {
+  top: calc( 50% - 0.924 * var(--r) ); // cos(22.5)
+  left: calc( 50% + 0.382 * var(--r) ); // sin(22.5)
+
+  .icon {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13182811/200x200-es6-logo-1rm.png');
+  }
+
+}
+.i2 {
+  top: calc( 50% - 0.555 * var(--r) ); // cos(56.25)
+  left: calc( 50% + 0.831 * var(--r) ); // sin(56.25)
+
+  .icon {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183437/100x100-react-rm.png');
+  }
+}
+.i3 {
+  top: calc( 50% );
+  left: calc( 50% + var(--r) );
+
+  .icon {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183718/100x100-webpack-logo-rm.png');
+  }
+}
+.i4 {
+  top: calc( 50% + 0.555 * var(--r) ); // cos(56.25)
+  left: calc( 50% + 0.831 * var(--r) ); // sin(56.25)
+
+  .icon {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13183907/100x100-jest-logo-rm.png');
+  }
+}
+.i5 {
+  top: calc( 50% + 0.924 * var(--r) ); // cos(22.5)
+  left: calc( 50% + 0.382 * var(--r) ); // sin(22.5)
+
+  .icon {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/13184118/100x100-ionic-logo-rm.png');
+  }
+}
