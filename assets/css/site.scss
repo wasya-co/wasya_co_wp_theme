@@ -1689,22 +1689,20 @@ h1.page-title {
     }
   }
 
-  .widget_nav_menu {
-    min-width: 300px;
+  .widget_nav_menu,
+  .widget_polylang {
+    // min-width: 300px;
 
     li {
       background: rgba(255,255,255, .9);
       margin-bottom: 3px;
-
 
       a {
         padding: 5px;
 
         display: block;
         width: 100%;
-        // border-bottom: var(--wco-dark-border);
         text-decoration: none;
-        // color: var(--wco-dark-text-color);
         color: var(--wco-light-text-color);
         padding-left: 20px;
         position: relative;
@@ -1717,7 +1715,7 @@ h1.page-title {
           top: calc( 50% - 7px );
           left: 5px;
           border-style: solid;
-          border-color: transparent var(--wco-light-border-color);
+          border-color: transparent var(--wco-light-text-color);
           border-width: 7px 0 10px 7px;
         }
 

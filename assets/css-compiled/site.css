@@ -1230,14 +1230,11 @@ h1.page-title {
 .widget-area .wp-block-social-links .alignright {
   justify-content: flex-end;
 }
-.widget-area .widget_nav_menu {
-  min-width: 300px;
-}
-.widget-area .widget_nav_menu li {
+.widget-area .widget_nav_menu li, .widget-area .widget_polylang li {
   background: rgba(255, 255, 255, 0.9);
   margin-bottom: 3px;
 }
-.widget-area .widget_nav_menu li a {
+.widget-area .widget_nav_menu li a, .widget-area .widget_polylang li a {
   padding: 5px;
   display: block;
   width: 100%;
@@ -1246,7 +1243,7 @@ h1.page-title {
   padding-left: 20px;
   position: relative;
 }
-.widget-area .widget_nav_menu li a::before {
+.widget-area .widget_nav_menu li a::before, .widget-area .widget_polylang li a::before {
   content: "";
   display: block;
   position: absolute;
@@ -1254,7 +1251,7 @@ h1.page-title {
   top: calc(50% - 7px);
   left: 5px;
   border-style: solid;
-  border-color: transparent var(--wco-light-border-color);
+  border-color: transparent var(--wco-light-text-color);
   border-width: 7px 0 10px 7px;
 }
 @media only screen and (max-width: 481px) {
