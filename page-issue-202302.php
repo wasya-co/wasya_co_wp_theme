@@ -34,7 +34,7 @@
   </section>
   <div class='divider'></div>
 
-  <section id='p4' class='our-services' >
+  <section id='p4' class='our-services-pg1' >
     <div class='max-width container'>
       <div class='header'>
         <h2 class='title'>Our Technology Services</h2>
@@ -53,8 +53,9 @@
               <div class='img ruby'>
                 <div class='imgC'></div>
               </div>
-              <h2>Ruby on Rails Web Development Services</h2>
-              <a href="/pages/ruby-on-rails-software-development-services"><button class="button-91" role="button">Explore</button></a>
+              <a href="/dev-ror"><h2>Ruby on Rails</h2></a>
+              <div class='sub' >Web Application Development</div>
+              <a href="/dev-ror"><button class="button-91" role="button">Explore</button></a>
             </div>
 
           </div>
@@ -64,8 +65,9 @@
               <div class='img reactor'>
                 <div class='imgC'></div>
               </div>
-              <h2>ReactJs Web Development Services</h2>
-              <a href="/pages/ruby-on-rails-software-development-services"><button class="button-91" role="button">Learn More</button></a>
+              <a href="/dev-react"><h2>ReactJs</h2></a>
+              <div class='sub' >Building Elegant Apps & Frontends</div>
+              <a href="/dev-react"><button class="button-91" role="button">Learn More</button></a>
             </div>
 
           </div>
@@ -78,15 +80,16 @@
               <div class='img printing-press'>
                 <div class='imgC'></div>
               </div>
-              <h2>Wordpress Development & Web Design Services</h2>
-              <a href="/pages/ruby-on-rails-software-development-services"><button class="button-91" role="button">Take a Tour</button></a>
+              <a href="/dev-wp"><h2>Wordpress</h2></a>
+              <div class='sub' >Design & Development</div>
+              <a href="/dev-wp"><button class="button-91" role="button">Take a Tour</button></a>
             </div>
 
           </div>
           <div class='col-md-6 our-services-exploreW'>
 
             <div class='our-services-explore' >
-              <div class='description' >
+              <div class='description sub' >
                 We additionally offer services in other languages, frameworks and technologies.
               </div>
               <div class='col' >
@@ -105,7 +108,7 @@
   <section id='p5' class='our-process' >
     <div class='max-width'>
 
-      <div class='col-md-6'>
+      <div class='col-md-8'>
         <div class='my-col'>
           <div class='header'>
             <h2>Our Process</h2>
@@ -118,12 +121,12 @@
           </div>
 
           <div class='flex-col'>
-            <a href="/pages/ruby-on-rails-software-development-services"><button class="button-91" role="button">Tour our Workshop</button></a>
-            <a href="/pages/ruby-on-rails-software-development-services">Read about Our Process</a>
+            <a href="/our-process-2"><button class="button-91" role="button">Tour our Workshop</button></a>
+            <a class='sub' href="/our-process-2">Read about Our Process</a>
           </div>
         </div>
       </div>
-      <div class='my-col col-md-6'>
+      <div class='my-col col-md-4'>
         <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" />
       </div>
 
@@ -131,50 +134,7 @@
   </section>
   <div class='divider'></div>
 
-  <section class='our-stack-2-frontend' >
-    <div class='max-width'>
-      <div class='header'>
-        <h2 class='title'>Frontend Technologies</h2>
-        <div class='fancy-border'></div>
-      </div>
-
-      <div id='circular'>
-        <div class='el center'>
-          <div class='icon'></div>
-        </div>
-        <div class='el i1'>
-          <div class='icon'></div>
-          <div class='label'>
-            ES6 JavaScript, NPM Node packages
-          </div>
-        </div>
-        <div class='el i2'>
-          <div class='icon'></div>
-          <div class='label'>
-            React
-          </div>
-        </div>
-        <div class='el i3'>
-          <div class='icon'></div>
-          <div class='label'>
-            Webpack & Babel
-          </div>
-        </div>
-        <div class='el i4'>
-          <div class='icon'></div>
-          <div class='label'>
-            Jest & Testing
-          </div>
-        </div>
-        <div class='el i5'>
-          <div class='icon'></div>
-          <div class='label'>
-            Ionic
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <? get_template_part( 'template-parts/our-services/frontends'); ?>
 
   <section id='p6' class='our-clients' >
     <div class='max-width'>

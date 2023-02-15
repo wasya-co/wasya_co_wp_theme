@@ -8,7 +8,7 @@ get_header('empty');
 the_post();
 ?>
 
-<body class='t20230116-grayM' >
+<body class="t20230116-grayM <?= join(" ", get_body_class()); ?>" >
 <div class='wco-container margin-overflow'>
 
 

@@ -18,7 +18,7 @@
     <? wp_head(); ?>
 
   </head>
-<body <? body_class(); ?> >
+<body class=" <?= join(" ", get_body_class()); ?>" >
 
 <div id="page" class="site">
   <div id="content" class="site-content">

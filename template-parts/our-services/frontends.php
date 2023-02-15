@@ -19,7 +19,7 @@
       <div class='el i2'>
         <div class='icon'></div>
         <div class='my-label'>
-          React
+          <a href="/dev-react">React</a>
         </div>
       </div>
       <div class='el i3'>

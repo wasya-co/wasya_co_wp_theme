@@ -27,7 +27,9 @@
 
   <? wp_head(); ?>
 </head>
-<body <? body_class(); ?>>
+
+<body class=" <?= join(" ", get_body_class()); ?>" >
+
 <? wp_body_open(); ?>
 <div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
