@@ -111,7 +111,7 @@
       <div class='col-md-8'>
         <div class='my-col'>
           <div class='header'>
-            <h2>Our Process</h2>
+            <h2 class='title' >Our Process</h2>
           </div>
           <div class='fancy-border'></div>
 
@@ -139,7 +139,7 @@
   <section id='p6' class='our-clients' >
     <div class='max-width'>
       <div class='header'>
-        <h2>Our Clients</h2>
+        <h2 class='title' style='color: #aaa;' >Trusted by Partners Worldwide</h2>
       </div>
       <div class='fancy-border'></div>
 
@@ -177,7 +177,7 @@
   <section id='p7' class='testimonials' >
     <div class='max-width'>
       <div class='header'>
-        <h2>What People are Saying</h2>
+        <h2 class='title' style='color: #aaa;' >What People are Saying</h2>
       </div>
       <div class='fancy-border'></div>
 
@@ -221,7 +221,7 @@
     <div class='max-width'>
 
       <div class='description'>
-        <p>Ready to make a move? <br />Chat with us to discuss your project:</p>
+        <p class='sm' >Ready to make a move? <br />Chat with us about your project:</p>
         <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a>
       </div>
 

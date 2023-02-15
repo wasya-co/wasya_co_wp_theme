@@ -13,31 +13,36 @@
       <div class='el i1'>
         <div class='icon'></div>
         <div class='my-label'>
-          ES6 JavaScript, NPM Node packages
+          <a href="/dev-js">ES6 JavaScript</a>
+          <div class='sm'>NPM Node packages</div>
         </div>
       </div>
       <div class='el i2'>
         <div class='icon'></div>
         <div class='my-label'>
           <a href="/dev-react">React</a>
+          <div class='sm'>jsx, virtual DOM</div>
         </div>
       </div>
       <div class='el i3'>
         <div class='icon'></div>
         <div class='my-label'>
-          Webpack & Babel
+          <a href=''>Webpack & Babel</a>
+          <div class='sm'>Build automation, CI/CD pipelines</div>
         </div>
       </div>
       <div class='el i4'>
         <div class='icon'></div>
         <div class='my-label'>
-          Jest & Testing
+          <a href="/dev-js">Jest</a>
+          <div class='sm'>Testing</div>
         </div>
       </div>
       <div class='el i5'>
         <div class='icon'></div>
         <div class='my-label'>
-          Ionic
+          <a href=''>Ionic</a>
+          <div class='sm'>Hybrid mobile apps</div>
         </div>
       </div>
     </div>

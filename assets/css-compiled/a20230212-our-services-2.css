@@ -238,8 +238,17 @@ section.our-services-ip-md .thumb5 {
 section.our-services-ip-md #rotatingC canvas {
   margin: auto;
 }
+section.our-stack-2-frontend a {
+  color: var(--wco-202302-color1);
+}
 section.our-stack-2-frontend .header {
   margin-bottom: 5em;
+}
+section.our-stack-2-frontend .sm {
+  color: #999;
+  font-size: 0.8em;
+  margin-top: -0.5em;
+  font-style: italic;
 }
 section.about-us {
   padding: 3em 0 4em;
@@ -409,14 +418,15 @@ section.contact-us .max-width {
   flex-direction: row-reverse;
   justify-content: center;
 }
+section.contact-us .sm {
+  font-size: 0.8em;
+}
 section.contact-us .description {
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-section.contact-us .description p {
-  text-align: center;
+  align-items: flex-start;
 }
 section.contact-us .illustration {
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png");

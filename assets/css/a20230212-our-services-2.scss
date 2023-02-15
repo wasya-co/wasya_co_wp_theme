@@ -348,8 +348,17 @@ section.our-services-ip-md {
 }
 
 section.our-stack-2-frontend {
+  a {
+    color: var(--wco-202302-color1);
+  }
   .header {
     margin-bottom: 5em;
+  }
+  .sm {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: -0.5em;
+    font-style: italic;
   }
 }
 
@@ -570,15 +579,18 @@ section.contact-us {
     justify-content: center;
   }
 
+  .sm {
+    font-size: 0.8em;
+  }
+
   .description {
+    margin-left: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    p {
-      text-align: center;
-    }
   }
 
   .illustration {
