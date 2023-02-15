@@ -13,7 +13,12 @@
     <meta name="copyright" content="WasyaCo" />
     <meta name="robots" content="index,follow"/>
 
-    <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process-2.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-shared.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-wco-card.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process-2.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-feb23-issue.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-our-services-2.css" crossorigin="anonymous">
 
     <? wp_head(); ?>
 
@@ -25,15 +30,6 @@
     <div class="content-area">
       <main class="site-main">
 
-<? /* <header class='main-header'>
-  <div class='max-width'>
-    <h1 class='logo'>WasyaCo</h1>
-    <nav class='main-nav'>
-      <a href='/'>Home</a>
-      <a href='/our-process-2'>Our Process</a>
-    </nav>
-  </div>
-</header> */ ?>
 <? get_template_part( 'template-parts/header/site-header' ); ?>
 
 <div class='container'>
