@@ -569,9 +569,28 @@ section.testimonials {
 }
 
 
-section.contact-us {
-  padding: 10em 0;
-  background: white;
+
+// hero, beautiful landscape
+section.hero {
+  height: 85vh;
+
+  + .divider {
+    height: 50px;
+    background-image: linear-gradient( rgba(0,0,0, 0), #ccc );
+  }
+}
+
+body.page-our-process-2 {
+  section.contact-us-2-md {
+    background: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
+    min-height: 50vh;
+  }
+}
+section.contact-us-2-md {
+  background-color: white;
+
+  flex-direction: row-reverse;
+  padding: 5em 0;
 
   .max-width {
     display: flex;
@@ -585,12 +604,11 @@ section.contact-us {
 
   .description {
     margin-left: 10px;
-
+    // width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
   }
 
   .illustration {
@@ -599,22 +617,21 @@ section.contact-us {
 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
 
 
     min-width: 200px;
     min-height: 200px;
 
   }
+
+
 }
+section.contact-us-2-md + .divider {
+  // border: 1px solid red;
 
-
-// hero, beautiful landscape
-section.hero {
-  height: 85vh;
-
-  + .divider {
-    height: 50px;
-    background-image: linear-gradient( rgba(0,0,0, 0), #ccc );
-  }
+  display: none;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 }

@@ -150,23 +150,6 @@ article#a20230210ourProcess #p3 .illustration {
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10132634/guy-1-rm-flipped-tiny.png");
   background-size: 80%;
 }
-article#a20230210ourProcess #p4 {
-  background: linear-gradient(var(--wco-color4), var(--wco-color5) 90%);
-  flex-direction: row-reverse;
-}
-article#a20230210ourProcess #p4 .description {
-  width: 50%;
-}
-article#a20230210ourProcess #p4 .illustration {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png");
-  background-position: center right;
-}
-article#a20230210ourProcess #p4 + .divider {
-  display: none;
-  width: 100%;
-  height: 100px;
-  background-image: linear-gradient(white, rgba(255, 255, 255, 0));
-}
 footer.main-footer {
   background: #eff;
   height: 120px;

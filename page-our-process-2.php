@@ -18,7 +18,7 @@
     <? wp_head(); ?>
 
   </head>
-<body class=" <?= join(" ", get_body_class()); ?>" >
+<body class="page-our-process-2 <?= join(" ", get_body_class()); ?>" >
 
 <div id="page" class="site">
   <div id="content" class="site-content">
@@ -82,18 +82,23 @@
         </div>
       </section>
       <div class='divider'></div>
-      <section id='p4' >
-        <div class='description '>
-          <div class='center'>
-            <p>Ready to make a move? <br />Chat with us about your project:</p>
+
+      <section class='contact-us-2-md' >
+        <div class='max-width'>
+          <div class='description'>
+            <p class='sm' >Ready to make a move? <br />Chat with us about your project:</p>
             <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a>
           </div>
+          <div class='illustration'></div>
         </div>
-        <div class='illustration'></div>
       </section>
       <div class='divider'></div>
+
+
+
       <div class='spacer-300'></div>
     </article>
+
 
 
 </div><!--container-->

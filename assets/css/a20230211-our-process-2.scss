@@ -210,27 +210,7 @@ article#a20230210ourProcess {
     }
   }
 
-  #p4 {
-    background: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
 
-    flex-direction: row-reverse;
-    .description {
-      width: 50%;
-    }
-    .illustration {
-      background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/10162202/300z300-rotary-1rm-tiny.png');
-      background-position: center right;
-    }
-
-  }
-  #p4 + .divider {
-    // border: 1px solid red;
-
-    display: none;
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
-  }
 
 }
 
