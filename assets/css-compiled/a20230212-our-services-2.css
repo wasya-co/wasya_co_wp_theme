@@ -1,48 +1,109 @@
-section.our-stack-2-frontend {
-  background: #eee;
-  border-top: 1px solid #00a3cc;
-  color: #00a3cc;
-  padding: 5em 0;
-}
-section.our-stack-2-frontend .header {
-  text-align: center;
-  margin-bottom: 5em;
-  display: block;
-}
-section.our-stack-2-frontend .header .fancy-border {
-  border-bottom: 1px solid #00a3cc;
-}
-#a20230223-our-services-2 a {
-  text-decoration: underline;
-}
-#a20230223-our-services-2 .dev-app-layer > .header {
-  padding: 1em 0;
-  margin: 1em auto 1em;
-  border: 10px solid #999;
-  color: #999;
-  border-left: 0;
-  border-right: 0;
-  text-align: center;
-}
-#a20230223-our-services-2 .dev-app-layer .dev-ror .illustration {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png");
-}
-#a20230223-our-services-2 .dev-app-layer .dev-wp .illustration {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png");
-}
-#a20230223-our-services-2 .dev-app-layer .dev-react .illustration {
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png");
-}
-.our-services-3 {
-  background: #ddd;
-  --wco-202302-color1: #00a3cc;
-}
 section .header {
   display: flex;
   justify-content: center;
 }
 section .header .title {
   font-family: lobster, cursive;
+}
+/*
+ * The common
+**/
+section.dev-wp-md, section.dev-react-md, section.dev-ror-md {
+  border-top: 1px solid var(--wco-202302-color1);
+  min-height: 75vh;
+}
+section.dev-wp-md .max-width, section.dev-react-md .max-width, section.dev-ror-md .max-width {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.dev-wp-md .max-width .wco-card, section.dev-react-md .max-width .wco-card, section.dev-ror-md .max-width .wco-card {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+section.our-stack-2-frontend, section.dev-app-layer-sm, section.dev-app-layer-h1, section.dev-wp-h1 {
+  background: #eee;
+  border-top: var(--wco-202302-border1);
+  color: var(--wco-202302-color1);
+  padding: 5em 0;
+}
+section.our-stack-2-frontend .header, section.dev-app-layer-sm .header, section.dev-app-layer-h1 .header, section.dev-wp-h1 .header {
+  text-align: center;
+  display: block;
+}
+section.our-stack-2-frontend .header .fancy-border, section.dev-app-layer-sm .header .fancy-border, section.dev-app-layer-h1 .header .fancy-border, section.dev-wp-h1 .header .fancy-border {
+  border-bottom: var(--wco-202302-border1);
+}
+/*
+ * Alphabetized : )
+**/
+section.dev-app-layer-h1 {
+  background: #ccc;
+  border-top: 0;
+  font-size: 0.8em;
+}
+section.dev-app-layer-h1 a {
+  color: var(--wco-202302-color1);
+  text-decoration: underline;
+}
+section.dev-app-layer-h1 button {
+  display: none;
+}
+section.dev-app-layer-h1 .header {
+  margin-bottom: 20px;
+}
+section.dev-app-layer-h1 .illustration {
+  width: 100px;
+  height: 100px;
+}
+section.dev-app-layer-h1 .wco-card {
+  margin-bottom: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+section.dev-app-layer-h1 .wco-card h2 {
+  font-size: 1.4em;
+  padding: 1em;
+}
+section.dev-app-layer-sm {
+  background: #ddd;
+}
+section.dev-react-md {
+  background: #d0d0d0;
+}
+.dev-react .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png");
+}
+section.dev-ror-md {
+  background: #ddd;
+}
+.dev-ror .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png");
+}
+body.page-dev-wp section.dev-app-layer-h1 .wco-card.dev-wp {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+}
+.dev-wp .illustration {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png");
+}
+section.dev-wp-h1 {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: -2em;
+  padding-bottom: 0;
+  background: #ccc;
+}
+section.dev-wp-h1 .header .title {
+  margin-top: 0;
+}
+section.dev-wp-md {
+  border-top: 0;
+  background: #ccc;
+}
+.our-services-3 {
+  background: #ddd;
 }
 section.our-services-lg .header h1.title {
   margin-top: 0.25em;
@@ -143,4 +204,7 @@ section.our-services-ip-md .thumb5 {
 }
 section.our-services-ip-md #rotatingC canvas {
   margin: auto;
+}
+section.our-stack-2-frontend .header {
+  margin-bottom: 5em;
 }

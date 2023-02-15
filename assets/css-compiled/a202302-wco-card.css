@@ -1,3 +1,6 @@
+.wco-card {
+  margin-bottom: 2em;
+}
 .wco-card-2 {
   border: 1px solid black;
   border-radius: 10px;
@@ -60,12 +63,10 @@
 }
 .wco-card-4 .col-1 .from-our-blog h4 {
   padding-bottom: 0.6em;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid var(--wco-202302-color1);
 }
 .wco-card-5 {
-  border-bottom: 2px dashed #ccc;
   padding-bottom: 2em;
-  margin-bottom: 2em;
 }
 .wco-card-5 .row-1 {
   display: flex;
@@ -104,5 +105,5 @@
 }
 .wco-card-5 .related h4 {
   padding-bottom: 0.6em;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid var(--wco-202302-color1);
 }

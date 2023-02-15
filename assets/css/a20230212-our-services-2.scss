@@ -1,74 +1,4 @@
 
-section.our-stack-2-frontend {
-  // background: white;
-  background: #eee;
-  border-top: 1px solid #00a3cc;
-  color: #00a3cc;
-
-  padding: 5em 0;
-
-  .header {
-    text-align: center;
-    margin-bottom: 5em;
-    display: block;
-
-    .fancy-border {
-      border-bottom: 1px solid #00a3cc;
-    }
-
-  }
-
-}
-
-#a20230223-our-services-2 {
-  a {
-    text-decoration: underline;
-  }
-
-  .dev-app-layer {
-    // background: #ccc;
-
-     > .header {
-      padding: 1em 0;
-      margin: 1em auto 1em;
-
-      border: 10px solid #999;
-      color: #999;
-
-      border-left: 0;
-      border-right: 0;
-
-      text-align: center;
-    }
-
-    .dev-ror {
-      .illustration {
-        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png');
-      }
-    }
-
-    .dev-wp {
-      .illustration {
-        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png');
-      }
-    }
-
-    .dev-react {
-      .illustration {
-        background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png');
-      }
-    }
-
-  }
-}
-
-.our-services-3 {
-  // background: #eee;
-  background: #ddd;
-
-  --wco-202302-color1: #00a3cc;
-}
-
 section {
   .header {
     // background: white;
@@ -79,6 +9,173 @@ section {
       font-family: lobster, cursive;
     }
   }
+}
+
+/*
+ * The common
+**/
+section.dev-wp-md,
+section.dev-react-md,
+section.dev-ror-md {
+  border-top: 1px solid var(--wco-202302-color1);
+  min-height: 75vh;
+
+  .max-width {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .wco-card {
+      // margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+section.our-stack-2-frontend,
+section.dev-app-layer-sm,
+section.dev-app-layer-h1,
+section.dev-wp-h1 {
+  // background: white;
+  background: #eee;
+  border-top: var(--wco-202302-border1);
+  color: var(--wco-202302-color1);
+
+  padding: 5em 0;
+
+  .header {
+    text-align: center;
+    display: block;
+
+    .fancy-border {
+      border-bottom: var(--wco-202302-border1);
+    }
+  }
+}
+
+/*
+ * Alphabetized : )
+**/
+section.dev-app-layer-h1 {
+  background: #ccc;
+  border-top: 0;
+  font-size: 0.8em;
+
+  a {
+    color: var(--wco-202302-color1);
+    text-decoration: underline;
+  }
+
+  button {
+    display: none;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+  .illustration {
+    // background: pink;
+
+    width: 100px;
+    height: 100px;
+  }
+  .wco-card {
+    // border: 1px solid red;
+
+    margin-bottom: 0;
+
+    flex-direction: row;
+    justify-content: center;
+
+    h2 {
+      font-size: 1.4em;
+      padding: 1em;
+    }
+  }
+}
+
+
+
+section.dev-app-layer-sm {
+  background: #ddd;
+}
+
+section.dev-react-md {
+  background: #d0d0d0;
+}
+.dev-react {
+  .illustration {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png');
+  }
+}
+
+section.dev-ror-md {
+  background: #ddd;
+}
+.dev-ror {
+  .illustration {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png');
+  }
+}
+
+body.page-dev-wp {
+  section.dev-app-layer-h1 {
+    .wco-card.dev-wp {
+      background: rgba(0,0,0, 0.06);
+      border-radius: 20px;
+    }
+  }
+}
+.dev-wp {
+  .illustration {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12204827/512x512-printing-press-1rm.png');
+  }
+}
+section.dev-wp-h1 {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: -2em;
+  padding-bottom: 0;
+
+  background: #ccc;
+
+  .header {
+    .title {
+      margin-top: 0;
+    }
+  }
+}
+
+section.dev-wp-md {
+  border-top: 0;
+  background: #ccc;
+}
+
+// #a20230223-our-services-2 {
+
+//   .dev-app-layer {
+//     // background: #ccc;
+
+//      > .header {
+//       padding: 1em 0;
+//       margin: 1em auto 1em;
+
+//       border: 10px solid #999;
+//       color: #999;
+
+//       border-left: 0;
+//       border-right: 0;
+
+//       text-align: center;
+//     }
+//   }
+// }
+
+.our-services-3 {
+  // background: #eee;
+  background: #ddd;
 }
 
 section.our-services-lg {
@@ -223,3 +320,10 @@ section.our-services-ip-md {
 
 
 }
+
+section.our-stack-2-frontend {
+  .header {
+    margin-bottom: 5em;
+  }
+}
+

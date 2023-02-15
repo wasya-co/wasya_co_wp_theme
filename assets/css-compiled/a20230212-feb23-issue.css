@@ -5,7 +5,6 @@ body.issue-202302 {
   background: #fff;
 }
 article#a20230212feb23issue {
-  --wco-20230212-bg1: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12130633/1536x1024-lowpoly-landscape-1.jpg");
   background: var(--wco-20230212-bg1) center center;
   background-size: cover;
   background-repeat: no-repeat;

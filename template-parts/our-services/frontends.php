@@ -44,4 +44,3 @@
   </div>
 </section>
 
-<div class='spacer-300'></div>

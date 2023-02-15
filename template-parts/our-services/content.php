@@ -111,7 +111,7 @@
   <div class='max-width'>
     <div class='header' >
       <h2 class='title' >
-        Content Creation & Intellectual Property
+        Content & Intellectual Property Creation
       </h2>
       <div class='fancy-border'></div>
     </div>

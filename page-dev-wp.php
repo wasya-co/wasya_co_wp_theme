@@ -31,19 +31,21 @@
 
 </head>
 
-<body <? body_class(); ?>>
+<body class="page-dev-wp <?= join(" ", get_body_class()); ?>" >
 
 <? get_template_part( 'template-parts/header/site-header' ); ?>
 
-<? get_template_part( 'template-parts/our-services/content'); ?>
-<? get_template_part( 'template-parts/our-services/frontends'); ?>
-<? get_template_part( 'template-parts/our-services/dev-app-layer-sm'); ?>
+<div class='spacer spacer-100' style='background: #ccc;' ></div>
 
-  <div class='spacer spacer-500' style='background: #eee; border-top: 1px solid var(--wco-202302-color1); ' >
-    [ &nbsp; this space is intentionally left blank &nbsp; ]
-  </div>
+<? get_template_part( 'template-parts/our-services/dev-app-layer-h1'); ?>
+<? get_template_part( 'template-parts/our-services/dev-wp-h1'); ?>
+<? get_template_part( 'template-parts/our-services/dev-wp-md'); ?>
+<? get_template_part( 'template-parts/our-services/dev-react-md'); ?>
+<? get_template_part( 'template-parts/our-services/dev-ror-md'); ?>
 
-  <? get_footer(); ?>
+<div class='spacer spacer-500' style='background: #eee; border-top: 1px solid var(--wco-202302-color1); ' > [ &nbsp; this space is intentionally left blank &nbsp; ] </div>
+
+<? get_footer(); ?>
 </body>
 
 </html>
