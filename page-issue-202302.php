@@ -38,7 +38,10 @@
     <div class='max-width container'>
       <div class='header'>
         <h2 class='title'>Our Technology Services</h2>
-        <div class='subtitle'>We offer technical development services in a variety of technologies and stacks.</div>
+        <div class='subtitle'>
+          <div>We offer design & development services</div>
+          <div>in a variety of technologies and stacks.</div>
+        </div>
       </div>
       <div class='fancy-border'></div>
 

@@ -171,12 +171,18 @@ article#a20230212feb23issue {
     }
   }
 
+  // #p4
   section.our-services {
     padding: 3em 0;
     background: white;
 
     .row {
       margin-top: 1em;
+    }
+
+    .subtitle {
+      display: flex;
+      justify-content: center;
     }
 
     .img.ruby {

@@ -131,6 +131,10 @@ article#a20230212feb23issue section.our-services {
 article#a20230212feb23issue section.our-services .row {
   margin-top: 1em;
 }
+article#a20230212feb23issue section.our-services .subtitle {
+  display: flex;
+  justify-content: center;
+}
 article#a20230212feb23issue section.our-services .img.ruby {
   background-color: white;
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/14101804/300x125-Ruby_on_Rails-Logo-tiny.png");
