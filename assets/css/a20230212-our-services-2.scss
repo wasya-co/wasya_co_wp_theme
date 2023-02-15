@@ -583,14 +583,16 @@ section.hero {
 body.page-our-process-2 {
   section.contact-us-2-md {
     background: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
-    min-height: 50vh;
   }
 }
 section.contact-us-2-md {
   background-color: white;
+  background-image: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
 
+  display: flex;
   flex-direction: row-reverse;
   padding: 5em 0;
+  min-height: 65vh;
 
   .max-width {
     display: flex;
@@ -604,7 +606,6 @@ section.contact-us-2-md {
 
   .description {
     margin-left: 10px;
-    // width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -619,13 +620,9 @@ section.contact-us-2-md {
     background-position: center center;
     background-size: contain;
 
-
     min-width: 200px;
     min-height: 200px;
-
   }
-
-
 }
 section.contact-us-2-md + .divider {
   // border: 1px solid red;
