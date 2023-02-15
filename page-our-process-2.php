@@ -62,7 +62,7 @@
         <div class='max-width'>
           <div class='description'>
             <p>We embrace iterative development methodology. We value a tight communication loop between stake holders, developers, and the end users. Our approach allows us to improve both the software quality and the time it takes to deliver it to market.</p>
-            <p>An overview of the project establishes requirements, specifications, deliverables, the budget and deadlines.</p>
+            <p>An overview of the project establishes the requirements, specifications, deliverables, the budget and deadlines.</p>
           </div>
           <div class='illustration'>
             <div class='illustrationC'></div>

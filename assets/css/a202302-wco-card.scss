@@ -1,0 +1,160 @@
+
+
+.wco-card-2 {
+  border: 1px solid black;
+  border-radius: 10px;
+
+  background: white;
+
+  position: relative;
+
+  padding: 1em calc(25% - 1.5em) 1em 1em;
+
+  width: 75%;
+  height: 40vh;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .img {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    width: 60%;
+    height: 40%;
+    // aspect-ratio: 3/2;
+
+    position: absolute;
+    top: calc( 50% - 66px );
+    left: 75%;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.wco-card-3 {
+  // border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .illustration {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+  }
+}
+
+.wco-card-4 {
+  // border: 1px solid red;
+
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+
+  display: flex;
+
+  .illustration {
+    width: 400px;
+    height: 400px;
+
+    background-size: cover;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .col-1 {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    .from-our-blog {
+      padding-right: 1em;
+
+      // align-self: flex-end;
+      h4 {
+        padding-bottom: 0.6em;
+        border-bottom: 2px solid #ccc;
+        // text-align: right;
+      }
+    }
+
+  }
+}
+
+.wco-card-5 {
+  // border: 1px solid red;
+
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+
+  // display: flex;
+
+  .row-1 {
+    display: flex;
+  }
+
+  .row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .illustration {
+    width: 400px;
+    height: 400px;
+
+    background-size: cover;
+  }
+
+  .header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    h2 {
+      flex-grow: 1;
+    }
+
+    > .col-1 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  > .col-1 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .from-our-blog {
+    h4 {
+      // text-align: right;
+    }
+  }
+  .related {
+    padding-right: 1em;
+    font-size: 0.8em;
+    h4 {
+      padding-bottom: 0.6em;
+      border-bottom: 2px solid #ccc;
+    }
+  }
+
+}
+

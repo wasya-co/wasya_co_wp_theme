@@ -1,129 +1,29 @@
 
-.wco-card-3 {
-  // border: 1px solid red;
+section.our-stack-2-frontend {
+  // background: white;
+  background: #eee;
+  border-top: 1px solid #00a3cc;
+  color: #00a3cc;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .illustration {
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-  }
-}
-
-.wco-card-4 {
-  // border: 1px solid red;
-
-  border-bottom: 2px dashed #ccc;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-
-  display: flex;
-
-  .illustration {
-    width: 400px;
-    height: 400px;
-
-    background-size: cover;
-  }
+  padding: 5em 0;
 
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-  }
+    text-align: center;
+    margin-bottom: 5em;
+    display: block;
 
-  .col-1 {
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
-
-    .from-our-blog {
-      padding-right: 1em;
-
-      // align-self: flex-end;
-      h4 {
-        padding-bottom: 0.6em;
-        border-bottom: 2px solid #ccc;
-        // text-align: right;
-      }
+    .fancy-border {
+      border-bottom: 1px solid #00a3cc;
     }
 
-  }
-}
-
-.wco-card-5 {
-  // border: 1px solid red;
-
-  border-bottom: 2px dashed #ccc;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-
-  // display: flex;
-
-  .row-1 {
-    display: flex;
-  }
-
-  .row-2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-
-  .illustration {
-    width: 400px;
-    height: 400px;
-
-    background-size: cover;
-  }
-
-  .header {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-
-    h2 {
-      flex-grow: 1;
-    }
-
-    > .col-1 {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
-  > .col-1 {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .from-our-blog {
-    h4 {
-      // text-align: right;
-    }
-  }
-  .related {
-    padding-right: 1em;
-    font-size: 0.8em;
-    h4 {
-      padding-bottom: 0.6em;
-      border-bottom: 2px solid #ccc;
-    }
   }
 
 }
-
 
 #a20230223-our-services-2 {
-
+  a {
+    text-decoration: underline;
+  }
 
   .dev-app-layer {
     // background: #ccc;
@@ -160,4 +60,166 @@
     }
 
   }
+}
+
+.our-services-3 {
+  // background: #eee;
+  background: #ddd;
+
+  --wco-202302-color1: #00a3cc;
+}
+
+section {
+  .header {
+    // background: white;
+    display: flex;
+    justify-content: center;
+
+    .title {
+      font-family: lobster, cursive;
+    }
+  }
+}
+
+section.our-services-lg {
+
+  .header {
+    // background: white;
+
+    h1.title {
+      // border: 1px solid red;
+
+      margin-top: 0.25em;
+      margin-bottom: 0.5em;
+
+      color: var(--wco-202302-color1);
+      font-size: 4em;
+      text-shadow: .1em .1em black;
+      text-shadow: .1em .1em white;
+      text-shadow: .1em .1em gold;
+      text-shadow: .1em .1em #CC00A3;
+      // text-shadow: .1em .1em #A3CC00;
+
+      transform: skew(-12deg) rotate(-14deg);
+
+    }
+  }
+
+
+}
+
+section.our-services-ip-md {
+  .header {
+    margin: 1em 0 2em 0;
+  }
+  .faint {
+    // border: 1px solid red;
+    background: #ffe;
+    border-radius: 20px;
+
+    padding-top: 30%;
+    // background-position: 50% 0%;
+    background-size: 400px;
+    background-position: -60px -70px;
+    background-repeat: no-repeat;
+  }
+  .faint-1d {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114715/512x512-1d-tiny.png');
+  }
+  .faint-2d {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114716/512x512-2d-tiny.png');
+  }
+  .faint-3d {
+    background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114717/512x512-3d-tiny.png');
+  }
+
+  .r0 {
+    display: flex;
+    align-items: stretch;
+    > div > div {
+      height: 100%;
+    }
+  }
+  .r1 {
+    // border: 1px solid cyan;
+    margin: 0 .5em;
+    display: flex;
+    font-size: 0.9em;
+  }
+  .r2 {
+    // border: 1px solid green;
+
+    margin-top: 1em;
+    // min-height: 300px;
+  }
+  .our-services-1d {
+    .r1 {
+      align-items: center;
+
+      .pW {
+        padding-right: 10px;
+        text-align: right;
+      }
+      .btnW {
+        align-self: flex-start;
+      }
+    }
+    .subtitle {
+      margin: 0 0.5em 0.3em 0.5em;
+      padding: 0 0 0.3em 0;
+      border-bottom: 2px solid var(--wco-202302-color1);
+    }
+    .r2 {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .our-services-2d {
+    .r1 {
+      justify-content: flex-end;
+    }
+  }
+
+  .thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 300px;
+
+    > div {
+      // background-color: yellow;
+
+      background-repeat: no-repeat;
+
+      width: 90px;
+      height: 90px;
+
+    }
+  }
+  .thumb1 {
+    background-image: url('https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ec3d697f7397cf93a02/andres1906_Black_skull_with_golden_Aztec-style_decoration_seen__973f8209-4313-4aa9-9b9f-2f048ac7c30a.png?1676484290');
+  }
+  .thumb2 {
+    background-image: url('https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ecad697f7397cf93a03/DemPwn_a_portrait_of_a_woman_with_a_short_bob_line_haircut_31574f8e-dfd4-4716-a895-8c634605cacc.png?1676484297');
+  }
+  .thumb3 {
+    background-image: url('https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ee0d697f7397cf93a04/piousbox_a_stylized_low-poly_rearing_centaur_saluting_with_his__bdba2765-9976-4cde-b648-e31478fe08f8.png?1676484319');
+  }
+  .thumb4 {
+    background-image: url('https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ef8d697f7397cf93a05/JasserHa_papercraft_gazellebleu4kmodernrealistic_72cc671b-7a24-4599-ab3c-43e975bd9ffc.png?1676484343');
+  }
+  .thumb5 {
+    background-image: url('https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1f08d697f7397cf93a06/Santiago_Alvarez_casa_minimalista_paisaje_4k_f1aadd6e-0dbb-4ee3-8971-cbe77464d65f.png?1676484358');
+  }
+
+  #rotatingC {
+    canvas {
+      margin: auto;
+    }
+  }
+
+
 }

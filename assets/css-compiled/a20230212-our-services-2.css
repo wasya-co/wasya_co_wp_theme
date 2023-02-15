@@ -1,85 +1,19 @@
-.wco-card-3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+section.our-stack-2-frontend {
+  background: #eee;
+  border-top: 1px solid #00a3cc;
+  color: #00a3cc;
+  padding: 5em 0;
 }
-.wco-card-3 .illustration {
-  width: 200px;
-  height: 200px;
-  background-size: cover;
+section.our-stack-2-frontend .header {
+  text-align: center;
+  margin-bottom: 5em;
+  display: block;
 }
-.wco-card-4 {
-  border-bottom: 2px dashed #ccc;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-  display: flex;
+section.our-stack-2-frontend .header .fancy-border {
+  border-bottom: 1px solid #00a3cc;
 }
-.wco-card-4 .illustration {
-  width: 400px;
-  height: 400px;
-  background-size: cover;
-}
-.wco-card-4 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-}
-.wco-card-4 .col-1 {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.wco-card-4 .col-1 .from-our-blog {
-  padding-right: 1em;
-}
-.wco-card-4 .col-1 .from-our-blog h4 {
-  padding-bottom: 0.6em;
-  border-bottom: 2px solid #ccc;
-}
-.wco-card-5 {
-  border-bottom: 2px dashed #ccc;
-  padding-bottom: 2em;
-  margin-bottom: 2em;
-}
-.wco-card-5 .row-1 {
-  display: flex;
-}
-.wco-card-5 .row-2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.wco-card-5 .illustration {
-  width: 400px;
-  height: 400px;
-  background-size: cover;
-}
-.wco-card-5 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-}
-.wco-card-5 .header h2 {
-  flex-grow: 1;
-}
-.wco-card-5 .header > .col-1 {
-  display: flex;
-  flex-direction: column;
-}
-.wco-card-5 > .col-1 {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.wco-card-5 .related {
-  padding-right: 1em;
-  font-size: 0.8em;
-}
-.wco-card-5 .related h4 {
-  padding-bottom: 0.6em;
-  border-bottom: 2px solid #ccc;
+#a20230223-our-services-2 a {
+  text-decoration: underline;
 }
 #a20230223-our-services-2 .dev-app-layer > .header {
   padding: 1em 0;
@@ -98,4 +32,115 @@
 }
 #a20230223-our-services-2 .dev-app-layer .dev-react .illustration {
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png");
+}
+.our-services-3 {
+  background: #ddd;
+  --wco-202302-color1: #00a3cc;
+}
+section .header {
+  display: flex;
+  justify-content: center;
+}
+section .header .title {
+  font-family: lobster, cursive;
+}
+section.our-services-lg .header h1.title {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  color: var(--wco-202302-color1);
+  font-size: 4em;
+  text-shadow: 0.1em 0.1em black;
+  text-shadow: 0.1em 0.1em white;
+  text-shadow: 0.1em 0.1em gold;
+  text-shadow: 0.1em 0.1em #CC00A3;
+  transform: skew(-12deg) rotate(-14deg);
+}
+section.our-services-ip-md .header {
+  margin: 1em 0 2em 0;
+}
+section.our-services-ip-md .faint {
+  background: #ffe;
+  border-radius: 20px;
+  padding-top: 30%;
+  background-size: 400px;
+  background-position: -60px -70px;
+  background-repeat: no-repeat;
+}
+section.our-services-ip-md .faint-1d {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114715/512x512-1d-tiny.png");
+}
+section.our-services-ip-md .faint-2d {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114716/512x512-2d-tiny.png");
+}
+section.our-services-ip-md .faint-3d {
+  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/15114717/512x512-3d-tiny.png");
+}
+section.our-services-ip-md .r0 {
+  display: flex;
+  align-items: stretch;
+}
+section.our-services-ip-md .r0 > div > div {
+  height: 100%;
+}
+section.our-services-ip-md .r1 {
+  margin: 0 0.5em;
+  display: flex;
+  font-size: 0.9em;
+}
+section.our-services-ip-md .r2 {
+  margin-top: 1em;
+}
+section.our-services-ip-md .our-services-1d .r1 {
+  align-items: center;
+}
+section.our-services-ip-md .our-services-1d .r1 .pW {
+  padding-right: 10px;
+  text-align: right;
+}
+section.our-services-ip-md .our-services-1d .r1 .btnW {
+  align-self: flex-start;
+}
+section.our-services-ip-md .our-services-1d .subtitle {
+  margin: 0 0.5em 0.3em 0.5em;
+  padding: 0 0 0.3em 0;
+  border-bottom: 2px solid var(--wco-202302-color1);
+}
+section.our-services-ip-md .our-services-1d .r2 {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.our-services-ip-md .our-services-2d .r1 {
+  justify-content: flex-end;
+}
+section.our-services-ip-md .thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
+}
+section.our-services-ip-md .thumbs > div {
+  background-repeat: no-repeat;
+  width: 90px;
+  height: 90px;
+}
+section.our-services-ip-md .thumb1 {
+  background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ec3d697f7397cf93a02/andres1906_Black_skull_with_golden_Aztec-style_decoration_seen__973f8209-4313-4aa9-9b9f-2f048ac7c30a.png?1676484290");
+}
+section.our-services-ip-md .thumb2 {
+  background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ecad697f7397cf93a03/DemPwn_a_portrait_of_a_woman_with_a_short_bob_line_haircut_31574f8e-dfd4-4716-a895-8c634605cacc.png?1676484297");
+}
+section.our-services-ip-md .thumb3 {
+  background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ee0d697f7397cf93a04/piousbox_a_stylized_low-poly_rearing_centaur_saluting_with_his__bdba2765-9976-4cde-b648-e31478fe08f8.png?1676484319");
+}
+section.our-services-ip-md .thumb4 {
+  background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1ef8d697f7397cf93a05/JasserHa_papercraft_gazellebleu4kmodernrealistic_72cc671b-7a24-4599-ab3c-43e975bd9ffc.png?1676484343");
+}
+section.our-services-ip-md .thumb5 {
+  background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1f08d697f7397cf93a06/Santiago_Alvarez_casa_minimalista_paisaje_4k_f1aadd6e-0dbb-4ee3-8971-cbe77464d65f.png?1676484358");
+}
+section.our-services-ip-md #rotatingC canvas {
+  margin: auto;
 }

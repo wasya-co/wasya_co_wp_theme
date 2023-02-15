@@ -1,105 +1,12 @@
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-.flex-row {
-  display: flex;
-}
-.max-width {
-  width: 1000px;
-  margin: auto;
-}
-
 .spacer {
   background: #f9f9f9;
-}
-.spacer-300 {
-  height: 300px;
-}
-.spacer-500 {
-  height: 500px;
-}
-
-
-/**
- * From: https://getcssscan.com/css-buttons-examples
- * ex: <a href="/w/c2"><button class="button-91" role="button">Schedule a call</button></a>
-**/
-.button-91 {
-  padding: 15px 25px;
-  border-radius: 14px;
-  font-size: 16px;
-
-  color: #fff;
-  // background-color: #38D2D2;
-  // background-color: var(--wco-dark-border-color);
-  background-color: var(--wco-light-link-color);
-  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
-    inset 0px 3px 9px rgba(255, 255, 255, 0.3),
-    inset 0px 1px 1px rgba(255, 255, 255, 0.6),
-    inset 0px -8px 36px rgba(0, 0, 0, 0.3),
-    inset 0px 1px 5px rgba(255, 255, 255, 0.6),
-    2px 19px 31px rgba(0, 0, 0, 0.2);
-
-  font-weight: bold;
-  border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-
-  cursor: pointer;
-
-  &:hover {
-    color: #fff;
-    background-color: var(--wco-dark-link-color);
-  }
 }
 
 body.issue-202302 {
   background: #fff;;
 }
 
-.wco-card-2 {
-  border: 1px solid black;
-  border-radius: 10px;
-
-  background: white;
-
-  position: relative;
-
-  padding: 1em calc(25% - 1.5em) 1em 1em;
-
-  width: 75%;
-  height: 40vh;
-  min-height: 400px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .img {
-    border: 1px solid black;
-    border-radius: 5px;
-
-    width: 60%;
-    height: 40%;
-    // aspect-ratio: 3/2;
-
-    position: absolute;
-    top: calc( 50% - 66px );
-    left: 75%;
-
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-}
 
 article#a20230212feb23issue {
   --wco-20230212-bg1: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12130633/1536x1024-lowpoly-landscape-1.jpg');
@@ -268,31 +175,16 @@ article#a20230212feb23issue {
     }
   }
 
-  section.our-stack-2-frontend {
-    // background: white;
-    background: #eee;
-    border-top: 1px solid #00a3cc;
-    color: #00a3cc;
 
-    padding: 5em 0;
-
-    .header {
-      text-align: center;
-      margin-bottom: 5em;
-
-      .fancy-border {
-        border-bottom: 1px solid #00a3cc;
-      }
-
-    }
-
-  }
 
   section.our-clients {
     padding: 10em 0 10em 0;
     border-bottom: 1px solid #00a3cc;
     background: white; // the logos are not transparent
 
+    .r1 {
+      margin-bottom: 100px;
+    }
     .col-md-3 {
       text-align: center;
     }
@@ -307,6 +199,9 @@ article#a20230212feb23issue {
     border-bottom: 1px solid #00a3cc;
     background: white;
 
+    .message {
+      margin-bottom: 1em;
+    }
     h2 {
       margin-bottom: 2em;
     }

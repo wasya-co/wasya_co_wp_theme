@@ -1,0 +1,108 @@
+.wco-card-2 {
+  border: 1px solid black;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  padding: 1em calc(25% - 1.5em) 1em 1em;
+  width: 75%;
+  height: 40vh;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wco-card-2 .img {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  top: calc(50% - 66px);
+  left: 75%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.wco-card-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wco-card-3 .illustration {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+.wco-card-4 {
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  display: flex;
+}
+.wco-card-4 .illustration {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+}
+.wco-card-4 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.wco-card-4 .col-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-4 .col-1 .from-our-blog {
+  padding-right: 1em;
+}
+.wco-card-4 .col-1 .from-our-blog h4 {
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #ccc;
+}
+.wco-card-5 {
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+.wco-card-5 .row-1 {
+  display: flex;
+}
+.wco-card-5 .row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.wco-card-5 .illustration {
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+}
+.wco-card-5 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.wco-card-5 .header h2 {
+  flex-grow: 1;
+}
+.wco-card-5 .header > .col-1 {
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-5 > .col-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wco-card-5 .related {
+  padding-right: 1em;
+  font-size: 0.8em;
+}
+.wco-card-5 .related h4 {
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid #ccc;
+}

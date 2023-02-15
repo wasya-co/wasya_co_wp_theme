@@ -10,7 +10,6 @@
   <meta name="description" content="Agile scrum methodology. Rapid iterations on software development! Ruby on rails, react, aws, cloud-based free services." />
   <meta name="keywords" content="software development, wasya co, victor piousbox" />
   <meta name="author" content="Victor Piousbox" />
-
   <meta name="copyright" content="WasyaCo" />
   <meta name="robots" content="index,follow" />
 
@@ -22,20 +21,22 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-shared.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process-2.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-feb23-issue.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-our-services-2.css" crossorigin="anonymous">
 
   <? wp_head(); ?>
-  <style>
-    a {
-      text-decoration: underline;
-    }
-  </style>
+
 </head>
 
 <body <? body_class(); ?>>
 
 <? get_template_part( 'template-parts/header/site-header' ); ?>
+
+<? get_template_part( 'template-parts/our-services/content'); ?>
+<? get_template_part( 'template-parts/our-services/frontends'); ?>
 
   <div id='a20230223-our-services-2'>
 
@@ -59,7 +60,7 @@ separately: marketing, strategy, analysis, business development -->
   3d assets - threejs, low-poly, rigged, web 3d
 </section> -->
 
-    <div class='spacer-300'></div>
+
 
     <section class='dev-app-layer dev-app-layer-sm'>
       <div class='header max-width'>
@@ -287,6 +288,8 @@ separately: marketing, strategy, analysis, business development -->
     <div class='spacer-500'></div>
 
   </div><!--uniq id-->
+
+
   <? get_footer(); ?>
 </body>
 

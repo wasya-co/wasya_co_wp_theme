@@ -87,7 +87,7 @@
 
             <div class='our-services-explore' >
               <div class='description' >
-                We additionally offer services in a multitude of other languages, frameworks and technologies.
+                We additionally offer services in other languages, frameworks and technologies.
               </div>
               <div class='col' >
                 <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12152656/300x300-usher-2.png" />
@@ -183,7 +183,7 @@
       </div>
       <div class='fancy-border'></div>
 
-      <div class='row'>
+      <div class='row r1'>
         <div class='col-md-3'>
           <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000856/wasya_co_nexenta.jpg" />
         </div>

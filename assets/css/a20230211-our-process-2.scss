@@ -1,37 +1,4 @@
 
-/*
- * From: https://getcssscan.com/css-buttons-examples
-**/
-.button-91 {
-  padding: 15px 25px;
-  border-radius: 14px;
-  font-size: 16px;
-
-  color: #fff;
-  // background-color: #38D2D2;
-  // background-color: var(--wco-dark-border-color);
-  background-color: var(--wco-light-link-color);
-  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
-    inset 0px 3px 9px rgba(255, 255, 255, 0.3),
-    inset 0px 1px 1px rgba(255, 255, 255, 0.6),
-    inset 0px -8px 36px rgba(0, 0, 0, 0.3),
-    inset 0px 1px 5px rgba(255, 255, 255, 0.6),
-    2px 19px 31px rgba(0, 0, 0, 0.2);
-
-  font-weight: bold;
-  border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-
-  cursor: pointer;
-
-  &:hover {
-    color: #fff;
-    background-color: var(--wco-dark-link-color);
-  }
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 html, body {
@@ -78,10 +45,7 @@ body.page-id-2689 { // development::our-process-2
     background: white;
   }
 }
-.center {
-  display: inline-block;
-  text-align: center;
-}
+
 .max-width {
   max-width: var(--responsive--alignwide-width);
   margin: auto;
