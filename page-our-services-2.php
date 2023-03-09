@@ -39,10 +39,14 @@
 <? get_template_part( 'template-parts/our-services/content'); ?>
 <? get_template_part( 'template-parts/our-services/frontends'); ?>
 <? get_template_part( 'template-parts/our-services/dev-app-layer-sm'); ?>
+<? get_template_part( 'template-parts/our-services/our-stack'); ?>
 
-  <div class='spacer spacer-500' style='background: #eee; border-top: 1px solid var(--wco-202302-color1); ' >
-    [ &nbsp; this space is intentionally left blank &nbsp; ]
-  </div>
+  <!-- <div class='spacer spacer-500'
+    style='background: #eee; border-top: 1px solid var(--wco-202302-color1); '
+  > [ &nbsp; this space is intentionally left blank &nbsp; ]
+  </div> -->
+
+
 
   <? get_footer(); ?>
 </body>

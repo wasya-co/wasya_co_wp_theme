@@ -21,17 +21,17 @@ section.dev-wp-md .max-width .wco-card, section.dev-react-md .max-width .wco-car
   padding-bottom: 0;
   border-bottom: 0;
 }
-section.our-stack-2-frontend, section.dev-app-layer-sm, section.dev-app-layer-h1, section.dev-wp-h1 {
+section.our-stack-2-frontend, section.dev-app-layer-sm, section.dev-app-layer-h1, section.dev-wp-h1, section#i20230309stack {
   background: #eee;
   border-top: var(--wco-202302-border1);
   color: var(--wco-202302-color1);
   padding: 5em 0;
 }
-section.our-stack-2-frontend .header, section.dev-app-layer-sm .header, section.dev-app-layer-h1 .header, section.dev-wp-h1 .header {
+section.our-stack-2-frontend .header, section.dev-app-layer-sm .header, section.dev-app-layer-h1 .header, section.dev-wp-h1 .header, section#i20230309stack .header {
   text-align: center;
   display: block;
 }
-section.our-stack-2-frontend .header .fancy-border, section.dev-app-layer-sm .header .fancy-border, section.dev-app-layer-h1 .header .fancy-border, section.dev-wp-h1 .header .fancy-border {
+section.our-stack-2-frontend .header .fancy-border, section.dev-app-layer-sm .header .fancy-border, section.dev-app-layer-h1 .header .fancy-border, section.dev-wp-h1 .header .fancy-border, section#i20230309stack .header .fancy-border {
   border-bottom: var(--wco-202302-border1);
 }
 /*
@@ -456,4 +456,85 @@ section.contact-us-2-md + .divider {
   width: 100%;
   height: 100px;
   background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+}
+#i20230309stack .OurStack > .header {
+  text-align: center;
+}
+#i20230309stack .logos {
+  margin-left: 3em;
+  display: flex;
+}
+#i20230309stack .logos > div {
+  /* border: 1px solid yellow; */
+  font-size: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 1rem 1rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+#i20230309stack .capistrano-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09071507/100x100-capistrano-logo-tiny.png");
+}
+#i20230309stack .express-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072159/100x100-express-tiny.png");
+}
+#i20230309stack .socket-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072430/100x100-socket-logo-tiny.png");
+}
+#i20230309stack .docker-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072726/100x100-docker-logo-tiny.png");
+}
+#i20230309stack .bash-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072840/100x100-bash-logo-tiny.png");
+}
+#i20230309stack .pytorch-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09073323/100x100-pytorch-logo-4-tiny.png");
+}
+#i20230309stack .nltk-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09073544/100x100-nltk-logo-tiny.png");
+}
+#i20230309stack .wiki-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074007/100x100-wiki-logo-2-tiny.png");
+}
+#i20230309stack .drupal-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074137/100x100-drupal-logo-2-tiny.png");
+}
+#i20230309stack .joomla-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074303/100x100-joomla-logo-2-tiny.png");
+}
+#i20230309stack .wordpress-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074432/100x100-wordpress-logo-tiny.png");
+}
+#i20230309stack .moodle-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074537/100x100-moodle-logo-1-tiny.png");
+}
+#i20230309stack .java-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074649/100x100-java-logo-4-tiny.png");
+}
+#i20230309stack .alfresco-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074941/100x100-alfresco-logo-1-tiny.png");
+}
+#i20230309stack .jenkins-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075113/100x100-jenkins-logo-2-tiny.png");
+}
+#i20230309stack .rails-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075314/100x100-rails-logo-tiny.png");
+}
+#i20230309stack .spree-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075538/100x100-spree-logo-2.jpg");
+}
+#i20230309stack .mongo-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075736/100x100-mongodb-logo-0.jpg");
+}
+#i20230309stack .redis-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075904/100x100-redis-logo-2-tiny.png");
+}
+#i20230309stack .mysql-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080030/100x100-mysql-logo-1-tiny.png");
+}
+#i20230309stack .postgres-logo {
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080137/100x100-postgresql-logo-1-tiny.png");
 }

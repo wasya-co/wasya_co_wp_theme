@@ -39,7 +39,8 @@ section.dev-ror-md {
 section.our-stack-2-frontend,
 section.dev-app-layer-sm,
 section.dev-app-layer-h1,
-section.dev-wp-h1 {
+section.dev-wp-h1,
+section#i20230309stack {
   // background: white;
   background: #eee;
   border-top: var(--wco-202302-border1);
@@ -631,4 +632,93 @@ section.contact-us-2-md + .divider {
   width: 100%;
   height: 100px;
   background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+
+#i20230309stack {
+  .OurStack > .header {
+    text-align: center;
+  }
+
+  .logos {
+    margin-left: 3em;
+    display: flex;
+  }
+  .logos > div {
+    /* border: 1px solid yellow; */
+    font-size: 0;
+
+    width: 100px;
+    height: 100px;
+    margin: 0 1rem 1rem 0;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .capistrano-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09071507/100x100-capistrano-logo-tiny.png');
+  }
+  .express-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072159/100x100-express-tiny.png');
+  }
+  .socket-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072430/100x100-socket-logo-tiny.png');
+  }
+  .docker-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072726/100x100-docker-logo-tiny.png');
+  }
+  .bash-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09072840/100x100-bash-logo-tiny.png');
+  }
+  .pytorch-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09073323/100x100-pytorch-logo-4-tiny.png');
+  }
+  .nltk-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09073544/100x100-nltk-logo-tiny.png');
+  }
+  .wiki-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074007/100x100-wiki-logo-2-tiny.png');
+  }
+  .drupal-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074137/100x100-drupal-logo-2-tiny.png');
+  }
+  .joomla-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074303/100x100-joomla-logo-2-tiny.png');
+  }
+  .wordpress-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074432/100x100-wordpress-logo-tiny.png');
+  }
+  .moodle-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074537/100x100-moodle-logo-1-tiny.png');
+  }
+  .java-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074649/100x100-java-logo-4-tiny.png');
+  }
+  .alfresco-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09074941/100x100-alfresco-logo-1-tiny.png');
+  }
+  .jenkins-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075113/100x100-jenkins-logo-2-tiny.png');
+  }
+  .rails-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075314/100x100-rails-logo-tiny.png');
+  }
+  .spree-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075538/100x100-spree-logo-2.jpg');
+  }
+  .mongo-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075736/100x100-mongodb-logo-0.jpg');
+  }
+  .redis-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09075904/100x100-redis-logo-2-tiny.png');
+  }
+  .mysql-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080030/100x100-mysql-logo-1-tiny.png');
+  }
+  .postgres-logo {
+    background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080137/100x100-postgresql-logo-1-tiny.png');
+  }
 }
