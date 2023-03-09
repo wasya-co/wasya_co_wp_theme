@@ -1,11 +1,3 @@
-<?
-/**
- * Header
- *
- * This is the template that displays all of the <head> section and everything up until main.
- *
-**/
-?>
 
 <!doctype html>
 <html <? language_attributes(); ?> >
@@ -16,6 +8,22 @@
   <?= google_analytics(); ?>
   <?= bootstrap_css(); ?>
   <?= carousel_css(); ?>
+
+  <?
+  if ( is_single() ) {
+    $meta_description = get_the_title();
+    $author_id = get_post_field('post_author', get_the_ID() );
+    $meta_author = get_the_author_meta( 'display_name', $author_id );
+    $meta_keywords = get_post_meta( get_the_ID(), 'wco_meta_keywords', true);
+  } else {
+    $meta_description = get_bloginfo('name') . " - " . get_bloginfo('description');
+    $meta_author = 'Victor Piousbox';
+    $meta_keywords = 'Software Development, Consulting';
+  }
+  ?>
+  <meta name="description" content="<?= $meta_description ?>" >
+  <meta name="keywords" content="<?= $meta_keywords ?>" >
+  <meta name="author" content="<?= $meta_author ?>" >
 
 
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css">
