@@ -2198,3 +2198,18 @@ article.post-3229 .footerContainer .mcnTextContent a, article.post-3229 .footerC
   display: flex;
   justify-content: space-between;
 }
+#popmake-3147 {
+  height: 80vh;
+  width: 640px;
+  left: calc(50vw - 640px / 2);
+}
+#popmake-3147 .pum-content {
+  height: 100%;
+}
+#popmake-3147 .pum-content > p {
+  height: 100%;
+}
+#popmake-3147 iframe.google-doc {
+  width: 100%;
+  height: 100%;
+}
