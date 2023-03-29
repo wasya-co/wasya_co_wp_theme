@@ -9,6 +9,7 @@
 #masthead-mobile.wco-sticky-header svg {  /* @TODO: nothing mobile about it */
   fill: black;
 }
+
 /* _vp_ 2022-09-28 */
 .wco-sticky-header .primary-navigation > div > .menu-wrapper > li > .sub-menu li {
   background: var(--wco-light-bg-color);
@@ -59,6 +60,21 @@
 
 .menu-button-container #primary-mobile-menu[aria-expanded*=true] .dropdown-icon.close {
   display: flex;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
 }
 
 .has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu[aria-expanded*=true] .dropdown-icon.close {
@@ -467,6 +483,9 @@
 }
 
 .site-header-wrapper {
+  // border: 1px solid red;
+  // background: white;
+
   border-bottom: var(--wco-dark-border);
   position: absolute;
   width: 100%;
@@ -509,7 +528,7 @@
   top: 0;
 
   background: var(--wco-light-bg-color);
-  box-shadow: 0px 1px 5px rgb(0 0 0 / 50%);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
 
   animation-name: wco-sticky-header;
   animation-duration: 0.5s;

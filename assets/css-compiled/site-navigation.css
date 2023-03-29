@@ -51,6 +51,20 @@
 .menu-button-container #primary-mobile-menu[aria-expanded*=true] .dropdown-icon.close {
   display: flex;
 }
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
+}
 .has-logo.has-title-and-tagline .menu-button-container #primary-mobile-menu[aria-expanded*=true] .dropdown-icon.close {
   animation-name: twentytwentyone-close-button-transition;
   animation-duration: 0.3s;

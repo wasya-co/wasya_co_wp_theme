@@ -150,6 +150,9 @@ function do_setup() {
   add_filter('gutenberg_can_edit_post', '__return_false');
   add_filter('use_block_editor_for_post', '__return_false');
   add_filter('widget_text', 'do_shortcode');
+
+  // ('pll_check_canonical_url', '__return_false', 99, 2);
+  add_filter( 'pll_check_canonical_url', '__return_false' );
 }
 add_action( 'after_setup_theme', 'do_setup' );
 
