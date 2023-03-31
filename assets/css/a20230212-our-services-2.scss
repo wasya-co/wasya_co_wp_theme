@@ -424,13 +424,8 @@ section.our-services-pg1 {
     padding-bottom: 0.5em;
   }
 
-  .row {
-    margin-top: 1em;
-  }
-
-  .subtitle {
-    display: flex;
-    justify-content: center;
+  .wco-card-2 {
+    margin-bottom: 1em;
   }
 
   .img.ruby {
@@ -483,6 +478,23 @@ section.our-services-pg1 {
   }
 }
 
+/* desktop, horizontal cellphone */
+@media only screen and (min-width: 482px) {
+  section.our-services-pg1 {
+
+  }
+}
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.our-services-pg1 {
+    .subtitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
 section.our-process {
   margin: 0;
   padding: 4em 0;
@@ -524,19 +536,51 @@ section.our-clients {
   border-bottom: 1px solid #00a3cc;
   background: white; // the logos are not transparent
 
-  .header {
+  > div > .header {
     margin-bottom: 2em;
   }
 
-  .r1 {
-    margin-bottom: 100px;
-  }
   .col-md-3 {
     text-align: center;
   }
   img {
     // padding: 2em;
     width: 100px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 822px) {
+  section.our-clients {
+    .r1 {
+      margin-bottom: 100px;
+    }
+  }
+}
+/* desktop, horizontal cellphone */
+@media only screen and (min-width: 482px) {
+  section.our-clients {
+
+  }
+}
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.our-clients {
+    .r1 {
+      margin-bottom: 0
+    }
+    .rows {
+      display: flex;
+    }
+  }
+}
+/* cellphone */
+@media only screen and (max-width: 482px) {
+  section.our-clients {
+    > div > .header {
+      span.a {
+        display: block;
+      }
+    }
   }
 }
 
@@ -546,10 +590,11 @@ section.testimonials {
   background: white;
 
   .message {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
-  h2 {
-    margin-bottom: 2em;
+  .testimonial {
+    margin-top: 2em;
+    // margin-bottom: 0.5em;
   }
 
   .signature {
@@ -568,7 +613,15 @@ section.testimonials {
     }
   }
 }
-
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.testimonials {
+    .testimonial {
+      border-left: 10px solid gray;
+      margin-left: 1em;
+    }
+  }
+}
 
 
 // hero, beautiful landscape
@@ -633,7 +686,15 @@ section.contact-us-2-md + .divider {
   height: 100px;
   background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
 }
-
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.contact-us-2-md {
+    > .max-width {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
 
 #i20230309stack {
   .OurStack > .header {
