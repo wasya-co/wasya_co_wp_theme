@@ -24,3 +24,4 @@ Changelog available here: http://athemes.com/changelog/sydney/
 2.5.0 - 2023-01-16 - making minimal cc processing form, improving structure
 2.6.0 - lotsa good work!
 2.7.0 - 2023-02-24 - deploying feb23 issue.
+2.8.0 - 2023-03-31 - css changes for mobile of homepage.

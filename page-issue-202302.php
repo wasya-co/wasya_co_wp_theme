@@ -35,17 +35,16 @@
   <div class='divider'></div>
 
   <section id='p4' class='our-services-pg1' >
-    <div class='max-width container'>
+    <div class='max-width'>
       <div class='header'>
         <h2 class='title'>Our Technology Services</h2>
         <div class='subtitle'>
-          <div>We offer design & development services</div>
-          <div>in a variety of technologies and stacks.</div>
+          <span class='a'>We offer design & development services&nbsp;</span><span class='a'>in a variety of technologies and stacks.</span>
         </div>
       </div>
       <div class='fancy-border'></div>
 
-      <div class=''>
+      <div class='rows'>
         <div class='row'>
           <div class='col-md-6'>
 
@@ -106,9 +105,12 @@
   <div class='divider'></div>
 
   <section id='p5' class='our-process' >
-    <div class='max-width'>
+    <div class='row max-width'><? // separate div b/c background and content may be different ?>
 
-      <div class='col-md-8'>
+      <div class='my-col col-sm-12 col-md-4 order-md-2'>
+        <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" />
+      </div>
+      <div class='col-sm-12 col-md-8 order-md-1'>
         <div class='my-col'>
           <div class='header'>
             <h2 class='title' >Our Process</h2>
@@ -126,9 +128,7 @@
           </div>
         </div>
       </div>
-      <div class='my-col col-md-4'>
-        <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" />
-      </div>
+
 
     </div>
   </section>
@@ -139,36 +139,38 @@
   <section id='p6' class='our-clients' >
     <div class='max-width'>
       <div class='header'>
-        <h2 class='title' style='color: #aaa;' >Trusted by Partners Worldwide</h2>
+        <h2 class='title' style='color: #aaa;' ><span class='a'>Trusted by </span><span class='a'>Partners Worldwide</span></h2>
       </div>
       <div class='fancy-border'></div>
 
-      <div class='row r1'>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000856/wasya_co_nexenta.jpg" />
+      <div class='rows'>
+        <div class='row r1'>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000856/wasya_co_nexenta.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000851/wasya_co_creek2.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000854/wasya_co_liatrio.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000855/wasya_co_mediatek.jpg" />
+          </div>
         </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000851/wasya_co_creek2.jpg" />
-        </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000854/wasya_co_liatrio.jpg" />
-        </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000855/wasya_co_mediatek.jpg" />
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000856/wasya_co_operaevent.jpg" />
-        </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000858/wasya_co_signvox.jpg" />
-        </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000903/wasya_co_zmdigital.jpg" />
-        </div>
-        <div class='col-md-3'>
-          <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000857/wasya_co_redes.jpg" />
+        <div class='row'>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000856/wasya_co_operaevent.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000858/wasya_co_signvox.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000903/wasya_co_zmdigital.jpg" />
+          </div>
+          <div class='col-md-3'>
+            <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/08/28000857/wasya_co_redes.jpg" />
+          </div>
         </div>
       </div>
     </div><!--max-width-->

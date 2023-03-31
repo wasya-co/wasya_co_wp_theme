@@ -26,6 +26,7 @@
   <meta name="author" content="<?= $meta_author ?>" >
 
 
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css/variables.css">
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css">
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-shared.css">
   <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-wco-card.css">

@@ -296,12 +296,8 @@ section.our-services-pg1 .sub {
   font-size: 0.8em;
   padding-bottom: 0.5em;
 }
-section.our-services-pg1 .row {
-  margin-top: 1em;
-}
-section.our-services-pg1 .subtitle {
-  display: flex;
-  justify-content: center;
+section.our-services-pg1 .wco-card-2 {
+  margin-bottom: 1em;
 }
 section.our-services-pg1 .img.ruby {
   background-color: white;
@@ -337,6 +333,15 @@ section.our-services-pg1 .our-services-explore img {
   width: 160px;
   margin-bottom: 1em;
 }
+/* desktop, horizontal cellphone */
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.our-services-pg1 .subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 section.our-process {
   margin: 0;
   padding: 4em 0;
@@ -371,11 +376,8 @@ section.our-clients {
   border-bottom: 1px solid #00a3cc;
   background: white;
 }
-section.our-clients .header {
+section.our-clients > div > .header {
   margin-bottom: 2em;
-}
-section.our-clients .r1 {
-  margin-bottom: 100px;
 }
 section.our-clients .col-md-3 {
   text-align: center;
@@ -383,16 +385,38 @@ section.our-clients .col-md-3 {
 section.our-clients img {
   width: 100px;
 }
+/* desktop */
+@media only screen and (min-width: 822px) {
+  section.our-clients .r1 {
+    margin-bottom: 100px;
+  }
+}
+/* desktop, horizontal cellphone */
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.our-clients .r1 {
+    margin-bottom: 0;
+  }
+  section.our-clients .rows {
+    display: flex;
+  }
+}
+/* cellphone */
+@media only screen and (max-width: 482px) {
+  section.our-clients > div > .header span.a {
+    display: block;
+  }
+}
 section.testimonials {
   padding: 10em 0 10em 0;
   border-bottom: 1px solid #00a3cc;
   background: white;
 }
 section.testimonials .message {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
-section.testimonials h2 {
-  margin-bottom: 2em;
+section.testimonials .testimonial {
+  margin-top: 2em;
 }
 section.testimonials .signature {
   font-weight: bold;
@@ -408,6 +432,13 @@ section.testimonials .signature .name::before {
 }
 section.testimonials .signature .name::after {
   content: ", ";
+}
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.testimonials .testimonial {
+    border-left: 10px solid gray;
+    margin-left: 1em;
+  }
 }
 section.hero {
   height: 85vh;
@@ -456,6 +487,13 @@ section.contact-us-2-md + .divider {
   width: 100%;
   height: 100px;
   background-image: linear-gradient(white, rgba(255, 255, 255, 0));
+}
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  section.contact-us-2-md > .max-width {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 #i20230309stack .OurStack > .header {
   text-align: center;
