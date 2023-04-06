@@ -1316,8 +1316,34 @@ h1.page-title {
     }
   }
 
-  .widget_nav_menu,
+
   .widget_polylang {
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 1em;
+        background: rgba(255,255,255, .9);
+
+        a {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  .widget_search form {
+    display: flex;
+    flex-wrap: nowrap;
+
+    label {
+      display: none;
+    }
+  }
+
+  .widget_nav_menu {
     li {
       background: rgba(255,255,255, .9);
       margin-bottom: 3px;

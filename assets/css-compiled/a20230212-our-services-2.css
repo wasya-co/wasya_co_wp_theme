@@ -284,6 +284,9 @@ section.issue-navigator a {
 section.issue-navigator .p1, section.issue-navigator .p2 {
   text-align: right;
 }
+.custom-html-widget section.issue-navigator {
+  background: transparent;
+}
 section.our-services-pg1 {
   padding: 3em 0;
   background: white;

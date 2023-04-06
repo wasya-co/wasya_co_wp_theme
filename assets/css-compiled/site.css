@@ -931,11 +931,30 @@ h1.page-title {
 .widget-area .wp-block-social-links .alignright {
   justify-content: flex-end;
 }
-.widget-area .widget_nav_menu li, .widget-area .widget_polylang li {
+.widget-area .widget_polylang ul {
+  display: flex;
+}
+.widget-area .widget_polylang ul li {
+  margin-right: 1em;
+  background: rgba(255, 255, 255, 0.9);
+}
+.widget-area .widget_polylang ul li a {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.widget-area .widget_search form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.widget-area .widget_search form label {
+  display: none;
+}
+.widget-area .widget_nav_menu li {
   background: rgba(255, 255, 255, 0.9);
   margin-bottom: 3px;
 }
-.widget-area .widget_nav_menu li a, .widget-area .widget_polylang li a {
+.widget-area .widget_nav_menu li a {
   padding: 5px;
   display: block;
   width: 100%;
@@ -944,7 +963,7 @@ h1.page-title {
   padding-left: 20px;
   position: relative;
 }
-.widget-area .widget_nav_menu li a::before, .widget-area .widget_polylang li a::before {
+.widget-area .widget_nav_menu li a::before {
   content: "";
   display: block;
   position: absolute;
