@@ -154,6 +154,9 @@ function do_setup() {
 
   // ('pll_check_canonical_url', '__return_false', 99, 2);
   add_filter( 'pll_check_canonical_url', '__return_false' );
+
+  remove_action( 'template_redirect', 'wp_redirect_admin_locations', 1000 );
+
 }
 add_action( 'after_setup_theme', 'do_setup' );
 
