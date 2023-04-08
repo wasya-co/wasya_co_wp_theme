@@ -1316,8 +1316,13 @@ h1.page-title {
     }
   }
 
+  #block-11 { /* social buttons */
+    display: inline-block;
+  }
 
   .widget_polylang {
+    display: inline-block;
+
     ul {
       display: flex;
 

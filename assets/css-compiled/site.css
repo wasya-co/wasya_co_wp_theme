@@ -931,6 +931,9 @@ h1.page-title {
 .widget-area .wp-block-social-links .alignright {
   justify-content: flex-end;
 }
+.widget-area .widget_polylang {
+  display: inline-block;
+}
 .widget-area .widget_polylang ul {
   display: flex;
 }
