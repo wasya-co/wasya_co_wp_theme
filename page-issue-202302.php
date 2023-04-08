@@ -17,7 +17,7 @@
 
       <p>Wasya Co is a research & development firm that specializes in delivering resilient, high-quality software solutions.</p>
 
-      <p>We walk in step with the time by embracing innovation as a core value. We look ahead to a bright future. We are firmly rooted in the past as our engine of growth. We diligently operate in the present, by solving real clients' needs.</p>
+      <p>We walk in step with the time by embracing innovation as a core value. We look ahead to a bright future. We are firmly rooted in the past as our engine of growth. We diligently operate in the present, by solving clients' real needs.</p>
     </div>
   </section>
   <div class='divider'></div>
