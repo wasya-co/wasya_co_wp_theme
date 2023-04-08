@@ -1376,8 +1376,13 @@ h1.page-title {
 }
 @media only screen and (min-width: 852px) {
   .widget-area {
-    > * {
+    > div:nth-child(1) {
+      // border: 1px solid red;
       width: 32%;
+    }
+    > div:nth-child(2) {
+      // border: 1px solid green;
+      width: 68%;
     }
   }
 }
