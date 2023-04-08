@@ -986,7 +986,7 @@ h1.page-title {
     width: 32%;
   }
   .widget-area > div:nth-child(2) {
-    width: 68%;
+    width: 66%;
   }
 }
 @media only screen and (max-width: 481px) {
