@@ -71,7 +71,6 @@ html {
 }
 .site-main .W0 {
   background-color: var(--wco-light-bg-color);
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png");
 }
 .site-main > .not-found > *, .entry-content > *, [class*=inner-container] > *, .wp-block-template-part > *, .wp-block-post-template :where(li > *) {
   margin-top: calc(0.666 * var(--global--spacing-vertical));
@@ -348,6 +347,9 @@ h1.entry-title {
 /**
  * Entry Content
  */
+.entry-content {
+  margin-bottom: 3em;
+}
 .entry-content p {
   word-wrap: break-word;
 }
@@ -1029,7 +1031,6 @@ h1.page-title {
 .search-form {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   max-width: var(--responsive--aligndefault-width);
 }
 .search-form > label {
@@ -1121,7 +1122,7 @@ header.page-header {
   max-width: 300px;
 }
 .overflow-margin {
-  margin: -50px auto 0;
+  margin-top: -50px;
 }
 .Card, .pagination, .comments-pagination {
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
@@ -1215,6 +1216,10 @@ c, .clear {
   display: none;
 }
 /* single content-post */
+.sidebar-right {
+  margin-top: 1em;
+  margin-left: 1em;
+}
 .single_php article .custom-html-widget {
   margin: 0 1em 1em 0;
 }
@@ -1227,9 +1232,6 @@ c, .clear {
 .single_php article .overflow-margin {
   margin-left: 0;
   margin-right: 0;
-}
-.single_php article .sidebar-right {
-  margin: 1em;
 }
 @media only screen and (max-width: 852px) {
   .single_php article .entry-content {
@@ -1268,17 +1270,7 @@ html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lan
   margin: 20px 0;
 }
 body.category-site-updates .archive_php .W0 {
-  background-color: #f2f2fb;
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26171509/70x126-bg.png");
-  background-attachment: fixed;
   box-shadow: 0px 10px 30px var(--wco-light-bg-color);
-  background-size: 35px 63px;
-}
-body.category-site-updates .site-main {
-  background-color: #f2f2f2;
-  background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26171509/70x126-bg.png");
-  background-attachment: fixed;
-  background-size: 35px 63px;
 }
 article#post-2990 .feature-img-wrapper {
   display: none;

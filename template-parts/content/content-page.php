@@ -3,7 +3,7 @@
  * Template part for displaying page content in page.php
 **/
 ?>
-
+<!-- content-page.php -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <?php if ( !is_front_page() ) : ?>

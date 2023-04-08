@@ -1,7 +1,8 @@
 <?php
 
 // $hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/29191326/1920x450-dark-galaxy-1.jpg";
-$hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26151217/1500x450-clouds-19.jpg";
+// $hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26151217/1500x450-clouds-19.jpg";
+$hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/08142951/1536x430-ai-bg-wallpaper-clouds-2.jpg";
 
 /*
  * _vp_ 2022-09-27

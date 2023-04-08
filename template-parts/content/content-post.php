@@ -11,6 +11,7 @@ if (strlen($hero_url) == 0) {
 }
 ?>
 
+<!-- template-parts/content/content-post.php -->
 <article id="post-<? the_ID(); ?>" class="<?= implode(" ", get_post_class()); ?>" >
 
   <header class="page-header"
