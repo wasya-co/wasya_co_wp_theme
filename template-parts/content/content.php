@@ -6,6 +6,7 @@
 **/
 ?>
 
+<!-- template-parts / content / content.php -->
 <article id="post-<? the_ID(); ?>" class="content_php Card <?= implode(" ", get_post_class()); ?>" >
   <header class="page-header">
     <? if ( is_singular() ) : ?>

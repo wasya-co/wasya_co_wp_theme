@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
-  font-size: 16px;
+  font-size: 12px;
 }
 #wpadminbar {
   top: auto;
@@ -742,6 +742,11 @@ h1.page-title {
     opacity: 1;
   }
 }
+/* M */
+.metaline {
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
 /*
  * Next/Previous navigation
  * and paged nav
@@ -1257,7 +1262,7 @@ html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lan
   max-width: 200px;
 }
 .wps_subtitle {
-  margin-left: 10px;
+  margin-left: 1rem;
   flex-grow: 1;
 }
 /*
