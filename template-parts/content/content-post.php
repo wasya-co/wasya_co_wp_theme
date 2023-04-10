@@ -22,7 +22,7 @@ if (strlen($hero_url) == 0) {
     </div>
   </header>
 
-  <div class="flex-row alignwide">
+  <div class="flex-row alignwide flex-wrap">
 
     <div class="entry-content overflow-margin Card">
 

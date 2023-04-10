@@ -12,17 +12,14 @@ $subtitle = get_post_meta( get_the_ID(), 'wps_subtitle', true);
 
   <div class='flex-row-2' >
     <? the_post_thumbnail(array(200,200)); ?>
-
     <header>
-
       <? twenty_twenty_one_entry_meta_footer(); ?>
       <div class="wps_subtitle"><?= $subtitle; ?></div>
     </header>
-
   </div>
 
   <div class="entry-content">
-    <?php get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
+    <? get_template_part( 'template-parts/excerpt/excerpt', get_post_format() ); ?>
   </div>
 
 </article>

@@ -1217,6 +1217,9 @@ c, .clear {
 .flex-row {
   display: flex;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .hide, .hidden {
   display: none;
 }
