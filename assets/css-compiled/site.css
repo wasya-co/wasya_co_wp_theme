@@ -259,6 +259,7 @@ a:hover {
   background: linear-gradient(rgba(97, 206, 208, 0), rgba(97, 206, 208, 0.6));
   color: var(--wco-light-text-color);
   padding: 2em 0;
+  z-index: 1;
 }
 .footer-top aside {
   margin-top: 0;
