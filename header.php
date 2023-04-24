@@ -4,10 +4,7 @@
 <head>
   <meta charset="<? bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <?= owa_tracker(); ?>
-  <?= google_analytics(); ?>
-  <?= bootstrap_css(); ?>
-  <? carousel_css(); ?>
+  <? bootstrap_css(); ?>
 
   <?
   if ( is_single() ) {
