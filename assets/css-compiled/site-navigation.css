@@ -567,3 +567,7 @@ ul.footer-navigation-wrapper li .svg-icon:hover {
 .footer-navigation-wrapper .sub-menu-toggle, .footer-navigation-wrapper .menu-item-description {
   display: none;
 }
+html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"], html[lang="ru-RU"] a[lang="ru-RU"] {
+  box-sizing: border-box;
+  background: white;
+}
