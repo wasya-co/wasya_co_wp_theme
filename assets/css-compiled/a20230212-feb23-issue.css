@@ -14,10 +14,22 @@ article#a20230212feb23issue {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  /* #p5 */
 }
 article#a20230212feb23issue section .header {
   text-align: center;
 }
 article#a20230212feb23issue section .header .title {
   font-family: "Lobster", cursive;
+}
+article#a20230212feb23issue section.our-process {
+  border-top: 1px solid #00a3cc;
+  background: linear-gradient(#000, #333 30%, #333 70%, #ddd 75%);
+  color: #eee;
+}
+article#a20230212feb23issue section.our-process > .max-width {
+  align-items: center;
+}
+article#a20230212feb23issue section.our-clients {
+  border-top: 1px solid #00a3cc;
 }

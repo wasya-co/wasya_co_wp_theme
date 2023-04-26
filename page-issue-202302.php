@@ -108,7 +108,8 @@
     <div class='row max-width'><? // separate div b/c background and content may be different ?>
 
       <div class='my-col col-sm-12 col-md-4 order-md-2'>
-        <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" />
+        <? // <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12155105/256x256-robotic-arm-1rm-tiny.png" /> ?>
+        <img class='illustration' src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/26164122/256x256-robotic-arm-rm-tiny.png" />
       </div>
       <div class='col-sm-12 col-md-8 order-md-1'>
         <div class='my-col'>

@@ -197,19 +197,20 @@ section.dev-wp-md {
   background: #ccc;
 }
 
-section.our-services-lg {
-
+.burgundy-1 {
   .header {
-    // background: white;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: lobster, cursive;
+    text-align: center;
 
     h1.title {
       // border: 1px solid red;
 
       margin-top: 0.25em;
-      margin-bottom: 0.5em;
 
       color: var(--wco-202302-color1);
       font-size: 4em;
@@ -222,10 +223,18 @@ section.our-services-lg {
       transform: skew(-12deg) rotate(-14deg);
 
     }
+    h2.subtitle {
+      color: black;
+      text-shadow: .1em .1em white;
+
+      transform: skew(-12deg) rotate(-14deg);
+
+      margin-bottom: 2em;
+    }
   }
-
-
 }
+
+
 
 section.our-services-pg1 {
 }
@@ -340,6 +349,13 @@ section.our-services-ip-md {
   }
 
   #rotatingC {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     canvas {
       margin: auto;
     }
@@ -785,4 +801,56 @@ section.contact-us-2-md + .divider {
   .postgres-logo {
     background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080137/100x100-postgresql-logo-1-tiny.png');
   }
+}
+
+
+article.a20230426-dev-ror {
+  --wco-20230426-biker-girl: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/26165707/256x256-ruby-red-bike-girl-rm-tiny.png');
+
+  .header {
+    // border: 1px solid red;
+
+    height: 60vh;
+    min-height: 400px;
+    background: no-repeat 70% center;
+    background-color: #ddd;
+    background-image: var(--wco-20230426-biker-girl);
+  }
+
+  .r1 {
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    min-height: 400px;
+    background: var(--wco-202302-burgundy);
+
+    margin-top: -60px;
+
+    .r1C {
+      background: white;
+      padding: 20px;
+      min-height: 400px;
+      border-radius: 20px;
+
+      .row {
+        margin-top: 2em;
+      }
+
+      .Card {
+        height: 100%;
+      }
+
+    }
+  }
+
+
+  .contact-us-2-md {
+    min-height: 400px;
+    height: 60vh;
+    padding: 0;
+
+
+  }
+
 }

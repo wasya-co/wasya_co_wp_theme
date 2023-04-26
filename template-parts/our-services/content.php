@@ -33,22 +33,24 @@
 
   function init() {
 
-    const container = document.createElement( 'div' );
-    document.getElementById('rotatingC').appendChild( container );
+    const container = document.createElement( 'div' )
 
     // fov — Camera frustum vertical field of view.
     // aspect — Camera frustum aspect ratio.
     // near — Camera frustum near plane.
     // far — Camera frustum far plane.
-    camera = new THREE.PerspectiveCamera( 45, w/h, 1, 1600 );
-    camera.position.set( - 1.8, 0.6, 2.7 );
+    camera = new THREE.PerspectiveCamera( 45, w/h, 1, 1600 )
+    camera.position.set( - 1.8, 0.6, 2.7 )
 
-    scene = new THREE.Scene({});
+    scene = new THREE.Scene({})
 
-    const loader = new GLTFLoader().setPath( '/wp-content/themes/wasya_co_wp_theme/data/obj/' );
+    const loader = new GLTFLoader().setPath( '/wp-content/themes/wasya_co_wp_theme/data/obj/' )
         loader.load( 'cyberpunk-laptop.glb', function ( gltf ) {
-          scene.add( gltf.scene );
-          render();
+          $("#rotatingC span.label").css('display', 'none')
+          document.getElementById('rotatingC').appendChild( container )
+
+          scene.add( gltf.scene )
+          render()
         } );
 
     renderer = new THREE.WebGLRenderer({
@@ -96,23 +98,11 @@
 <!-- <div class='debug'>Our Services 3</div> -->
 <div class='spacer-300'></div>
 
-<section class='our-services-lg' >
+<section class='our-services-ip-md burgundy-1' >
   <div class='max-width'>
     <div class='header' >
-      <h1 class='title' >
-        Our Services
-      </h1>
-      <div class='fancy-border'></div>
-    </div>
-  </div>
-</section>
-
-<section class='our-services-ip-md' >
-  <div class='max-width'>
-    <div class='header' >
-      <h2 class='title' >
-        Content & Intellectual Property Creation
-      </h2>
+      <h1 class='title' >Our Services</h1>
+      <h2 class='subtitle' >Content & Intellectual Property Creation</h2>
       <div class='fancy-border'></div>
     </div>
 
@@ -186,6 +176,7 @@
           </div>
 
           <div id='rotatingC' class='r2'>
+            <span class='label'>Loading...</span>
           </div>
 
         </div><!--faint-3d-->

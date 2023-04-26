@@ -132,13 +132,15 @@ section.dev-wp-md {
   border-top: 0;
   background: #ccc;
 }
-section.our-services-lg .header {
+.burgundy-1 .header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: lobster, cursive;
+  text-align: center;
 }
-section.our-services-lg .header h1.title {
+.burgundy-1 .header h1.title {
   margin-top: 0.25em;
-  margin-bottom: 0.5em;
   color: var(--wco-202302-color1);
   font-size: 4em;
   text-shadow: 0.1em 0.1em black;
@@ -146,6 +148,12 @@ section.our-services-lg .header h1.title {
   text-shadow: 0.1em 0.1em gold;
   text-shadow: 0.1em 0.1em #CC00A3;
   transform: skew(-12deg) rotate(-14deg);
+}
+.burgundy-1 .header h2.subtitle {
+  color: black;
+  text-shadow: 0.1em 0.1em white;
+  transform: skew(-12deg) rotate(-14deg);
+  margin-bottom: 2em;
 }
 section.our-services-ip-md .header {
   margin: 1em 0 2em 0;
@@ -234,6 +242,13 @@ section.our-services-ip-md .thumb4 {
 }
 section.our-services-ip-md .thumb5 {
   background-image: url("https://d2ptz2tf6xxnie.cloudfront.net/photos/thumb/63ed1f08d697f7397cf93a06/Santiago_Alvarez_casa_minimalista_paisaje_4k_f1aadd6e-0dbb-4ee3-8971-cbe77464d65f.png?1676484358");
+}
+section.our-services-ip-md #rotatingC {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section.our-services-ip-md #rotatingC canvas {
   margin: auto;
@@ -578,4 +593,39 @@ section.contact-us-2-md + .divider {
 }
 #i20230309stack .postgres-logo {
   background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/03/09080137/100x100-postgresql-logo-1-tiny.png");
+}
+article.a20230426-dev-ror {
+  --wco-20230426-biker-girl: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/26165707/256x256-ruby-red-bike-girl-rm-tiny.png");
+}
+article.a20230426-dev-ror .header {
+  height: 60vh;
+  min-height: 400px;
+  background: no-repeat 70% center;
+  background-color: #ddd;
+  background-image: var(--wco-20230426-biker-girl);
+}
+article.a20230426-dev-ror .r1 {
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  min-height: 400px;
+  background: var(--wco-202302-burgundy);
+  margin-top: -60px;
+}
+article.a20230426-dev-ror .r1 .r1C {
+  background: white;
+  padding: 20px;
+  min-height: 400px;
+  border-radius: 20px;
+}
+article.a20230426-dev-ror .r1 .r1C .row {
+  margin-top: 2em;
+}
+article.a20230426-dev-ror .r1 .r1C .Card {
+  height: 100%;
+}
+article.a20230426-dev-ror .contact-us-2-md {
+  min-height: 400px;
+  height: 60vh;
+  padding: 0;
 }

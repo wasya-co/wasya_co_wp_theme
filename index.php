@@ -1,37 +1,27 @@
-<?php
+<?
 /**
  * Display a page when nothing more specific matches a query.
  * Display the home page when no home.php file exists.
  *
  * _vp_ 2022-11-09
- */
+**/
 
 get_header(); ?>
 
-<?php if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) ) ) : ?>
-	<header class="page-header alignwide">
-		<h1 class="page-title"><?php single_post_title(); ?></h1>
-	</header><!-- .page-header -->
-<?php endif; ?>
+<? if ( is_home() && ! is_front_page() && ! empty( single_post_title( '', false ) ) ) : ?>
+  <header class="page-header alignwide">
+    <h1 class="page-title"><? single_post_title(); ?></h1>
+  </header>
+<? endif; ?>
 
-<?php
+<?
 if ( have_posts() ) {
-
-	// Load posts loop.
-	while ( have_posts() ) {
-		the_post();
-
-		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
-	}
-
-	// Previous/next page navigation.
-	twenty_twenty_one_the_posts_navigation();
-
+  while ( have_posts() ) {
+    the_post();
+    get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
+  }
+  twenty_twenty_one_the_posts_navigation();
 } else {
-
-	// If no content, include the "No posts found" template.
-	get_template_part( 'template-parts/content/content-none' );
-
+  get_template_part( 'template-parts/content/content-none' );
 }
-
 get_footer();
