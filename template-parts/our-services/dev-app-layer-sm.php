@@ -13,8 +13,7 @@
 
       <div class='wco-card-3 dev-ror'>
 
-        <div class='illustration'>
-        </div>
+        <div class='illustration'></div>
 
         <h2>Ruby on Rails</h2>
 

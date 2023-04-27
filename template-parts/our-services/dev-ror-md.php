@@ -2,11 +2,11 @@
 <section class='dev-ror dev-ror-md' >
   <div class='max-width'>
 
-    <div class='wco-card wco-card-4 dev-ror'>
-
-      <div class='illustration'></div>
-
-      <div class='col-1'>
+    <div class='wco-card wco-card-4 row' >
+      <div class='col-md-4'>
+        <div class='illustration'></div>
+      </div>
+      <div class='col-md-8'>
 
         <div class='header'>
           <h2>Ruby on Rails</h2>
@@ -32,7 +32,7 @@
           </ol>
         </div>
 
-      </div><!--col-1-->
+      </div>
 
     </div><!--dev-ror--><!--wco-card-4-->
 

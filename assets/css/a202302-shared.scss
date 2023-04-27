@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
 
-
   --wco-202302-color1: #00a3cc;
   --wco-202302-border1: 1px solid var(--wco-202302-color1);
 }
@@ -19,7 +18,7 @@ html, body {
   color: #fff;
   // background-color: #38D2D2;
   // background-color: var(--wco-dark-border-color);
-  background-color: var(--wco-light-link-color);
+  background-color: var(--wco-lod-link-color);
   background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
   box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
     inset 0px 3px 9px rgba(255, 255, 255, 0.3),
@@ -38,7 +37,7 @@ html, body {
 
   &:hover {
     color: #fff;
-    background-color: var(--wco-dark-link-color);
+    background-color: var(--wco-dol-link-color);
   }
 }
 

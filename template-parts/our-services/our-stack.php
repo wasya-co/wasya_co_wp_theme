@@ -1,9 +1,7 @@
 <section id="i20230309stack" class='OurStack'>
 
   <div class='header max-width'>
-    <h2 class='title'>
-    Our Stack
-    </h2>
+    <h2 class='title'>Our Stacks</h2>
     <div class='fancy-border'></div>
   </div>
 

@@ -4,15 +4,16 @@
 
   // lod, Light on Dark
   --wco-lod-text-color: #dedede;
-  --wco-light-link-color:   #00AC97;
-  // --wco-dol-link-color:   #20dfd7; // unused!
-  --wco-light-border: 1px dashed var(--wco-light-link-color);
+  --wco-lod-link-color: #00AC97;
+
+  --wco-light-border: 1px dashed var(--wco-lod-link-color);
   --wco-light-bg-color: white;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
   // dol, Dark on Light
   --wco-dol-text-color: #333;
+  --wco-dol-link-color: #178f87;
 
   --wco-width-sm: 1em;
   --wco-width-md: 2em;
@@ -75,22 +76,6 @@
   --list--font-family: var(--global--font-secondary);
   --definition-term--font-family: var(--global--font-primary);
 
-  /* Colors */
-  --global--color-black: #000;
-  --global--color-dark-gray: #28303d;
-  --global--color-gray: #39414d;
-  --global--color-light-gray: #f0f0f0;
-  --global--color-green: #d1e4dd;
-  --global--color-blue: #d1dfe4;
-  --global--color-purple: #d1d1e4;
-  --global--color-red: #e4d1d1;
-  --global--color-orange: #e4dad1;
-  --global--color-yellow: #eeeadd;
-  --global--color-white: #fff;
-  --global--color-white-50: rgba(255, 255, 255, 0.5);
-  --global--color-white-90: rgba(255, 255, 255, 0.9);
-  --global--color-primary: var(--global--color-dark-gray);
-
   /* Body text color, site title */
   --global--color-secondary: var(--global--color-gray);
 
@@ -100,8 +85,6 @@
 
   /* Mint, default body background */
   --global--color-border: var(--global--color-primary);
-
-  /* Used for borders (separators) */
 
   /* Spacing */
   --global--spacing-unit: 20px;

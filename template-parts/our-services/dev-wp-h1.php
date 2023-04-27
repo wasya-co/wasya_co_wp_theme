@@ -7,6 +7,6 @@
       <div class='fancy-border'></div>
     </div>
   </div>
-</section><!--dev-wp-h1-->
+</section>
 
 

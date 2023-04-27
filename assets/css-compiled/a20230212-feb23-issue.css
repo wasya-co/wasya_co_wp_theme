@@ -30,6 +30,9 @@ article#a20230212feb23issue section.our-process {
 article#a20230212feb23issue section.our-process > .max-width {
   align-items: center;
 }
+article#a20230212feb23issue section.our-process a.sub {
+  color: var(--wco-dol-link-color);
+}
 article#a20230212feb23issue section.our-clients {
   border-top: 1px solid #00a3cc;
 }

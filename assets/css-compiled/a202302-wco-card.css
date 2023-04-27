@@ -6,13 +6,12 @@
   border-radius: 10px;
   background: white;
   position: relative;
-  padding: 1em calc(25% - 1.5em) 1em 1em;
+  padding: 4em calc(25% - 1.5em) 1em 1em;
   width: 75%;
   height: 40vh;
   min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .wco-card-2 .img {
   border: 1px solid black;
@@ -20,7 +19,7 @@
   width: 60%;
   height: 40%;
   position: absolute;
-  top: calc(50% - 66px);
+  top: 4em;
   left: 75%;
   background-size: contain;
   background-position: center center;

@@ -27,7 +27,7 @@
       <div class='p1'>
         <a href='#'>Issue Feb'23</a>
       </div>
-      <div class='p2'>
+      <div class='p2 past-issues'>
         Past Issues: <a href='#'>Dec'22</a>, <a href='#'>Jan'23</a>, <a href='#'>All Issues</a>
       </div>
     </div>
@@ -87,15 +87,7 @@
           </div>
           <div class='col-md-6 our-services-exploreW'>
 
-            <div class='our-services-explore' >
-              <div class='description sub' >
-                We additionally offer services in other languages, frameworks and technologies.
-              </div>
-              <div class='col' >
-                <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12152656/300x300-usher-2.png" />
-                <a href="/pages/ruby-on-rails-software-development-services"><button class="button-91" role="button">View All Services</button></a>
-              </div>
-            </div>
+            <? get_template_part('template-parts/our-services/our-stack-link'); ?>
 
           </div>
         </div><!--row-->

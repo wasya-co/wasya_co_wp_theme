@@ -1,23 +1,23 @@
 
-
 <section class='dev-wp dev-wp-md' >
   <div class='max-width'>
 
     <div class='wco-card wco-card-5'>
 
-      <div class='row-1'>
-
-        <div class='illustration'></div>
-        <div class='header'>
-          <h2>Wordpress</h2>
-          <div class='col-1'>
-            <a href="/our-process-2"><button class="button-91" role="button">Bugfixes & Updates</button></a>
-            <a href='/'>Create & Update Plugins</a>
-          </div>
+      <div class='row' >
+        <div class='col-md-6'>
+          <div class='illustration'></div>
         </div>
-
+        <div class='col-md-6 label-1'>
+          <h2>Wordpress</h2>
+          <a href="/our-process-2">
+            <button class="button-91" role="button">Bugfixes & Updates</button>
+          </a>
+          <a href='/'>Create & Update Plugins</a>
+        </div>
       </div><!--row-1-->
-      <div class='row row-2'>
+
+      <div class='row'>
 
         <div class='related related-services col-md-6'>
           <h4>Related Services:</h4>
@@ -37,7 +37,7 @@
             <li><a href='#'>Show More</a></li>
           </ol>
         </div>
-      </div><!--row-2-->
+      </div><!--row-->
 
     </div><!--wco-card-5-->
 

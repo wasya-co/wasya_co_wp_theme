@@ -2,12 +2,11 @@
 <section class='dev-react dev-react-md' >
   <div class='max-width'>
 
-
-    <div class='wco-card wco-card-4 dev-react'>
-
-      <div class='illustration'></div>
-
-      <div class='col-1'>
+    <div class='wco-card wco-card-4 dev-react row' >
+      <div class='col-sm-6'>
+        <div class='illustration'></div>
+      </div>
+      <div class='col-sm-6'>
 
         <div class='header'>
           <h2>React Js</h2>
@@ -37,7 +36,7 @@
           </ol>
         </div>
 
-      </div><!--col-1-->
+      </div>
     </div><!--dev-react--><!--wco-card-4-->
 
   </div>

@@ -1164,7 +1164,7 @@ form#wpforms-form-7 .wpforms-field-container {
   display: block;
 }
 form#wpforms-form-7 .wpforms-submit-container button[type="submit"] {
-  background: var(--wco-light-link-color);
+  background: var(--wco-lod-link-color);
   color: var(--wco-light-bg-color);
 }
 form#wpforms-form-7 .are-you-human label::after {
