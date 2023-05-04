@@ -2,7 +2,7 @@
 <? get_header(); ?>
 <? // get_template_part( 'template-parts/header/site-header' ); ?>
 
-<article id="a2023q3-issue" class='' style='background: #336;' >
+<article id="a20230212feb23issue" class='' style='background: #336;' >
   <section id='p1' class='hero' >
   </section>
   <div class='divider'></div>
@@ -28,7 +28,7 @@
         <a href='#'>Issue 2023Q3</a>
       </div>
       <div class='p2 past-issues'>
-        Past Issues: <a href='#'>Jan'23</a>, <a href='#'>Feb'23</a>, <a href='#'>All Issues</a>
+        Past Issues: <a href='/issue-202302'>Feb'23</a>, <a href='/issue-202302'>Feb'23</a>, <a href='javascript: alert("Not Implemented!"); void(0);'>All Issues</a>
       </div>
     </div>
   </section>
