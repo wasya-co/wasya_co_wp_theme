@@ -9,26 +9,26 @@
  * @param {boolean} withListeners - Whether we want to add/remove listeners or not.
 **/
 function toggleAriaExpanded( el, withListeners ) {
-	if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
-		el.setAttribute( 'aria-expanded', 'true' );
-		submenuPosition( el.parentElement );
-		if ( withListeners ) {
-			document.addEventListener( 'click', collapseMenuOnClickOutside );
-		}
-	} else {
-		el.setAttribute( 'aria-expanded', 'false' );
-		if ( withListeners ) {
-			document.removeEventListener( 'click', collapseMenuOnClickOutside );
-		}
-	}
+  if ( 'true' !== el.getAttribute( 'aria-expanded' ) ) {
+    el.setAttribute( 'aria-expanded', 'true' );
+    submenuPosition( el.parentElement );
+    if ( withListeners ) {
+      document.addEventListener( 'click', collapseMenuOnClickOutside );
+    }
+  } else {
+    el.setAttribute( 'aria-expanded', 'false' );
+    if ( withListeners ) {
+      document.removeEventListener( 'click', collapseMenuOnClickOutside );
+    }
+  }
 }
 
 function collapseMenuOnClickOutside( event ) {
-	if ( ! document.getElementById( 'site-navigation' ).contains( event.target ) ) {
-		document.getElementById( 'site-navigation' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		} );
-	}
+  if ( ! document.getElementById( 'site-navigation' ).contains( event.target ) ) {
+    document.getElementById( 'site-navigation' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+      button.setAttribute( 'aria-expanded', 'false' );
+    } );
+  }
 }
 
 /**
@@ -39,26 +39,26 @@ function collapseMenuOnClickOutside( event ) {
  * @param {Element} li - The li element.
 **/
 function submenuPosition( li ) {
-	var subMenu = li.querySelector( 'ul.sub-menu' ),
-		rect,
-		right,
-		left,
-		windowWidth;
+  var subMenu = li.querySelector( 'ul.sub-menu' ),
+    rect,
+    right,
+    left,
+    windowWidth;
 
-	if ( ! subMenu ) {
-		return;
-	}
+  if ( ! subMenu ) {
+    return;
+  }
 
-	rect = subMenu.getBoundingClientRect();
-	right = Math.round( rect.right );
-	left = Math.round( rect.left );
-	windowWidth = Math.round( window.innerWidth );
+  rect = subMenu.getBoundingClientRect();
+  right = Math.round( rect.right );
+  left = Math.round( rect.left );
+  windowWidth = Math.round( window.innerWidth );
 
-	if ( right > windowWidth ) {
-		subMenu.classList.add( 'submenu-reposition-right' );
-	} else if ( document.body.classList.contains( 'rtl' ) && left < 0 ) {
-		subMenu.classList.add( 'submenu-reposition-left' );
-	}
+  if ( right > windowWidth ) {
+    subMenu.classList.add( 'submenu-reposition-right' );
+  } else if ( document.body.classList.contains( 'rtl' ) && left < 0 ) {
+    subMenu.classList.add( 'submenu-reposition-left' );
+  }
 }
 
 /**
@@ -69,132 +69,127 @@ function submenuPosition( li ) {
  * @param {Element} el - The element.
 **/
 function twentytwentyoneExpandSubMenu( el ) { // jshint ignore:line
-	// Close other expanded items.
-	el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
-		if ( button !== el ) {
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
-	} );
+  // Close other expanded items.
+  el.closest( 'nav' ).querySelectorAll( '.sub-menu-toggle' ).forEach( function( button ) {
+    if ( button !== el ) {
+      button.setAttribute( 'aria-expanded', 'false' );
+    }
+  } );
 
-	// Toggle aria-expanded on the button.
-	toggleAriaExpanded( el, true );
+  // Toggle aria-expanded on the button.
+  toggleAriaExpanded( el, true );
 
-	// On tab-away collapse the menu.
-	el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
-		linkEl.addEventListener( 'blur', function( event ) {
-			if ( ! el.parentNode.contains( event.relatedTarget ) ) {
-				el.setAttribute( 'aria-expanded', 'false' );
-			}
-		} );
-	} );
+  // On tab-away collapse the menu.
+  el.parentNode.querySelectorAll( 'ul > li:last-child > a' ).forEach( function( linkEl ) {
+    linkEl.addEventListener( 'blur', function( event ) {
+      if ( ! el.parentNode.contains( event.relatedTarget ) ) {
+        el.setAttribute( 'aria-expanded', 'false' );
+      }
+    } );
+  } );
 }
 
-( function() {
-	/**
-	 * Menu Toggle Behaviors
-	 *
-	 * @since Twenty Twenty-One 1.0
-	 *
-	 * @param {string} id - The ID.
-	**/
-	var navMenu = function( id ) {
-		var wrapper = document.body, // this is the element to which a CSS class is added when a mobile nav menu is open
-			mobileButton = document.getElementById( id + '-mobile-menu' ),
-			navMenuEl = document.getElementById( 'site-navigation' );
 
-		// If there's no nav menu, none of this is necessary.
-		if ( ! navMenuEl ) {
-			return;
-		}
+var navMenu = function( id ) {
 
-		if ( mobileButton ) {
-			mobileButton.onclick = function() {
-				wrapper.classList.toggle( id + '-navigation-open' );
-				wrapper.classList.toggle( 'lock-scrolling' );
-				toggleAriaExpanded( mobileButton );
-				mobileButton.focus();
-			};
-		}
+  var wrapper = document.body, // this is the element to which a CSS class is added when a mobile nav menu is open
+    mobileButton = document.getElementById( id + '-mobile-menu' ),
+    navMenuEl = document.getElementById( 'site-navigation' );
 
-		/**
-		 * Trap keyboard navigation in the menu modal.
-		 * Adapted from Twenty Twenty.
-		 *
-		 * @since Twenty Twenty-One 1.0
-		**/
-		document.addEventListener( 'keydown', function( event ) {
-			var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
-			if ( ! wrapper.classList.contains( id + '-navigation-open' ) ) {
-				return;
-			}
+  // If there's no nav menu, none of this is necessary.
+  if ( ! navMenuEl ) {
+    return;
+  }
 
-			modal = document.querySelector( '.' + id + '-navigation' );
-			selectors = 'input, a, button';
-			elements = modal.querySelectorAll( selectors );
-			elements = Array.prototype.slice.call( elements );
-			tabKey = event.keyCode === 9;
-			shiftKey = event.shiftKey;
-			escKey = event.keyCode === 27;
-			activeEl = document.activeElement; // eslint-disable-line @wordpress/no-global-active-element
-			lastEl = elements[ elements.length - 1 ];
-			firstEl = elements[0];
+  if ( mobileButton ) {
+    mobileButton.onclick = function() {
+      wrapper.classList.toggle( id + '-navigation-open' );
+      wrapper.classList.toggle( 'lock-scrolling' );
+      toggleAriaExpanded( mobileButton );
+      mobileButton.focus();
+    };
+  }
 
-			if ( escKey ) {
-				event.preventDefault();
-				wrapper.classList.remove( id + '-navigation-open', 'lock-scrolling' );
-				toggleAriaExpanded( mobileButton );
-				mobileButton.focus();
-			}
+  /**
+   * Trap keyboard navigation in the menu modal.
+   * Adapted from Twenty Twenty.
+   *
+   * @since Twenty Twenty-One 1.0
+  **/
+  document.addEventListener( 'keydown', function( event ) {
+    var modal, elements, selectors, lastEl, firstEl, activeEl, tabKey, shiftKey, escKey;
+    if ( ! wrapper.classList.contains( id + '-navigation-open' ) ) {
+      return;
+    }
 
-			if ( ! shiftKey && tabKey && lastEl === activeEl ) {
-				event.preventDefault();
-				firstEl.focus();
-			}
+    modal = document.querySelector( '.' + id + '-navigation' );
+    selectors = 'input, a, button';
+    elements = modal.querySelectorAll( selectors );
+    elements = Array.prototype.slice.call( elements );
+    tabKey = event.keyCode === 9;
+    shiftKey = event.shiftKey;
+    escKey = event.keyCode === 27;
+    activeEl = document.activeElement; // eslint-disable-line @wordpress/no-global-active-element
+    lastEl = elements[ elements.length - 1 ];
+    firstEl = elements[0];
 
-			if ( shiftKey && tabKey && firstEl === activeEl ) {
-				event.preventDefault();
-				lastEl.focus();
-			}
+    if ( escKey ) {
+      event.preventDefault();
+      wrapper.classList.remove( id + '-navigation-open', 'lock-scrolling' );
+      toggleAriaExpanded( mobileButton );
+      mobileButton.focus();
+    }
 
-			// If there are no elements in the menu, don't move the focus
-			if ( tabKey && firstEl === lastEl ) {
-				event.preventDefault();
-			}
-		} );
+    if ( ! shiftKey && tabKey && lastEl === activeEl ) {
+      event.preventDefault();
+      firstEl.focus();
+    }
 
-		/**
-		 * Close menu and scroll to anchor when an anchor link is clicked.
-		 * Adapted from Twenty Twenty.
-		 *
-		 * @since Twenty Twenty-One 1.1
-		**/
-		document.addEventListener( 'click', function( event ) {
-			// If target onclick is <a> with # within the href attribute
-			if ( event.target.hash && event.target.hash.includes( '#' ) ) {
-				wrapper.classList.remove( id + '-navigation-open', 'lock-scrolling' );
-				toggleAriaExpanded( mobileButton );
-				// Wait 550 and scroll to the anchor.
-				setTimeout(function () {
-					var anchor = document.getElementById(event.target.hash.slice(1));
-					if ( anchor ) {
-						anchor.scrollIntoView();
-					}
-				}, 550);
-			}
-		} );
+    if ( shiftKey && tabKey && firstEl === activeEl ) {
+      event.preventDefault();
+      lastEl.focus();
+    }
 
-		navMenuEl.querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
-			li.addEventListener( 'mouseenter', function() {
-				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'true' );
-				submenuPosition( li );
-			} );
-			li.addEventListener( 'mouseleave', function() {
-				this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'false' );
-			} );
-		} );
-	};
+    // If there are no elements in the menu, don't move the focus
+    if ( tabKey && firstEl === lastEl ) {
+      event.preventDefault();
+    }
+  } );
 
-	window.addEventListener( 'load', function() {
-		new navMenu( 'primary' );
-	} );
-}() );
+  /**
+   * Close menu and scroll to anchor when an anchor link is clicked.
+   * Adapted from Twenty Twenty.
+   *
+   * @since Twenty Twenty-One 1.1
+  **/
+  document.addEventListener( 'click', function( event ) {
+    // If target onclick is <a> with # within the href attribute
+    if ( event.target.hash && event.target.hash.includes( '#' ) ) {
+      wrapper.classList.remove( id + '-navigation-open', 'lock-scrolling' );
+      toggleAriaExpanded( mobileButton );
+      // Wait 550 and scroll to the anchor.
+      setTimeout(function () {
+        var anchor = document.getElementById(event.target.hash.slice(1));
+        if ( anchor ) {
+          anchor.scrollIntoView();
+        }
+      }, 550);
+    }
+  } );
+
+  navMenuEl.querySelectorAll( '.menu-wrapper > .menu-item-has-children' ).forEach( function( li ) {
+    li.addEventListener( 'mouseenter', function() {
+      this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'true' );
+      submenuPosition( li );
+    } );
+    li.addEventListener( 'mouseleave', function() {
+      this.querySelector( '.sub-menu-toggle' ).setAttribute( 'aria-expanded', 'false' );
+    } );
+  } );
+};
+
+(function initMenu() {
+  // console.log('loaded!')
+
+  new navMenu( 'primary' );
+})();

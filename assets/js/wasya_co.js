@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   $ = jQuery
 
-
   window.onscroll = function() {
     stickyHeader()
   }

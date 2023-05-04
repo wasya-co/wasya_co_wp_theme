@@ -1,20 +1,30 @@
-<?
-/**
- * Display site header
- * _vp_ 2022-11-09
-**/
-
-$wrapper_classes  = 'site-header';
-$wrapper_classes .= has_custom_logo() ? ' has-logo' : '';
-$wrapper_classes .= ( true === get_theme_mod( 'display_title_and_tagline', true ) ) ? ' has-title-and-tagline' : '';
-$wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
-?>
 
 <div class="site-header-wrapper">
-  <header id="masthead" class="<?= $wrapper_classes ?>" >
+  <header id="masthead" class="site-header" >
 
-    <? get_template_part( 'template-parts/header/site-branding' ); ?>
-    <? get_template_part( 'template-parts/header/site-nav' ); ?>
+    <div class="site-branding">
+      <div class="site-logo"><? the_custom_logo(); ?></div>
+    </div>
+    <? if ( has_nav_menu( 'primary' ) ) : ?>
+      <nav id="site-navigation" class="primary-navigation" aria-label="Primary menu">
+        <div class="menu-button-container">
+          <button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+            <span class="dropdown-icon open"><? esc_html_e( 'Menu', 'twentytwentyone' ); ?>
+              <?= twenty_twenty_one_get_icon_svg( 'ui', 'menu' ); ?>
+            </span>
+            <span class="dropdown-icon close"><? esc_html_e( 'Close', 'twentytwentyone' ); ?>
+              <?= twenty_twenty_one_get_icon_svg( 'ui', 'close' ); ?>
+            </span>
+          </button>
+        </div>
+        <? wp_nav_menu(array( 'theme_location'  => 'primary',
+                              'menu_class'      => 'menu-wrapper',
+                              'container_class' => 'primary-menu-container',
+                              'items_wrap'      => '<ul id="primary-menu-list" class="%2$s">%3$s</ul>',
+                              'fallback_cb'     => false,
+        ) ); ?>
+      </nav>
+    <? endif; ?>
 
   </header>
 </div>

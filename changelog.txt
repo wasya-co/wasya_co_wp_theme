@@ -19,10 +19,12 @@ Changelog available here: http://athemes.com/changelog/sydney/
 2.4.0 - 2022-12-26 - merry xmas!
                      adding two-column layout to archive_php
                      adding assymetric corners, box shadows.
-        2023-01-04 - better footer, incorporating low-poly illustrations
-        2023-01-15 - adding carousel, not ready to deploy
-2.5.0 - 2023-01-16 - making minimal cc processing form, improving structure
+        2023-01-04  - better footer, incorporating low-poly illustrations
+        2023-01-15  - adding carousel, not ready to deploy
+2.5.0 - 2023-01-16  - making minimal cc processing form, improving structure
 2.6.0 - lotsa good work!
-2.7.0 - 2023-02-24 - deploying feb23 issue.
-2.8.0 - 2023-03-31 - css changes for mobile of homepage.
-        2023-04-07 - fixed all major appearance bugs. the css is shared with ror. Looks good.
+2.7.0 - 2023-02-24  - deploying feb23 issue.
+2.8.0 - 2023-03-31  - css changes for mobile of homepage.
+        2023-04-07  - fixed all major appearance bugs. the css is shared with ror. Looks good.
+2.10.0 - 2023-05-01 - gonna be major changes. integrating this theme with wco_rb !
+
