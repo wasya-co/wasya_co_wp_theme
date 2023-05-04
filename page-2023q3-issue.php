@@ -2,7 +2,7 @@
 <? get_header(); ?>
 <? // get_template_part( 'template-parts/header/site-header' ); ?>
 
-<article id="a20230212feb23issue" class='' style='background: #336;' >
+<article id="a20230212feb23issue" class='' >
   <section id='p1' class='hero' >
   </section>
   <div class='divider'></div>
