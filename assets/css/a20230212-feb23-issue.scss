@@ -8,7 +8,8 @@ body.issue-202302 {
 }
 
 
-article#a20230212feb23issue {
+article#a20230212feb23issue,
+article#a2023q3issue {
   --wco-20230212-bg1:  url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12130633/1536x1024-lowpoly-landscape-1.jpg');
   --wco-20230212-bg2:  url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/17143717/1536x1024-tree-f6ebda-bg2.jpg');
   --wco-20230425-bg:   url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/04/25084657/20230425-wco-tree.jpg');
@@ -53,3 +54,17 @@ article#a20230212feb23issue {
 
 }
 
+/* f6ebda */
+article#a2023q3issue {
+  #p1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      margin-top: 10em;
+      background: #f6ebda;
+      padding: 0.2em 1em;
+    }
+  }
+}

@@ -2,8 +2,11 @@
 <? get_header(); ?>
 <? // get_template_part( 'template-parts/header/site-header' ); ?>
 
-<article id="a20230212feb23issue" class='' >
+<article id="a2023q3issue" class='' >
   <section id='p1' class='hero' >
+
+    <h1 class='lobster'>Innovative solutions for your digital success</h1>
+
   </section>
   <div class='divider'></div>
 
@@ -15,9 +18,11 @@
       </div>
       <div class='fancy-border'></div>
 
-      <p>Wasya Co is a research & development firm that specializes in delivering resilient, high-quality software solutions.</p>
+      <p>At Wasya Co, we understand the challenges that come with developing and maintaining software in today's fast-paced and constantly evolving technological landscape. That's why we offer a comprehensive range of services to help you navigate these challenges and stay ahead of the curve.</p>
 
-      <p>We walk in step with the time by embracing innovation as a core value. We look ahead to a bright future. We are firmly rooted in the past as our engine of growth. We diligently operate in the present, by solving clients' real needs.</p>
+      <p>Our focus is always on delivering value to our clients, and we pride ourselves on our ability to work collaboratively and transparently with our clients throughout the development process.</p>
+
+      <p>If you're looking for a trusted partner to help you achieve your digital goals, look no further than Wasya Co. We're committed to providing you with the innovative solutions you need to succeed in today's digital world.</p>
     </div>
   </section>
   <div class='divider'></div>
