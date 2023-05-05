@@ -1516,27 +1516,42 @@ h1.page-title {
 }
 
 /*
- * wasya_co _vp_ 2022-09-27
+ * _vp_ 2022-09-27
+ * _vp_ 2023-05-05
 **/
+.style-contrast-1 {
+  .page-header-inner {
+    background: rgba( 0, 0, 0, 0.5 );
 
+    .entry-title {
+      color: white;
+    }
+  }
+}
+
+.style-plain {
+  .page-header-inner {
+    background: white;
+
+    .entry-title {
+      color: black;
+    }
+  }
+}
 
 header.page-header {
-  // height: 300px;
   background-position: center center;
   background-size: cover;
-}
 
-.page-header-inner {
-  background: rgba( 0, 0, 0, 0.5 );
-  padding: 150px 0 60px 0;
-  width: 100%;
-  // height: 100%;
-}
+  .page-header-inner {
+    padding: 150px 0 60px 0;
+    width: 100%;
 
-.page-header .entry-title {
-  font-size: 2em;
-  color: white;
-  text-align: center;
+    .entry-title {
+      font-size: 2em;
+      text-align: center;
+    }
+  }
 }
 
 .articles {
@@ -1569,6 +1584,8 @@ header.page-header {
 
 .overflow-margin {
   margin-top: -50px;
+  padding: 1em;
+  background: white;
 }
 
 .Card,

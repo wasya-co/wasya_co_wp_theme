@@ -1083,20 +1083,31 @@ h1.page-title {
   outline: 0;
 }
 /*
- * wasya_co _vp_ 2022-09-27
+ * _vp_ 2022-09-27
+ * _vp_ 2023-05-05
 **/
+.style-contrast-1 .page-header-inner {
+  background: rgba(0, 0, 0, 0.5);
+}
+.style-contrast-1 .page-header-inner .entry-title {
+  color: white;
+}
+.style-plain .page-header-inner {
+  background: white;
+}
+.style-plain .page-header-inner .entry-title {
+  color: black;
+}
 header.page-header {
   background-position: center center;
   background-size: cover;
 }
-.page-header-inner {
-  background: rgba(0, 0, 0, 0.5);
+header.page-header .page-header-inner {
   padding: 150px 0 60px 0;
   width: 100%;
 }
-.page-header .entry-title {
+header.page-header .page-header-inner .entry-title {
   font-size: 2em;
-  color: white;
   text-align: center;
 }
 .articles {
@@ -1121,6 +1132,8 @@ header.page-header {
 }
 .overflow-margin {
   margin-top: -50px;
+  padding: 1em;
+  background: white;
 }
 .Card, .pagination, .comments-pagination {
   box-shadow: 1px 1px 3px 0px var(--wco-light-text-color);
