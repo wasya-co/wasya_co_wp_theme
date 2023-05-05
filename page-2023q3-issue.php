@@ -25,10 +25,11 @@
   <section id='p3' class='issue-navigator' >
     <div class='max-width'>
       <div class='p1'>
-        <a href='#'>Issue 2023Q3</a>
+        <a href='/2023q3-issue'>Issue 2023Q3</a>
       </div>
       <div class='p2 past-issues'>
-        Past Issues: <a href='/issue-202302'>Feb'23</a>, <a href='/issue-202302'>Feb'23</a>, <a href='javascript: alert("Not Implemented!"); void(0);'>All Issues</a>
+        <? /* @TODO: This can be a dynamic menu. _vp_ 2023-05-05 */ ?>
+        Past Issues: <a href='/issue-202302'>Feb'23</a>, <a href='/issues'>All Issues</a>
       </div>
     </div>
   </section>
@@ -75,14 +76,14 @@
         <div class='row flex-row'>
           <div class='col-md-6'>
 
-            <div class='wco-card-2'>
+            <? /* <div class='wco-card-2'>
               <div class='img printing-press'>
                 <div class='imgC'></div>
               </div>
               <a href="/dev-wp"><h2>Wordpress</h2></a>
               <div class='sub' >Design & Development</div>
               <a href="/dev-wp"><button class="button-91" role="button">Take a Tour</button></a>
-            </div>
+            </div> */ ?>
 
           </div>
           <div class='col-md-6 our-services-exploreW'>

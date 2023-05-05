@@ -5,6 +5,6 @@
   </div>
   <div class='col' >
     <img src="https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12152656/300x300-usher-2.png" />
-    <a href="/dev-all-stacks"><button class="button-91" role="button">View All Services</button></a>
+    <a href="/dev-all-stacks"><button class="button-91" role="button">All Services</button></a>
   </div>
 </div>
