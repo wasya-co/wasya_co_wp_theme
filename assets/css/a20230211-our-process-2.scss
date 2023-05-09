@@ -9,7 +9,8 @@ html, body {
 }
 body.page-id-3770, // production::our-process-2
 body.page-id-2689 { // development::our-process-2
-  background: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
+  background-color: var(--wco-dol-bg-color);
+  background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png')
     repeat-x bottom center fixed;
 
   .site-header-wrapper:not(.wco-sticky-header) {
@@ -51,7 +52,7 @@ body.page-id-2689 { // development::our-process-2
   margin: auto;
 }
 .spacer-300 {
-  background: linear-gradient(var(--wco-color5) 50%, var(--wco-transparent) );
+  background: linear-gradient(var(--wco-color5) 50%, white );
 
   height: 300px;
 }
@@ -59,6 +60,7 @@ body.page-id-2689 { // development::our-process-2
 
 /*
  * 2023-02-10 our-process.scss
+ * my cream: --wco-dol-bg-color
 **/
 article#a20230210ourProcess {
   // border: 1px solid pink;
@@ -136,7 +138,7 @@ article#a20230210ourProcess {
     // background: pink;
     // background-image: linear-gradient( 135deg, pink, white);
 
-    background: linear-gradient( white, var(--wco-color0) );
+    background: linear-gradient( var(--wco-dol-bg-color), var(--wco-color0) );
     padding-bottom: 40px;
 
     .illustration {

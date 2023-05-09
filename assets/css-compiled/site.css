@@ -61,8 +61,7 @@ html {
   align-items: flex-start;
 }
 .site-main > article {
-  background: white;
-  /* dedede,  #efefef; */
+  background: var(--wco-dol-bg-color);
 }
 @media only screen and (max-width: 482px) {
   .site-main > article {
@@ -271,8 +270,8 @@ a:hover {
   }
 }
 .site-footer {
-  background-color: rgba(97, 206, 208, 0.8);
-  color: var(--wco-light-text-color);
+  background-color: var(--wco-lod-bg-color);
+  color: var(--wco-lod-text-color);
   font-size: 0.8em;
   position: absolute;
   bottom: 0;
@@ -281,9 +280,9 @@ a:hover {
   z-index: 1;
 }
 .site-footer .site-info a {
-  border-left: 2px solid var(--wco-dol-text-color);
+  border-left: 2px solid var(--wco-lod-text-color);
   padding-left: var(--wco-width-sm);
-  color: var(--wco-dol-text-color);
+  color: var(--wco-lod-text-color);
   text-decoration: underline;
 }
 .site-footer .site-info span {
@@ -1040,20 +1039,19 @@ h1.page-title {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  height: 50px;
 }
 .search-form > label {
   width: 100%;
-  margin-bottom: 0;
   font-weight: var(--form--label-weight);
 }
 .search-form .search-field {
   flex-grow: 1;
   max-width: inherit;
-  margin-bottom: calc(var(--global--spacing-vertical) / 3);
 }
 .search-form .search-submit {
-  margin-top: calc(var(--global--spacing-vertical) / 3);
-  margin-left: 10px;
+  background: var(--wco-lod-bg-color);
+  color: var(--wco-lod-link-color);
 }
 .widget_rss a.rsswidget .rss-widget-icon {
   display: none;

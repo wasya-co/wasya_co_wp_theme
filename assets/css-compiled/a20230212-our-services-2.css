@@ -1,5 +1,5 @@
 .our-services-3 {
-  background: #ddd;
+  background: var(--wco-dol-bg-color);
 }
 section .header .title {
   font-family: lobster, cursive;

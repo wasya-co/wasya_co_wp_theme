@@ -58,19 +58,13 @@
   padding: var(--button--padding-vertical) var(--button--padding-horizontal);
   text-decoration: none;
 }
-/* SiteNavigation +/- is affected by the below */
-/* .site .button:not(:hover):not(:active):not(.has-text-color),
-button:not(:hover):not(:active):not(.has-text-color), */
-input[type=submit]:not(:hover):not(:active):not(.has-text-color), input[type=reset]:not(:hover):not(:active):not(.has-text-color), .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-text-color), .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color), .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
-  color: var(--global--color-background);
-}
 .has-background .site .button:not(:hover):not(:active):not(.has-text-color), .has-background button:not(:hover):not(:active):not(.has-text-color), .has-background input[type=submit]:not(:hover):not(:active):not(.has-text-color), .has-background input[type=reset]:not(:hover):not(:active):not(.has-text-color), .has-background .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-text-color), .has-background .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color), .has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
   color: var(--local--color-background, var(--global--color-primary));
 }
 .has-background .site .button:not(:hover):not(:active):not(.has-text-color).has-background, .has-background button:not(:hover):not(:active):not(.has-text-color).has-background, .has-background input[type=submit]:not(:hover):not(:active):not(.has-text-color).has-background, .has-background input[type=reset]:not(:hover):not(:active):not(.has-text-color).has-background, .has-background .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-text-color).has-background, .has-background .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-text-color).has-background, .has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-text-color).has-background {
   color: var(--global--color-primary);
 }
-.site .button:not(:hover):not(:active):not(.has-background), input[type=submit]:not(:hover):not(:active):not(.has-background), input[type=reset]:not(:hover):not(:active):not(.has-background), .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background), .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background), .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
+.site .button:not(:hover):not(:active):not(.has-background), input[type=reset]:not(:hover):not(:active):not(.has-background), .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background), .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background), .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {
   background-color: var(--global--color-primary);
 }
 .has-background .site .button:not(:hover):not(:active):not(.has-background), .has-background button:not(:hover):not(:active):not(.has-background), .has-background input[type=submit]:not(:hover):not(:active):not(.has-background), .has-background input[type=reset]:not(:hover):not(:active):not(.has-background), .has-background .wp-block-search .wp-block-search__button:not(:hover):not(:active):not(.has-background), .has-background .wp-block-button .wp-block-button__link:not(:hover):not(:active):not(.has-background), .has-background .wp-block-file a.wp-block-file__button:not(:hover):not(:active):not(.has-background) {

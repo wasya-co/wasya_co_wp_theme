@@ -1,25 +1,30 @@
 
 :root {
   --global--admin-bar--height: 0px;
+  --global--color-primary: #178f87;
 
-  // lod, Light on Dark
-  --wco-lod-text-color: #dedede;
-  --wco-lod-link-color: #00AC97;
+  /* lod, Light on Dark */
+  --wco-lod-text-color: white;
+  --wco-lod-link-color: white; /* #00AC97; */
+  --wco-lod-bg-color: rgba(97, 206, 208, 0.8);
 
   --wco-light-border: 1px dashed var(--wco-lod-link-color);
   --wco-light-bg-color: white;
   --wco-light-text-color: black;
   --wco-light-site-menu-link-color: black;
 
-  // dol, Dark on Light
+  /* dol, Dark on Light */
   --wco-dol-text-color: #333;
   --wco-dol-link-color: #178f87;
+  --wco-dol-bg-color: #f6ebda;
 
   --wco-width-sm: 1em;
   --wco-width-md: 2em;
   --wco-border-radius: 2em;
-  --wco-overflow-size: 32px; // post page, top and bottom
-  --wco-tag-tail-width: 15px; // fancy categories, tags
+  /* post page, top and bottom */
+  --wco-overflow-size: 32px;
+  /* fancy categories, tags */
+  --wco-tag-tail-width: 15px;
 
   --debug-border: 1px solid red;
 
@@ -28,7 +33,7 @@
   --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
 
   /* Font Size */
-  // --global--font-size-base: 1rem;
+  /* --global--font-size-base: 1rem; */
   --global--font-size-xs: 1rem;
   --global--font-size-sm: 1.125rem;
   --global--font-size-md: 1.25rem;

@@ -80,8 +80,7 @@ html {
 }
 
 .site-main > article {
-  background: white; /* dedede,  #efefef; */
-  // background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/28175553/bg2-semitransparent.png');
+  background: var(--wco-dol-bg-color);
 }
 @media only screen and (max-width: 482px) {
   .site-main > article {
@@ -382,8 +381,8 @@ a:hover {
 .site-footer {
   // border-top: 1px dashed #46a3a5;
 
-  background-color: rgba(97, 206, 208, 0.8);
-  color: var(--wco-light-text-color);
+  background-color: var(--wco-lod-bg-color);
+  color: var(--wco-lod-text-color);
 
   font-size: 0.8em;
 
@@ -396,9 +395,9 @@ a:hover {
 
   .site-info {
     a {
-      border-left: 2px solid var(--wco-dol-text-color);
+      border-left: 2px solid var(--wco-lod-text-color);
       padding-left: var(--wco-width-sm);
-      color: var(--wco-dol-text-color);
+      color: var(--wco-lod-text-color);
       text-decoration: underline;
     }
 
@@ -1466,20 +1465,19 @@ h1.page-title {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  height: 50px;
 
   > label {
     width: 100%;
-    margin-bottom: 0;
     font-weight: var(--form--label-weight);
   }
   .search-field {
     flex-grow: 1;
     max-width: inherit;
-    margin-bottom: calc(var(--global--spacing-vertical) / 3);
   }
   .search-submit {
-    margin-top: calc(var(--global--spacing-vertical) / 3);
-    margin-left: 10px;
+    background: var(--wco-lod-bg-color);
+    color: var(--wco-lod-link-color);
   }
 }
 
