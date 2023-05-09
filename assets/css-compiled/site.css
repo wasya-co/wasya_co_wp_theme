@@ -998,15 +998,18 @@ h1.page-title {
     width: 66%;
   }
 }
-@media only screen and (max-width: 481px) {
-  .widget-area {
-    margin-top: calc(3 * var(--global--spacing-vertical));
-  }
-}
-/* cellphone, horizontal cellphone */
+/* mobile cellphone, horizontal cellphone */
 @media only screen and (max-width: 851px) {
   .widget-area {
+    margin-top: calc(3 * var(--global--spacing-vertical));
+    padding-bottom: calc(var(--global--spacing-vertical) / 3);
     flex-direction: column;
+    display: flex;
+    flex-wrap: no-wrap;
+    align-items: flex-start;
+  }
+  .widget-area .search-form {
+    magin-bottom: 50px;
   }
 }
 .widget a {
@@ -1047,11 +1050,12 @@ h1.page-title {
 }
 .search-form .search-field {
   flex-grow: 1;
-  max-width: inherit;
+  max-width: 40vw;
 }
 .search-form .search-submit {
   background: var(--wco-lod-bg-color);
   color: var(--wco-lod-link-color);
+  max-width: 40vw;
 }
 .widget_rss a.rsswidget .rss-widget-icon {
   display: none;

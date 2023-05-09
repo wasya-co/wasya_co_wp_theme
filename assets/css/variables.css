@@ -5,7 +5,7 @@
 
   /* lod, Light on Dark */
   --wco-lod-text-color: white;
-  --wco-lod-link-color: white; /* #00AC97; */
+  --wco-lod-link-color:  #00AC97;
   --wco-lod-bg-color: rgba(97, 206, 208, 0.8);
 
   --wco-light-border: 1px dashed var(--wco-lod-link-color);
