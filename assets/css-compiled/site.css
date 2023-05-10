@@ -68,6 +68,9 @@ html {
     background: var(--wco-light-bg-color);
   }
 }
+.site-main {
+  background-color: var(--wco-dol-bg-color);
+}
 .site-main .W0 {
   background-color: var(--wco-light-bg-color);
 }
