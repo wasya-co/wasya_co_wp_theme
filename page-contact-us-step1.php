@@ -12,7 +12,7 @@
       <div class='col-md-6'>
         <div class='item'>
           <p>You can fill out the project intake form, which is our preferred method of contact:</p>
-          <a href="/project-intake-1">
+          <a href="/contact-us/project-intake">
             <button class="button-91" role="button">Project Intake Form</button>
           </a>
         </div>
@@ -31,7 +31,7 @@
       <div class='col-md-6 '>
         <div class='item'>
           <p>You can use our preferred method of contact and book a priority call:</p>
-          <a href="/w/c2">
+          <a href="/consulting-services">
             <button class="button-91" role="button">Book a priority call</button>
           </a>
         </div>
