@@ -621,7 +621,7 @@ section.our-clients {
 section.testimonials {
   padding: 10em 0 10em 0;
   border-bottom: 1px solid #00a3cc;
-  background: white;
+  background: var(--wco-lod-text-color);
 
   .message {
     margin-bottom: 0.5em;
@@ -674,8 +674,9 @@ body.page-our-process-2 {
   }
 }
 section.contact-us-2-md {
-  background-color: white;
-  background-image: linear-gradient(var(--wco-color4), var(--wco-color5) 90% );
+  background: linear-gradient( var(--wco-lod-text-color), var(--wco-dol-bg-color) );
+  // background-color: linear-gradient(var(--wco-color4), var(--wco-dol-bg-color) 90% );
+  // background-color: linear-gradient( white, black );
 
   display: flex;
   flex-direction: row-reverse;

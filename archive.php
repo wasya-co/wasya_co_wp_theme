@@ -37,7 +37,7 @@ if (strlen($hero_url) == 0) {
 
     <?php endif; ?>
 
-    <div class='descr col-2'>
+    <div class='descr col-2a'>
       <?php if ( $description ) : ?>
         <div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
       <?php endif; ?>

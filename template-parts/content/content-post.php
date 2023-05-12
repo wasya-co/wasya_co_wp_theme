@@ -22,9 +22,10 @@ if (strlen($hero_url) == 0) {
     </div>
   </header>
 
-  <div class="flex-row alignwide flex-wrap">
+  <div class="alignwide row">
 
-    <div class="entry-content overflow-margin Card">
+
+    <div class="entry-content overflow-margin Card col-md-8 col-sm-12">
 
       <footer class="entry-footer default-max-width">
         <? twenty_twenty_one_entry_meta_footer(array(
@@ -47,11 +48,13 @@ if (strlen($hero_url) == 0) {
       <? if ( comments_open() || get_comments_number() ) { comments_template(); } ?>
     </div>
 
-    <? if ( is_active_sidebar( 'sidebar-right' ) ) : ?>
+    <? if ( false && is_active_sidebar( 'sidebar-right' ) ) : ?>
       <section class='sidebar-right' >
         <? dynamic_sidebar( 'sidebar-right' ); ?>
       </section>
     <? endif; ?>
+
+    <? get_template_part('template-parts/content/sidebar2'); ?>
 
   </div>
 

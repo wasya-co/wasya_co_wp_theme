@@ -4,9 +4,10 @@
   --global--color-primary: #178f87;
 
   /* lod, Light on Dark */
-  --wco-lod-text-color: white;
-  --wco-lod-link-color:  #00AC97;
-  --wco-lod-bg-color: rgba(97, 206, 208, 0.8);
+  --wco-lod-text-color: #ddd;
+  --wco-lod-link-color:  white;
+  --wco-lod-bg-color: rgba(0,0,0, 0.5);
+  --wco-lod-bg-color-trash: rgba(97, 206, 208, 0.8);
 
   --wco-light-border: 1px dashed var(--wco-lod-link-color);
   --wco-light-bg-color: white;
