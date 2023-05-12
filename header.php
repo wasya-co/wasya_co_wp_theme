@@ -1,4 +1,6 @@
 
+<? $assetVersion = '20230512'; ?>
+
 <!doctype html>
 <html <? language_attributes(); ?> >
 <head>
@@ -23,13 +25,13 @@
   <meta name="author" content="<?= $meta_author ?>" >
 
 
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css/variables.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-shared.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-wco-card.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process-2.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-feb23-issue.css">
-  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-our-services-2.css">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css/variables.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-circular.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-shared.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a202302-wco-card.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230211-our-process-2.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-feb23-issue.css?<?= $assetVersion; ?>">
+  <link rel="stylesheet" href="/wp-content/themes/wasya_co_wp_theme/assets/css-compiled/a20230212-our-services-2.css?<?= $assetVersion; ?>">
 
   <!-- Matomo -->
   <script>
