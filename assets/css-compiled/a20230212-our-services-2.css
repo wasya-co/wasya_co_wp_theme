@@ -1,4 +1,7 @@
-body.page-id-3106 .header .title, ._ .header .title {
+/* development */
+/* production our-services */
+/* production our-services-trash */
+body.page-id-3106 .header .title, body.page-id-4062 .header .title, body.page-id-4066 .header .title, ._ .header .title {
   font-family: lobster, cursive;
   color: var(--wco-202302-color1);
 }
@@ -343,22 +346,25 @@ section.our-services-pg1 .our-services-exploreW {
   align-items: center;
   justify-content: flex-end;
 }
-section.our-services-pg1 .our-services-explore {
+section.our-services-pg1 .our-services-explore, section.our-services-pg1 .our-services-explore-2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-section.our-services-pg1 .our-services-explore .description {
+section.our-services-pg1 .our-services-explore .description, section.our-services-pg1 .our-services-explore-2 .description {
   text-align: right;
   margin-right: 1em;
 }
-section.our-services-pg1 .our-services-explore .col {
+section.our-services-pg1 .our-services-explore .col, section.our-services-pg1 .our-services-explore-2 .col {
   display: flex;
   flex-direction: column;
 }
-section.our-services-pg1 .our-services-explore img {
+section.our-services-pg1 .our-services-explore img, section.our-services-pg1 .our-services-explore-2 img {
   width: 160px;
   margin-bottom: 1em;
+}
+section.our-services-pg1 .our-services-explore-2 .description {
+  margin-right: 0;
 }
 /* desktop, horizontal cellphone */
 /* cellphone, horizontal cellphone */

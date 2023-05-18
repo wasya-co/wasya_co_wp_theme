@@ -1,7 +1,7 @@
 
 body.page-id-3106, /* development */
-body.page-id-4062, /* production our-services-2 */
-body.page-id-4066, /* production our-services */
+body.page-id-4062, /* production our-services */
+body.page-id-4066, /* production our-services-trash */
 ._ {
   .header {
     .title {
@@ -488,7 +488,8 @@ section.our-services-pg1 {
     align-items: center;
     justify-content: flex-end;
   }
-  .our-services-explore {
+  .our-services-explore,
+  .our-services-explore-2 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -509,6 +510,11 @@ section.our-services-pg1 {
     img {
       width: 160px;
       margin-bottom: 1em;
+    }
+  }
+  .our-services-explore-2 {
+    .description {
+      margin-right: 0;
     }
   }
 }

@@ -93,7 +93,7 @@
           </div>
           <div class='col-md-6 our-services-exploreW'>
 
-            <? get_template_part('template-parts/our-services/our-stack-link'); ?>
+            <? get_template_part('template-parts/our-services/our-stack-link-2'); ?>
 
           </div>
         </div><!--row-->
