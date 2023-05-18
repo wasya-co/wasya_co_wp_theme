@@ -1,8 +1,9 @@
+body.page-id-3106 .header .title, ._ .header .title {
+  font-family: lobster, cursive;
+  color: var(--wco-202302-color1);
+}
 .our-services-3 {
   background: var(--wco-dol-bg-color);
-}
-section .header .title {
-  font-family: lobster, cursive;
 }
 .lobster {
   font-family: lobster, cursive;
@@ -10,31 +11,30 @@ section .header .title {
 /*
  * The common
 **/
-section.dev-wp-md, section.dev-react-md, section.dev-ror-md {
+section.dev-wp-md, section.dev-react-md, section.dev-ror-md, section.our-stack-2-frontend, ._ {
   border-top: 1px solid var(--wco-202302-color1);
   min-height: 75vh;
 }
-section.dev-wp-md .max-width, section.dev-react-md .max-width, section.dev-ror-md .max-width {
+section.dev-wp-md .max-width, section.dev-react-md .max-width, section.dev-ror-md .max-width, section.our-stack-2-frontend .max-width, ._ .max-width {
   min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section.dev-wp-md .max-width .wco-card, section.dev-react-md .max-width .wco-card, section.dev-ror-md .max-width .wco-card {
+section.dev-wp-md .max-width .wco-card, section.dev-react-md .max-width .wco-card, section.dev-ror-md .max-width .wco-card, section.our-stack-2-frontend .max-width .wco-card, ._ .max-width .wco-card {
   padding-bottom: 0;
   border-bottom: 0;
 }
-section.our-stack-2-frontend, section.dev-app-layer-sm, section.dev-app-layer-h1, section.dev-wp-h1, section#i20230309stack {
+section.our-stack-2-frontend, section.dev-app-layer-sm, section.dev-app-layer-h1, section#i20230309stack {
   background: #eee;
   border-top: var(--wco-202302-border1);
-  color: var(--wco-202302-color1);
   padding: 5em 0;
 }
-section.our-stack-2-frontend .header, section.dev-app-layer-sm .header, section.dev-app-layer-h1 .header, section.dev-wp-h1 .header, section#i20230309stack .header {
+section.our-stack-2-frontend .header, section.dev-app-layer-sm .header, section.dev-app-layer-h1 .header, section#i20230309stack .header {
   text-align: center;
   display: block;
 }
-section.our-stack-2-frontend .header .fancy-border, section.dev-app-layer-sm .header .fancy-border, section.dev-app-layer-h1 .header .fancy-border, section.dev-wp-h1 .header .fancy-border, section#i20230309stack .header .fancy-border {
+section.our-stack-2-frontend .header .fancy-border, section.dev-app-layer-sm .header .fancy-border, section.dev-app-layer-h1 .header .fancy-border, section#i20230309stack .header .fancy-border {
   border-bottom: var(--wco-202302-border1);
 }
 /*
@@ -76,9 +76,6 @@ section.dev-react-md {
 }
 .dev-react .illustration {
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12205243/512x512-reactor-21rm.png");
-}
-section.dev-ror-md {
-  background: #ddd;
 }
 .dev-ror .illustration {
   background-image: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png");
@@ -126,19 +123,20 @@ body.page-dev-wp section.dev-app-layer-h1 .wco-card.dev-wp {
   flex-direction: column;
   justify-content: center;
 }
-section.dev-wp-h1 {
-  border-top: 0;
-  padding-top: 0;
-  margin-top: -2em;
-  padding-bottom: 0;
-  background: #ccc;
-}
-section.dev-wp-h1 .header .title {
-  margin-top: 0;
-}
 section.dev-wp-md {
   border-top: 0;
   background: #ccc;
+}
+section.dev-wp-md .header {
+  margin-top: 2em;
+  text-align: center;
+  display: block;
+}
+section.dev-wp-md .header .fancy-border {
+  border-bottom: var(--wco-202302-border1);
+}
+section.dev-wp-md .header .title {
+  margin-top: 0;
 }
 .burgundy-1 .header {
   display: flex;

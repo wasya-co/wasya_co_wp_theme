@@ -1,17 +1,19 @@
 
+body.page-id-3106,
+._ {
+  .header {
+    .title {
+      font-family: lobster, cursive;
+      color: var(--wco-202302-color1);
+    }
+  }
+}
+
 .our-services-3 {
   background: var(--wco-dol-bg-color);
 }
 
-section {
-  .header {
-    // background: white;
 
-    .title {
-      font-family: lobster, cursive;
-    }
-  }
-}
 .lobster {
   font-family: lobster, cursive;
 }
@@ -21,7 +23,9 @@ section {
 **/
 section.dev-wp-md,
 section.dev-react-md,
-section.dev-ror-md {
+section.dev-ror-md,
+section.our-stack-2-frontend,
+._ {
   border-top: 1px solid var(--wco-202302-color1);
   min-height: 75vh;
 
@@ -32,22 +36,19 @@ section.dev-ror-md {
     justify-content: center;
 
     .wco-card {
-      // margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: 0;
     }
   }
+
 }
 
 section.our-stack-2-frontend,
 section.dev-app-layer-sm,
 section.dev-app-layer-h1,
-section.dev-wp-h1,
 section#i20230309stack {
-  // background: white;
   background: #eee;
   border-top: var(--wco-202302-border1);
-  color: var(--wco-202302-color1);
 
   padding: 5em 0;
 
@@ -117,9 +118,6 @@ section.dev-react-md {
   }
 }
 
-section.dev-ror-md {
-  background: #ddd;
-}
 .dev-ror {
   .illustration {
     background-image: url('https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/12203523/train-1rm.png');
@@ -185,24 +183,25 @@ body.page-dev-wp {
     justify-content: center;
   }
 }
-section.dev-wp-h1 {
-  border-top: 0;
-  padding-top: 0;
-  margin-top: -2em;
-  padding-bottom: 0;
-
-  background: #ccc;
-
-  .header {
-    .title {
-      margin-top: 0;
-    }
-  }
-}
 
 section.dev-wp-md {
   border-top: 0;
   background: #ccc;
+
+  .header {
+    margin-top: 2em;
+
+    text-align: center;
+    display: block;
+
+    .fancy-border {
+      border-bottom: var(--wco-202302-border1);
+    }
+
+    .title {
+      margin-top: 0;
+    }
+  }
 }
 
 .burgundy-1 {
