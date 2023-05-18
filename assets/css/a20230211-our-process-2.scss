@@ -51,9 +51,10 @@ body.page-id-2689 { // development::our-process-2
   max-width: var(--responsive--alignwide-width);
   margin: auto;
 }
+.spacer-200 {
+  height: 200px;
+}
 .spacer-300 {
-  background: linear-gradient(var(--wco-color5) 50%, white );
-
   height: 300px;
 }
 

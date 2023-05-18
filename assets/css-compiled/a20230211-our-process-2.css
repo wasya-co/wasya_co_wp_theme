@@ -42,8 +42,10 @@ body.page-id-3770 .site-header-wrapper.sticky-header, body.page-id-2689 .site-he
   max-width: var(--responsive--alignwide-width);
   margin: auto;
 }
+.spacer-200 {
+  height: 200px;
+}
 .spacer-300 {
-  background: linear-gradient(var(--wco-color5) 50%, white);
   height: 300px;
 }
 /*

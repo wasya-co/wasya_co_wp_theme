@@ -58,7 +58,7 @@
 
 
 
-  <div class='spacer-300'></div>
+  <div class='spacer-200'></div>
 </article>
 
 <? get_footer(); ?>
