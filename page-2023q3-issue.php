@@ -27,18 +27,7 @@
   </section>
   <div class='divider'></div>
 
-  <section id='p3' class='issue-navigator' >
-    <div class='max-width'>
-      <div class='p1'>
-        <a href='/2023q3-issue'>Issue 2023Q3</a>
-      </div>
-      <div class='p2 past-issues'>
-        <? /* @TODO: This can be a dynamic menu. _vp_ 2023-05-05 */ ?>
-        Past Issues: <a href='/issue-202302'>Feb'23</a>, <a href='/issues'>All Issues</a>
-      </div>
-    </div>
-  </section>
-  <div class='divider'></div>
+  <? issue_navigator_widget(); ?>
 
   <section id='p4' class='our-services-pg1' >
     <div class='max-width'>
