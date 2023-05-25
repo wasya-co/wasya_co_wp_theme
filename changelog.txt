@@ -27,4 +27,5 @@ Changelog available here: http://athemes.com/changelog/sydney/
 2.8.0 - 2023-03-31  - css changes for mobile of homepage.
         2023-04-07  - fixed all major appearance bugs. the css is shared with ror. Looks good.
 2.10.0 - 2023-05-01 - gonna be major changes. integrating this theme with wco_rb !
+2.11.0 - 2023-05-25 - minimal footer for iframe_src template (resume)
 

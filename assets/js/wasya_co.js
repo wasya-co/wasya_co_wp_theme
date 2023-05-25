@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   stickyHeader()
 
+  $("body.page-template-template-resume .footers .do-expand").click(function () {
+    $("body").removeClass('page-template-template-resume')
+  })
+
 })
 
 /*

@@ -4,10 +4,14 @@
   </div><!-- #content -->
 
   <div class='footers'>
+
     <div class='footers-fog'></div>
 
     <? if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
       <footer class='footer-top' >
+        <div class='alignwide max-width'>
+          <div class='do-expand'>[Expand Menu]</div>
+        </div>
         <aside class="widget-area alignwide max-width">
           <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
             <div><? dynamic_sidebar( 'footer-1' ); ?></div>
@@ -24,7 +28,7 @@
 
     <footer class="site-footer" >
       <div class='alignwide max-width site-info'>
-        <span>Copyright (c) 2023 Wasya Co</span>
+        <span class='copyright' >Copyright (c) 2023 Wasya Co</span>
         <?php if ( has_nav_menu( 'footer' ) ) : ?>
           <nav aria-label="Secondary menu" class="footer-navigation" >
             <ul class="footer-navigation-wrapper">
@@ -39,7 +43,7 @@
             </ul>
           </nav>
         <?php endif; ?>
-        <span>v2.1.0</span>
+        <span class='version'>v2.1.0</span>
       </div>
     </footer>
   </div><!--footers-->

@@ -215,22 +215,39 @@ a:hover {
 /*
  * Site Footer(s)
 **/
-.footer-top {
+.footers {
+  border-top: 1px solid #00a3cc;
+  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
+  position: relative;
+  background-size: 75%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--wco-dol-bg-color);
+}
+.footers > * {
+  flex-grow: 1;
+}
+.footers .do-expand {
+  display: none;
+}
+.footers .footer-top {
   background: linear-gradient(rgba(97, 206, 208, 0), var(--wco-dol-bg-color));
   color: var(--wco-light-text-color);
-  padding: 2em 0;
+  padding: 1em 0 2em;
   z-index: 1;
 }
-.footer-top aside {
+.footers .footer-top aside {
   margin-top: 0;
 }
-/* cellphone, horizontal cellphone */
-@media only screen and (max-width: 851px) {
-  .footer-top {
-    padding-bottom: 7em;
-  }
+.footers .footers-fog {
+  height: 150px;
+  background-image: linear-gradient(white, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.site-footer {
+.footers .site-footer {
   background-color: var(--wco-lod-bg-color);
   color: var(--wco-lod-text-color);
   font-size: 0.8em;
@@ -240,20 +257,55 @@ a:hover {
   right: 0;
   z-index: 1;
 }
-.site-footer .site-info a {
+.footers .site-footer .site-info a {
   border-left: 2px solid var(--wco-lod-text-color);
   padding-left: var(--wco-width-sm);
   color: var(--wco-lod-link-color);
   text-decoration: underline;
 }
-.site-footer .site-info span {
+.footers .site-footer .site-info span {
   padding-right: var(--wco-width-sm);
 }
+/* cellphone, horizontal cellphone */
+@media only screen and (max-width: 851px) {
+  .footer-top {
+    padding-bottom: 7em;
+  }
+}
 @media only screen and (max-width: 482px) {
-  .site-footer .site-info a {
+  .footers {
+    flex-wrap: wrap;
+  }
+  .footers .site-footer {
+    position: relative;
+  }
+  .footers .site-footer .site-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footers .site-footer .site-info a {
     display: block;
     margin-left: 0;
+    border: 0;
   }
+  .footers .site-footer .version {
+    display: none;
+  }
+}
+body.page-template-template-resume .footers {
+  background: var(--wco-dol-bg-color);
+  flex-wrap: nowrap;
+}
+body.page-template-template-resume .footers aside {
+  display: none;
+}
+body.page-template-template-resume .footers .do-expand {
+  margin-bottom: 1em;
+  display: block;
+}
+body.page-template-template-resume .footers .footers-fog {
+  display: none;
 }
 .home .page-header {
   border-bottom: none;
@@ -1613,29 +1665,6 @@ article.post-3229 .footerContainer .mcnTextContent a, article.post-3229 .footerC
   border-left: 0;
   border-right: var(--wco-tag-tail-width) solid white;
   width: var(--wco-tag-tail-width);
-}
-.footers {
-  background: url("https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2023/02/09140256/1600x218-desert-scene-1-tiny.png") repeat-x bottom center fixed;
-  position: relative;
-  background-size: 75%;
-  display: flex;
-  flex-direction: row;
-}
-.footers > * {
-  flex-grow: 1;
-}
-.footers .footers-fog {
-  border-top: 1px solid #00a3cc;
-  height: 150px;
-  background-image: linear-gradient(white, rgba(0, 0, 0, 0));
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.footers .footer-copyright > .maxwidth {
-  display: flex;
-  justify-content: space-between;
 }
 #popmake-3147, #popmake-3869 {
   height: 80vh;
