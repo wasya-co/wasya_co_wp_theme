@@ -13,12 +13,26 @@
           <div class='do-expand'>[Expand Menu]</div>
         </div>
         <aside class="widget-area alignwide max-width">
-          <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
-            <div><? dynamic_sidebar( 'footer-1' ); ?></div>
-          <? endif; ?>
+
+          <div>
+            <? if ( has_nav_menu( 'footer-1' ) ) : ?>
+              <nav class="footer-1" >
+                <? wp_nav_menu(array( 'theme_location' => 'footer-1',
+                                      'container'      => false,
+                                      'depth'          => 1,
+                                      'fallback_cb'    => false,
+                ) ); ?>
+              </nav>
+            <? endif; ?>
+            <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
+              <? dynamic_sidebar( 'footer-1' ); ?>
+            <? endif; ?>
+          </div>
+
           <? if ( is_active_sidebar( 'footer-2' ) ) : ?>
             <div><? dynamic_sidebar( 'footer-2' ); ?></div>
           <? endif; ?>
+
           <? if ( is_active_sidebar( 'footer-3' ) ) : ?>
             <div><? dynamic_sidebar( 'footer-3' ); ?></div>
           <? endif; ?>
@@ -30,17 +44,12 @@
       <div class='alignwide max-width site-info'>
         <span class='copyright' >Copyright (c) 2023 Wasya Co</span>
         <?php if ( has_nav_menu( 'footer-tos' ) ) : ?>
-          <nav aria-label="Secondary menu" class="footer-navigation" >
-            <ul class="footer-navigation-wrapper">
+          <nav aria-label="Secondary menu" class="footer-tos" >
               <? wp_nav_menu(array( 'theme_location' => 'footer-tos',
-                                    'items_wrap'     => '%3$s',
                                     'container'      => false,
                                     'depth'          => 1,
-                                    'link_before'    => '<span>',
-                                    'link_after'     => '</span>',
                                     'fallback_cb'    => false,
               ) ); ?>
-            </ul>
           </nav>
         <?php endif; ?>
         <span class='version'>v2.1.0</span>

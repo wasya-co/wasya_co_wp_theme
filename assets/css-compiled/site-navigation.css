@@ -461,6 +461,31 @@
   margin-left: auto;
   margin-right: auto;
 }
+.widget-area nav.footer-1 ul li {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0));
+  list-style: none;
+  margin-bottom: 3px;
+}
+.widget-area nav.footer-1 ul li a {
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--wco-light-text-color);
+  padding-left: 20px;
+  position: relative;
+}
+.widget-area nav.footer-1 ul li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  top: calc(50% - 7px);
+  left: 5px;
+  border-style: solid;
+  border-color: transparent var(--wco-light-text-color);
+  border-width: 7px 0 10px 7px;
+}
 .site-header-wrapper {
   background: var(--wco-dol-bg-color);
   border-bottom: var(--wco-dark-border);
@@ -533,49 +558,38 @@ section.issue-navigator nav ul li {
 /*
  * Footer navigation
 **/
-nav.footer-navigation {
-  display: inline;
-}
-ul.footer-navigation-wrapper {
+nav.footer-tos {
   display: inline;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
-ul.footer-navigation-wrapper li {
+nav.footer-tos ul {
+  display: inline;
+}
+nav.footer-tos ul li {
   display: inline;
   line-height: 3;
 }
-ul.footer-navigation-wrapper li a {
+nav.footer-tos ul li a {
   padding: calc(1.25 * var(--primary-nav--padding)) var(--primary-nav--padding);
   padding-top: 0;
   padding-bottom: 0;
 }
-ul.footer-navigation-wrapper li a:hover {
+nav.footer-tos ul li a:hover {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-skip-ink: none;
 }
-ul.footer-navigation-wrapper li .svg-icon {
+nav.footer-tos ul li .svg-icon {
   vertical-align: middle;
   fill: var(--footer--color-link);
 }
-ul.footer-navigation-wrapper li .svg-icon:hover {
+nav.footer-tos ul li .svg-icon:hover {
   transform: scale(1.1);
 }
-.is-dark-theme .footer-navigation-wrapper li a:focus .svg-icon {
-  fill: var(--wp--style--color--link, var(--global--color-background));
-}
-.has-background-white .footer-navigation-wrapper li a:focus .svg-icon {
-  fill: var(--wp--style--color--link, var(--global--color-white));
-}
-@media (prefers-reduced-motion: no-preference) {
-  .footer-navigation-wrapper li .svg-icon {
-    transition: transform 0.1s ease;
-  }
-}
-.footer-navigation-wrapper .sub-menu-toggle, .footer-navigation-wrapper .menu-item-description {
+nav.footer-tos .sub-menu-toggle, nav.footer-tos .menu-item-description {
   display: none;
 }
 html[lang="en-US"] a[lang="en-US"], html[lang="es-CO"] a[lang="es-CO"], html[lang="pt-BR"] a[lang="pt-BR"], html[lang="ru-RU"] a[lang="ru-RU"] {

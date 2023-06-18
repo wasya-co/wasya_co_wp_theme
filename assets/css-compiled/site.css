@@ -694,30 +694,6 @@ h1.page-title {
   align-items: center;
   padding: 5px;
 }
-.widget-area .widget_nav_menu li {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0));
-  margin-bottom: 3px;
-}
-.widget-area .widget_nav_menu li a {
-  padding: 5px;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: var(--wco-light-text-color);
-  padding-left: 20px;
-  position: relative;
-}
-.widget-area .widget_nav_menu li a::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 0;
-  top: calc(50% - 7px);
-  left: 5px;
-  border-style: solid;
-  border-color: transparent var(--wco-light-text-color);
-  border-width: 7px 0 10px 7px;
-}
 @media only screen and (min-width: 852px) {
   .widget-area > div:nth-child(1) {
     width: 32%;
