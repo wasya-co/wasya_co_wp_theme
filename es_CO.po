@@ -1,0 +1,29 @@
+
+# C
+msgid "current issue"
+msgstr "edicion actual"
+
+# D
+
+msgid "default"
+msgstr "predeterminado"
+
+# I
+msgid "issue"
+msgstr "edicion"
+msgid "issues"
+msgstr "ediciones"
+
+
+
+# T
+
+msgid "test"
+msgstr "es/test 222"
+
+# -=---
+
+# msgid ""
+# msgstr ""
+
+

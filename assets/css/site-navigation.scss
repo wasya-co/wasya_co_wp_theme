@@ -647,12 +647,29 @@
     color: var(--wco-lod-link-color);
   }
 
-
 }
 
 
 /*
- * footer navigation
+ * Issue Navigator
+**/
+
+section.issue-navigator {
+  text-align: right;
+
+  h1 {}
+  nav {
+    ul {
+      li {
+        display: inline;
+        padding-left: .5em;
+      }
+    }
+  }
+}
+
+/*
+ * Footer navigation
 **/
 
 nav.footer-navigation {

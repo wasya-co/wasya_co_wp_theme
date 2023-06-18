@@ -1,4 +1,4 @@
-<?php
+<?
 
 // $hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/09/29191326/1920x450-dark-galaxy-1.jpg";
 // $hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26151217/1500x450-clouds-19.jpg";
@@ -9,7 +9,7 @@ $hero_url_default = "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/20
 **/
 function do_setup() {
   include get_template_directory() . '/inc/category-meta-fields.php';
-  load_theme_textdomain( 't21', get_template_directory() . '/languages' );
+  load_theme_textdomain('t21');
 
   add_theme_support( 'custom-logo' );
   add_theme_support( 'automatic-feed-links' ); // Add default posts and comments RSS feed links to head.
@@ -34,8 +34,10 @@ function do_setup() {
 
 
   register_nav_menus(array(
-    'primary' => esc_html__( 'Primary menu' ),
-    'footer'  => esc_html__( 'Footer menu' ),
+    'primary'     => esc_html__( 'Primary Menu' ),
+    'footer-1'    => esc_html__( 'Footer Links' ),
+    'footer-tos'  => esc_html__( 'Footer ToS' ),
+    'issues-nav'  => esc_html__( 'Issues Navigator' ),
   ) );
   register_nav_menu('footer', 'footer');
 
@@ -441,5 +443,3 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) {
     return __( ', ' );
   }
 }
-
-

@@ -15,3 +15,9 @@ wco_iframe_src:
   https://ish-assets-2.s3.amazonaws.com/2023/hunter/202301+VictorPudeyev+Resume.pdf
   https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2022/12/26102601/20230102-VictorPudeyev-Resume.pdf
 
+== Develop ==
+
+  msgfmt -o es_CO.mo es_co.po
+
+
+

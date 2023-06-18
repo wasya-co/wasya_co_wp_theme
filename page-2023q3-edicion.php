@@ -5,7 +5,7 @@
 <article id="a2023q3issue" class='' >
   <section id='p1' class='hero' >
 
-    <h1 class='lobster'>Innovative solutions for your digital success</h1>
+    <h1 class='lobster'>Soluciones innovadoras para su éxito digital</h1>
 
   </section>
   <div class='divider'></div>
@@ -18,37 +18,38 @@
       </div>
       <div class='fancy-border'></div>
 
-      <p>At Wasya Co, we understand the challenges that come with developing and maintaining software in today's fast-paced and constantly evolving technological landscape. That's why we offer a comprehensive range of services to help you navigate these challenges and stay ahead of the curve.</p>
+      <p>En Wasya Co, entendemos los desafíos que conlleva el desarrollo y el mantenimiento del software en el panorama tecnológico de ritmo acelerado y en constante evolución de hoy. Es por eso que ofrecemos una gama integral de servicios para ayudarlo a navegar estos desafíos y mantenerse a la vanguardia de la curva.</p>
 
-      <p>Our focus is always on delivering value to our clients, and we pride ourselves on our ability to work collaboratively and transparently with our clients throughout the development process.</p>
+      <p>Nuestro enfoque siempre está en ofrecer valor a nuestros clientes, y nos enorgullecemos de nuestra capacidad de trabajar de manera colaborativa y transparente con nuestros clientes durante todo el proceso de desarrollo.</p>
 
-      <p>If you're looking for a trusted partner to help you achieve your digital goals, look no further than Wasya Co. We're committed to providing you with the innovative solutions you need to succeed in today's digital world.</p>
+      <p>Si está buscando un socio de confianza para ayudarlo a lograr sus objetivos digitales, no busque más allá de Wasya Co. Estamos comprometidos a proporcionarle las soluciones innovadoras que necesita para tener éxito en el mundo digital actual.</p>
     </div>
   </section>
   <div class='divider'></div>
 
   <? if ( has_nav_menu( 'issues-nav' ) ) : ?>
     <?
-    $lang = explode('-', get_bloginfo('language'))[0];
-    // var_dump( $lang );
+    $page = get_page_by_path('config');
+    // var_dump($page);
 
-    $config = get_page_by_path('config');
-
-    $current_issue_id = get_post_meta( $config->ID, $lang .'/wco_current_issue_id', true);
-    // var_dump( $current_issue_id );
-
+    // // Duplicated from template-parts/content/content-post.php
+    $current_issue_date = get_post_meta( $page->ID, 'wco_current_issue_date', true);
+    $current_issue_slug = $current_issue_date . '-' . __('issue', 't21');
+    var_dump( $current_issue_slug );
+    $current_issue      = get_page_by_path(__('issues', 't21') . '/' . $current_issue_slug);
+    var_dump( $current_issue );
     ?>
     <section class='issue-navigator' >
       <div class='max-width'>
-        <h1>
-          <?= ucwords(__('current issue', 't21')); ?>:
-          <a href="<? get_page_uri( $current_issue_id ); ?>" ><?= get_the_title($current_issue_id); ?></a>
-        </h1>
+        <h1><?= ucwords(__('current issue', 't21')); ?>: <a href="<?= get_page_uri( $current_issue->ID ); ?>" ><?= $current_issue->post_title; ?></a></h1>
         <nav >
-          <ul >
+          <ul class="footer-navigation-wrapper">
             <? wp_nav_menu(array( 'theme_location' => 'issues-nav',
+                                  'items_wrap'     => '%3$s',
                                   'container'      => false,
                                   'depth'          => 1,
+                                  'link_before'    => '<span>',
+                                  'link_after'     => '</span>',
                                   'fallback_cb'    => false,
             ) ); ?>
           </ul>
@@ -97,21 +98,9 @@
 
         <div class='row flex-row'>
           <div class='col-md-6'>
-
-            <? /* <div class='wco-card-2'>
-              <div class='img printing-press'>
-                <div class='imgC'></div>
-              </div>
-              <a href="/dev-wp"><h2>Wordpress</h2></a>
-              <div class='sub' >Design & Development</div>
-              <a href="/dev-wp"><button class="button-91" role="button">Take a Tour</button></a>
-            </div> */ ?>
-
           </div>
           <div class='col-md-6 our-services-exploreW'>
-
             <? get_template_part('template-parts/our-services/our-stack-link-2'); ?>
-
           </div>
         </div><!--row-->
       </div><!--container-->

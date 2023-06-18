@@ -29,10 +29,10 @@
     <footer class="site-footer" >
       <div class='alignwide max-width site-info'>
         <span class='copyright' >Copyright (c) 2023 Wasya Co</span>
-        <?php if ( has_nav_menu( 'footer' ) ) : ?>
+        <?php if ( has_nav_menu( 'footer-tos' ) ) : ?>
           <nav aria-label="Secondary menu" class="footer-navigation" >
             <ul class="footer-navigation-wrapper">
-              <? wp_nav_menu(array( 'theme_location' => 'footer',
+              <? wp_nav_menu(array( 'theme_location' => 'footer-tos',
                                     'items_wrap'     => '%3$s',
                                     'container'      => false,
                                     'depth'          => 1,

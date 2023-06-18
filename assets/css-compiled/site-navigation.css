@@ -521,7 +521,17 @@
   color: var(--wco-lod-link-color);
 }
 /*
- * footer navigation
+ * Issue Navigator
+**/
+section.issue-navigator {
+  text-align: right;
+}
+section.issue-navigator nav ul li {
+  display: inline;
+  padding-left: 0.5em;
+}
+/*
+ * Footer navigation
 **/
 nav.footer-navigation {
   display: inline;
