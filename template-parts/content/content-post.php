@@ -24,7 +24,6 @@ if (strlen($hero_url) == 0) {
 
   <div class="alignwide row">
 
-
     <div class="entry-content overflow-margin Card col-md-8 col-sm-12">
 
       <footer class="entry-footer default-max-width">
