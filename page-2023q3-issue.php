@@ -20,7 +20,7 @@
 
       <p>At Wasya Co, we understand the challenges that come with developing and maintaining software in today's fast-paced and constantly evolving technological landscape. That's why we offer a comprehensive range of services to help you navigate these challenges and stay ahead of the curve.</p>
 
-      <p>Our focus is always on delivering value to our clients, and we pride ourselves on our ability to work collaboratively and transparently with our clients throughout the development process.</p>
+      <p>Our focus is always on delivering value to our clients, and we pride ourselves in our ability to work collaboratively and transparently with our clients throughout the development process.</p>
 
       <p>If you're looking for a trusted partner to help you achieve your digital goals, look no further than Wasya Co. We're committed to providing you with the innovative solutions you need to succeed in today's digital world.</p>
     </div>
