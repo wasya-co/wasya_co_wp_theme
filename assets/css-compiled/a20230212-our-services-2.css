@@ -549,8 +549,10 @@ article.contact-us-4-step1 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2em;
 }
 article.contact-us-4-step1 .contact-us-4-C {
+  width: 100%;
   margin-bottom: 200px;
 }
 #i20230309stack .OurStack > .header {

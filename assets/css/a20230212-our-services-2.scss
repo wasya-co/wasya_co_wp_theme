@@ -765,15 +765,13 @@ article.contact-us-4 {
 }
 article.contact-us-4-step1 {
   .item {
-    // border: 1px solid yellow;
-
-    // width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2em;
   }
   .contact-us-4-C {
+    width: 100%;
     margin-bottom: 200px;
   }
 }
