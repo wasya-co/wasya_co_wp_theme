@@ -31,7 +31,7 @@
       <div class='col-md-6 '>
         <div class='item'>
           <p>You can use our preferred method of contact and book a priority call:</p>
-          <a href="/consulting-services">
+          <a href="https://tidycal.com/wasya-co/30min">
             <button class="button-91" role="button">Book a priority call</button>
           </a>
         </div>
