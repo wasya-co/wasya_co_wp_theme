@@ -78,6 +78,6 @@
 
   </section>
 
-  <? get_template_part( 'template-parts/footer/contact-us'); ?>
+  <? // get_template_part( 'template-parts/footer/contact-us'); ?>
 
 </article>
