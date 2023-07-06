@@ -1,6 +1,6 @@
 
 <div class="site-header-wrapper">
-  <header id="masthead" class="site-header" >
+  <header class="site-header" >
 
     <div class="site-branding">
       <div class="site-logo"><? the_custom_logo(); ?></div>

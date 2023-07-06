@@ -39,7 +39,6 @@ function do_setup() {
     'footer-tos'  => esc_html__( 'Footer ToS' ),
     'issues-nav'  => esc_html__( 'Issues Navigator' ),
   ) );
-  register_nav_menu('footer', 'footer');
 
   add_theme_support('html5', array( 'comment-form',
                                     'comment-list',
