@@ -30,7 +30,7 @@
   <? if ( has_nav_menu( 'issues-nav' ) ) : ?>
     <?
     $page = get_page_by_path('config');
-    // var_dump($page);
+    var_dump($page);
 
     // // Duplicated from template-parts/content/content-post.php
     $current_issue_date = get_post_meta( $page->ID, 'wco_current_issue_date', true);
