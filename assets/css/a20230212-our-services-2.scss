@@ -422,7 +422,16 @@ section.about-us {
   }
 }
 
-section.issue-navigator {
+html[lang="en-US"] section.issues-navigator nav ul li:first-child:before {
+  content: 'Current Issue: ';
+}
+html[lang="es-CO"] section.issues-navigator nav ul li:first-child:before {
+  content: 'Edición actual: ';
+}
+html[lang="pt-BR"] section.issues-navigator nav ul li:first-child:before {
+  content: 'Edição atual: ';
+}
+section.issues-navigator {
   background: #ccc;
   // background-image: linear-gradient( rgba(32, 32, 32, 0.7), white );
 
@@ -433,17 +442,38 @@ section.issue-navigator {
   padding: 2em 0;
   margin: 0;
 
-  .p1,
-  .p2 {
+  nav {
     text-align: right;
+
+    ul li {
+      display: inline;
+    }
+
+    ul li:first-child {
+      display: block;
+      &:after {
+        content: '';
+      }
+    }
+    ul li {
+      &:after {
+        content: ' | ';
+      }
+    }
+    ul li:last-child {
+      &:after {
+        content: '';
+      }
+    }
+
+
   }
-  .past-issues {
-    // display: none; // temporary. _vp_ 2023-04-27
-  }
+
 }
-.custom-html-widget section.issue-navigator {
-  background: transparent;
-}
+/* the below is for recruitment only, so currently unused. */
+// .custom-html-widget section.issues-navigator {
+//   background: transparent;
+// }
 
 section.our-services-pg1 {
   padding: 3em 0;

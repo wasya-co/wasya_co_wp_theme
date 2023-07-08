@@ -27,36 +27,7 @@
   </section>
   <div class='divider'></div>
 
-  <? if ( has_nav_menu( 'issues-nav' ) ) : ?>
-    <?
-    $page = get_page_by_path('config');
-    // var_dump($page);
-
-    // // Duplicated from template-parts/content/content-post.php
-    $current_issue_date = get_post_meta( $page->ID, 'wco_current_issue_date', true);
-    $current_issue_slug = $current_issue_date . '-' . __('issue', 't21');
-    var_dump( $current_issue_slug );
-    $current_issue      = get_page_by_path(__('issues', 't21') . '/' . $current_issue_slug);
-    var_dump( $current_issue );
-    ?>
-    <section class='issue-navigator' >
-      <div class='max-width'>
-        <h1><?= ucwords(__('current issue', 't21')); ?>: <a href="<?= get_page_uri( $current_issue->ID ); ?>" ><?= $current_issue->post_title; ?></a></h1>
-        <nav >
-          <ul class="footer-navigation-wrapper">
-            <? wp_nav_menu(array( 'theme_location' => 'issues-nav',
-                                  'items_wrap'     => '%3$s',
-                                  'container'      => false,
-                                  'depth'          => 1,
-                                  'link_before'    => '<span>',
-                                  'link_after'     => '</span>',
-                                  'fallback_cb'    => false,
-            ) ); ?>
-          </ul>
-        </nav>
-      </div>
-    </section>
-  <? endif; ?>
+  <?= issues_navigator(); ?>
 
   <section id='p4' class='our-services-pg1' >
     <div class='max-width'>

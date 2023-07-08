@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* development */
 /* production our-services */
 /* production our-services-trash */
@@ -300,20 +301,42 @@ section.about-us + .divider {
   height: 50px;
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), #ccc);
 }
-section.issue-navigator {
+html[lang="en-US"] section.issues-navigator nav ul li:first-child:before {
+  content: "Current Issue: ";
+}
+html[lang="es-CO"] section.issues-navigator nav ul li:first-child:before {
+  content: "Edición actual: ";
+}
+html[lang="pt-BR"] section.issues-navigator nav ul li:first-child:before {
+  content: "Edição atual: ";
+}
+section.issues-navigator {
   background: #ccc;
   padding: 2em 0;
   margin: 0;
 }
-section.issue-navigator a {
+section.issues-navigator a {
   text-decoration: underline;
 }
-section.issue-navigator .p1, section.issue-navigator .p2 {
+section.issues-navigator nav {
   text-align: right;
 }
-.custom-html-widget section.issue-navigator {
-  background: transparent;
+section.issues-navigator nav ul li {
+  display: inline;
 }
+section.issues-navigator nav ul li:first-child {
+  display: block;
+}
+section.issues-navigator nav ul li:first-child:after {
+  content: "";
+}
+section.issues-navigator nav ul li:after {
+  content: " | ";
+}
+section.issues-navigator nav ul li:last-child:after {
+  content: "";
+}
+/* the below is for recruitment only, so currently unused. */
 section.our-services-pg1 {
   padding: 3em 0;
   background: white;

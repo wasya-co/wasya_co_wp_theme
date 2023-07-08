@@ -27,35 +27,7 @@
   </section>
   <div class='divider'></div>
 
-  <? if ( has_nav_menu( 'issues-nav' ) ) : ?>
-    <?
-    $lang = explode('-', get_bloginfo('language'))[0];
-    // var_dump( $lang );
-
-    $config = get_page_by_path('config');
-
-    $current_issue_id = get_post_meta( $config->ID, $lang .'/wco_current_issue_id', true);
-    // var_dump( $current_issue_id );
-
-    ?>
-    <section class='issue-navigator' >
-      <div class='max-width'>
-        <h1>
-          <?= ucwords(__('current issue', 't21')); ?>:
-          <a href="<? get_page_uri( $current_issue_id ); ?>" ><?= get_the_title($current_issue_id); ?></a>
-        </h1>
-        <nav >
-          <ul >
-            <? wp_nav_menu(array( 'theme_location' => 'issues-nav',
-                                  'container'      => false,
-                                  'depth'          => 1,
-                                  'fallback_cb'    => false,
-            ) ); ?>
-          </ul>
-        </nav>
-      </div>
-    </section>
-  <? endif; ?>
+  <?= issues_navigator(); ?>
 
   <section id='p4' class='our-services-pg1' >
     <div class='max-width'>
