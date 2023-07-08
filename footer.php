@@ -15,15 +15,7 @@
         <aside class="widget-area alignwide max-width">
 
           <div>
-            <? if ( has_nav_menu( 'footer-1' ) ) : ?>
-              <nav class="footer-1" >
-                <? wp_nav_menu(array( 'theme_location' => 'footer-1',
-                                      'container'      => false,
-                                      'depth'          => 1,
-                                      'fallback_cb'    => false,
-                ) ); ?>
-              </nav>
-            <? endif; ?>
+
             <? if ( is_active_sidebar( 'footer-1' ) ) : ?>
               <? dynamic_sidebar( 'footer-1' ); ?>
             <? endif; ?>
