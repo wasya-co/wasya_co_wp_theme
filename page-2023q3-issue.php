@@ -33,6 +33,7 @@
     // var_dump( $lang );
 
     $config = get_page_by_path('config');
+    var_dump( $config );
 
     $current_issue_id = get_post_meta( $config->ID, $lang .'/wco_current_issue_id', true);
     // var_dump( $current_issue_id );
