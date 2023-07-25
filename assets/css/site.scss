@@ -107,7 +107,7 @@ html {
     background: var(--wco-dol-bg-color);
   }
   .W0 {
-    background-color: var(--wco-light-bg-color);
+    background-color: transparent; /* var(--wco-light-bg-color); */
   }
 }
 @media only screen and (max-width: 482px) {
@@ -1093,7 +1093,7 @@ header.page-header {
   position: relative;
   padding: 1em;
   flex-grow: 1;
-  max-width: 600px;
+  // max-width: 600px;
 
   article {
     margin: 0 auto 2em;
@@ -1303,7 +1303,7 @@ c,
     }
 
     .entry-content {
-      max-width: 640px;
+      // max-width: 640px;
     }
 
     .flex-row {

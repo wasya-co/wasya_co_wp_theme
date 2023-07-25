@@ -85,7 +85,8 @@ html {
   background: var(--wco-dol-bg-color);
 }
 .site-main .W0 {
-  background-color: var(--wco-light-bg-color);
+  background-color: transparent;
+  /* var(--wco-light-bg-color); */
 }
 @media only screen and (max-width: 482px) {
   .site-main > article {
@@ -829,7 +830,6 @@ header.page-header .page-header-inner .entry-title {
   position: relative;
   padding: 1em;
   flex-grow: 1;
-  max-width: 600px;
 }
 .articles article {
   margin: 0 auto 2em;
@@ -977,9 +977,6 @@ c, .clear, .clearfix {
 }
 .single_php article .custom-html-widget {
   margin: 0 1em 1em 0;
-}
-.single_php article .entry-content {
-  max-width: 640px;
 }
 .single_php article .flex-row {
   justify-content: center;
