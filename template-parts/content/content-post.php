@@ -26,6 +26,11 @@ if (strlen($hero_url) == 0) {
 
     <div class="entry-content overflow-margin Card">
 
+      <div class='subhead'>
+        <? $subtitle = new WP_Subtitle( get_the_ID() ); ?>
+        <?= $subtitle->get_subtitle(); ?>
+      </div>
+
       <footer class="entry-footer default-max-width">
         <? twenty_twenty_one_entry_meta_footer(array(
           'display edit-box' => false
